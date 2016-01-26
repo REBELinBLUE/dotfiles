@@ -1,0 +1,156 @@
+[user]
+    name = Stephen Ball
+
+[apply]
+    # Detect whitespace errors when applying a patch
+    whitespace = fix
+
+[color]
+    # Use colors in Git commands that are capable of colored output when outputting to the terminal
+    ui = auto
+
+[color "branch"]
+    # Highlight current. Yellow local branches; Green remotes.
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    # Yellow meta; Magenta line info; Red for deleltions; Green for additions.
+    frag = magenta
+    meta = yellow
+    new = green
+    old = red
+
+[color "status"]
+    # Changed files are yellow. Staged files are green. New (untracked) files are cyan.
+    # Headers are gray (white dimmed). Branch is always green even in headers
+    added = green
+    branch = green
+    changed = yellow
+    header = white dim
+    untracked = cyan
+
+[diff]
+    # Use more time to create better diffs
+    algorithm = patience
+
+    # Diff will detect both renames and copies
+    renames = copies
+
+    tool = chdiff
+
+[core]
+    editor = nano
+    quotepath = false
+    excludesfile = ~/.gitignore_global
+    # Treat spaces before tabs and all kinds of trailing whitespace as an error
+    whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+
+    # Make `git rebase` safer on OS X
+    trustctime = false
+
+[merge]
+    # Include summaries of merged commits in newly created merge commit messages
+    log = true
+
+    tool = chdiff
+
+[push]
+    default = simple
+
+[mergetool "chdiff"]
+    cmd = /usr/bin/env chdiff --wait "$LOCAL" "$REMOTE"
+    keepBackup = false
+    trustExitCode = false
+
+[difftool]
+    prompt = false
+
+[difftool "chdiff"]
+    cmd = /usr/bin/env chdiff $LOCAL $REMOTE
+
+[difftool "sourcetree"]
+    cmd = /usr/bin/env chdiff \"$LOCAL\" \"$REMOTE\"
+    path = 
+
+[mergetool "sourcetree"]
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
+
+[push]
+    default = simple
+
+[filter "media"]
+    clean = git-media-clean %f
+    smudge = git-media-smudge %f
+
+[filter "lfs"]
+    clean = git lfs clean %f
+    smudge = git lfs smudge %f
+    required = true
+
+[alias]
+    # Amend the currently staged files to the latest commit
+    amend = commit --amend --reuse-message=HEAD
+
+    # Shorthand for branch
+    b = branch
+
+    # Show verbose output about branches
+    branches = branch -va
+
+    # Clone a repository including all submodules
+    c = clone --recursive
+
+    # Commit all changes
+    ca = !git add --all && git commit --all --verbose
+
+    # Switch to a branch
+    co = checkout
+
+    # Show the diff between the latest commit and the current state
+    d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+
+    # Remove branches that have already been merged with master
+    # a.k.a. ‘delete merged’
+    dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
+    # Fetch everything all remotes
+    f = fetch --all
+
+    # Switch to a branch, creating it if necessary
+    go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+
+    # View the SHA, description, and history graph of the latest 20 commits
+    l = log --format='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --no-merges -n 30
+
+    # Shorthand for merge
+    m = merge
+
+    # Shorthand for push
+    p = push
+
+    # Pull in remote changes for the current repository and all its submodules
+    pl = !"git pull; git submodule foreach git pull origin master"
+
+    # Shorthand for remote
+    r = remote
+
+    # Interactive rebase with the given number of latest commits
+    reb = "!r() { git rebase -i HEAD~$1; }; r"
+
+    # Remove the old tag with this name and tag the latest commit with it.
+    retag = "!r() { git tag -d $1 && git push origin :refs/tags/$1 && git tag $1; }; r"
+
+    # Show verbose output about remotes
+    remotes = remote --verbose
+
+    # View the current working tree status using the short format
+    s = status --short --branch
+
+    # List contributors with number of commits
+    sl = shortlog --summary --numbered
+
+    # Show verbose output about tags
+    tags = tag --list
