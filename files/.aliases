@@ -1,0 +1,55 @@
+# Easier navigation: .., ..., ...., ....., ~ and -
+alias ..='cd ..'         # Go up one directory
+alias ...='cd ../..'     # Go up two directories
+alias ....='cd ../../..' # Go up three directories
+alias -- -='cd -'        # Go back
+alias ~="cd ~" # `cd` is probably faster to type though
+
+# List files
+alias ls='ls -F -G --color=auto'
+alias dir='dir -F -G --color=auto'
+alias ll='ls -l --color=auto'
+
+# Prompt for confirmation
+alias cp='cp -iv'
+alias rm='rm -i'
+alias mv='mv -iv'
+
+# Other useful aliases
+alias grep='grep --color=auto -in'
+alias _='sudo'
+alias l1='ls -1'
+alias sl=ls
+
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
+
+# Get public IP
+alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
+
+# Flush Directory Service cache
+alias flush='dscacheutil -flushcache'
+
+# Remove .DS_Store files
+alias dsclean='find . -type f -name .DS_Store -delete'
+
+# Toggle hidden files
+alias showhidden='defaults write com.apple.finder AppleShowAllFiles TRUE'
+alias hidehidden='defaults write com.apple.finder AppleShowAllFiles FALSE'
+
+# Update homebrew
+alias brewup='brew update && brew upgrade --all && brew cleanup'
+
+# OS X has no `md5sum`, so use `md5` as a fallback
+command -v md5sum > /dev/null || alias md5sum="md5"
+
+# OS X has no `sha1sum`, so use `shasum` as a fallback
+command -v sha1sum > /dev/null || alias sha1sum="shasum"
+
+# Empty the Trash on all mounted volumes and the main HDD.
+# Also, clear Apple’s System Logs to improve shell startup speed.
+# Finally, clear download history from quarantine. https://mths.be/bum
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
+
+# Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"

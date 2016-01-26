@@ -1,6 +1,3 @@
-[user]
-    name = Stephen Ball
-
 [apply]
     # Detect whitespace errors when applying a patch
     whitespace = fix
@@ -44,11 +41,20 @@
     editor = nano
     quotepath = false
     excludesfile = ~/.gitignore_global
+    #attributesfile = ~/.gitattributes
+
     # Treat spaces before tabs and all kinds of trailing whitespace as an error
+    # [default] trailing-space: looks for spaces at the end of a line
+    # [default] space-before-tab: looks for spaces before tabs at the beginning of a line
     whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 
     # Make `git rebase` safer on OS X
+    # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
     trustctime = false
+
+    # Prevent showing files whose names contain non-ASCII symbols as unversioned.
+    # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
+    precomposeunicode = false
 
 [merge]
     # Include summaries of merged commits in newly created merge commit messages
@@ -70,17 +76,6 @@
 [difftool "chdiff"]
     cmd = /usr/bin/env chdiff $LOCAL $REMOTE
 
-[difftool "sourcetree"]
-    cmd = /usr/bin/env chdiff \"$LOCAL\" \"$REMOTE\"
-    path = 
-
-[mergetool "sourcetree"]
-    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-    trustExitCode = true
-
-[push]
-    default = simple
-
 [filter "media"]
     clean = git-media-clean %f
     smudge = git-media-smudge %f
@@ -89,6 +84,11 @@
     clean = git lfs clean %f
     smudge = git lfs smudge %f
     required = true
+
+[help]
+
+    # Automatically correct and execute mistyped commands
+    autocorrect = 1
 
 [alias]
     # Amend the currently staged files to the latest commit

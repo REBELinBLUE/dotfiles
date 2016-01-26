@@ -1,0 +1,21 @@
+# Make nano the default editor.
+export EDITOR='nano -w'
+
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/Applications/VirtualBox.app/Contents/MacOS:/usr/local/sbin:$PATH"
+export PATH="~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:~/.composer/vendor/bin:$PATH"
+export PATH="$(brew --prefix findutils)/bin:$PATH"
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+
+export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
+
+# Larger bash history (allow 32³ entries; default is 500)
+export HISTSIZE=32768;
+export HISTFILESIZE=${HISTSIZE};
+export HISTCONTROL=ignoredups:erasedups;
+
+# Make some commands not show up in history
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
+
+# Prefer UK English and use UTF-8.
+export LANG="en_GB.UTF-8";
+export LC_ALL="en_GB.UTF-8";
