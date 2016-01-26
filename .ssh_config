@@ -1,0 +1,17 @@
+# NAS servers
+Host mycloud
+    HostName wdmycloudmirror.local
+    User sshd
+    HostkeyAlgorithms ssh-dss
+
+Host mypassport
+    HostName mypassport.local
+    User root
+
+# Web hosting
+Host linode
+    HostName rebelinblue.com
+
+# Work servers
+Host *.aa
+   StrictHostKeyChecking no
