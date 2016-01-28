@@ -5,6 +5,13 @@ export DOTFILES=~/.dotfiles
 export PATH
 
 
+# Load the shell dotfiles
+for file in $DOTFILES/files/.{bash_prompt,exports,aliases,functions,extra}; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
+
+
 # Source all files in "source"
 # function src() {
 #   local file

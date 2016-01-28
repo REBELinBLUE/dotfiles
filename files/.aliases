@@ -6,9 +6,9 @@ alias -- -='cd -'        # Go back
 alias ~="cd ~" # `cd` is probably faster to type though
 
 # List files
-alias ls='ls -F -G --color=auto'
-alias dir='dir -F -G --color=auto'
-alias ll='ls -l --color=auto'
+alias ls='ls -F -G --color=auto --quoting-style=literal'
+alias dir='dir -F -G --color=auto --quoting-style=literal'
+alias ll='ls -l --color=auto --quoting-style=literal'
 
 # Prompt for confirmation
 alias cp='cp -iv'
@@ -18,7 +18,7 @@ alias mv='mv -iv'
 # Other useful aliases
 alias grep='grep --color=auto -in'
 alias _='sudo'
-alias l1='ls -1'
+alias l1='ls -1 --quoting-style=literal'
 alias sl=ls
 
 # Enable aliases to be sudo’ed
