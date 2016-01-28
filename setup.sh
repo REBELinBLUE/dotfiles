@@ -24,6 +24,10 @@ fi
 
 brew update
 
+# Install vagrant
+brew tap caskroom/cask
+brew cask install vagrant
+
 # Install `wget` with IRI support
 brew install wget --with-iri
 
