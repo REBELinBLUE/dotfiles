@@ -30,19 +30,20 @@ brew install bash
 
 # Install extras
 brew install binutils
-brew install diffutils
-brew install ed --default-names
+brew install homebrew/dupes/diffutils
+brew install ed --with-default-names
 brew install gnu-indent --with-default-names
 brew install gnu-getopt --with-default-names
 brew install gnu-tar --with-default-names
 brew install gnu-which --with-default-names
-brew install grep --with-default-names
+brew install homebrew/dupes/grep --with-default-names
 brew install wdiff --with-gettext
-brew install nano --disable-nls --enable-color --enable-extra --enable-multibuffer --enable-nanorc --enable-utf8
-brew install file-formula
+brew install homebrew/dupes/nano --disable-nls --enable-color --enable-extra --enable-multibuffer --enable-nanorc --enable-utf8
 brew install vim --override-system-vi
 brew install ack gzip watch git git-lfs git-extras tig less openssh rsync unzip
 brew install dnsmasq node readline docker ccat top-osx screen gnutls gawk sqlite osquery 
+
+brew tap homebrew/completions
 
 # Install completions
 brew install vagrant-completion bash-completion bash-git-prompt 
