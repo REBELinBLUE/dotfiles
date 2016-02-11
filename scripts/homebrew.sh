@@ -56,6 +56,7 @@ brew tap dinkypumpkin/get_iplayer
 brew update
 brew install --with-deps get_iplayer
 
+brew install httpie
 
 # Install glances
 brew install python
