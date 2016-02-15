@@ -3,7 +3,7 @@ alias ..='cd ..'         # Go up one directory
 alias ...='cd ../..'     # Go up two directories
 alias ....='cd ../../..' # Go up three directories
 alias -- -='cd -'        # Go back
-alias ~="cd ~" # `cd` is probably faster to type though
+alias ~='cd ~' # `cd` is probably faster to type though
 
 # List files
 alias ls='ls -F -G --color=auto --quoting-style=literal'
