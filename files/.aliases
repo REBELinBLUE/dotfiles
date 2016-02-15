@@ -24,6 +24,7 @@ alias sl=ls
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
+
 # Get public IP
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
 
