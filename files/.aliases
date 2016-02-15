@@ -24,6 +24,8 @@ alias sl=ls
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
+# Open gists in browser
+alias gist='gist -o'
 
 # Get public IP
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
@@ -53,6 +55,4 @@ command -v sha1sum > /dev/null || alias sha1sum="shasum"
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 
 # Lock the screen (when going AFK)
-alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-
-alias gist="gist -o"
+alias afk='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
