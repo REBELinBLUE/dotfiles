@@ -41,7 +41,7 @@ brew install wdiff --with-gettext
 brew install homebrew/dupes/nano --disable-nls --enable-color --enable-extra --enable-multibuffer --enable-nanorc --enable-utf8
 brew install vim --override-system-vi
 brew install ack gzip watch git git-lfs git-extras git-flow tig less openssh rsync unzip pgcli mycli
-brew install dnsmasq node readline docker ccat top-osx screen gnutls gawk sqlite osquery htop-osx
+brew install dnsmasq node readline docker ccat top-osx screen gnutls gawk sqlite osquery htop-osx diff-so-fancy
 
 brew tap homebrew/completions
 
