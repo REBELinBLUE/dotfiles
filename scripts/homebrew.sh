@@ -12,6 +12,10 @@ brew update
 # Install `wget` with IRI support
 brew install wget --with-iri
 
+# Install curl
+brew install curl --with-openssl
+brew link --force curl
+
 # Install GNU core utilities (those that come with OS X are outdated)
 brew install coreutils
 
@@ -42,13 +46,14 @@ brew install homebrew/dupes/nano --disable-nls --enable-color --enable-extra --e
 brew install vim --override-system-vi
 brew install ack gzip watch git git-lfs git-extras git-flow tig less openssh rsync unzip pgcli mycli
 brew install dnsmasq node readline ccat screen gnutls gawk sqlite osquery htop-osx diff-so-fancy
+brew install terminal-notifier
 
 brew tap homebrew/completions
 
 # Install completions
-brew install vagrant-completion bash-completion bash-git-prompt 
+brew install vagrant-completion bash-completion bash-git-prompt
 
-# Install media tools 
+# Install media tools
 brew install mplayer media-info xvid ffmpeg rtmpdump atomicparsley id3v2
 
 # Install get iplayer
