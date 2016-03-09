@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+terminal-notifier -message "$5" -title "$4" -appIcon "$2" -sound default
