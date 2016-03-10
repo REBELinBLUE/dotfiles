@@ -48,6 +48,11 @@ brew install ack gzip watch git git-lfs git-extras git-flow tig less openssh rsy
 brew install dnsmasq node readline ccat screen gnutls gawk sqlite osquery htop-osx diff-so-fancy
 brew install terminal-notifier
 
+brew tap alexandregz/MXhomebrew
+brew install bashmarks
+cd `brew --prefix bashmarks`/libexec/
+curl https://patch-diff.githubusercontent.com/raw/huyng/bashmarks/pull/52.patch | patch bashmarks.sh
+
 brew tap homebrew/completions
 
 # Install completions
