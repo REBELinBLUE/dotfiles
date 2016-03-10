@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until the script has finished.
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 # Install Homebrew.
 if [[ ! "$(type -P brew)" ]]; then
     echo "Installing Homebrew"
@@ -32,6 +37,11 @@ brew install gnu-sed --with-default-names
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`
 brew install bash
 
+BASHPATH=$(brew --prefix)/bin/bash
+sudo echo $BASHPATH >> /etc/shells
+chsh -s $BASHPATH # will set for current user only.
+echo $BASH_VERSION
+
 # Install extras
 brew install binutils
 brew install homebrew/dupes/diffutils
@@ -46,12 +56,13 @@ brew install homebrew/dupes/nano --disable-nls --enable-color --enable-extra --e
 brew install vim --override-system-vi
 brew install ack gzip watch git git-lfs git-fresh git-extras git-flow tig less openssh rsync unzip pgcli mycli
 brew install dnsmasq node readline ccat screen gnutls gawk sqlite osquery htop-osx diff-so-fancy
-brew install terminal-notifier
+brew install terminal-notifier tree tvnamer
 
 brew tap alexandregz/MXhomebrew
 brew install bashmarks
 cd `brew --prefix bashmarks`/libexec/
 curl https://patch-diff.githubusercontent.com/raw/huyng/bashmarks/pull/52.patch | patch bashmarks.sh
+cd -
 
 brew tap homebrew/completions
 

@@ -1,0 +1,13 @@
+{
+	"valid_extensions": ["m4v"],
+	"search_all_languages": false,
+	"langauge": "en",
+	"filename_with_episode": "%(episode)s %(episodename)s%(ext)s",
+	"filename_without_episode": "%(seriesname)s - [%(seasonno)02dx%(episode)s]%(ext)s",
+	"filename_with_episode_no_season": "%(seriesname)s - %(episodename)s%(ext)s",
+	"filename_without_episode_no_season": "%(seriesname)s - [%(episode)s]%(ext)s",
+	"filename_with_date_and_episode": "%(seriesname)s - %(episodename)s%(ext)s",
+	"filename_with_date_without_episode": "%(seriesname)s - [%(episode)s]%(ext)s",
+	"move_files_enable": true,
+	"move_files_destination": "./%(seriesname)s/Season %(seasonnumber)d/"
+}
