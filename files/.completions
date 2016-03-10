@@ -22,3 +22,7 @@ shopt -s nocaseglob;
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
+
+# Check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
