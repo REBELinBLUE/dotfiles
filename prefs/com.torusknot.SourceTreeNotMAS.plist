@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AtlassianAccountEmail</key>
+	<string>hipchat@stephen.rebelinblue.com</string>
+	<key>NSNavLastRootDirectory</key>
+	<string>/usr/local/Cellar/git-lfs/1.1.2/bin</string>
+	<key>NSNavPanelExpandedSizeForOpenMode</key>
+	<string>{712, 498}</string>
+	<key>NSOutlineView Items Sidebar_</key>
+	<array>
+		<integer>2060302418395990200</integer>
+		<integer>10451717551580144974</integer>
+		<integer>4092625529179183398</integer>
+	</array>
+	<key>NSOutlineView Items Sidebar_Deployer</key>
+	<array>
+		<integer>10451717551580144974</integer>
+		<integer>4092625529179183398</integer>
+		<integer>2060302418395990200</integer>
+	</array>
+	<key>NSOutlineView Items Sidebar_deployer</key>
+	<array>
+		<integer>2060302418395990200</integer>
+		<integer>10451717551580144974</integer>
+		<integer>4092625529179183398</integer>
+	</array>
+	<key>NSOutlineView Items Sidebar_dotfiles</key>
+	<array>
+		<integer>2060302418395990200</integer>
+		<integer>10451717551580144974</integer>
+		<integer>4092625529179183398</integer>
+	</array>
+	<key>NSOutlineView Items repoBrowserRemote</key>
+	<array>
+		<data>
+		YnBsaXN0MDDUAQIDBAUGPD1YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
+		VCR0b3ASAAGGoK8QDwcIGRobICkqKywtLjY6O1UkbnVsbNgJCgsMDQ4PEBES
+		ExQSFhcYVmlzTGVhZlZwYXJlbnRWJGNsYXNzWGNoaWxkcmVuVHBhdGhecmVw
+		b3NpdG9yeVR5cGVZaGFzaFZhbHVlVG5hbWWAA4AAgAuABIAAgA2ADoACWFBl
+		cnNvbmFsEADSHAsdH1pOUy5vYmplY3RzoR6ABYAM2AkKCwwNDg8QISITEiUm
+		JyiAB4ABgAuAAIAIgAmACoAGVVBIUENJEAFfEBovVXNlcnMvc3RlcGhlbi9T
+		aXRlcy9QSFBDSRABE2X7xPU8Gqfa0i8wMTJaJGNsYXNzbmFtZVgkY2xhc3Nl
+		c11TVEJyb3dzZXJOb2RlozM0NV1TVEJyb3dzZXJOb2RlWlNUVHJlZU5vZGVY
+		TlNPYmplY3TSLzA3OF5OU011dGFibGVBcnJheaM3OTVXTlNBcnJheRD/FAAA
+		AAAAAAAAzlkzUhbF8ilfEA9OU0tleWVkQXJjaGl2ZXLRPiJUcm9vdIABAAgA
+		EQAaACMALQAyADcASQBPAGAAZwBuAHUAfgCDAJIAnAChAKMApQCnAKkAqwCt
+		AK8AsQC6ALwAwQDMAM4A0ADSAOMA5QDnAOkA6wDtAO8A8QDzAPkA+wEYARoB
+		IwEoATMBPAFKAU4BXAFnAXABdQGEAYgBkAGSAaMBtQG4Ab0AAAAAAAACAQAA
+		AAAAAABAAAAAAAAAAAAAAAAAAAABvw==
+		</data>
+	</array>
+	<key>NSSplitView Subview Frames SearchViewDescSplitter</key>
+	<array>
+		<string>0.000000, 0.000000, 301.000000, 197.000000, NO, NO</string>
+		<string>0.000000, 198.000000, 301.000000, 272.000000, NO, NO</string>
+	</array>
+	<key>NSSplitView Subview Frames SearchViewLowerSplitter</key>
+	<array>
+		<string>0.000000, 0.000000, 301.000000, 470.000000, NO, NO</string>
+		<string>302.000000, 0.000000, 956.000000, 470.000000, NO, NO</string>
+	</array>
+	<key>NSSplitView Subview Frames SearchViewMainSplitter</key>
+	<array>
+		<string>0.000000, 0.000000, 1258.000000, 337.000000, NO, NO</string>
+		<string>0.000000, 347.000000, 1258.000000, 470.000000, NO, NO</string>
+	</array>
+	<key>NSSplitView Subview Frames repowindow_FileStatusViewMainSplitter</key>
+	<array>
+		<string>0.000000, 0.000000, 395.000000, 382.000000, NO, NO</string>
+		<string>396.000000, 0.000000, 513.000000, 382.000000, NO, NO</string>
+	</array>
+	<key>NSSplitView Subview Frames repowindow_FileStatusViewStagingSplitter</key>
+	<array>
+		<string>0.000000, 0.000000, 395.000000, 186.000000, NO, NO</string>
+		<string>0.000000, 187.000000, 395.000000, 195.000000, NO, NO</string>
+	</array>
+	<key>NSSplitView Subview Frames repowindow_LogViewDescSplitter</key>
+	<array>
+		<string>0.000000, 0.000000, 424.000000, 146.000000, NO, NO</string>
+		<string>0.000000, 147.000000, 424.000000, 131.000000, NO, NO</string>
+	</array>
+	<key>NSSplitView Subview Frames repowindow_LogViewLowerSplitter</key>
+	<array>
+		<string>0.000000, 0.000000, 424.000000, 278.000000, NO, NO</string>
+		<string>425.000000, 0.000000, 443.000000, 278.000000, NO, NO</string>
+	</array>
+	<key>NSSplitView Subview Frames repowindow_LogViewMainSplitter</key>
+	<array>
+		<string>0.000000, 0.000000, 868.000000, 161.000000, NO, NO</string>
+		<string>0.000000, 162.000000, 868.000000, 304.000000, NO, NO</string>
+	</array>
+	<key>NSTableView Columns logViewFileStatusTable</key>
+	<array>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErBGNvbDGG
+		</data>
+		<string>249</string>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErBGNvbDKG
+		</data>
+		<string>172</string>
+	</array>
+	<key>NSTableView Columns logtableview</key>
+	<array>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErBWdyYXBohg==
+		</data>
+		<string>87</string>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErEGRlc2NyaXB0aW9uZW50cnmG
+		</data>
+		<string>484</string>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErA3JldoY=
+		</data>
+		<string>53</string>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErDmNoYW5nZXNldHNob3J0hg==
+		</data>
+		<string>65</string>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErBHVzZXKG
+		</data>
+		<string>111</string>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErBGRhdGWG
+		</data>
+		<string>106</string>
+	</array>
+	<key>NSTableView Hidden Columns logViewFileStatusTable</key>
+	<array/>
+	<key>NSTableView Hidden Columns logtableview</key>
+	<array>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErA3JldoY=
+		</data>
+	</array>
+	<key>NSTableView Sort Ordering logViewFileStatusTable</key>
+	<array/>
+	<key>NSTableView Sort Ordering logtableview</key>
+	<array/>
+	<key>NSToolbar Configuration gittoolbar1.9</key>
+	<dict>
+		<key>TB Display Mode</key>
+		<integer>1</integer>
+		<key>TB Icon Size Mode</key>
+		<integer>1</integer>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+		<key>TB Size Mode</key>
+		<integer>1</integer>
+	</dict>
+	<key>NSWindow Frame Deployer</key>
+	<string>188 325 1050 487 0 0 1440 900 </string>
+	<key>STWelcomeStageAtlassianAccount</key>
+	<false/>
+	<key>STWelcomeStageCloning</key>
+	<false/>
+	<key>STWelcomeStageLicense</key>
+	<false/>
+	<key>STWelcomeStageRemotes</key>
+	<false/>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<key>SUHasLaunchedBefore</key>
+	<true/>
+	<key>SULastCheckTime</key>
+	<date>2016-03-10T23:13:46Z</date>
+	<key>SUScheduledCheckInterval</key>
+	<real>86400</real>
+	<key>SidebarWidth_</key>
+	<integer>140</integer>
+	<key>SidebarWidth_Deployer</key>
+	<integer>181</integer>
+	<key>SidebarWidth_deployer</key>
+	<integer>140</integer>
+	<key>SidebarWidth_dotfiles</key>
+	<integer>140</integer>
+	<key>agreedToEULA2</key>
+	<true/>
+	<key>anonymousUUID</key>
+	<string>ABB36F2F-40C9-4B55-BA49-669C6E4C8B6C</string>
+	<key>bookmarksStyleSize</key>
+	<integer>1</integer>
+	<key>bookmarksWindowOpen</key>
+	<false/>
+	<key>bulkRemoteProjectLinkDone</key>
+	<true/>
+	<key>commitPaneHeight</key>
+	<integer>160</integer>
+	<key>completedWelcomeWizardVersion</key>
+	<integer>3</integer>
+	<key>diffArgs</key>
+	<string></string>
+	<key>diffCmd</key>
+	<string></string>
+	<key>diffContextLevel</key>
+	<integer>3</integer>
+	<key>diffIgnoreWhitespace</key>
+	<false/>
+	<key>diffTool</key>
+	<integer>4</integer>
+	<key>fileStatusFilterMode</key>
+	<integer>1</integer>
+	<key>fileStatusViewMode2</key>
+	<integer>0</integer>
+	<key>gitCustomPath</key>
+	<string>/usr/local/Cellar/git/2.7.2/bin/git</string>
+	<key>gitFlowCustomPath</key>
+	<string>/usr/local/Cellar/git-flow/0.4.1/bin/git-flow</string>
+	<key>gitFlowWhichOne</key>
+	<integer>1</integer>
+	<key>gitGlobalIgnoreFile</key>
+	<string>/Users/stephen/.gitignore_global</string>
+	<key>gitLfsCustomPath</key>
+	<string>/usr/local/Cellar/git-lfs/1.1.2/bin/git-lfs</string>
+	<key>gitLfsWhichOne</key>
+	<integer>1</integer>
+	<key>gitWhichOne</key>
+	<integer>1</integer>
+	<key>globalUserEmail</key>
+	<string>stephen@rebelinblue.com</string>
+	<key>globalUserFullName</key>
+	<string>Stephen Ball</string>
+	<key>lastNewsCheck</key>
+	<date>2016-03-10T23:13:51Z</date>
+	<key>launchProcessingDone</key>
+	<integer>1</integer>
+	<key>logViewFollowFirst</key>
+	<false/>
+	<key>logViewOrdering</key>
+	<integer>1</integer>
+	<key>logViewSelectedBranches</key>
+	<string>*__STAllBranches__*</string>
+	<key>logViewShowRemotes</key>
+	<true/>
+	<key>mercuralGlobalIgnoreFile</key>
+	<string>/Users/stephen/.hgignore_global</string>
+	<key>mergeArgs</key>
+	<string></string>
+	<key>mergeCmd</key>
+	<string></string>
+	<key>mergeTool</key>
+	<integer>0</integer>
+	<key>previousCommitMessages</key>
+	<array>
+		<string>List of apps</string>
+		<string>IR Black theme</string>
+		<string>Added source code pro fonts</string>
+		<string>Work on server list</string>
+	</array>
+	<key>showFileStatusViewOptionsTip</key>
+	<false/>
+	<key>showStagingTip</key>
+	<false/>
+	<key>showToolbarTip</key>
+	<false/>
+	<key>terminalApp</key>
+	<integer>2</integer>
+	<key>windowRestorationMethod</key>
+	<integer>2</integer>
+</dict>
+</plist>

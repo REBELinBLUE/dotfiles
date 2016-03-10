@@ -16,6 +16,6 @@ SetFile -a V ~/VirtualBox\ VMs/
 cd /tmp
 curl -L https://github.com/adobe-fonts/source-code-pro/archive/2.010R-ro/1.030R-it.zip > fonts.zip
 unzip fonts.zip
-rm -f fonts.zip
 cp -f source-code-pro*/TTF/*.ttf ~/Library/Fonts
+rm -f fonts.zip
 rm -rf source-code-pro*
