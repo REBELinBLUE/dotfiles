@@ -8,9 +8,14 @@ if [[ ! "$(type -P composer)" ]]; then
     chmod +x $DOTFILES/bin/composer
 fi
 
-
-mkdir ~/bin
-mkdir ~/VirtualBox\ VMs/
-SetFile -a V ~/bin
-
+# Hide VirtualBox folder
+mkdir -q ~/VirtualBox\ VMs/
 SetFile -a V ~/VirtualBox\ VMs/
+
+# Install Source Code Pro fonts
+cd /tmp
+curl -L https://github.com/adobe-fonts/source-code-pro/archive/2.010R-ro/1.030R-it.zip > fonts.zip
+unzip fonts.zip
+rm -f fonts.zip
+cp -f source-code-pro*/TTF/*.ttf ~/Library/Fonts
+rm -rf source-code-pro*
