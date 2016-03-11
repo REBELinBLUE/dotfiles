@@ -1,0 +1,23 @@
+{
+    "bootstrapped": true,
+    "in_process_packages":
+    [
+    ],
+    "installed_packages":
+    [
+        "Alignment",
+        "DocBlockr",
+        "DotENV",
+        "EditorConfig",
+        "Function Name Display",
+        "Laravel 5 Snippets",
+        "Laravel Blade Highlighter",
+        "Markdown Preview",
+        "Package Control",
+        "SublimeCodeIntel",
+        "Theme - Afterglow",
+        "VCS Gutter",
+        "Vuejs Complete Package",
+        "Vuejs Snippets"
+    ]
+}

@@ -2,107 +2,257 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AppleLanguages</key>
+	<array>
+		<string>en</string>
+	</array>
 	<key>AtlassianAccountEmail</key>
 	<string>hipchat@stephen.rebelinblue.com</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>/usr/local/Cellar/git-lfs/1.1.2/bin</string>
+	<string>/usr/local/Cellar/git-flow/0.4.1/bin</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 498}</string>
+	<string>{704, 498}</string>
 	<key>NSOutlineView Items Sidebar_</key>
 	<array>
 		<integer>2060302418395990200</integer>
 		<integer>10451717551580144974</integer>
-		<integer>4092625529179183398</integer>
 	</array>
-	<key>NSOutlineView Items Sidebar_Deployer</key>
-	<array>
-		<integer>10451717551580144974</integer>
-		<integer>4092625529179183398</integer>
-		<integer>2060302418395990200</integer>
-	</array>
-	<key>NSOutlineView Items Sidebar_deployer</key>
+	<key>NSOutlineView Items Sidebar_deployment documentation</key>
 	<array>
 		<integer>2060302418395990200</integer>
 		<integer>10451717551580144974</integer>
 		<integer>4092625529179183398</integer>
 	</array>
-	<key>NSOutlineView Items Sidebar_dotfiles</key>
+	<key>NSOutlineView Items Sidebar_gitolite-admin</key>
+	<array>
+		<integer>-4031358047977103948</integer>
+		<integer>-7271385550997536499</integer>
+		<integer>4131957867619232802</integer>
+		<integer>-7333872305879256273</integer>
+		<integer>-7995026522129406642</integer>
+		<integer>4092625529179183398</integer>
+	</array>
+	<key>NSOutlineView Items Sidebar_nikeplusviewer</key>
+	<array>
+		<integer>-7995026522129406642</integer>
+		<integer>4092625529179183398</integer>
+		<integer>-7333872305879256273</integer>
+	</array>
+	<key>NSOutlineView Items Sidebar_running</key>
+	<array>
+		<integer>4131957867619232802</integer>
+		<integer>-7333872305879256273</integer>
+		<integer>-7271385550997536499</integer>
+		<integer>4092625529179183398</integer>
+		<integer>-7995026522129406642</integer>
+	</array>
+	<key>NSOutlineView Items Sidebar_user</key>
 	<array>
 		<integer>2060302418395990200</integer>
 		<integer>10451717551580144974</integer>
 		<integer>4092625529179183398</integer>
+	</array>
+	<key>NSOutlineView Items Sidebar_zf-tutorial</key>
+	<array>
+		<integer>4092625529179183398</integer>
+		<integer>-7333872305879256273</integer>
+		<integer>-7995026522129406642</integer>
+	</array>
+	<key>NSOutlineView Items bookmarksOutline</key>
+	<array>
+		<data>
+		YnBsaXN0MDDUAQIDBAUGZmdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
+		VCR0b3ASAAGGoK8QGgcIGRobIissLTY8RUZHSElRWltcXWFiY2RlVSRudWxs
+		2AkKCwwNDg8QERISFBUWFxhecmVwb3NpdG9yeVR5cGVWcGFyZW50VHBhdGhW
+		JGNsYXNzWGNoaWxkcmVuWWhhc2hWYWx1ZVRuYW1lVmlzTGVhZoAVgACAAIAP
+		gASAGYACgANTUEhQEADSDBwdHlpOUy5vYmplY3RzgBSjHyAhgAWACoAQ2AkK
+		CwwNDg8QIyQlFBIoKSqADYAIgBeAD4AAgBiABoAHWWZyYW1ld29yaxAB2AkK
+		CwwNDg8QERISFDIzFxiAFYAAgACAD4AJgBaAAoAD0gwcHTiAFKMfICGABYAK
+		gBDYCQoLDA0ODxAjJD8UEkJDKoANgAiADIAPgACADoALgAdXcnVubmluZ18Q
+		HC9Vc2Vycy9zdGVwaGVuL1NpdGVzL3J1bm5pbmcQARQAAAAAAAAAANybODAa
+		4Y/70kpLTE1aJGNsYXNzbmFtZVgkY2xhc3Nlc11TVEJyb3dzZXJOb2Rlo05P
+		UF1TVEJyb3dzZXJOb2RlWlNUVHJlZU5vZGVYTlNPYmplY3TYCQoLDA0ODxAj
+		JFQUEldYKoANgAiAEoAPgACAE4ARgAdXd2Vic2l0ZV8QHC9Vc2Vycy9zdGVw
+		aGVuL1NpdGVzL3dlYnNpdGUTAEWjVPxAag/SSkteX15OU011dGFibGVBcnJh
+		eaNeYFBXTlNBcnJheRD/FAAAAAAAAAAA1OAX7cohRwBfEB4vVXNlcnMvc3Rl
+		cGhlbi9TaXRlcy9mcmFtZXdvcmsUAAAAAAAAAACiszAXH5rRRRQAAAAAAAAA
+		ANTgF+3KIUcAXxAPTlNLZXllZEFyY2hpdmVy0WhpVHJvb3SAAQAIABEAGgAj
+		AC0AMgA3AFQAWgBrAHoAgQCGAI0AlgCgAKUArACuALAAsgC0ALYAuAC6ALwA
+		wADCAMcA0gDUANgA2gDcAN4A7wDxAPMA9QD3APkA+wD9AP8BCQELARwBHgEg
+		ASIBJAEmASgBKgEsATEBMwE3ATkBOwE9AU4BUAFSAVQBVgFYAVoBXAFeAWYB
+		hQGHAZgBnQGoAbEBvwHDAdEB3AHlAfYB+AH6AfwB/gIAAgICBAIGAg4CLQI2
+		AjsCSgJOAlYCWAJpAooCmwKsAr4CwQLGAAAAAAAAAgEAAAAAAAAAagAAAAAA
+		AAAAAAAAAAAAAsg=
+		</data>
+		<data>
+		YnBsaXN0MDDUAQIDBAUGSktYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
+		VCR0b3ASAAGGoK8QEgcIGRobICkqKzQ4P0BBRkdISVUkbnVsbNgJCgsMDQ4P
+		EBESEhQVFhcYXnJlcG9zaXRvcnlUeXBlVnBhcmVudFRwYXRoViRjbGFzc1hj
+		aGlsZHJlblloYXNoVmFsdWVUbmFtZVZpc0xlYWaAC4AAgACADYAEgBGAAoAD
+		VkRqYW5nbxAA0gwcHR5aTlMub2JqZWN0c4AKoR+ABdgJCgsMDQ4PECEiIxQS
+		JicogA+ACIAOgA2AAIAQgAaAB1hib29raW5ncxAB2AkKCwwNDg8QERISFDAx
+		FxiAC4AAgACADYAJgAyAAoAD0gwcHTaACqEfgAXSOTo7PFokY2xhc3NuYW1l
+		WCRjbGFzc2VzXk5TTXV0YWJsZUFycmF5ozs9PldOU0FycmF5WE5TT2JqZWN0
+		EP8TYRxwalXWzFfSOTpCQ11TVEJyb3dzZXJOb2Rlo0RFPl1TVEJyb3dzZXJO
+		b2RlWlNUVHJlZU5vZGVfEB0vVXNlcnMvc3RlcGhlbi9TaXRlcy9ib29raW5n
+		cxABEw7pchD8gAwcE2EccGpV1sxXXxAPTlNLZXllZEFyY2hpdmVy0UxNVHJv
+		b3SAAQAIABEAGgAjAC0AMgA3AEwAUgBjAHIAeQB+AIUAjgCYAJ0ApACmAKgA
+		qgCsAK4AsACyALQAuwC9AMIAzQDPANEA0wDkAOYA6ADqAOwA7gDwAPIA9AD9
+		AP8BEAESARQBFgEYARoBHAEeASABJQEnASkBKwEwATsBRAFTAVcBXwFoAWoB
+		cwF4AYYBigGYAaMBwwHFAc4B1wHpAewB8QAAAAAAAAIBAAAAAAAAAE4AAAAA
+		AAAAAAAAAAAAAAHz
+		</data>
+		<data>
+		YnBsaXN0MDDUAQIDBAUGWFlYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
+		VCR0b3ASAAGGoK8QFgcIGRobISorLDU6Q0RFRkdPU1RVVldVJG51bGzYCQoL
+		DA0ODxAREhIUFRYXGF5yZXBvc2l0b3J5VHlwZVZwYXJlbnRUcGF0aFYkY2xh
+		c3NYY2hpbGRyZW5ZaGFzaFZhbHVlVG5hbWVWaXNMZWFmgBGAAIAAgA+ABIAV
+		gAKAA1NpT1MQANIMHB0eWk5TLm9iamVjdHOAEKIfIIAFgArYCQoLDA0ODxAi
+		IyQUEicoKYANgAiAE4APgACAFIAGgAdebmlrZXBsdXN2aWV3ZXIQAdgJCgsM
+		DQ4PEBESEhQxMhcYgBGAAIAAgA+ACYASgAKAA9IMHB03gBCiHyCABYAK2AkK
+		CwwNDg8QIiM9FBJAQSmADYAIgAyAD4AAgA6AC4AHWU9sZCBOaWtlK18QMi9V
+		c2Vycy9zdGVwaGVuL0RvY3VtZW50cy9EZXZlbG9wbWVudC9pT1MvT2xkIE5p
+		a2UrEAEUAAAAAAAAAAD3F7+UfGELo9JISUpLWiRjbGFzc25hbWVYJGNsYXNz
+		ZXNdU1RCcm93c2VyTm9kZaNMTU5dU1RCcm93c2VyTm9kZVpTVFRyZWVOb2Rl
+		WE5TT2JqZWN00khJUFFeTlNNdXRhYmxlQXJyYXmjUFJOV05TQXJyYXkQ/xQA
+		AAAAAAAAAKanmNlk2Hx7XxA3L1VzZXJzL3N0ZXBoZW4vRG9jdW1lbnRzL0Rl
+		dmVsb3BtZW50L2lPUy9uaWtlcGx1c3ZpZXdlchQAAAAAAAAAALttHCa9b9u+
+		FAAAAAAAAAAApqeY2WTYfHtfEA9OU0tleWVkQXJjaGl2ZXLRWltUcm9vdIAB
+		AAgAEQAaACMALQAyADcAUABWAGcAdgB9AIIAiQCSAJwAoQCoAKoArACuALAA
+		sgC0ALYAuAC8AL4AwwDOANAA0wDVANcA6ADqAOwA7gDwAPIA9AD2APgBBwEJ
+		ARoBHAEeASABIgEkASYBKAEqAS8BMQE0ATYBOAFJAUsBTQFPAVEBUwFVAVcB
+		WQFjAZgBmgGrAbABuwHEAdIB1gHkAe8B+AH9AgwCEAIYAhoCKwJlAnYChwKZ
+		ApwCoQAAAAAAAAIBAAAAAAAAAFwAAAAAAAAAAAAAAAAAAAKj
+		</data>
+		<data>
+		YnBsaXN0MDDUAQIDBAUGWFlYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
+		VCR0b3ASAAGGoK8QFgcIGRobISorLDU6Q0RFRkdPU1RVVldVJG51bGzYCQoL
+		DA0ODxAREhIUFRYXGF5yZXBvc2l0b3J5VHlwZVZwYXJlbnRUcGF0aFYkY2xh
+		c3NYY2hpbGRyZW5ZaGFzaFZhbHVlVG5hbWVWaXNMZWFmgBGAAIAAgA+ABIAV
+		gAKAA15aZW5kIEZyYW1ld29yaxAA0gwcHR5aTlMub2JqZWN0c4AQoh8ggAWA
+		CtgJCgsMDQ4PECIjJBQSJygpgA2ACIATgA+AAIAUgAaAB1Zwb3J0YWwQAdgJ
+		CgsMDQ4PEBESEhQxMhcYgBGAAIAAgA+ACYASgAKAA9IMHB03gBCiHyCABYAK
+		2AkKCwwNDg8QIiM9FBJAQSmADYAIgAyAD4AAgA6AC4AHW3pmLXR1dG9yaWFs
+		XxAgL1VzZXJzL3N0ZXBoZW4vU2l0ZXMvemYtdHV0b3JpYWwQARQAAAAAAAAA
+		AJlv6cniMIcW0khJSktaJGNsYXNzbmFtZVgkY2xhc3Nlc11TVEJyb3dzZXJO
+		b2Rlo0xNTl1TVEJyb3dzZXJOb2RlWlNUVHJlZU5vZGVYTlNPYmplY3TSSElQ
+		UV5OU011dGFibGVBcnJheaNQUk5XTlNBcnJheRD/E2xDg5LOybA4XxAbL1Vz
+		ZXJzL3N0ZXBoZW4vU2l0ZXMvcG9ydGFsE13PcvPC/c9ZE2xDg5LOybA4XxAP
+		TlNLZXllZEFyY2hpdmVy0VpbVHJvb3SAAQAIABEAGgAjAC0AMgA3AFAAVgBn
+		AHYAfQCCAIkAkgCcAKEAqACqAKwArgCwALIAtAC2ALgAxwDJAM4A2QDbAN4A
+		4ADiAPMA9QD3APkA+wD9AP8BAQEDAQoBDAEdAR8BIQEjASUBJwEpASsBLQEy
+		ATQBNwE5ATsBTAFOAVABUgFUAVYBWAFaAVwBaAGLAY0BngGjAa4BtwHFAckB
+		1wHiAesB8AH/AgMCCwINAhYCNAI9AkYCWAJbAmAAAAAAAAACAQAAAAAAAABc
+		AAAAAAAAAAAAAAAAAAACYg==
+		</data>
 	</array>
 	<key>NSOutlineView Items repoBrowserRemote</key>
 	<array>
 		<data>
-		YnBsaXN0MDDUAQIDBAUGPD1YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
-		VCR0b3ASAAGGoK8QDwcIGRobICkqKywtLjY6O1UkbnVsbNgJCgsMDQ4PEBES
-		ExQSFhcYVmlzTGVhZlZwYXJlbnRWJGNsYXNzWGNoaWxkcmVuVHBhdGhecmVw
-		b3NpdG9yeVR5cGVZaGFzaFZhbHVlVG5hbWWAA4AAgAuABIAAgA2ADoACWFBl
-		cnNvbmFsEADSHAsdH1pOUy5vYmplY3RzoR6ABYAM2AkKCwwNDg8QISITEiUm
-		JyiAB4ABgAuAAIAIgAmACoAGVVBIUENJEAFfEBovVXNlcnMvc3RlcGhlbi9T
-		aXRlcy9QSFBDSRABE2X7xPU8Gqfa0i8wMTJaJGNsYXNzbmFtZVgkY2xhc3Nl
-		c11TVEJyb3dzZXJOb2RlozM0NV1TVEJyb3dzZXJOb2RlWlNUVHJlZU5vZGVY
-		TlNPYmplY3TSLzA3OF5OU011dGFibGVBcnJheaM3OTVXTlNBcnJheRD/FAAA
-		AAAAAAAAzlkzUhbF8ilfEA9OU0tleWVkQXJjaGl2ZXLRPiJUcm9vdIABAAgA
-		EQAaACMALQAyADcASQBPAGAAZwBuAHUAfgCDAJIAnAChAKMApQCnAKkAqwCt
-		AK8AsQC6ALwAwQDMAM4A0ADSAOMA5QDnAOkA6wDtAO8A8QDzAPkA+wEYARoB
-		IwEoATMBPAFKAU4BXAFnAXABdQGEAYgBkAGSAaMBtQG4Ab0AAAAAAAACAQAA
-		AAAAAABAAAAAAAAAAAAAAAAAAAABvw==
+		YnBsaXN0MDDUAQIDBAUGVldYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
+		VCR0b3ASAAGGoK8QFwcIGRobIissLS4vMDhBQkNETU5PUFRVVSRudWxs2AkK
+		CwwNDg8QERITFBIWFxhWaXNMZWFmVnBhcmVudFYkY2xhc3NYY2hpbGRyZW5U
+		cGF0aF5yZXBvc2l0b3J5VHlwZVloYXNoVmFsdWVUbmFtZYADgACAC4AEgACA
+		FYAWgAJYUGVyc29uYWwQANIcCx0hWk5TLm9iamVjdHOjHh8ggAWADIAQgBTY
+		CQoLDA0ODxAjJBMSJygpKoAHgAGAC4AAgAiACYAKgAZYZGVwbG95ZXIQAV8Q
+		HS9Vc2Vycy9zdGVwaGVuL1NpdGVzL2RlcGxveWVyEAEUAAAAAAAAAAC6nZjq
+		4fGoCNIxMjM0WiRjbGFzc25hbWVYJGNsYXNzZXNdU1RCcm93c2VyTm9kZaM1
+		NjddU1RCcm93c2VyTm9kZVpTVFRyZWVOb2RlWE5TT2JqZWN02AkKCwwNDg8Q
+		IyQTEj0oP0CAB4ABgAuAAIAOgAmAD4ANVVBIUENJXxAaL1VzZXJzL3N0ZXBo
+		ZW4vU2l0ZXMvUEhQQ0kTcQTRaA8Z+fXYCQoLDA0ODxAjJBMSSShLTIAHgAGA
+		C4AAgBKACYATgBFfEBhkZXBsb3ltZW50IGRvY3VtZW50YXRpb25fECcvVXNl
+		cnMvc3RlcGhlbi9TaXRlcy9waHBkZXBsb3ltZW50L3VzZXIUAAAAAAAAAADs
+		Hj2xyeI7I9IxMlFSXk5TTXV0YWJsZUFycmF5o1FTN1dOU0FycmF5EP8UAAAA
+		AAAAAADeI7EvjD5TEl8QD05TS2V5ZWRBcmNoaXZlctFYJFRyb290gAEACAAR
+		ABoAIwAtADIANwBRAFcAaABvAHYAfQCGAIsAmgCkAKkAqwCtAK8AsQCzALUA
+		twC5AMIAxADJANQA2ADaANwA3gDgAPEA8wD1APcA+QD7AP0A/wEBAQoBDAEs
+		AS4BPwFEAU8BWAFmAWoBeAGDAYwBnQGfAaEBowGlAacBqQGrAa0BswHQAdkB
+		6gHsAe4B8AHyAfQB9gH4AfoCFQI/AlACVQJkAmgCcAJyAoMClQKYAp0AAAAA
+		AAACAQAAAAAAAABaAAAAAAAAAAAAAAAAAAACnw==
 		</data>
 	</array>
 	<key>NSSplitView Subview Frames SearchViewDescSplitter</key>
 	<array>
-		<string>0.000000, 0.000000, 301.000000, 197.000000, NO, NO</string>
-		<string>0.000000, 198.000000, 301.000000, 272.000000, NO, NO</string>
+		<string>0.000000, 0.000000, 301.000000, 206.500000, NO, NO</string>
+		<string>0.000000, 207.500000, 301.000000, 284.000000, NO, NO</string>
 	</array>
 	<key>NSSplitView Subview Frames SearchViewLowerSplitter</key>
 	<array>
-		<string>0.000000, 0.000000, 301.000000, 470.000000, NO, NO</string>
-		<string>302.000000, 0.000000, 956.000000, 470.000000, NO, NO</string>
+		<string>0.000000, 0.000000, 301.000000, 491.500000, NO, NO</string>
+		<string>302.000000, 0.000000, 1139.000000, 491.500000, NO, NO</string>
 	</array>
 	<key>NSSplitView Subview Frames SearchViewMainSplitter</key>
 	<array>
-		<string>0.000000, 0.000000, 1258.000000, 337.000000, NO, NO</string>
-		<string>0.000000, 347.000000, 1258.000000, 470.000000, NO, NO</string>
+		<string>0.000000, 0.000000, 1441.000000, 352.500000, NO, NO</string>
+		<string>0.000000, 362.500000, 1441.000000, 491.500000, NO, NO</string>
+	</array>
+	<key>NSSplitView Subview Frames commitsheet_FileStatusViewMainSplitter</key>
+	<array>
+		<string>0.000000, 0.000000, 384.000000, 332.000000, NO</string>
+		<string>385.000000, 0.000000, 349.000000, 332.000000, NO</string>
+	</array>
+	<key>NSSplitView Subview Frames commitsheet_FileStatusViewStagingSplitter</key>
+	<array>
+		<string>0.000000, 0.000000, 384.000000, 129.000000, NO</string>
+		<string>0.000000, 139.000000, 384.000000, 148.000000, NO</string>
 	</array>
 	<key>NSSplitView Subview Frames repowindow_FileStatusViewMainSplitter</key>
 	<array>
-		<string>0.000000, 0.000000, 395.000000, 382.000000, NO, NO</string>
-		<string>396.000000, 0.000000, 513.000000, 382.000000, NO, NO</string>
+		<string>0.000000, 0.000000, 703.000000, 794.000000, NO, NO</string>
+		<string>704.000000, 0.000000, 737.000000, 794.000000, NO, NO</string>
 	</array>
 	<key>NSSplitView Subview Frames repowindow_FileStatusViewStagingSplitter</key>
 	<array>
-		<string>0.000000, 0.000000, 395.000000, 186.000000, NO, NO</string>
-		<string>0.000000, 187.000000, 395.000000, 195.000000, NO, NO</string>
+		<string>0.000000, 0.000000, 703.000000, 367.500000, NO, NO</string>
+		<string>0.000000, 368.500000, 703.000000, 425.500000, NO, NO</string>
 	</array>
 	<key>NSSplitView Subview Frames repowindow_LogViewDescSplitter</key>
 	<array>
-		<string>0.000000, 0.000000, 424.000000, 146.000000, NO, NO</string>
-		<string>0.000000, 147.000000, 424.000000, 131.000000, NO, NO</string>
+		<string>0.000000, 0.000000, 404.000000, 323.000000, NO, NO</string>
+		<string>0.000000, 324.000000, 404.000000, 373.500000, NO, NO</string>
 	</array>
 	<key>NSSplitView Subview Frames repowindow_LogViewLowerSplitter</key>
 	<array>
-		<string>0.000000, 0.000000, 424.000000, 278.000000, NO, NO</string>
-		<string>425.000000, 0.000000, 443.000000, 278.000000, NO, NO</string>
+		<string>0.000000, 0.000000, 404.000000, 697.500000, NO, NO</string>
+		<string>404.000000, 0.000000, 1405.000000, 697.500000, NO, NO</string>
 	</array>
 	<key>NSSplitView Subview Frames repowindow_LogViewMainSplitter</key>
 	<array>
-		<string>0.000000, 0.000000, 868.000000, 161.000000, NO, NO</string>
-		<string>0.000000, 162.000000, 868.000000, 304.000000, NO, NO</string>
+		<string>0.000000, 0.000000, 1809.000000, 386.500000, NO, NO</string>
+		<string>0.000000, 387.500000, 1809.000000, 723.500000, NO, NO</string>
 	</array>
-	<key>NSTableView Columns logViewFileStatusTable</key>
+	<key>NSTableView Columns hostedProjectTable</key>
 	<array>
 		<data>
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
-		hAErBGNvbDGG
+		hAErCHJlcG90eXBlhg==
 		</data>
-		<string>249</string>
+		<string>16</string>
 		<data>
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
-		hAErBGNvbDKG
+		hAErBG5hbWWG
 		</data>
-		<string>172</string>
+		<string>95</string>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErC2Rlc2NyaXB0aW9uhg==
+		</data>
+		<string>487</string>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErB3ByaXZhdGWG
+		</data>
+		<string>16</string>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErBGhvc3SG
+		</data>
+		<string>72</string>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErBU93bmVyhg==
+		</data>
+		<string>64</string>
 	</array>
 	<key>NSTableView Columns logtableview</key>
 	<array>
@@ -115,7 +265,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErEGRlc2NyaXB0aW9uZW50cnmG
 		</data>
-		<string>484</string>
+		<string>1425</string>
 		<data>
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErA3JldoY=
@@ -137,7 +287,7 @@
 		</data>
 		<string>106</string>
 	</array>
-	<key>NSTableView Hidden Columns logViewFileStatusTable</key>
+	<key>NSTableView Hidden Columns hostedProjectTable</key>
 	<array/>
 	<key>NSTableView Hidden Columns logtableview</key>
 	<array>
@@ -146,10 +296,27 @@
 		hAErA3JldoY=
 		</data>
 	</array>
-	<key>NSTableView Sort Ordering logViewFileStatusTable</key>
-	<array/>
+	<key>NSTableView Sort Ordering hostedProjectTable</key>
+	<array>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErBG5hbWWG
+		</data>
+		<true/>
+	</array>
 	<key>NSTableView Sort Ordering logtableview</key>
 	<array/>
+	<key>NSToolbar Configuration bookmarksToolbar1.4</key>
+	<dict>
+		<key>TB Display Mode</key>
+		<integer>2</integer>
+		<key>TB Icon Size Mode</key>
+		<integer>1</integer>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+		<key>TB Size Mode</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSToolbar Configuration gittoolbar1.9</key>
 	<dict>
 		<key>TB Display Mode</key>
@@ -161,8 +328,18 @@
 		<key>TB Size Mode</key>
 		<integer>1</integer>
 	</dict>
-	<key>NSWindow Frame Deployer</key>
-	<string>188 325 1050 487 0 0 1440 900 </string>
+	<key>NSWindow Frame ::Default::</key>
+	<string>434 186 1950 1132 0 0 2560 1417 </string>
+	<key>NSWindow Frame bookmarks</key>
+	<string>285 229 987 758 0 0 1920 1057 </string>
+	<key>NSWindow Frame deployment documentation</key>
+	<string>489 484 1220 780 0 0 2560 1417 </string>
+	<key>NSWindow Frame gitcommitsheet</key>
+	<string>557 416 774 626 0 0 1920 1178 </string>
+	<key>NSWindow Frame gitolite-admin</key>
+	<string>280 203 1486 742 0 0 1920 1178 </string>
+	<key>NSWindow Frame repobrowserwindow</key>
+	<string>380 748 480 622 0 0 2560 1417 </string>
 	<key>STWelcomeStageAtlassianAccount</key>
 	<false/>
 	<key>STWelcomeStageCloning</key>
@@ -176,29 +353,37 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-03-10T23:13:46Z</date>
+	<date>2016-03-11T18:33:15Z</date>
 	<key>SUScheduledCheckInterval</key>
 	<real>86400</real>
 	<key>SidebarWidth_</key>
 	<integer>140</integer>
-	<key>SidebarWidth_Deployer</key>
-	<integer>181</integer>
-	<key>SidebarWidth_deployer</key>
+	<key>SidebarWidth_deployment documentation</key>
 	<integer>140</integer>
 	<key>SidebarWidth_dotfiles</key>
 	<integer>140</integer>
+	<key>SidebarWidth_gitolite-admin</key>
+	<integer>140</integer>
+	<key>SidebarWidth_nikeplusviewer</key>
+	<integer>140</integer>
+	<key>SidebarWidth_running</key>
+	<integer>140</integer>
+	<key>SidebarWidth_user</key>
+	<integer>140</integer>
+	<key>SidebarWidth_zf-tutorial</key>
+	<integer>140</integer>
+	<key>agreedToEULA</key>
+	<true/>
 	<key>agreedToEULA2</key>
 	<true/>
 	<key>anonymousUUID</key>
-	<string>ABB36F2F-40C9-4B55-BA49-669C6E4C8B6C</string>
+	<string>3B7B025F-1DE3-44D7-915C-D1A7E487B01F</string>
 	<key>bookmarksStyleSize</key>
 	<integer>1</integer>
 	<key>bookmarksWindowOpen</key>
-	<false/>
+	<true/>
 	<key>bulkRemoteProjectLinkDone</key>
 	<true/>
-	<key>commitPaneHeight</key>
-	<integer>160</integer>
 	<key>completedWelcomeWizardVersion</key>
 	<integer>3</integer>
 	<key>diffArgs</key>
@@ -213,18 +398,18 @@
 	<integer>4</integer>
 	<key>fileStatusFilterMode</key>
 	<integer>1</integer>
-	<key>fileStatusViewMode2</key>
+	<key>fileStatusViewMode</key>
 	<integer>0</integer>
 	<key>gitCustomPath</key>
-	<string>/usr/local/Cellar/git/2.7.2/bin/git</string>
+	<string>/usr/local/bin/git</string>
 	<key>gitFlowCustomPath</key>
-	<string>/usr/local/Cellar/git-flow/0.4.1/bin/git-flow</string>
+	<string>/usr/local/bin/git-flow</string>
 	<key>gitFlowWhichOne</key>
 	<integer>1</integer>
 	<key>gitGlobalIgnoreFile</key>
 	<string>/Users/stephen/.gitignore_global</string>
 	<key>gitLfsCustomPath</key>
-	<string>/usr/local/Cellar/git-lfs/1.1.2/bin/git-lfs</string>
+	<string>/usr/local/bin/git-lfs</string>
 	<key>gitLfsWhichOne</key>
 	<integer>1</integer>
 	<key>gitWhichOne</key>
@@ -234,15 +419,19 @@
 	<key>globalUserFullName</key>
 	<string>Stephen Ball</string>
 	<key>lastNewsCheck</key>
-	<date>2016-03-10T23:13:51Z</date>
+	<date>2016-03-11T18:33:17Z</date>
+	<key>lastNewsDisplayedID</key>
+	<integer>1</integer>
 	<key>launchProcessingDone</key>
 	<integer>1</integer>
 	<key>logViewFollowFirst</key>
 	<false/>
 	<key>logViewOrdering</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>logViewSelectedBranches</key>
 	<string>*__STAllBranches__*</string>
+	<key>logViewShowAllBranches</key>
+	<true/>
 	<key>logViewShowRemotes</key>
 	<true/>
 	<key>mercuralGlobalIgnoreFile</key>
@@ -253,16 +442,7 @@
 	<string></string>
 	<key>mergeTool</key>
 	<integer>0</integer>
-	<key>previousCommitMessages</key>
-	<array>
-		<string>List of apps</string>
-		<string>IR Black theme</string>
-		<string>Added source code pro fonts</string>
-		<string>Work on server list</string>
-	</array>
 	<key>showFileStatusViewOptionsTip</key>
-	<false/>
-	<key>showStagingTip</key>
 	<false/>
 	<key>showToolbarTip</key>
 	<false/>
