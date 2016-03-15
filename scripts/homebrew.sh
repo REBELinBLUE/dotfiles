@@ -83,5 +83,9 @@ brew install httpie gist asciinema
 brew install python
 pip install bottle pysnmp zeroconf netifaces influxdb statsd matplotlib pystache py-cpuinfo glances
 
+pip install --upgrade pip
+pip install httpie-oauth
+pip install httpie-jwt-auth
+
 # Remove outdated versions from the cellar.
 brew cleanup
