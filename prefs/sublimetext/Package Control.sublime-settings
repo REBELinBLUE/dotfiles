@@ -5,21 +5,22 @@
     ],
     "installed_packages":
     [
-        "Alignment",
-        "DocBlockr",
-        "DotENV",
-        "EditorConfig",
-        "Function Name Display",
-        "Laravel 5 Snippets",
-        "Laravel Blade Highlighter",
-        "Markdown Preview",
-        "Package Control",
-        "Pretty JSON",
-        "SublimeCodeIntel",
-        "Theme - Afterglow",
-        "TrailingSpaces",
-        "VCS Gutter",
-        "Vuejs Complete Package",
-        "Vuejs Snippets"
+		"AdvancedNewFile",
+		"Alignment",
+		"DocBlockr",
+		"DotENV",
+		"EditorConfig",
+		"Function Name Display",
+		"Laravel 5 Snippets",
+		"Laravel Blade Highlighter",
+		"Markdown Preview",
+		"Package Control",
+		"Pretty JSON",
+		"SublimeCodeIntel",
+		"Theme - Afterglow",
+		"TrailingSpaces",
+		"VCS Gutter",
+		"Vuejs Complete Package",
+		"Vuejs Snippets"
     ]
 }
