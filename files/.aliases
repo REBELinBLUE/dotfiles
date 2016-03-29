@@ -10,6 +10,9 @@ alias ls='ls -F -G --color=auto --quoting-style=literal'
 alias dir='dir -F -G --color=auto --quoting-style=literal'
 alias ll='ls -l --color=auto --quoting-style=literal'
 
+# Use ccat
+alias cat='ccat'
+
 # Prompt for confirmation
 alias cp='cp -iv'
 alias rm='rm -i'
