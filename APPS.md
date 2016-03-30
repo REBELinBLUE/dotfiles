@@ -41,3 +41,5 @@
 * CleanMyDrive 2
 * DaisyDisk
 * 1Password
+* Stache
+* Dropshare
