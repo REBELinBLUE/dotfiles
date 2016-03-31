@@ -16,12 +16,11 @@ if [ -f `brew --prefix bash-git-prompt`/share/gitprompt.sh ]; then
     GIT_PROMPT_SEPARATOR=' '
     GIT_PROMPT_BRANCH="${BLUE}"
 
-    #GIT_PROMPT_COMMAND_OK="${GREEN}✔ " # displays as ✔
-    #GIT_PROMPT_COMMAND_FAIL="${RED}✘-_LAST_COMMAND_STATE_ " # displays as ✘-1 for exit code 1
-    #_LAST_COMMAND_INDICATOR_
+    GIT_PROMPT_COMMAND_OK="${GREEN}✔${RESET}" # displays as ✔
+    GIT_PROMPT_COMMAND_FAIL="${RED}✘-_LAST_COMMAND_STATE_${RESET}" # displays as ✘-1 for exit code 1
 
-    GIT_PROMPT_START="\n${GREEN}\u ${RESET}in ${PINK}\w${RESET}"
-    GIT_PROMPT_END="${RESET}\n${RESET}\$ "
+    GIT_PROMPT_START="\n${GREEN}\u@\h ${RESET}in ${PINK}\w${RESET}"
+    GIT_PROMPT_END="${RESET}\n_LAST_COMMAND_INDICATOR_${RESET} \$ "
 
     source `brew --prefix bash-git-prompt`/share/gitprompt.sh
 else
