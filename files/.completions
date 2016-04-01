@@ -12,7 +12,7 @@ fi
 
 if [ -f `brew --repository`/Library/Contributions/brew_bash_completion.sh ]; then
     source `brew --repository`/Library/Contributions/brew_bash_completion.sh
-fi;
+fi
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
