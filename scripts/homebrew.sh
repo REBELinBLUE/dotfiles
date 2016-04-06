@@ -69,10 +69,12 @@ brew tap homebrew/completions
 # Install completions
 brew install vagrant-completion bash-completion bash-git-prompt
 
-# Install media tools
-brew install mplayer media-info xvid ffmpeg rtmpdump atomicparsley id3v2
+# Install ffmpeg for Dropshare
+brew install ffmpeg
+ln -s `which ffmpeg` /usr/local/bin/ffmpeg-static
 
-# Install get iplayer
+# Install  get iplayer & media tools
+brew install mplayer media-info xvid rtmpdump atomicparsley id3v2
 brew tap dinkypumpkin/get_iplayer
 brew update
 brew install --with-deps get_iplayer
