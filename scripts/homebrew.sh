@@ -81,6 +81,8 @@ brew install --with-deps get_iplayer
 
 brew install httpie gist asciinema
 
+brew install homebrew/binary/ngrok2
+  
 # Install glances
 brew install python
 pip install bottle pysnmp zeroconf netifaces influxdb statsd matplotlib pystache py-cpuinfo glances
