@@ -11,11 +11,3 @@ fi
 # Hide VirtualBox folder
 mkdir -q ~/VirtualBox\ VMs/
 SetFile -a V ~/VirtualBox\ VMs/
-
-# Install Source Code Pro fonts
-cd /tmp
-curl -L https://github.com/adobe-fonts/source-code-pro/archive/2.010R-ro/1.030R-it.zip > fonts.zip
-unzip fonts.zip
-cp -f source-code-pro*/TTF/*.ttf ~/Library/Fonts
-rm -f fonts.zip
-rm -rf source-code-pro*
