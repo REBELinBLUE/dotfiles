@@ -91,5 +91,9 @@ pip install --upgrade pip
 pip install httpie-oauth
 pip install httpie-jwt-auth
 
+brew cask install qlmarkdown qlcolorcode qlstephen quicklook-json qlprettypatch  quicklook-csv qlimagesize
+
+
+
 # Remove outdated versions from the cellar.
 brew cleanup
