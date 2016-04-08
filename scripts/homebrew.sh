@@ -91,9 +91,12 @@ pip install --upgrade pip
 pip install httpie-oauth
 pip install httpie-jwt-auth
 
+# Install quicklook plugins
 brew cask install qlmarkdown qlcolorcode qlstephen quicklook-json qlprettypatch  quicklook-csv qlimagesize
 
-
+# Install fonts
+brew tap caskroom/fonts  
+brew cask install font-sauce-code-powerline font-source-code-pro font-source-sans-pro font-source-serif-pro
 
 # Remove outdated versions from the cellar.
 brew cleanup
