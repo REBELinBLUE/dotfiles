@@ -11,3 +11,5 @@ fi
 # Hide VirtualBox folder
 mkdir -q ~/VirtualBox\ VMs/
 SetFile -a V ~/VirtualBox\ VMs/
+
+mkdir -q ~/Vagrant
