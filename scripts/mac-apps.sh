@@ -25,6 +25,7 @@ mas install 803453959 # Slack
 mas install 416812579 # File Multi Tool 5
 mas install 924726344 # Deliveries
 mas install 870659406 # Stache
+mas install 497799835 # Xcode 7.3
 
 # mas install 409201541 # Pages
 # mas install 409183694 # Keynote
