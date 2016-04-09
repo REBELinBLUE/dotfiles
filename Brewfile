@@ -8,6 +8,7 @@ tap 'homebrew/completions'
 tap 'homebrew/binary'
 tap 'alexandregz/MXhomebrew'
 tap 'alehouse/homebrew-unofficial'
+tap 'argon/mas'
 
 # Make sure apps get installed in system Applications dir
 cask_args appdir: '/Applications'
@@ -84,12 +85,12 @@ brew 'unzip'
 brew 'mycli'
 brew 'pgcli'
 brew 'bashmarks'
-brew 'argon/mas/mas'
+brew 'mas'
 
 # Apps
 cask 'changes'
 cask 'cleanmymac'
-#cask 'cocktail' # Currently a 404
+# cask 'cocktail' # Currently a 404
 cask 'dockertoolbox'
 cask 'dropshare'
 cask 'flame'
