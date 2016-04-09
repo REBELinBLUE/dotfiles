@@ -265,6 +265,9 @@ defaults write com.torusknot.SourceTreeNotMAS STWelcomeStageLicense -bool false
 defaults write com.torusknot.SourceTreeNotMAS STWelcomeStageRemotes -bool false
 defaults write com.torusknot.SourceTreeNotMAS SUEnableAutomaticChecks -bool true
 
+cp -r ./prefs/sourcetree/actions.plist "${HOME}/Library/Application Support/SourceTree/" 2> /dev/null
+plutil -convert binary1 "${HOME}/Library/Application Support/SourceTree/actions.plist"
+
 ###############################################################################
 # Sublime Text                                                                #
 ###############################################################################
