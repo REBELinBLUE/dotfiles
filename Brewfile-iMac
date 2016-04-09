@@ -1,0 +1,24 @@
+# Additional brewfile only for main computer
+
+tap 'dinkypumpkin/get_iplayer'
+
+brew 'mplayer'
+brew 'media-info'
+brew 'xvid'
+brew 'tvnamer'
+brew 'rtmpdump'
+brew 'atomicparsley'
+brew 'id3v2'
+brew 'get_iplayer', args: ['with-deps']
+brew 'libdvdcss'
+
+cask 'bbc-iplayer-downloads'
+cask 'crashplan'
+cask 'handbrake'
+cask 'handbrakecli'
+cask 'logitech-harmony'
+cask 'mdrp'
+cask 'otomatic'
+cask 'videomonkey'
+cask 'batch-rip-actions-for-automator.rb'
+cask 'fairmount'
