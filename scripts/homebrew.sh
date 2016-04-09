@@ -13,7 +13,8 @@ chsh -s $BASHPATH # will set for current user only.
 
 SIP_STATUS=$(csrutil status)
 if [[ $SIP_STATUS == *"enabled"* ]]; then
-    echo "SIP is enabled so /etc/shells can not be modified!";
+    echo -e "\e[41;1m SIP is enabled so /etc/shells can not be modified. \e[0m"
+    read -p "Press [Enter] to continue..."
 else
     sudo echo $BASHPATH >> /etc/shells
 fi
