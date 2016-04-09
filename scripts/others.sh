@@ -34,15 +34,10 @@ pip install httpie-jwt-auth
 
 # Install additional CLIs
 cp ./bin/notify-send /usr/local/bin/notify-send
-ln -s "/Applications/Changes.app/Contents/Resources/chdiff" /usr/local/bin/chdiff
-ln -s "/Applications/SourceTree.app/Contents/Resources/stree" /usr/local/bin/stree
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
-ln -s "/Applications/MacDown.app/Contents/SharedSupport/bin/macdown" /usr/local/bin/macdown
 ln -s `which ffmpeg` /usr/local/bin/ffmpeg-static
 
-chmod +x /usr/local/bin/chdiff
 chmod +x /usr/local/bin/notify-send
-chmod +x /usr/local/bin/stree
-chmod +x /usr/local/bin/subl
-chmod +x /usr/local/bin/macdown
 chmod +x /usr/local/bin/ffmpeg-static
+
+
+# TODO Now we need to prompt for composer auth key, asciinema key, gist key and ngrok key
