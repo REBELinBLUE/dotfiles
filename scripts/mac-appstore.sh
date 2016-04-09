@@ -8,7 +8,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 brew install argon/mas/mas
 
-# TODO: Prompt to login to the mas
+# TODO: Prompt to login to the MAS
 
 mas install 402434720 # Name Mangler
 mas install 1054607607 # Helium

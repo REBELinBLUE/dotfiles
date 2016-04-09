@@ -6,7 +6,6 @@ tap 'homebrew/bundle'
 tap 'homebrew/dupes'
 tap 'homebrew/completions'
 tap 'homebrew/binary'
-tap 'dinkypumpkin/get_iplayer'
 tap 'alexandregz/MXhomebrew'
 
 # Make sure apps get installed in system Applications dir
@@ -46,13 +45,6 @@ brew 'bash-git-prompt'
 
 # Install media tools
 brew 'ffmpeg'
-brew 'mplayer'
-brew 'media-info'
-brew 'xvid'
-brew 'rtmpdump'
-brew 'atomicparsley'
-brew 'id3v2'
-brew 'get_iplayer', args: ['with-deps']
 
 # Install other tools
 brew 'ed', args: ['with-default-names']
@@ -90,6 +82,7 @@ brew 'openssh'
 brew 'rsync'
 brew 'unzip'
 brew 'mycli'
+brew 'pgcli'
 brew 'bashmarks'
 
 # Apps
@@ -99,15 +92,19 @@ cask 'dockertoolbox'
 cask 'dropshare'
 cask 'flame'
 cask 'flux'
-#cask 'gitter'
+cask 'houdahgeo'
+case 'garmin-express'
+case 'garmin-virb-edit'
+cask 'gitter'
 cask 'imageoptim'
 cask 'iterm2-beta'
 cask 'macdown'
-#cask 'onyx'
+cask 'near-lock'
+cask 'onyx'
 cask 'sequel-pro'
 cask 'sourcetree'
 cask 'sublime-text3'
-# cask 'things' # Version is so ridiculously out of date
+# cask 'things' # Version in cask is so ridiculously out of date
 cask 'transmission'
 cask 'transmit'
 cask 'vagrant'
@@ -132,3 +129,19 @@ cask 'font-sauce-code-powerline'
 cask 'font-source-code-pro'
 cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
+
+# Only on main computer
+# tap 'dinkypumpkin/get_iplayer'
+# brew 'mplayer'
+# brew 'media-info'
+# brew 'xvid'
+# brew 'rtmpdump'
+# brew 'atomicparsley'
+# brew 'id3v2'
+# brew 'get_iplayer', args: ['with-deps']
+# cask 'mdrp'
+# cask 'videomonkey'
+# cask 'otomatic'
+# cask 'handbrake'
+# cask 'handbrakecli'
+# cask 'logitech-harmony'
