@@ -226,7 +226,7 @@ defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
 ###############################################################################
 
 # Install the IR Dark theme for iTerm
-open "./prefs/IR_Black.itermcolors"
+open -a /Applications/iTerm2.app "./prefs/IR_Black.itermcolors"
 open "./prefs/IR_Black.terminal"
 
 # Don’t display the annoying prompt when quitting iTerm
@@ -266,4 +266,8 @@ defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -stri
 
 # Install Sublime Text settings
 mkdir -p "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/"
-cp -r prefs/sublimetext/*.sublime-settings "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/" 2> /dev/null
+mkdir -p "${HOME}/Library/Application Support/Sublime Text 3/Installed Packages/"
+
+curl -O https://packagecontrol.io/Package%20Control.sublime-package 2> /dev/null
+mv "Package Controll.sublime-package" "${HOME}/Library/Application Support/Sublime Text 3/Installed Packages/" 2> /dev/null
+cp -r ./prefs/sublimetext/*.sublime-settings "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/" 2> /dev/null
