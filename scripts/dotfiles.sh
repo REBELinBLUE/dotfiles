@@ -17,3 +17,5 @@ if [ -f ~/.bashrc ]; then
 fi
 
 ln -s ~/.dotfiles/files/.bashrc ~/.bashrc
+
+source ~/.bashrc
