@@ -22,6 +22,7 @@ fi
 SetFile -a V ~/VirtualBox\ VMs/
 
 # Install glances
+sudo chown -R $(whoami) /usr/local
 pip install bottle pysnmp zeroconf netifaces influxdb statsd matplotlib pystache py-cpuinfo glances
 
 # Install HTTPie plugins
@@ -30,6 +31,7 @@ pip install --upgrade pip
 sudo chown -R $(whoami) /usr/local
 pip install httpie-oauth
 pip install httpie-jwt-auth
+sudo chown -R $(whoami) /usr/local
 
 # Install additional CLIs
 cp bin/chdiff /usr/local/bin/chdiff
