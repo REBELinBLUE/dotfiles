@@ -18,24 +18,24 @@ brew 'wget', args: ['with-iri']
 brew 'curl', args: ['with-openssl']
 
 # Install GNU tool
-brew 'findutils', args['with-default-names']
+brew 'findutils', args: ['with-default-names']
 brew 'coreutils'
 brew 'moreutils'
 brew 'binutils'
-brew 'gnu-indent', args['with-default-names']
-brew 'gnu-getopt', args['with-default-names']
-brew 'gnu-tar', args['with-default-names']
-brew 'gnu-which', args['with-default-names']
-brew 'gnu-sed', args['with-default-names']
+brew 'gnu-indent', args: ['with-default-names']
+brew 'gnu-getopt', args: ['with-default-names']
+brew 'gnu-tar', args: ['with-default-names']
+brew 'gnu-which', args: ['with-default-names']
+brew 'gnu-sed', args: ['with-default-names']
 
 # Install Bash 4
 brew 'bash'
 
 # Install more recent versions of some OS X tools
-brew 'homebrew/dupes/grep', args['with-default-names']
-brew 'vim', args['override-system-vi']
+brew 'homebrew/dupes/grep', args: ['with-default-names']
+brew 'vim', args: ['override-system-vi']
 brew 'homebrew/dupes/diffutils'
-brew 'homebrew/dupes/nano', args['disable-nls', 'enable-color', 'enable-extra', 'enable-multibuffer', 'enable-nanorc', 'enable-utf8']
+brew 'homebrew/dupes/nano', args: ['disable-nls', 'enable-color', 'enable-extra', 'enable-multibuffer', 'enable-nanorc', 'enable-utf8']
 brew 'python'
 
 # Install bash completions
@@ -51,11 +51,11 @@ brew 'xvid'
 brew 'rtmpdump'
 brew 'atomicparsley'
 brew 'id3v2'
-brew 'get_iplayer', args['with-deps']
+brew 'get_iplayer', args: ['with-deps']
 
 # Install other tools
-brew 'ed', args['with-default-names']
-brew 'wdiff', args['with-gettext']
+brew 'ed', args: ['with-default-names']
+brew 'wdiff', args: ['with-gettext']
 brew 'httpie'
 brew 'gist'
 brew 'asciinema'
