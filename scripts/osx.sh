@@ -268,6 +268,6 @@ defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -stri
 mkdir -p "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/"
 mkdir -p "${HOME}/Library/Application Support/Sublime Text 3/Installed Packages/"
 
-curl -O https://packagecontrol.io/Package%20Control.sublime-package 2> /dev/null
+curl -o "Package Control.sublime-package" https://packagecontrol.io/Package%20Control.sublime-package
 mv "Package Control.sublime-package" "${HOME}/Library/Application Support/Sublime Text 3/Installed Packages/" 2> /dev/null
 cp -r ./prefs/sublimetext/*.sublime-settings "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/" 2> /dev/null
