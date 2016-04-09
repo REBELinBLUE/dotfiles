@@ -6,8 +6,6 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-brew install argon/mas/mas
-
 # TODO: Prompt to login to the MAS
 
 mas install 402434720 # Name Mangler
@@ -36,5 +34,3 @@ mas install 497799835 # Xcode 7.3
 # mas install 408981434 # iMovie
 # mas install 465069360 # My Movies Pro
 # mas install 451907568 # Paprika Recipe Manager
-
-brew remove argon/mas/mas

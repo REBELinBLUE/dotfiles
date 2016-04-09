@@ -84,6 +84,7 @@ brew 'unzip'
 brew 'mycli'
 brew 'pgcli'
 brew 'bashmarks'
+brew 'argon/mas/mas'
 
 # Apps
 cask 'changes'
@@ -115,7 +116,7 @@ cask 'virtualbox'
 cask 'virtualbox-extension-pack'
 cask 'viscosity'
 cask 'vlc'
-case 'undercover'
+cask 'undercover'
 
 # Quicklook
 cask 'qlcolorcode'
