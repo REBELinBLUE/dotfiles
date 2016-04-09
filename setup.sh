@@ -19,3 +19,7 @@ brew tap homebrew/bundle
 brew bundle
 
 exec ./scripts/homebrew.sh
+exec ./scripts/others.sh
+exec ./scripts/vagrant.sh
+#exec ./scripts/osx.sh
+exec ./scripts/dotfiles.sh

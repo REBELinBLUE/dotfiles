@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# ~/.osx — https://mths.be/osx
-
 # Ask for the administrator password upfront
 sudo -v
 

@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Ask for the administrator password upfront
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
@@ -12,18 +13,7 @@ chsh -s $BASHPATH # will set for current user only.
 echo $BASH_VERSION
 
 # Patch bashmarks
-cd `brew --prefix bashmarks`/libexec/
-curl https://patch-diff.githubusercontent.com/raw/huyng/bashmarks/pull/52.patch | patch bashmarks.sh
-cd -
+curl https://patch-diff.githubusercontent.com/raw/huyng/bashmarks/pull/52.patch | patch `brew --prefix bashmarks`/libexec/bashmarks.sh
 
 # Symlink ffmpeg for Dropshare
 ln -s `which ffmpeg` /usr/local/bin/ffmpeg-static
-
-# Install glances
-pip install bottle pysnmp zeroconf netifaces influxdb statsd matplotlib pystache py-cpuinfo glances
-
-# Install HTTPie plugins
-pip install --upgrade pip
-pip install httpie-oauth
-pip install httpie-jwt-auth
-

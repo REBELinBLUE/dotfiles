@@ -1,9 +1,5 @@
 export DOTFILES=~/.dotfiles
 
-# Add binaries into the path
-[[ -d $DOTFILES/bin ]] && PATH=$DOTFILES/bin:$PATH
-export PATH
-
 # Load the shell dotfiles
 for file in $DOTFILES/files/.{bash_prompt,exports,aliases,functions,extra}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
