@@ -6,16 +6,12 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-if [ -f ~/.bash_profile ]; then
-    rm ~/.bash_profile
-fi
+for file in .dotfiles/files/.{bashrc,bash_profile,editorconfig,inputrc,gitconfig,gitignore_global,nanorc,tvnamer.json}; do
+    if [ -f "~/$file" ]; then
+        rm "~/$file"
+    fi
 
-ln -s ~/.dotfiles/files/.bash_profile ~/.bash_profile
-
-if [ -f ~/.bashrc ]; then
-    rm ~/.bashrc
-fi
-
-ln -s ~/.dotfiles/files/.bashrc ~/.bashrc
+    ln -s ~/.dotfiles/files/$file ~/$file
+done
 
 source ~/.bashrc
