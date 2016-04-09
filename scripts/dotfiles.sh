@@ -37,11 +37,11 @@ fi
 
 ln -s ~/.dotfiles/files/.gitconfig ~/.gitconfig
 
-if [ -f ~/.gitignore_global ]; then
-    rm -f ~/.gitignore_global
+if [ -f ~/.gitignore ]; then
+    rm -f ~/.gitignore
 fi
 
-ln -s ~/.dotfiles/files/.gitignore_global ~/.gitignore_global
+ln -s ~/.dotfiles/files/.gitignore ~/.gitignore
 
 if [ -f ~/.nanorc ]; then
     rm -f ~/.nanorc
