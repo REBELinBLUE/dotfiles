@@ -120,7 +120,7 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 sudo systemsetup -settimezone "Europe/London" > /dev/null
 
 # Improve the quality of bluetooth audio
-defaults write com.apple.BluetoothAudioAgent “Apple Bitpool Min (editable)” -int 40
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
 ###############################################################################
 # Screen                                                                      #
