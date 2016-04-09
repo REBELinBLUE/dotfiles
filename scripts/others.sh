@@ -33,14 +33,16 @@ pip install httpie-oauth
 pip install httpie-jwt-auth
 
 # Install additional CLIs
-cp ./bin/chdiff /usr/local/bin/chdiff
 cp ./bin/notify-send /usr/local/bin/notify-send
-cp ./bin/stree /usr/local/bin/stree
-cp ./bin/subl /usr/local/bin/subl
-cp ./bin/macdown /usr/local/bin/macdown
+ln -s "/Applications/Changes.app/Contents/Resources/chdiff" /usr/local/bin/chdiff
+ln -s "/Applications/SourceTree.app/Contents/Resources/stree" /usr/local/bin/stree
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+ln -s "/Applications/MacDown.app/Contents/SharedSupport/bin/macdown" /usr/local/bin/macdown
 
 chmod +x /usr/local/bin/chdiff
 chmod +x /usr/local/bin/notify-send
 chmod +x /usr/local/bin/stree
 chmod +x /usr/local/bin/subl
 chmod +x /usr/local/bin/macdown
+
+
