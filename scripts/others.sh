@@ -35,8 +35,10 @@ cp ./bin/chdiff /usr/local/bin/chdiff
 cp ./bin/notify-send /usr/local/bin/notify-send
 cp ./bin/stree /usr/local/bin/stree
 cp ./bin/subl /usr/local/bin/subl
+cp ./bin/macdown /usr/local/bin/macdown
 
 chmod +x /usr/local/bin/chdiff
 chmod +x /usr/local/bin/notify-send
 chmod +x /usr/local/bin/stree
 chmod +x /usr/local/bin/subl
+chmod +x /usr/local/bin/macdown
