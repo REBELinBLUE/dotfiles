@@ -16,4 +16,6 @@ curl https://patch-diff.githubusercontent.com/raw/fgrehm/vagrant-notify/pull/22.
 # Install homestead
 #vagrant box add --provider virtualbox laravel/homestead
 
-mkdir -q ~/Vagrant/
+if [ ! -d ~/Vagrant/ ]; then
+    mkdir ~/Vagrant/
+fi
