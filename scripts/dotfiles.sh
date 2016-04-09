@@ -55,5 +55,11 @@ fi
 
 ln -s ~/.dotfiles/files/.tvnamer.json ~/.tvnamer.json
 
+if [ -f ~/.ssh/config ]; then
+    rm  ~/.ssh/config
+fi
+
+ln -s ~/.dotfiles/files/.ssh/config ~/.ssh/config
+
 
 source ~/.bashrc
