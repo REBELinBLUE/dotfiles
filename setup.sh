@@ -18,22 +18,6 @@ brew update
 brew tap homebrew/bundle
 brew bundle
 
-print_error() {
-    printf " [✖] %s\n" "$1"
-}
-
-print_result() {
-    [ $1 -eq 0 ] \
-        && print_success "$2" \
-        || print_error "$2"
-
-    return $1
-}
-
-print_success() {
-    printf " [✔] %s\n" "$1"
-}
-
 source scripts/homebrew.sh
 source scripts/others.sh
 source scripts/vagrant.sh
