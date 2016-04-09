@@ -36,7 +36,7 @@ if [ -f ~/.gitconfig ]; then
     rm -f ~/.gitconfig
 fi
 
-ln -s ~/.dotfiles/files/.gitconfig ~/.gitconfig
+echo -e "[include]\n    path = $HOME/.dotfiles/files/.gitconfig" > $HOME/.gitconfig
 
 if [ -f ~/.gitignore ]; then
     rm -f ~/.gitignore
