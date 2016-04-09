@@ -7,6 +7,7 @@ tap 'homebrew/dupes'
 tap 'homebrew/completions'
 tap 'homebrew/binary'
 tap 'alexandregz/MXhomebrew'
+tap 'alehouse/homebrew-unofficial'
 
 # Make sure apps get installed in system Applications dir
 cask_args appdir: '/Applications'
@@ -86,6 +87,7 @@ brew 'bashmarks'
 
 # Apps
 cask 'changes'
+cask 'cleanmymac'
 #cask 'cocktail' # Currently a 404
 cask 'dockertoolbox'
 cask 'dropshare'
@@ -113,6 +115,7 @@ cask 'virtualbox'
 cask 'virtualbox-extension-pack'
 cask 'viscosity'
 cask 'vlc'
+case 'undercover'
 
 # Quicklook
 cask 'qlcolorcode'
@@ -128,20 +131,3 @@ cask 'font-sauce-code-powerline'
 cask 'font-source-code-pro'
 cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
-
-# Only on main computer
-# tap 'dinkypumpkin/get_iplayer'
-# brew 'mplayer'
-# brew 'media-info'
-# brew 'xvid'
-# brew 'tvnamer'
-# brew 'rtmpdump'
-# brew 'atomicparsley'
-# brew 'id3v2'
-# brew 'get_iplayer', args: ['with-deps']
-# cask 'mdrp'
-# cask 'videomonkey'
-# cask 'otomatic'
-# cask 'handbrake'
-# cask 'handbrakecli'
-# cask 'logitech-harmony'

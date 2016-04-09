@@ -28,14 +28,12 @@ export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 
 The following apps need to be installed manually
 
-* BBC iPlayer Downloads
-* Clean My Mac 2
-* Crashplan
-* Firefox
-* Google Chrome
+* Batch Rip Actions for Automator
+* Firefox - Needs to be installed manually so 1password will run
+* Google Chrome - Needs to be installed manually so 1password will run
 * MetaX
 * Moneywiz 2
-* Things - Out of date version is cask
+* Things - Out of date version in cask
 * WD Access & TPLink PLC Device Scan
 
 Mac appstore apps can be installed with `scripts/mac-appstore.sh`
