@@ -300,15 +300,3 @@ defaults read com.torusknot.SourceTreeNotMAS terminalApp -int 2
 # Install Sublime Text settings
 mkdir -p ~/Library/Application\ Support/Sublime\ Text*/Packages/User/
 cp -r prefs/sublimetext/*.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/ 2> /dev/null
-
-###############################################################################
-# Kill affected applications                                                  #
-###############################################################################
-
-for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
-    "Dock" "Finder" "Google Chrome" "Mail" "Messages" \
-    "Photos" "Safari" "SystemUIServer" "Terminal" \
-    "Transmission" "Tweetbot" "Twitter" "iCal"; do
-    killall "${app}" &> /dev/null
-done
-echo "Done. Note that some of these changes require a logout/restart to take effect."
