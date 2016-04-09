@@ -18,8 +18,8 @@ brew update
 brew tap homebrew/bundle
 brew bundle
 
-exec ./scripts/homebrew.sh
-exec ./scripts/others.sh
-exec ./scripts/vagrant.sh
-#exec ./scripts/osx.sh
-exec ./scripts/dotfiles.sh
+source scripts/homebrew.sh
+source scripts/others.sh
+source scripts/vagrant.sh
+source scripts/osx.sh
+source scripts/dotfiles.sh
