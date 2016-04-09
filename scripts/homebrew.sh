@@ -6,14 +6,14 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Add bash to the shells
+# Add bash to the shells - Have to do this manually on El Captian, disabling rootless
 BASHPATH=$(brew --prefix)/bin/bash
-sudo echo $BASHPATH >> /etc/shells
+#sudo echo $BASHPATH >> /etc/shells
 chsh -s $BASHPATH # will set for current user only.
-echo $BASH_VERSION
+#echo $BASH_VERSION
 
 # Patch bashmarks
-curl https://patch-diff.githubusercontent.com/raw/huyng/bashmarks/pull/52.patch | patch `brew --prefix bashmarks`/libexec/bashmarks.sh
+curl https://patch-diff.githubusercontent.com/raw/huyng/bashmarks/pull/52.patch | patch -d `brew --prefix bashmarks`/libexec/ bashmarks.sh
 
 # Symlink ffmpeg for Dropshare
 ln -s `which ffmpeg` /usr/local/bin/ffmpeg-static
