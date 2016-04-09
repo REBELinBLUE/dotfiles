@@ -278,25 +278,25 @@ defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -stri
 # Source Tree                                                                 #
 ###############################################################################
 
-defaults read com.torusknot.SourceTreeNotMAS AtlassianAccountEmail -string "hipchat@stephen.rebelinblue.com"
-defaults read com.torusknot.SourceTreeNotMAS agreedToEULA -bool true
-defaults read com.torusknot.SourceTreeNotMAS agreedToEULA2 -bool true
-defaults read com.torusknot.SourceTreeNotMAS diffTool -int 4
-defaults read com.torusknot.SourceTreeNotMAS fileStatusFilterMode -int 1
-defaults read com.torusknot.SourceTreeNotMAS fileStatusViewMode -int 0
-defaults read com.torusknot.SourceTreeNotMAS gitCustomPath -string "/usr/local/bin/git"
-defaults read com.torusknot.SourceTreeNotMAS gitFlowCustomPath -string "/usr/local/bin/git-flow"
-defaults read com.torusknot.SourceTreeNotMAS gitFlowWhichOne -int 1
-defaults read com.torusknot.SourceTreeNotMAS gitGlobalIgnoreFile -string "/Users/stephen/.gitignore_global"
-defaults read com.torusknot.SourceTreeNotMAS gitLfsCustomPath -string "/usr/local/bin/git-lfs"
-defaults read com.torusknot.SourceTreeNotMAS gitLfsWhichOne -int 1
-defaults read com.torusknot.SourceTreeNotMAS gitWhichOne -int 1
-defaults read com.torusknot.SourceTreeNotMAS terminalApp -int 2
+# defaults read com.torusknot.SourceTreeNotMAS AtlassianAccountEmail -string "hipchat@stephen.rebelinblue.com"
+# defaults read com.torusknot.SourceTreeNotMAS agreedToEULA -bool true
+# defaults read com.torusknot.SourceTreeNotMAS agreedToEULA2 -bool true
+# defaults read com.torusknot.SourceTreeNotMAS diffTool -int 4
+# defaults read com.torusknot.SourceTreeNotMAS fileStatusFilterMode -int 1
+# defaults read com.torusknot.SourceTreeNotMAS fileStatusViewMode -int 0
+# defaults read com.torusknot.SourceTreeNotMAS gitCustomPath -string "/usr/local/bin/git"
+# defaults read com.torusknot.SourceTreeNotMAS gitFlowCustomPath -string "/usr/local/bin/git-flow"
+# defaults read com.torusknot.SourceTreeNotMAS gitFlowWhichOne -int 1
+# defaults read com.torusknot.SourceTreeNotMAS gitGlobalIgnoreFile -string "/Users/stephen/.gitignore_global"
+# defaults read com.torusknot.SourceTreeNotMAS gitLfsCustomPath -string "/usr/local/bin/git-lfs"
+# defaults read com.torusknot.SourceTreeNotMAS gitLfsWhichOne -int 1
+# defaults read com.torusknot.SourceTreeNotMAS gitWhichOne -int 1
+# defaults read com.torusknot.SourceTreeNotMAS terminalApp -int 2
 
 ###############################################################################
 # Sublime Text                                                                #
 ###############################################################################
 
 # Install Sublime Text settings
-mkdir -p ~/Library/Application\ Support/Sublime\ Text*/Packages/User/
-cp -r prefs/sublimetext/*.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/ 2> /dev/null
+mkdir -p "~/Library/Application Support/Sublime Text 3/Packages/User/"
+cp -r prefs/sublimetext/*.sublime-settings "~/Library/Application Support/Sublime Text 3/Packages/User/" 2> /dev/null

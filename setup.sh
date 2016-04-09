@@ -37,5 +37,5 @@ print_success() {
 source scripts/homebrew.sh
 source scripts/others.sh
 source scripts/vagrant.sh
-source scripts/osx.sh
 source scripts/dotfiles.sh
+source scripts/osx.sh
