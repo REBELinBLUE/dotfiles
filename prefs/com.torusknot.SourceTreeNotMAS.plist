@@ -9,7 +9,7 @@
 	<key>AtlassianAccountEmail</key>
 	<string>hipchat@stephen.rebelinblue.com</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>/usr/local/Cellar/git-flow/0.4.1/bin</string>
+	<string>/usr/local</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{704, 498}</string>
 	<key>NSOutlineView Items Sidebar_</key>
