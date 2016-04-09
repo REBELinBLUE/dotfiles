@@ -89,7 +89,7 @@ brew 'less'
 brew 'openssh'
 brew 'rsync'
 brew 'unzip'
-brew 'pgcli'
+#brew 'pgcli'
 brew 'mycli'
 brew 'bashmarks'
 

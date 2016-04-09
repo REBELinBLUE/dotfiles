@@ -26,7 +26,9 @@ sudo chown -R $(whoami) /usr/local
 pip install bottle pysnmp zeroconf netifaces influxdb statsd matplotlib pystache py-cpuinfo glances
 
 # Install HTTPie plugins
+sudo chown -R $(whoami) /usr/local
 pip install --upgrade pip
+sudo chown -R $(whoami) /usr/local
 pip install httpie-oauth
 pip install httpie-jwt-auth
 

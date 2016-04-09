@@ -181,7 +181,7 @@ defaults write com.apple.dock autohide -bool true
 #defaults write com.apple.dock showhidden -bool true
 
 # Reset Launchpad, but keep the desktop wallpaper intact
-find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
+find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -delete
 
 ###############################################################################
 # TextEdit                                                                    #
@@ -226,8 +226,8 @@ defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
 ###############################################################################
 
 # Install the IR Dark theme for iTerm
-open -a /Applications/iTerm2.app "./prefs/IR_Black.itermcolors"
-open "./prefs/IR_Black.terminal"
+open -g -a /Applications/iTerm.app "./prefs/IR_Black.itermcolors"
+open -g -a "./prefs/IR_Black.terminal"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool true
