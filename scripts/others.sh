@@ -38,6 +38,3 @@ ln -s `which ffmpeg` /usr/local/bin/ffmpeg-static
 
 chmod +x /usr/local/bin/notify-send
 chmod +x /usr/local/bin/ffmpeg-static
-
-
-# TODO Now we need to prompt for composer auth key, asciinema key, gist key and ngrok key

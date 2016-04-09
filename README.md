@@ -39,3 +39,14 @@ The following apps need to be installed manually
 * WD Access & TPLink PLC Device Scan
 
 Mac appstore apps can be installed with `scripts/mac-appstore.sh`
+
+## Final steps
+
+Run the following commands to authenticate with various services
+
+```bash
+$ composer config --global github-oauth.github.com OAUTH_TOKEN
+$ gist --login
+$ ngrok authtoken OAUTH_TOKEN
+$ asciinema auth
+```
