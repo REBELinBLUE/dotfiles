@@ -26,7 +26,7 @@ export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 
 ## Addtional Apps
 
-The following apps need to be installed mainly
+The following apps need to be installed manually
 
 * BBC iPlayer Downloads
 * Clean My Mac 2
