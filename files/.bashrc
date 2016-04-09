@@ -1,7 +1,7 @@
 export DOTFILES=~/.dotfiles
 
 # Load the shell dotfiles
-for file in $DOTFILES/files/.{bash_prompt,exports,aliases,functions,extra}; do
+for file in $DOTFILES/files/.{bash_prompt,exports,aliases,extra}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
