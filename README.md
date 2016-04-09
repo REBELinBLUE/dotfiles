@@ -32,6 +32,7 @@ The following apps need to be installed manually
 * Google Chrome - Needs to be installed manually so 1password will run
 * MetaX
 * Moneywiz 2
+* Tuneskit
 * Things - Out of date version in cask
 * WD Access & TPLink PLC Device Scan
 
