@@ -1,5 +1,5 @@
 # Load the shell dotfiles
-for file in $HOME/.dotfiles/files/.{bash_prompt,exports,aliases}; do
+for file in $HOME/.dotfiles/files/.{bash_prompt,completions,exports,aliases}; do
     if [ -r "$file" ] && [ -f "$file" ]; then
         source "$file"
     fi
