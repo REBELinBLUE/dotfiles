@@ -6,11 +6,17 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Add bash to the shells - Have to do this manually on El Captian, disabling rootless
+# Add bash to the shells - Rootless needs to be disabled
+# http://osxdaily.com/2015/10/05/disable-rootless-system-integrity-protection-mac-os-x/
 BASHPATH=$(brew --prefix)/bin/bash
-#sudo echo $BASHPATH >> /etc/shells
 chsh -s $BASHPATH # will set for current user only.
-#echo $BASH_VERSION
+
+SIP_STATUS=$(csrutil status)
+if [[ $SIP_STATUS == *"enabled"* ]]; then
+    echo "SIP is enabled so /etc/shells can not be modified!";
+else
+    sudo echo $BASHPATH >> /etc/shells
+fi
 
 # Patch bashmarks
 curl https://patch-diff.githubusercontent.com/raw/huyng/bashmarks/pull/52.patch | patch -d `brew --prefix bashmarks`/libexec/ bashmarks.sh
