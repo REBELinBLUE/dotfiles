@@ -259,6 +259,11 @@ defaults write com.torusknot.SourceTreeNotMAS gitLfsCustomPath -string "/usr/loc
 defaults write com.torusknot.SourceTreeNotMAS gitLfsWhichOne -int 1
 defaults write com.torusknot.SourceTreeNotMAS gitWhichOne -int 1
 defaults write com.torusknot.SourceTreeNotMAS terminalApp -int 2
+defaults write com.torusknot.SourceTreeNotMAS STWelcomeStageAtlassianAccount -bool false
+defaults write com.torusknot.SourceTreeNotMAS STWelcomeStageCloning -bool false
+defaults write com.torusknot.SourceTreeNotMAS STWelcomeStageLicense -bool false
+defaults write com.torusknot.SourceTreeNotMAS STWelcomeStageRemotes -bool false
+defaults write com.torusknot.SourceTreeNotMAS SUEnableAutomaticChecks -bool true
 
 ###############################################################################
 # Sublime Text                                                                #
