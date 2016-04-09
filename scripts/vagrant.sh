@@ -16,7 +16,6 @@ curl https://patch-diff.githubusercontent.com/raw/fgrehm/vagrant-notify/pull/22.
 # Install homestead
 vagrant box add --provider virtualbox laravel/homestead
 
-
 SetFile -a V ~/VirtualBox\ VMs/
 
 if [ ! -d ~/Vagrant/ ]; then
