@@ -28,7 +28,6 @@ export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 
 The following apps need to be installed manually
 
-* Batch Rip Actions for Automator
 * Firefox - Needs to be installed manually so 1password will run
 * Google Chrome - Needs to be installed manually so 1password will run
 * MetaX
