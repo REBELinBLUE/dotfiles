@@ -31,10 +31,10 @@ pip install httpie-oauth
 pip install httpie-jwt-auth
 
 # Install additional CLIs
-cp --remove-destination ./bin/chdiff /usr/local/bin/chdiff
-cp --remove-destination ./bin/notify-send /usr/local/bin/notify-send
-cp --remove-destination ./bin/stree /usr/local/bin/stree
-cp --remove-destination ./bin/subl /usr/local/bin/subl
+cp ./bin/chdiff /usr/local/bin/chdiff
+cp ./bin/notify-send /usr/local/bin/notify-send
+cp ./bin/stree /usr/local/bin/stree
+cp ./bin/subl /usr/local/bin/subl
 
 chmod +x /usr/local/bin/chdiff
 chmod +x /usr/local/bin/notify-send
