@@ -20,7 +20,9 @@ else
 fi
 
 # Patch bashmarks
-curl https://patch-diff.githubusercontent.com/raw/huyng/bashmarks/pull/52.patch | patch -d `brew --prefix bashmarks`/libexec/ bashmarks.sh
+curl https://patch-diff.githubusercontent.com/raw/huyng/bashmarks/pull/52.patch | patch -t -d `brew --prefix bashmarks`/libexec/ bashmarks.sh
 
 # Symlink ffmpeg for Dropshare
-ln -s `which ffmpeg` /usr/local/bin/ffmpeg-static
+ln -s `which ffmpeg` /usr/local/bin/ffmpeg-static > /dev/null
+
+SetFile -a V ~/VirtualBox\ VMs/

@@ -7,11 +7,11 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 for file in .dotfiles/files/.{bashrc,bash_profile,editorconfig,inputrc,gitconfig,gitignore_global,nanorc,tvnamer.json}; do
-    if [ -f "~/$file" ]; then
-        rm "~/$file"
+    if [ -f "${HOME}/${file}" ]; then
+        rm "${HOME}/${file}"
     fi
 
-    ln -s ~/.dotfiles/files/$file ~/$file
+    ln -s "${HOME}/.dotfiles/files/${file}" "${HOME}/${file}"
 done
 
 source ~/.bashrc
