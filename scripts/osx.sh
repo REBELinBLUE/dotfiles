@@ -56,6 +56,8 @@ defaults write com.apple.systemuiserver menuExtras -array \
     "/System/Library/CoreServices/Menu Extras/Battery.menu" \
     "/System/Library/CoreServices/Menu Extras/Clock.menu"
 
+# Disable menu bar transparency
+defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
 # Set sidebar icon size to small
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
@@ -104,6 +106,11 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightC
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 
+# Trackpad: Swiping with 3 and 4
+defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool true
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerHorizSwipeGesture -int 1
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 1
+
 # Set language and text formats
 defaults write NSGlobalDomain AppleLanguages -array "en"
 defaults write NSGlobalDomain AppleLocale -string "en_GB@"
@@ -112,6 +119,9 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "Europe/London" > /dev/null
+
+# Improve the quality of bluetooth audio
+defaults write com.apple.BluetoothAudioAgent “Apple Bitpool Min (editable)” -int 40
 
 ###############################################################################
 # Screen                                                                      #
@@ -168,6 +178,9 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+
+# Disable the warning when changing a file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”
@@ -242,61 +255,52 @@ defaults write org.m0k.transmission WarningLegal -bool false
 # Bypass the annoyingly slow t.co URL shortener
 defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
 
-
 ###############################################################################
 # iTerm 2                                                                     #
 ###############################################################################
 
-# # Install the IR Dark theme for iTerm
+# Install the IR Dark theme for iTerm
 open "./prefs/IR_Black.itermcolors"
 open "./prefs/IR_Black.terminal"
 
-# # Don’t display the annoying prompt when quitting iTerm
-defaults write com.googlecode.iterm2 PromptOnQuit -bool false
-
-# TODO - Finish the settings below
-
-
-
+# Don’t display the annoying prompt when quitting iTerm
+defaults write com.googlecode.iterm2 PromptOnQuit -bool true
 
 ###############################################################################
 # Mail                                                                        #
 ###############################################################################
 
-# Disable send and reply animations in Mail.app
-# defaults write com.apple.mail DisableReplyAnimations -bool true
-# defaults write com.apple.mail DisableSendAnimations -bool true
-
-# # Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
-# defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
-
-# # Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app
-# defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" -string "@\\U21a9"
-
-# # Display emails in threaded mode, sorted by date (oldest at the top)
-# defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreadedMode" -string "yes"
-# defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortedDescending" -string "yes"
-# defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -string "received-date"
-
-# # Disable inline attachments (just show the icons)
-# defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
-
-# # Disable automatic spell checking
-# defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled"
+# Display emails in threaded mode, sorted by date (oldest at the top)
+defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreadedMode" -string "yes"
+defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortedDescending" -string "yes"
+defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -string "received-date"
 
 ###############################################################################
 # Source Tree                                                                 #
 ###############################################################################
 
+defaults read com.torusknot.SourceTreeNotMAS AtlassianAccountEmail -string "hipchat@stephen.rebelinblue.com"
+defaults read com.torusknot.SourceTreeNotMAS agreedToEULA -bool true
+defaults read com.torusknot.SourceTreeNotMAS agreedToEULA2 -bool true
+defaults read com.torusknot.SourceTreeNotMAS diffTool -int 4
+defaults read com.torusknot.SourceTreeNotMAS fileStatusFilterMode -int 1
+defaults read com.torusknot.SourceTreeNotMAS fileStatusViewMode -int 0
+defaults read com.torusknot.SourceTreeNotMAS gitCustomPath -string "/usr/local/bin/git"
+defaults read com.torusknot.SourceTreeNotMAS gitFlowCustomPath -string "/usr/local/bin/git-flow"
+defaults read com.torusknot.SourceTreeNotMAS gitFlowWhichOne -int 1
+defaults read com.torusknot.SourceTreeNotMAS gitGlobalIgnoreFile -string "/Users/stephen/.gitignore_global"
+defaults read com.torusknot.SourceTreeNotMAS gitLfsCustomPath -string "/usr/local/bin/git-lfs"
+defaults read com.torusknot.SourceTreeNotMAS gitLfsWhichOne -int 1
+defaults read com.torusknot.SourceTreeNotMAS gitWhichOne -int 1
+defaults read com.torusknot.SourceTreeNotMAS terminalApp -int 2
 
 ###############################################################################
 # Sublime Text                                                                #
 ###############################################################################
 
 # Install Sublime Text settings
-cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
-
-
+mkdir -p ~/Library/Application\ Support/Sublime\ Text*/Packages/User/
+cp -r prefs/sublimetext/*.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/ 2> /dev/null
 
 ###############################################################################
 # Kill affected applications                                                  #
