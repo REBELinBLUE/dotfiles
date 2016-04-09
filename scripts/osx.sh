@@ -227,7 +227,7 @@ defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
 
 # Install the IR Dark theme for iTerm
 open -g -a /Applications/iTerm.app "./prefs/IR_Black.itermcolors"
-open -g -a "./prefs/IR_Black.terminal"
+open -g -a /Applications/Utilities/Terminal.app "./prefs/IR_Black.terminal"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool true
