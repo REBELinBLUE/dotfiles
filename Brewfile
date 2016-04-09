@@ -23,7 +23,6 @@ brew 'curl', args: ['with-openssl']
 brew 'findutils', args: ['with-default-names']
 brew 'coreutils'
 brew 'moreutils'
-brew 'binutils'
 brew 'gnu-indent', args: ['with-default-names']
 brew 'gnu-getopt', args: ['with-default-names']
 brew 'gnu-tar', args: ['with-default-names']
