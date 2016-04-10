@@ -28,3 +28,6 @@ source scripts/others.sh
 source scripts/vagrant.sh
 source scripts/dotfiles.sh
 source scripts/osx.sh
+
+#git clone https://github.com/huyng/bashmarks.git /opt/bashmarks
+#git clone https://github.com/magicmonty/bash-git-prompt.git /opt/bash-git-prompt

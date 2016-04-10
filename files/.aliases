@@ -55,7 +55,7 @@ if [ "$(uname)" == "Darwin" ]; then
     alias brewup='brew update && brew upgrade --all && brew cleanup'
 
     # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-    alias update='sudo mas upgrade; sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update'
+    alias update='sudo mas upgrade; sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup; npm install npm -g; npm update -g'
 
     # Empty the Trash on all mounted volumes and the main HDD.
     # Also, clear Apple’s System Logs to improve shell startup speed.
