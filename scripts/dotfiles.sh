@@ -50,11 +50,13 @@ fi
 
 ln -s ~/.dotfiles/files/.nanorc ~/.nanorc
 
-if [ -f ~/.tvnamer.json ]; then
-    rm -f ~/.tvnamer.json
-fi
 
-ln -s ~/.dotfiles/files/.tvnamer.json ~/.tvnamer.json
+if [[ ! "$(type -P tvnamer)" ]]; then
+    if [ -f ~/.tvnamer.json ]; then
+        rm -f ~/.tvnamer.json
+    fi
+    ln -s ~/.dotfiles/files/.tvnamer.json ~/.tvnamer.json
+fi
 
 if [ -f ~/.ssh/config ]; then
     rm -f ~/.ssh/config
