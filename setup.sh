@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [ "$(uname)" != "Darwin" ]; then
+    echo -e "\e[41;1m The setup script is only for OS X \e[0m"
+    exit 1;
+fi
+
 # Ask for the administrator password upfront
 sudo -v
 

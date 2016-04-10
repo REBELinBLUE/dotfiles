@@ -64,5 +64,4 @@ fi
 
 ln -s ~/.dotfiles/files/.ssh/config ~/.ssh/config
 
-
 source ~/.bashrc
