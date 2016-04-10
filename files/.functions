@@ -2,8 +2,3 @@
 function dash() {
     open "dash://$*"
 }
-
-# Open man page in dash
-function dman() {
-    open "dash://man:$*"
-}
