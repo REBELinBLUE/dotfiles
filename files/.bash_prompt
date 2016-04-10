@@ -28,7 +28,7 @@ if [ -f ${GIT_PROMPT}/gitprompt.sh ]; then
     GIT_PROMPT_START="\n${GREEN}\u ${RESET}at ${GREEN}\h ${RESET}in ${PINK}\w${RESET}"
     GIT_PROMPT_END="${RESET}\n\$ "
 
-    source `brew --prefix bash-git-prompt`/share/gitprompt.sh
+    source ${GIT_PROMPT}/gitprompt.sh
 else
     function parse_git_dirty() {
         [[ $(git status 2> /dev/null | tail -n1) != *"working directory clean"* ]] && echo "*"
