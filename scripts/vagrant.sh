@@ -13,8 +13,9 @@ vagrant plugin install vagrant-reload
 # Patch vagrant notify
 curl https://patch-diff.githubusercontent.com/raw/fgrehm/vagrant-notify/pull/22.patch | patch -t -d ~/.vagrant.d/gems/gems/vagrant-notify-0.4.0/lib/vagrant-notify/ plugin.rb
 
-# Install homestead
+# Install homestead & debian
 vagrant box add --provider virtualbox laravel/homestead
+vagrant box add --provider virtualbox debian/jessie64
 
 SetFile -a V ~/VirtualBox\ VMs/
 
