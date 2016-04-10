@@ -1,4 +1,4 @@
-if [ "$(uname)" != "Darwin" ]; then
+if [ "$(uname)" == "Darwin" ]; then
     if [ -f `brew --prefix bashmarks`/libexec/bashmarks.sh ]; then
         source `brew --prefix bashmarks`/libexec/bashmarks.sh
     fi
