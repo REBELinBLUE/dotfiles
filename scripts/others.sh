@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source ../files/.functions
+
 # Ask for the administrator password upfront
 sudo -v
 
@@ -8,7 +10,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Install composer
 if [[ ! "$(type -P composer)" ]]; then
-    echo "Installing composer"
+    info 'Installing composer'
     curl -sS https://getcomposer.org/installer | php
     mv composer.phar /usr/local/bin/composer
     chmod +x /usr/local/bin/composer

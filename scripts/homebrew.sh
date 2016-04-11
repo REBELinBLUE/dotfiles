@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+source ../files/.functions
+
 if [ "$(uname)" != "Darwin" ]; then
-    echo -e "\e[41;1m This script is only for OS X \e[0m"
+    error "The setup script is only for OS X"
     exit 1;
 fi
 
@@ -18,7 +20,7 @@ chsh -s $BASHPATH # will set for current user only.
 
 SIP_STATUS=$(csrutil status)
 if [[ $SIP_STATUS == *"enabled"* ]]; then
-    echo -e "\e[41;1m SIP is enabled so /etc/shells can not be modified. \e[0m"
+    error 'SIP is enabled so /etc/shells can not be modified.'
     read -p "Press [Enter] to continue..."
 else
     sudo echo $BASHPATH >> /etc/shells

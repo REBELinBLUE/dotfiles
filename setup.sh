@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+source ./files/.functions
+
 if [ "$(uname)" != "Darwin" ]; then
-    echo -e "\e[41;1m The setup script is only for OS X \e[0m"
+    error "The setup script is only for OS X"
     exit 1;
 fi
 
@@ -13,7 +15,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Install Homebrew.
 if [[ ! "$(type -P brew)" ]]; then
-    echo "Installing Homebrew"
+    info "Installing Homebrew"
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 

@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+source ../files/.functions
+
 if [ "$(uname)" != "Darwin" ]; then
-    echo -e "\e[41;1m This script is only for OS X \e[0m"
+    error "The setup script is only for OS X"
     exit 1;
 fi
 
