@@ -48,7 +48,7 @@ brew 'bash-git-prompt'
 brew 'composer-completion'
 
 # Install PHP7
-brew 'php70', args['with-homebrew-curl', 'with-postgresql', 'without-apache', 'without-fpm']
+brew 'php70', args: ['with-homebrew-curl', 'with-postgresql', 'without-apache', 'without-fpm']
 
 # Install media tools
 brew 'ffmpeg'
