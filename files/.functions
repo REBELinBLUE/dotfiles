@@ -1,9 +1,9 @@
-# Open argument in Dash
-function dash() {
-    open "dash://$*"
-}
-
 if [ "$(uname)" == "Darwin" ]; then
+
+    # Open argument in Dash
+    function dash() {
+        open "dash://$*"
+    }
 
     update() {
         sudo mas upgrade
@@ -36,6 +36,7 @@ man() {
     man "$@"
 }
 
+# Helper functions
 function info {
     echo -e "\033[1;33m => $1\033[0m";
 }
@@ -46,5 +47,22 @@ function ok {
 
 function error {
     echo -e "\033[1;31m => Error: $1\033[0m";
+}
+
+# A function to allow cd ../../../.. to be cd ..... instead
+cd() {
+    if [[ "$1" =~ ^\.\.+$ ]]; then
+        local a dir;
+        a=${#1};
+
+        while [ $a -ne 1 ]; do
+            dir=${dir}"../";
+            ((a--));
+        done
+
+        builtin cd $dir;
+    else
+        builtin cd "$@";
+    fi
 }
 
