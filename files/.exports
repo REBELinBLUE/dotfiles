@@ -13,6 +13,7 @@ if [ "$(uname)" == "Darwin" ]; then
     export MANPATH="$(brew --prefix findutils)/libexec/gnuman:$MANPATH"
     export MANPATH="$(brew --prefix coreutils)/share/man:$MANPATH"
 
+    export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 fi
 
 # Add more paths
