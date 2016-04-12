@@ -6,6 +6,8 @@ tap 'homebrew/bundle'
 tap 'homebrew/dupes'
 tap 'homebrew/completions'
 tap 'homebrew/binary'
+tap 'homebrew/versions'
+tap 'homebrew/homebrew-php'
 tap 'alexandregz/MXhomebrew'
 tap 'alehouse/homebrew-unofficial'
 tap 'argon/mas'
@@ -43,6 +45,10 @@ brew 'python'
 brew 'vagrant-completion'
 brew 'bash-completion'
 brew 'bash-git-prompt'
+brew 'composer-completion'
+
+# Install PHP7
+brew 'php70', args['with-homebrew-curl', 'with-postgresql', 'without-apache', 'without-fpm']
 
 # Install media tools
 brew 'ffmpeg'
