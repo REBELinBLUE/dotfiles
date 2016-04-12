@@ -51,7 +51,7 @@ fi
 ln -s ~/.dotfiles/files/.nanorc ~/.nanorc
 
 
-if [[ ! "$(type -P tvnamer)" ]]; then
+if [[ "$(type -P tvnamer)" ]]; then
     if [ -f ~/.tvnamer.json ]; then
         rm -f ~/.tvnamer.json
     fi

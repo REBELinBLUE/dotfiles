@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ../files/.functions
+source ~/.dotfiles/files/.functions
 
 # Ask for the administrator password upfront
 sudo -v

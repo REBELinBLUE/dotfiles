@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ../files/.functions
+source ~/.dotfiles/files/.functions
 
 if [ "$(uname)" != "Darwin" ]; then
     error "The setup script is only for OS X"

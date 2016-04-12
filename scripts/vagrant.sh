@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ../files/.functions
+source ~/.dotfiles/files/.functions
 
 sudo -v
 
