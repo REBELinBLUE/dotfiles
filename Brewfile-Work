@@ -3,7 +3,7 @@
 cask_args appdir: '/Applications'
 
 brew 'ansible'
-brew 'aswcli'
+brew 'awscli'
 
 cask 'charles'
 cask 'gpgtools'
