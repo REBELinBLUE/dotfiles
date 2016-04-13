@@ -239,7 +239,7 @@ open -g -a /Applications/Utilities/Terminal.app "./prefs/IR_Black.terminal"
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool true
 
-# FIXME Add additional iterm settings
+# FIXME Add additional iterm settings to do with colours and tmux
 
 ###############################################################################
 # Mail                                                                        #
