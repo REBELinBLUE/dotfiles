@@ -3,13 +3,17 @@
 cask_args appdir: '/Applications'
 
 cask 'cleanmymac'
-cask 'houdahgeo'
+# cask 'cocktail' # Currently a 404
+cask 'flame'
 cask 'garmin-express'
 cask 'gitter'
 cask 'goofy'
+cask 'houdahgeo'
 cask 'imageoptim'
-# cask 'cocktail' # Currently a 404
 # cask 'things' # Version in cask is so ridiculously out of date
 cask 'transmission'
+cask 'transmit'
 cask 'vlc'
 cask 'undercover'
+cask 'versions'
+cask 'viscosity'
