@@ -32,11 +32,9 @@ fi
 
 ln -s ~/.dotfiles/files/.inputrc ~/.inputrc
 
-if [ -f ~/.gitconfig ]; then
-    rm -f ~/.gitconfig
+if [ ! -f ~/.gitconfig ]; then
+    echo -e "[include]\n    path = $HOME/.dotfiles/files/.gitconfig" > $HOME/.gitconfig
 fi
-
-echo -e "[include]\n    path = $HOME/.dotfiles/files/.gitconfig" > $HOME/.gitconfig
 
 if [ -f ~/.gitignore ]; then
     rm -f ~/.gitignore
@@ -44,12 +42,17 @@ fi
 
 ln -s ~/.dotfiles/files/.gitignore ~/.gitignore
 
+if [ -f ~/.tmux.conf ]; then
+    rm -f ~/.tmux.conf
+fi
+
+ln -s ~/.dotfiles/files/.tmux.conf ~/.tmux.conf
+
 if [ -f ~/.nanorc ]; then
     rm -f ~/.nanorc
 fi
 
 ln -s ~/.dotfiles/files/.nanorc ~/.nanorc
-
 
 if [[ "$(type -P tvnamer)" ]]; then
     if [ -f ~/.tvnamer.json ]; then

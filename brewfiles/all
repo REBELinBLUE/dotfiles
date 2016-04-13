@@ -60,6 +60,7 @@ brew 'ed', args: ['with-default-names']
 brew 'wdiff', args: ['with-gettext']
 brew 'httpie'
 brew 'gist'
+brew 'tmux'
 brew 'asciinema'
 brew 'homebrew/binary/ngrok2'
 brew 'hub'
