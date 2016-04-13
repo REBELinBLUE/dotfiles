@@ -1,5 +1,7 @@
 # Additional brewfile only for personal Macs
 
+tap 'caskroom/cask'
+
 cask_args appdir: '/Applications'
 
 cask 'cleanmymac'

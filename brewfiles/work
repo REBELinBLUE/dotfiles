@@ -1,5 +1,7 @@
 # Additional brewfile only for work Mac
 
+tap 'caskroom/cask'
+
 cask_args appdir: '/Applications'
 
 brew 'ansible'

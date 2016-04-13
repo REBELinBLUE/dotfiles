@@ -1,6 +1,9 @@
 # Additional brewfile only for main computer
 
 tap 'dinkypumpkin/get_iplayer'
+tap 'caskroom/cask'
+
+cask_args appdir: '/Applications'
 
 brew 'mplayer'
 brew 'media-info'
@@ -11,8 +14,6 @@ brew 'atomicparsley'
 brew 'id3v2'
 brew 'get_iplayer', args: ['with-deps']
 brew 'libdvdcss'
-
-cask_args appdir: '/Applications'
 
 cask 'bbc-iplayer-downloads'
 cask 'crashplan'
