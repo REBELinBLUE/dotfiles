@@ -8,4 +8,3 @@ brew 'ansible'
 brew 'awscli'
 
 cask 'charles'
-cask 'gpgtools'
