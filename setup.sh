@@ -23,7 +23,7 @@ brew update
 
 # Install brew apps
 brew tap homebrew/bundle
-brew bundle
+brew bundle --file=brewfiles/all
 
 source scripts/homebrew.sh
 source scripts/others.sh
