@@ -1,0 +1,6 @@
+# Additional brewfile only for work Mac
+
+cask_args appdir: '/Applications'
+
+cask 'charles'
+cask 'gpgtools'

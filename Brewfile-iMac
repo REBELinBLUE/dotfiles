@@ -12,6 +12,8 @@ brew 'id3v2'
 brew 'get_iplayer', args: ['with-deps']
 brew 'libdvdcss'
 
+cask_args appdir: '/Applications'
+
 cask 'bbc-iplayer-downloads'
 cask 'crashplan'
 cask 'handbrake'

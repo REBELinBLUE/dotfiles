@@ -1,0 +1,15 @@
+# Additional brewfile only for personal Macs
+
+cask_args appdir: '/Applications'
+
+cask 'cleanmymac'
+cask 'houdahgeo'
+cask 'garmin-express'
+cask 'gitter'
+cask 'goofy'
+cask 'imageoptim'
+# cask 'cocktail' # Currently a 404
+# cask 'things' # Version in cask is so ridiculously out of date
+cask 'transmission'
+cask 'vlc'
+cask 'undercover'

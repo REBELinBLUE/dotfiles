@@ -1,3 +1,5 @@
+# brewfile for all machines
+
 # Taps
 tap 'caskroom/cask'
 tap 'caskroom/fonts'
@@ -96,17 +98,10 @@ brew 'mas'
 
 # Apps
 cask 'changes'
-cask 'cleanmymac'
-# cask 'cocktail' # Currently a 404
 cask 'dockertoolbox'
 cask 'dropshare'
 cask 'flame'
 cask 'flux'
-cask 'houdahgeo'
-cask 'garmin-express'
-cask 'gitter'
-cask 'goofy'
-cask 'imageoptim'
 cask 'iterm2-beta'
 cask 'keka'
 cask 'macdown'
@@ -115,8 +110,6 @@ cask 'onyx'
 cask 'sequel-pro'
 cask 'sourcetree'
 cask 'sublime-text3'
-# cask 'things' # Version in cask is so ridiculously out of date
-cask 'transmission'
 cask 'transmit'
 cask 'vagrant'
 cask 'vagrant-manager'
@@ -124,8 +117,6 @@ cask 'versions'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
 cask 'viscosity'
-cask 'vlc'
-cask 'undercover'
 
 # Quicklook
 cask 'qlcolorcode'
