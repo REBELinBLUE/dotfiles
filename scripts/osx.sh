@@ -16,7 +16,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
-# Menu bar: hide the Time Machine, Volume, and User icons
 for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
     defaults write "${domain}" dontAutoLoad -array \
         "/System/Library/CoreServices/Menu Extras/User.menu"
@@ -114,6 +113,8 @@ defaults write com.apple.screencapture type -string "png"
 # Finder                                                                      #
 ###############################################################################
 
+# FIXME: Disable the recent menu
+
 # Set Desktop as the default location for new Finder windows
 # For other paths, use `PfLo` and `file:///full/path/here/`
 defaults write com.apple.finder NewWindowTarget -string "PfHm"
@@ -184,9 +185,6 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
-# Make Dock icons of hidden applications translucent
-#defaults write com.apple.dock showhidden -bool true
-
 # Reset Launchpad, but keep the desktop wallpaper intact
 find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -delete
 
@@ -204,6 +202,8 @@ defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 ###############################################################################
 # Transmission.app                                                            #
 ###############################################################################
+
+# FIXME: Only run if transmission is installed
 
 # Use `~/Downloads/Torrents` to store incomplete downloads
 defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
@@ -239,6 +239,8 @@ open -g -a /Applications/Utilities/Terminal.app "./prefs/IR_Black.terminal"
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool true
 
+# FIXME Add additional iterm settings
+
 ###############################################################################
 # Mail                                                                        #
 ###############################################################################
@@ -252,6 +254,7 @@ defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -stri
 # Source Tree                                                                 #
 ###############################################################################
 
+# FIXME: Still not working correctly, damn you Atlassian
 defaults write com.torusknot.SourceTreeNotMAS AtlassianAccountEmail -string "hipchat@stephen.rebelinblue.com"
 defaults write com.torusknot.SourceTreeNotMAS agreedToEULA -bool true
 defaults write com.torusknot.SourceTreeNotMAS agreedToEULA2 -bool true

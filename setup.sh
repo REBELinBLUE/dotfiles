@@ -25,6 +25,16 @@ brew update
 brew tap homebrew/bundle
 brew bundle --file=brewfiles/all
 
+# On work computer
+#brew bundle --file=brewfiles/work
+
+# On MacBook Air
+# brew bundle --file=brewfiles/personal
+
+# On iMac
+# brew bundle --file=brewfiles/personal
+# brew bundle --file=brewfiles/imac
+
 source scripts/homebrew.sh
 source scripts/others.sh
 source scripts/vagrant.sh
