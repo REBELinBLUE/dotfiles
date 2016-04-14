@@ -200,28 +200,6 @@ defaults write com.apple.TextEdit PlainTextEncoding -int 4
 defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 
 ###############################################################################
-# Transmission.app                                                            #
-###############################################################################
-
-# FIXME: Only run if transmission is installed
-
-# Use `~/Downloads/Torrents` to store incomplete downloads
-defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Torrents"
-
-# Don’t prompt for confirmation before downloading
-defaults write org.m0k.transmission DownloadAsk -bool false
-
-# Trash original torrent files
-defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
-
-# Hide the donate message
-defaults write org.m0k.transmission WarningDonate -bool false
-
-# Hide the legal disclaimer
-defaults write org.m0k.transmission WarningLegal -bool false
-
-###############################################################################
 # Tweetbot.app                                                                #
 ###############################################################################
 
@@ -242,7 +220,17 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool true
 # Set tmux to open in a new tab on the current window
 defaults write com.googlecode.iterm2 OpenTmuxWindowsIn -int 2
 
-# FIXME Add additional iterm settings to do with colours and tmux
+# Set font colours
+/usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Use Bold Font" true' ~/Library/Preferences/com.googlecode.iterm2.plist
+/usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Use Bright Bold" false' ~/Library/Preferences/com.googlecode.iterm2.plist
+/usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Use Italic Font" false' ~/Library/Preferences/com.googlecode.iterm2.plist
+/usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Use Non-ASCII Font" true' ~/Library/Preferences/com.googlecode.iterm2.plist
+/usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Non-ASCII Anti Aliased" true' ~/Library/Preferences/com.googlecode.iterm2.plist
+/usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"ASCII Anti Aliased" true' ~/Library/Preferences/com.googlecode.iterm2.plist
+/usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Non Ascii Font" "Monaco 12"' ~/Library/Preferences/com.googlecode.iterm2.plist
+/usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Normal Font" "Monaco 12"' ~/Library/Preferences/com.googlecode.iterm2.plist
+/usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Terminal Type" "xterm-256color"' ~/Library/Preferences/com.googlecode.iterm2.plist
+/usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Scrollback Lines" 1000' ~/Library/Preferences/com.googlecode.iterm2.plist
 
 ###############################################################################
 # Mail                                                                        #
@@ -292,3 +280,25 @@ mkdir -p "${HOME}/Library/Application Support/Sublime Text 3/Installed Packages/
 curl -o "Package Control.sublime-package" https://packagecontrol.io/Package%20Control.sublime-package
 mv "Package Control.sublime-package" "${HOME}/Library/Application Support/Sublime Text 3/Installed Packages/" 2> /dev/null
 cp -r ./prefs/sublimetext/*.sublime-settings "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/" 2> /dev/null
+
+###############################################################################
+# Transmission.app                                                            #
+###############################################################################
+
+if [ -e /Applications/Transmission.app ]; then
+    # Use `~/Downloads/Torrents` to store incomplete downloads
+    defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
+    defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Torrents"
+
+    # Don’t prompt for confirmation before downloading
+    defaults write org.m0k.transmission DownloadAsk -bool false
+
+    # Trash original torrent files
+    defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
+
+    # Hide the donate message
+    defaults write org.m0k.transmission WarningDonate -bool false
+
+    # Hide the legal disclaimer
+    defaults write org.m0k.transmission WarningLegal -bool false
+fi
