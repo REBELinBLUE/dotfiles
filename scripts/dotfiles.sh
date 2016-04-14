@@ -1,70 +1,46 @@
 #!/usr/bin/env bash
 
-# Ask for the administrator password upfront
-sudo -v
+skip=".gitconfig .bash_prompt .exports .completions .aliases .functions"
 
-# Keep-alive: update existing `sudo` time stamp until `.osx` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+# Symlink any files except those listed above
+for path in $HOME/.dotfiles/files/.*; do
+    if [ -f $path ]; then
+        name=$(basename $path)
 
-# TODO: Clean this up, loads of duplication!
+        # If file is in list to skip continue
+        if [[ $skip =~ $name ]]; then
+            continue
+        fi
 
-if [ -f ~/.bashrc ]; then
-    rm -f ~/.bashrc
-fi
+        if [ -f $HOME/$name ]; then
+            rm $HOME/$name
+        fi
 
-ln -s ~/.dotfiles/files/.bashrc ~/.bashrc
+        ln -s $path $HOME/$name
+    fi
+done
 
-if [ -f ~/.bash_profile ]; then
-    rm  -f ~/.bash_profile
-fi
-
-ln -s ~/.dotfiles/files/.bash_profile ~/.bash_profile
-
-if [ -f ~/.editorconfig ]; then
-    rm -f ~/.editorconfig
-fi
-
-ln -s ~/.dotfiles/files/.editorconfig ~/.editorconfig
-
-if [ -f ~/.inputrc ]; then
-    rm -f ~/.inputrc
-fi
-
-ln -s ~/.dotfiles/files/.inputrc ~/.inputrc
-
+#  Setup initial git config
 if [ ! -f ~/.gitconfig ]; then
     echo -e "[include]\n    path = $HOME/.dotfiles/files/.gitconfig" > $HOME/.gitconfig
 fi
 
-if [ -f ~/.gitignore ]; then
-    rm -f ~/.gitignore
+# Remove tvnamer config if not installed
+if [[ ! "$(type -P tvnamer)" ]]; then
+    rm -f ~/.tvnamer.json
 fi
 
-ln -s ~/.dotfiles/files/.gitignore ~/.gitignore
-
-if [ -f ~/.tmux.conf ]; then
-    rm -f ~/.tmux.conf
+# Symlink SSH config
+if [ -f $HOME/.ssh/config ]; then
+    rm -f $HOME/.ssh/config
 fi
 
-ln -s ~/.dotfiles/files/.tmux.conf ~/.tmux.conf
+ln -s $HOME/.dotfiles/files/.ssh/config $HOME/.ssh/config
 
-if [ -f ~/.nanorc ]; then
-    rm -f ~/.nanorc
+# Set up extras config
+if [ ! -f $HOME/.extras ]; then
+    echo -e "# Stick any extra functions, aliases and exports in this file" > $HOME/.extras
+    $EDITOR $HOME/.extras
 fi
 
-ln -s ~/.dotfiles/files/.nanorc ~/.nanorc
-
-if [[ "$(type -P tvnamer)" ]]; then
-    if [ -f ~/.tvnamer.json ]; then
-        rm -f ~/.tvnamer.json
-    fi
-    ln -s ~/.dotfiles/files/.tvnamer.json ~/.tvnamer.json
-fi
-
-if [ -f ~/.ssh/config ]; then
-    rm -f ~/.ssh/config
-fi
-
-ln -s ~/.dotfiles/files/.ssh/config ~/.ssh/config
-
-source ~/.bashrc
+source $HOME/.bashrc

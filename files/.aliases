@@ -33,6 +33,9 @@ alias gist='gist -o'
 # Get public IP
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
 
+# Tmux in control mode
+alias tmux='tmux -CC'
+
 if [ "$(uname)" == "Darwin" ]; then
 
     # OS X has no `md5sum`, so use `md5` as a fallback

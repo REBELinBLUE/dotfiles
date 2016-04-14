@@ -210,6 +210,7 @@ defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
 # iTerm 2                                                                     #
 ###############################################################################
 
+# FIXME: Add cursor setting
 # Install the IR Dark theme for iTerm
 open -g -a /Applications/iTerm.app "./prefs/IR_Black.itermcolors"
 open -g -a /Applications/Utilities/Terminal.app "./prefs/IR_Black.terminal"
@@ -227,7 +228,7 @@ defaults write com.googlecode.iterm2 OpenTmuxWindowsIn -int 2
 /usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Use Non-ASCII Font" true' ~/Library/Preferences/com.googlecode.iterm2.plist
 /usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Non-ASCII Anti Aliased" true' ~/Library/Preferences/com.googlecode.iterm2.plist
 /usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"ASCII Anti Aliased" true' ~/Library/Preferences/com.googlecode.iterm2.plist
-/usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Non Ascii Font" "Monaco 12"' ~/Library/Preferences/com.googlecode.iterm2.plist
+/usr/libexec/PlistBuddy -c 'Add :"New Bookmarks":0:"Non Ascii Font" string "Monaco 12"' ~/Library/Preferences/com.googlecode.iterm2.plist
 /usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Normal Font" "Monaco 12"' ~/Library/Preferences/com.googlecode.iterm2.plist
 /usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Terminal Type" "xterm-256color"' ~/Library/Preferences/com.googlecode.iterm2.plist
 /usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Scrollback Lines" 1000' ~/Library/Preferences/com.googlecode.iterm2.plist
