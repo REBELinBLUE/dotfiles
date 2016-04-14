@@ -11,6 +11,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 vagrant plugin install vagrant-vbguest
 vagrant plugin install vagrant-notify
 vagrant plugin install vagrant-reload
+vagrant plugin install vagrant-bindfs
 
 # Patch vagrant notify
 curl https://patch-diff.githubusercontent.com/raw/fgrehm/vagrant-notify/pull/22.patch | patch -t -d ~/.vagrant.d/gems/gems/vagrant-notify-0.4.0/lib/vagrant-notify/ plugin.rb
@@ -18,6 +19,7 @@ curl https://patch-diff.githubusercontent.com/raw/fgrehm/vagrant-notify/pull/22.
 # Install homestead & debian
 vagrant box add --provider virtualbox laravel/homestead
 vagrant box add --provider virtualbox debian/jessie64
+vagrant box add --provider virtualbox ubuntu/trusty64
 
 SetFile -a V ~/VirtualBox\ VMs/
 
