@@ -21,10 +21,12 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="~/.composer/vendor/bin:$PATH"
 
-# Larger bash history (allow 32³ entries; default is 500)
-export HISTSIZE=32768
+# Larger bash history (allow 10000 entries; default is 500)
+export HISTSIZE=10000
 export HISTFILESIZE=${HISTSIZE}
 export HISTCONTROL="ignoredups:erasedups"
+#export HISTTIMEFORMAT='%F %T '
+export HH_CONFIG=hicolor
 
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help:history:clear:reset"
