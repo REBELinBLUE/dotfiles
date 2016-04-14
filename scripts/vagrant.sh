@@ -2,11 +2,6 @@
 
 source ~/.dotfiles/files/.functions
 
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until the script has finished.
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 # Install vagrant plugins
 vagrant plugin install vagrant-vbguest
 vagrant plugin install vagrant-notify
@@ -21,8 +16,10 @@ vagrant box add --provider virtualbox laravel/homestead
 vagrant box add --provider virtualbox debian/jessie64
 vagrant box add --provider virtualbox ubuntu/trusty64
 
-SetFile -a V ~/VirtualBox\ VMs/
+if [ "$(uname)" == "Darwin" ]; then
+    SetFile -a V ~/VirtualBox\ VMs/
 
-if [ ! -d ~/Vagrant/ ]; then
-    mkdir ~/Vagrant/
+    if [ ! -d ~/Vagrant/ ]; then
+        mkdir ~/Vagrant/
+    fi
 fi

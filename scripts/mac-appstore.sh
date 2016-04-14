@@ -17,7 +17,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 mas install 402434720 # Name Mangler
 mas install 1054607607 # Helium
-#mas install 425424353 # The Unarchiver
 mas install 407963104 # Pixelmator
 mas install 442160987 # Flycut
 mas install 467939042 # Growl
@@ -42,3 +41,4 @@ mas install 449589707 # Dash
 # mas install 408981434 # iMovie
 # mas install 465069360 # My Movies Pro
 # mas install 451907568 # Paprika Recipe Manager
+#mas install 425424353 # The Unarchiver
