@@ -6,5 +6,6 @@ cask_args appdir: '/Applications'
 
 brew 'ansible'
 brew 'awscli'
+brew 'php70-rdkafka'
 
 cask 'charles'
