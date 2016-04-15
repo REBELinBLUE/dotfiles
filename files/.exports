@@ -31,6 +31,9 @@ export HH_CONFIG=hicolor
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help:history:clear:reset"
 
+# Disable El Capitan's session history
+export SHELL_SESSION_HISTORY=0
+
 # Prefer UK English and use UTF-8.
 export LANG="en_GB.UTF-8"
 export LC_ALL="en_GB.UTF-8"
