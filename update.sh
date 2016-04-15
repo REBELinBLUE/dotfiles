@@ -3,8 +3,8 @@
 source ~/.dotfiles/files/.functions
 
 if [ "$(uname)" != "Darwin" ]; then
-	error "The update script is only for OS X"
-	exit 1;
+    error "The update script is only for OS X"
+    exit 1;
 fi
 
 # Ask for the administrator password upfront
