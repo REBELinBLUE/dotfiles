@@ -283,7 +283,7 @@ mv "Package Control.sublime-package" "${HOME}/Library/Application Support/Sublim
 cp -r ./prefs/sublimetext/*.sublime-settings "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/" 2> /dev/null
 
 ###############################################################################
-# Transmission.app                                                            #
+# Transmission                                                                #
 ###############################################################################
 
 if [ -e /Applications/Transmission.app ]; then
@@ -303,3 +303,10 @@ if [ -e /Applications/Transmission.app ]; then
     # Hide the legal disclaimer
     defaults write org.m0k.transmission WarningLegal -bool false
 fi
+
+###############################################################################
+# Pixelmator                                                                  #
+###############################################################################
+
+# Don't open in pixelmator format
+defaults write com.pixelmatorteam.pixelmator openDocumentsInPixelmatorFileFormat -bool false
