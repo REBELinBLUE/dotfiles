@@ -115,7 +115,6 @@ cask 'sourcetree'
 cask 'sublime-text3'
 cask 'undercover'
 cask 'vagrant'
-cask 'vagrant-manager'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
 
