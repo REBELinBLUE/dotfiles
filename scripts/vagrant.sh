@@ -6,7 +6,10 @@ source ~/.dotfiles/files/.functions
 vagrant plugin install vagrant-vbguest
 vagrant plugin install vagrant-notify
 vagrant plugin install vagrant-reload
+
+# Install vagrant plugins for work machine
 vagrant plugin install vagrant-bindfs
+vagrant plugin install vagrant-proxyconf
 
 # Patch vagrant notify
 curl https://patch-diff.githubusercontent.com/raw/fgrehm/vagrant-notify/pull/22.patch | patch -t -d ~/.vagrant.d/gems/gems/vagrant-notify-0.4.0/lib/vagrant-notify/ plugin.rb
