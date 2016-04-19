@@ -37,6 +37,9 @@ alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
 # Tmux in control mode
 alias tmux='tmux -CC'
 
+# Reload the shell (i.e. invoke as a login shell)
+alias reload="exec $SHELL -l"
+
 if [ "$(uname)" == "Darwin" ]; then
 
     # OS X has no `md5sum`, so use `md5` as a fallback
