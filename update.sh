@@ -31,4 +31,4 @@ brew bundle --file=brewfiles/all
 
 source scripts/dotfiles.sh
 
-reload
+exec $SHELL -l
