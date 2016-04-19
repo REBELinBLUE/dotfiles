@@ -21,9 +21,17 @@ vagrant box add --provider virtualbox debian/jessie64
 vagrant box add --provider virtualbox ubuntu/trusty64
 
 if [ "$(uname)" == "Darwin" ]; then
-    SetFile -a V ~/VirtualBox\ VMs/
+    if [ ! -d $HOME/VirtualBox\ VMs/ ]; then
+        mkdir $HOME/VirtualBox\ VMs/
+    fi
 
-    if [ ! -d ~/Vagrant/ ]; then
-        mkdir ~/Vagrant/
+    SetFile -a V $HOME/VirtualBox\ VMs/
+
+    if [ ! -d $HOME/Vagrant/ ]; then
+        mkdir $HOME/Vagrant/
+    fi
+
+    if [ ! -d $HOME/.vagrant.d/ ]; then
+        mkdir $HOME/.vagrant.d/
     fi
 fi

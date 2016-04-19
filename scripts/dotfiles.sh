@@ -27,7 +27,7 @@ fi
 
 # Remove tvnamer config if not installed
 if [[ ! "$(type -P tvnamer)" ]]; then
-    rm -f ~/.tvnamer.json
+    rm -f $HOME/.tvnamer.json
 fi
 
 # Symlink SSH config
@@ -38,12 +38,13 @@ fi
 ln -s $HOME/.dotfiles/files/.ssh/config $HOME/.ssh/config
 
 # Symlink Vagrantfile
-if [ -f $HOME/.vagrant.d/Vagrantfile ]; then
-    rm -f $HOME/.vagrant.d/Vagrantfile
+if [ -d $HOME/.vagrant.d/ ]; then
+    if [ -f $HOME/.vagrant.d/Vagrantfile ]; then
+        rm -f $HOME/.vagrant.d/Vagrantfile
+    fi
+
+    ln -s $HOME/.dotfiles/files/.vagrant.d/Vagrantfile $HOME/.vagrant.d/Vagrantfile
 fi
-
-ln -s $HOME/.dotfiles/files/.vagrant.d/Vagrantfile $HOME/.vagrant.d/Vagrantfile
-
 
 # Set up extras config
 if [ ! -f $HOME/.extras ]; then
