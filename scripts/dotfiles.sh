@@ -37,6 +37,14 @@ fi
 
 ln -s $HOME/.dotfiles/files/.ssh/config $HOME/.ssh/config
 
+# Symlink Vagrantfile
+if [ -f $HOME/.vagrant.d/Vagrantfile ]; then
+    rm -f $HOME/.vagrant.d/Vagrantfile
+fi
+
+ln -s $HOME/.dotfiles/files/.vagrant.d/Vagrantfile $HOME/.vagrant.d/Vagrantfile
+
+
 # Set up extras config
 if [ ! -f $HOME/.extras ]; then
     echo -e "# Stick any extra functions, aliases and exports in this file" > $HOME/.extras

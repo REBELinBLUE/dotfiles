@@ -16,6 +16,9 @@ alias sl='ls'
 # Use ccat
 alias cat='ccat'
 
+# Use sshrc
+alias ssh='sshrc'
+
 # Prompt for confirmation
 alias cp='cp -iv'
 alias rm='rm -i'

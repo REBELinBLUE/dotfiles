@@ -1,0 +1,62 @@
+# Easier navigation: .., ..., ...., ....., ~ and -
+alias ..='cd ..'         # Go up one directory
+alias ...='cd ../..'     # Go up two directories
+alias ....='cd ../../..' # Go up three directories
+alias -- -='cd -'        # Go back
+alias ~='cd ~'           # `cd` is probably faster to type though
+
+# List files
+alias ls='ls -F -G --color=auto --quoting-style=literal'
+alias ll='ls -l --color=auto --quoting-style=literal'
+alias la='ls -lA --color=auto --quoting-style=literal'
+alias l1='ls -1 --color=auto --quoting-style=literal'
+alias sl='ls'
+
+# List files
+alias ls='ls -F -G --color=auto --quoting-style=literal'
+alias la='ls -lA --color=auto --quoting-style=literal'
+
+# Prompt for confirmation
+alias cp='cp -iv'
+alias rm='rm -i'
+alias mv='mv -iv'
+
+# Other useful aliases
+alias grep='grep --color=auto -in'
+
+BLACK=$(tput -Txterm setaf 0)
+RED=$(tput -Txterm setaf 1)
+GREEN=$(tput -Txterm setaf 2)
+YELLOW=$(tput -Txterm setaf 3)
+BLUE=$(tput -Txterm setaf 4)
+PINK=$(tput -Txterm setaf 5)
+CYAN=$(tput -Txterm setaf 6)
+BOLD=$(tput -Txterm bold)
+RESET=$(tput -Txterm sgr0)
+
+# A function to allow cd ../../../.. to be cd ..... instead
+cd() {
+    if [[ "$1" =~ ^\.\.+$ ]]; then
+        local a dir;
+        a=${#1};
+
+        while [ $a -ne 1 ]; do
+            dir=${dir}"../";
+            ((a--));
+        done
+
+        builtin cd $dir;
+    else
+        builtin cd "$@";
+    fi
+}
+
+function parse_git_dirty() {
+    [[ $(git status 2> /dev/null | tail -n1) != *"working directory clean"* ]] && echo "*"
+}
+
+function parse_git_branch() {
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+}
+
+export PS1="\n${GREEN}\u ${RESET}at ${GREEN}\h ${RESET}in ${PINK}\w${RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${BLUE}\$(parse_git_branch)${RESET}\n$ ${RESET}"
