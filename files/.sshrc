@@ -23,6 +23,9 @@ alias mv='mv -iv'
 # Other useful aliases
 alias grep='grep --color=auto -in'
 
+# Add edit alias
+alias edit='$EDITOR'
+
 BLACK=$(tput -Txterm setaf 0)
 RED=$(tput -Txterm setaf 1)
 GREEN=$(tput -Txterm setaf 2)
