@@ -1,3 +1,6 @@
+# Make nano the default editor.
+export EDITOR="nano -w"
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..='cd ..'         # Go up one directory
 alias ...='cd ../..'     # Go up two directories
@@ -11,10 +14,6 @@ alias ll='ls -l --color=auto --quoting-style=literal'
 alias la='ls -lA --color=auto --quoting-style=literal'
 alias l1='ls -1 --color=auto --quoting-style=literal'
 alias sl='ls'
-
-# List files
-alias ls='ls -F -G --color=auto --quoting-style=literal'
-alias la='ls -lA --color=auto --quoting-style=literal'
 
 # Prompt for confirmation
 alias cp='cp -iv'
@@ -51,12 +50,15 @@ cd() {
     fi
 }
 
-function parse_git_dirty() {
+function _parse_git_dirty() {
     [[ $(git status 2> /dev/null | tail -n1) != *"working directory clean"* ]] && echo "*"
 }
 
-function parse_git_branch() {
-    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+function _parse_git_branch() {
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(_parse_git_dirty)/"
 }
 
-export PS1="\n${GREEN}\u ${RESET}at ${GREEN}\h ${RESET}in ${PINK}\w${RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${BLUE}\$(parse_git_branch)${RESET}\n$ ${RESET}"
+export PS1="\n${GREEN}\u ${RESET}at ${GREEN}\h ${RESET}in ${PINK}\w${RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${BLUE}\$(_parse_git_branch)${RESET}\n$ ${RESET}"
+
+# Check the window size after each command and, if necessary, update the values of LINES and COLUMNS.
+shopt -s checkwinsize

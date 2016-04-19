@@ -30,15 +30,15 @@ if [ -f ${GIT_PROMPT}/gitprompt.sh ]; then
 
     source ${GIT_PROMPT}/gitprompt.sh
 else
-    function parse_git_dirty() {
+    function _parse_git_dirty() {
         [[ $(git status 2> /dev/null | tail -n1) != *"working directory clean"* ]] && echo "*"
     }
 
-    function parse_git_branch() {
-        git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+    function _parse_git_branch() {
+        git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(_parse_git_dirty)/"
     }
 
-    export PS1="\n${GREEN}\u ${RESET}at ${GREEN}\h ${RESET}in ${PINK}\w${RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${BLUE}\$(parse_git_branch)${RESET}\n$ ${RESET}"
+    export PS1="\n${GREEN}\u ${RESET}at ${GREEN}\h ${RESET}in ${PINK}\w${RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${BLUE}\$(_parse_git_branch)${RESET}\n$ ${RESET}"
 fi
 
 # mem/file sync of history
