@@ -94,8 +94,7 @@ else
         echo -e "\033[1;32m => bash-git-prompt setup!\033[0m";
     }
 
-	echo -e "\033[1;31m => bash-git-prompt is not installed, run _install_git_prompt to install it\033[0m";
-
+    echo -e "\033[1;31m => bash-git-prompt is not installed, run _install_git_prompt to install it\033[0m";
 
     export PS1="\n${PROMPT_COLOR}\u ${RESET}at ${PROMPT_COLOR}\h ${RESET}in ${PINK}\w${RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${BLUE}\$(_parse_git_branch)${RESET}\n$ ${RESET}"
 fi
