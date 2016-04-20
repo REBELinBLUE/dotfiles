@@ -37,9 +37,9 @@ end
 
 # Set the hostname of machine to the hostname of the host + the folder name if they aren't explictly set
 def getHostName()
-    host = File.basename(Dir.getwd)
+    folder = File.basename(Dir.getwd)
 
-    return Socket.gethostname + '-' + host.gsub('_', '-')
+    return Socket.gethostname + '-' + folder.gsub('_', '-')
 end
 
 # Set work machines into a group
