@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ~/.dotfiles/files/.functions
+source $HOME/.dotfiles/files/.functions
 
 if [ "$(uname)" != "Darwin" ]; then
     error "The setup script is only for OS X"
@@ -35,11 +35,11 @@ brew bundle --file=brewfiles/all
 # brew bundle --file=brewfiles/personal
 # brew bundle --file=brewfiles/imac
 
-source scripts/homebrew.sh
-source scripts/others.sh
-source scripts/vagrant.sh
-source scripts/dotfiles.sh
-source scripts/osx.sh
+source $HOME/.dotfiles/scripts/homebrew.sh
+source $HOME/.dotfiles/scripts/others.sh
+source $HOME/.dotfiles/scripts/vagrant.sh
+source $HOME/.dotfiles/scripts/dotfiles.sh
+source $HOME/.dotfiles/scripts/osx.sh
 
 # Fixme: do this on linux
 #git clone https://github.com/huyng/bashmarks.git /opt/bashmarks

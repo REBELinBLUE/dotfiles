@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ~/.dotfiles/files/.functions
+source $HOME/.dotfiles/files/.functions
 
 if [ "$(uname)" != "Darwin" ]; then
     error "The update script is only for OS X"
@@ -29,6 +29,6 @@ brew bundle --file=brewfiles/all
 # brew bundle --file=brewfiles/personal
 # brew bundle --file=brewfiles/imac
 
-source scripts/dotfiles.sh
+source $HOME/.dotfiles/scripts/dotfiles.sh
 
 exec $SHELL -l

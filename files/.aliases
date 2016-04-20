@@ -46,7 +46,13 @@ alias tmux='tmux -CC'
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
+# Update dotfiles
+# alias dotup="git --work-tree=$HOME/.dotfiles/ pull && $HOME/.dotfiles/scripts/dotfiles.sh && exec $SHELL -l"
+
 if [ "$(uname)" == "Darwin" ]; then
+
+    # Update dotfiles
+    # alias dotup="git --work-tree=$HOME/.dotfiles/ pull && $HOME/.dotfiles/update.sh"
 
     # OS X has no `md5sum`, so use `md5` as a fallback
     command -v md5sum > /dev/null || alias md5sum='md5'

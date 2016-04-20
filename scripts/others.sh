@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ~/.dotfiles/files/.functions
+source $HOME/.dotfiles/files/.functions
 
 # Ask for the administrator password upfront
 sudo -v
@@ -17,11 +17,11 @@ if [[ ! "$(type -P composer)" ]]; then
 fi
 
 # Hide VirtualBox folder
-if [ ! -d ~/VirtualBox\ VMs/ ]; then
-    mkdir ~/VirtualBox\ VMs/
+if [ ! -d $HOME/VirtualBox\ VMs/ ]; then
+    mkdir $HOME/VirtualBox\ VMs/
 fi
 
-SetFile -a V ~/VirtualBox\ VMs/
+SetFile -a V $HOME/VirtualBox\ VMs/
 
 # Install glances
 sudo chown -R $(whoami) /usr/local
@@ -35,7 +35,7 @@ pip install httpie-oauth
 pip install httpie-jwt-auth
 
 # Install additional CLIs
-cp ./bin/notify-send /usr/local/bin/notify-send
+cp $HOME/.dotfiles/bin/notify-send /usr/local/bin/notify-send
 ln -s `which ffmpeg` /usr/local/bin/ffmpeg-static
 
 chmod +x /usr/local/bin/notify-send
