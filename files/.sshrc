@@ -59,7 +59,13 @@ if [ -f /etc/is_vagrant_vm ]; then
     PROMPT_COLOR=$YELLOW
 fi
 
-if [ -f /opt/bash-git-prompt/gitprompt.sh ]; then
+# Use a folder in home for bash git prompt unless it is installed in /opt or we are running in vagrant
+GIT_PROMPT=$HOME/.bash-git-prompt
+if [ -d /opt/bash-git-prompt ] || [ -f /etc/is_vagrant_vm ]; then
+    GIT_PROMPT=/opt/bash-git-prompt
+fi
+
+if [ -f ${GIT_PROMPT}/gitprompt.sh ]; then
     GIT_PROMPT_ONLY_IN_REPO=0
     GIT_PROMPT_PREFIX=" ${RESET}on "
     GIT_PROMPT_SUFFIX="${RESET}"
@@ -81,10 +87,15 @@ else
     }
 
     function _install_git_prompt() {
-        sudo git clone https://github.com/magicmonty/bash-git-prompt.git /opt/bash-git-prompt --depth=1
-        # FIXME: Figure out how to reload the prompt
-        #exec $SHELL -l
+        echo -e "\033[1;33m => Downloading bash-git-prompt\033[0m";
+        sudo git clone https://github.com/magicmonty/bash-git-prompt.git $GIT_PROMPT --depth=1
+        reset
+        source $SSHHOME/sshrc.bashrc
+        echo -e "\033[1;32m => bash-git-prompt setup!\033[0m";
     }
+
+	echo -e "\033[1;31m => bash-git-prompt is not installed, run _install_git_prompt to install it\033[0m";
+
 
     export PS1="\n${PROMPT_COLOR}\u ${RESET}at ${PROMPT_COLOR}\h ${RESET}in ${PINK}\w${RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${BLUE}\$(_parse_git_branch)${RESET}\n$ ${RESET}"
 fi
