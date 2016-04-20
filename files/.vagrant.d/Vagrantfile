@@ -27,6 +27,8 @@ Vagrant.configure('2') do |config|
             provider.customize ["modifyvm", :id, "--ostype", "Ubuntu_64"]
         end
     end
+
+    config.vm.provision "shell", inline: "touch /etc/is_vagrant_vm"
 end
 
 # Set the hostname of machine to the hostname of the host + the folder name if they aren't explictly set

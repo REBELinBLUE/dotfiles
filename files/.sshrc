@@ -61,7 +61,13 @@ function _parse_git_branch() {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(_parse_git_dirty)/"
 }
 
-export PS1="\n${RED}\u ${RESET}at ${RED}\h ${RESET}in ${PINK}\w${RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${BLUE}\$(_parse_git_branch)${RESET}\n$ ${RESET}"
+# Use /etc/is_vagrant_vm to test if vagrant and if so use yellow not red for the user/host
+PROMPT_COLOR=$RED
+if [ -f /etc/is_vagrant_vm ]; then
+    PROMPT_COLOR=$YELLOW
+fi
+
+export PS1="\n${PROMPT_COLOR}\u ${RESET}at ${PROMPT_COLOR}\h ${RESET}in ${PINK}\w${RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${BLUE}\$(_parse_git_branch)${RESET}\n$ ${RESET}"
 
 # Check the window size after each command and, if necessary, update the values of LINES and COLUMNS.
 shopt -s checkwinsize
