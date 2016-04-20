@@ -1,3 +1,5 @@
+require 'socket'
+
 Vagrant.configure('2') do |config|
     # Enable caching
     if Vagrant.has_plugin?('vagrant-cachier')
@@ -9,6 +11,42 @@ Vagrant.configure('2') do |config|
         }
     end
 
-    # Use vagrant SSH
+    # Use sshrc instead of normal SSH
     config.ssh.ssh_command = 'sshrc'
+
+    # Set the hostname to the folder name if one isn't set
+    config.vm.hostname = getHostName()
+
+    config.vm.provider :virtualbox do |provider|
+
+        if isIssaMachine()
+            provider.customize ["modifyvm", :id, "--groups", "/ISSA"]
+        end
+
+        if config.vm.box == 'ubuntu/trusty64'
+            provider.customize ["modifyvm", :id, "--ostype", "Ubuntu_64"]
+        end
+    end
+
+    # Install composer globally - FIXME: Check for PHP
+    config.vm.provision "shell", inline: "curl -sS https://getcomposer.org/installer | php; chmod +x composer.phar; mv composer.phar /usr/local/bin/composer"
+
+    # Update composer on each boot
+    config.vm.provision "shell", inline: "sudo /usr/local/bin/composer self-update", run: "always"
+end
+
+# Set the hostname of machine to the hostname of the host + the folder name if they aren't explictly set
+def getHostName()
+    host = File.basename(Dir.getwd)
+
+    return Socket.gethostname + '-' + host.gsub('_', '-')
+end
+
+# Set work machines into a group
+def isIssaMachine()
+    if Dir.getwd.include? "services-dev"
+        return true
+    end
+
+    return false
 end
