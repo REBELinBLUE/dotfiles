@@ -53,21 +53,35 @@ cd() {
     fi
 }
 
-function _parse_git_dirty() {
-    [[ $(git status 2> /dev/null | tail -n1) != *"working directory clean"* ]] && echo "*"
-}
-
-function _parse_git_branch() {
-    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(_parse_git_dirty)/"
-}
-
 # Use /etc/is_vagrant_vm to test if vagrant and if so use yellow not red for the user/host
 PROMPT_COLOR=$RED
 if [ -f /etc/is_vagrant_vm ]; then
     PROMPT_COLOR=$YELLOW
 fi
 
-export PS1="\n${PROMPT_COLOR}\u ${RESET}at ${PROMPT_COLOR}\h ${RESET}in ${PINK}\w${RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${BLUE}\$(_parse_git_branch)${RESET}\n$ ${RESET}"
+if [ -f /opt/bash-git-prompt/gitprompt.sh ]; then
+    GIT_PROMPT_ONLY_IN_REPO=0
+    GIT_PROMPT_PREFIX=" ${RESET}on "
+    GIT_PROMPT_SUFFIX="${RESET}"
+    GIT_PROMPT_LEADING_SPACE=0
+    GIT_PROMPT_SEPARATOR=' '
+    GIT_PROMPT_BRANCH="${BLUE}"
+
+    GIT_PROMPT_START="\n${PROMPT_COLOR}\u ${RESET}at ${PROMPT_COLOR}\h ${RESET}in ${PINK}\w${RESET}"
+    GIT_PROMPT_END="${RESET}\n\$ "
+
+    source /opt/bash-git-prompt/gitprompt.sh
+else
+    function _parse_git_dirty() {
+        [[ $(git status 2> /dev/null | tail -n1) != *"working directory clean"* ]] && echo "*"
+    }
+
+    function _parse_git_branch() {
+        git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(_parse_git_dirty)/"
+    }
+
+    export PS1="\n${PROMPT_COLOR}\u ${RESET}at ${PROMPT_COLOR}\h ${RESET}in ${PINK}\w${RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${BLUE}\$(_parse_git_branch)${RESET}\n$ ${RESET}"
+fi
 
 # Check the window size after each command and, if necessary, update the values of LINES and COLUMNS.
 shopt -s checkwinsize

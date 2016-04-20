@@ -29,6 +29,7 @@ Vagrant.configure('2') do |config|
     end
 
     config.vm.provision "shell", inline: "touch /etc/is_vagrant_vm"
+    config.vm.provision "shell", inline: "git clone https://github.com/magicmonty/bash-git-prompt.git /opt/bash-git-prompt --depth=1"
 end
 
 # Set the hostname of machine to the hostname of the host + the folder name if they aren't explictly set
