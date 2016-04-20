@@ -27,12 +27,6 @@ Vagrant.configure('2') do |config|
             provider.customize ["modifyvm", :id, "--ostype", "Ubuntu_64"]
         end
     end
-
-    # Install composer globally - FIXME: Check for PHP
-    config.vm.provision "shell", inline: "curl -sS https://getcomposer.org/installer | php; chmod +x composer.phar; mv composer.phar /usr/local/bin/composer"
-
-    # Update composer on each boot
-    config.vm.provision "shell", inline: "sudo /usr/local/bin/composer self-update", run: "always"
 end
 
 # Set the hostname of machine to the hostname of the host + the folder name if they aren't explictly set
