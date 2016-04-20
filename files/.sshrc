@@ -26,15 +26,16 @@ alias grep='grep --color=auto -in'
 # Add edit alias
 alias edit='$EDITOR'
 
-BLACK=$(tput -Txterm setaf 0)
-RED=$(tput -Txterm setaf 1)
-GREEN=$(tput -Txterm setaf 2)
-YELLOW=$(tput -Txterm setaf 3)
-BLUE=$(tput -Txterm setaf 4)
-PINK=$(tput -Txterm setaf 5)
-CYAN=$(tput -Txterm setaf 6)
-BOLD=$(tput -Txterm bold)
-RESET=$(tput -Txterm sgr0)
+BLACK=$(tput -Txterm-256color setaf 0)
+RED=$(tput -Txterm-256color setaf 1)
+GREEN=$(tput -Txterm-256color setaf 2)
+YELLOW=$(tput -Txterm-256color setaf 3)
+BLUE=$(tput -Txterm-256color setaf 4)
+MAGENTA=$(tput -Txterm-256color setaf 5)
+CYAN=$(tput -Txterm-256color setaf 6)
+WHITE=$(tput -Txterm-256color setaf 7)
+BOLD=$(tput -Txterm-256color bold)
+RESET=$(tput -Txterm-256color sgr0)
 
 # A function to allow cd ../../../.. to be cd ..... instead
 cd() {
@@ -73,7 +74,7 @@ if [ -f ${GIT_PROMPT}/gitprompt.sh ]; then
     GIT_PROMPT_SEPARATOR=' '
     GIT_PROMPT_BRANCH="${BLUE}"
 
-    GIT_PROMPT_START="\n${PROMPT_COLOR}\u ${RESET}at ${PROMPT_COLOR}\h ${RESET}in ${PINK}\w${RESET}"
+    GIT_PROMPT_START="\n${PROMPT_COLOR}\u ${RESET}at ${PROMPT_COLOR}\h ${RESET}in ${MAGENTA}\w${RESET}"
     GIT_PROMPT_END="${RESET}\n\$ "
 
     source /opt/bash-git-prompt/gitprompt.sh
@@ -96,7 +97,8 @@ else
 
     echo -e "\033[1;31m => bash-git-prompt is not installed, run _install_git_prompt to install it\033[0m";
 
-    export PS1="\n${PROMPT_COLOR}\u ${RESET}at ${PROMPT_COLOR}\h ${RESET}in ${PINK}\w${RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${BLUE}\$(_parse_git_branch)${RESET}\n$ ${RESET}"
+    export PS1="\n${PROMPT_COLOR}\u ${RESET}at ${PROMPT_COLOR}\h ${RESET}in ${MAGENTA}\w${RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${BLUE}\$(_parse_git_branch)${RESET}\n$ ${RESET}"
+    export PS2="> "
 fi
 
 # Check the window size after each command and, if necessary, update the values of LINES and COLUMNS.

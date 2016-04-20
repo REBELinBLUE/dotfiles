@@ -1,12 +1,26 @@
-BLACK=$(tput -Txterm setaf 0)
-RED=$(tput -Txterm setaf 1)
-GREEN=$(tput -Txterm setaf 2)
-YELLOW=$(tput -Txterm setaf 3)
-BLUE=$(tput -Txterm setaf 4)
-PINK=$(tput -Txterm setaf 5)
-CYAN=$(tput -Txterm setaf 6)
-BOLD=$(tput -Txterm bold)
-RESET=$(tput -Txterm sgr0)
+BLACK=$(tput -Txterm-256color setaf 0)
+RED=$(tput -Txterm-256color setaf 1)
+GREEN=$(tput -Txterm-256color setaf 2)
+YELLOW=$(tput -Txterm-256color setaf 3)
+BLUE=$(tput -Txterm-256color setaf 4)
+MAGENTA=$(tput -Txterm-256color setaf 5)
+CYAN=$(tput -Txterm-256color setaf 6)
+WHITE=$(tput -Txterm-256color setaf 7)
+BOLD=$(tput -Txterm-256color bold)
+RESET=$(tput -Txterm-256color sgr0)
+
+# setab - background
+# smul - underline, rmul - off
+# smso - highlight, rmso - off
+# xterm-256color
+
+# supported colours
+#for C in {0..255}; do
+#    tput setab $C
+#    echo -n "$C "
+#done
+#tput sgr0
+#echo
 
 GIT_PROMPT=/opt/bash-git-prompt
 if [ "$(uname)" == "Darwin" ]; then
@@ -21,11 +35,7 @@ if [ -f ${GIT_PROMPT}/gitprompt.sh ]; then
     GIT_PROMPT_SEPARATOR=' '
     GIT_PROMPT_BRANCH="${BLUE}"
 
-    #GIT_PROMPT_COMMAND_OK="${GREEN}✔${RESET}" # displays as ✔
-    #GIT_PROMPT_COMMAND_FAIL="${RED}✘-_LAST_COMMAND_STATE_${RESET}" # displays as ✘-1 for exit code 1
-    # _LAST_COMMAND_INDICATOR_${RESET}
-
-    GIT_PROMPT_START="\n${GREEN}\u ${RESET}at ${GREEN}\h ${RESET}in ${PINK}\w${RESET}"
+    GIT_PROMPT_START="\n${GREEN}\u ${RESET}at ${GREEN}\h ${RESET}in ${MAGENTA}\w${RESET}"
     GIT_PROMPT_END="${RESET}\n\$ "
 
     source ${GIT_PROMPT}/gitprompt.sh
@@ -38,7 +48,8 @@ else
         git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(_parse_git_dirty)/"
     }
 
-    export PS1="\n${GREEN}\u ${RESET}at ${GREEN}\h ${RESET}in ${PINK}\w${RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${BLUE}\$(_parse_git_branch)${RESET}\n$ ${RESET}"
+    export PS1="\n${GREEN}\u ${RESET}at ${GREEN}\h ${RESET}in ${MAGENTA}\w${RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${BLUE}\$(_parse_git_branch)${RESET}\n$ ${RESET}"
+    export PS2="> "
 fi
 
 # mem/file sync of history
