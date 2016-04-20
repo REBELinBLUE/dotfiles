@@ -80,6 +80,12 @@ else
         git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(_parse_git_dirty)/"
     }
 
+    function _install_git_prompt() {
+        sudo git clone https://github.com/magicmonty/bash-git-prompt.git /opt/bash-git-prompt --depth=1
+        # FIXME: Figure out how to reload the prompt
+        #exec $SHELL -l
+    }
+
     export PS1="\n${PROMPT_COLOR}\u ${RESET}at ${PROMPT_COLOR}\h ${RESET}in ${PINK}\w${RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${BLUE}\$(_parse_git_branch)${RESET}\n$ ${RESET}"
 fi
 
