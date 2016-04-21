@@ -26,7 +26,7 @@ if [ ! -f ~/.gitconfig ]; then
 fi
 
 # Remove tvnamer config if not installed
-if [[ ! "$(type -P tvnamer)" ]]; then
+if ! type_exists 'tvnamer'; then
     rm -f $HOME/.tvnamer.json
 fi
 

@@ -9,8 +9,8 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Install composer
-if [[ ! "$(type -P composer)" ]]; then
-    info 'Installing composer'
+if ! type_exists 'composer'; then
+    e_arrow 'Installing composer'
     curl -sS https://getcomposer.org/installer | php
     mv composer.phar /usr/local/bin/composer
     chmod +x /usr/local/bin/composer

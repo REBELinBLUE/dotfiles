@@ -27,7 +27,7 @@ alias grep='grep --color=auto -in'
 alias edit='$EDITOR'
 
 # Add a composer alias which looks for composer in . if it isn't installed globally
-if [[ ! "$(type -P composer)" ]]; then
+if ! type_exists 'composer'; then
      alias composer='php composer.phar'
 fi
 

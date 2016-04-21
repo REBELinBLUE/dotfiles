@@ -14,8 +14,8 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Install Homebrew.
-if [[ ! "$(type -P brew)" ]]; then
-    info "Installing Homebrew"
+if ! type_exists 'brew'; then
+    e_info "Installing Homebrew"
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 

@@ -42,3 +42,8 @@ shopt -s globstar
 # Check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
+
+# if this is interactive shell, then bind hh to Ctrl-r (for Vi mode check doc)
+if [[ $- =~ .*i.* ]]; then
+    bind '"\C-r": "\C-a hh \C-j"';
+fi
