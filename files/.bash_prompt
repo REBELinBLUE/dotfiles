@@ -1,6 +1,6 @@
 GIT_PROMPT=/opt/bash-git-prompt
 if is_os "darwin"; then
-    GIT_PROMPT=`brew --prefix bash-git-prompt`/share
+    GIT_PROMPT=$(brew --prefix bash-git-prompt)/share
 fi
 
 if [ -f ${GIT_PROMPT}/gitprompt.sh ]; then
@@ -27,6 +27,3 @@ else
     export PS1="\n${CLI_GREEN}\u ${CLI_RESET}at ${CLI_GREEN}\h ${CLI_RESET}in ${CLI_MAGENTA}\w${CLI_RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${CLI_BLUE}\$(_parse_git_branch)${CLI_RESET}\n$ ${CLI_RESET}"
     export PS2="> "
 fi
-
-# mem/file sync of history
-#export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
