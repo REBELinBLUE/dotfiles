@@ -47,7 +47,7 @@ alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias tmux='tmux -CC'
 
 # Reload the shell (i.e. invoke as a login shell)
-alias reload="exec $SHELL -l"
+alias reload="reset; exec $SHELL -l"
 
 # Update dotfiles
 # alias dotup="git --work-tree=$HOME/.dotfiles/ pull && $HOME/.dotfiles/scripts/dotfiles.sh && exec $SHELL -l"
