@@ -3,10 +3,12 @@ if is_os "darwin"; then
     GIT_PROMPT=$(brew --prefix bash-git-prompt)/share
 fi
 
-# Underline the hostname when connected via SSH.
+# Underline the hostname when connected via SSH
 HOST_STYLE=""
-if [[ "${SSH_TTY}" ]]; then
-    HOST_STYLE=$CLI_UNDERLINE
+if [ $(hostname | grep '.lan' | wc -l) == 1 ]; then
+    if [[ "${SSH_TTY}" ]]; then
+        HOST_STYLE=$CLI_UNDERLINE
+    fi
 fi
 
 if [ -f ${GIT_PROMPT}/gitprompt.sh ]; then
