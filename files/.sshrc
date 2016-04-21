@@ -36,6 +36,7 @@ CYAN=$(tput -Txterm-256color setaf 6)
 WHITE=$(tput -Txterm-256color setaf 7)
 BOLD=$(tput -Txterm-256color bold)
 RESET=$(tput -Txterm-256color sgr0)
+# FIXME: These colours don't seem to fit Afterglow too well
 
 # A function to allow cd ../../../.. to be cd ..... instead
 cd() {

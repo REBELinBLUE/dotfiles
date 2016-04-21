@@ -1,10 +1,12 @@
 # Additional brewfile only for work Mac
 
 tap 'caskroom/cask'
+tap 'homebrew/versions'
+tap 'homebrew/homebrew-php'
 
 cask_args appdir: '/Applications'
 
-brew 'ansible'
+brew 'ansible19'
 brew 'awscli'
 brew 'php70-rdkafka'
 brew 'git-standup'
