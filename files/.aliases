@@ -19,13 +19,19 @@ alias cat='ccat'
 # Use editor
 alias edit='$EDITOR'
 
-# Use sshrc instead of ssh
-alias ssh='sshrc'
+if type_exists 'sshrc'; then
+    # Use sshrc instead of ssh
+    alias ssh='sshrc'
+fi
 
-# Use hub command instead of git
-alias git='hub'
+if type_exists 'hub'; then
+    # Use hub command instead of git
+    alias git='hub'
+fi
 
-eval "$(thefuck --alias)"
+if type_exists 'thefuck'; then
+    eval "$(thefuck --alias)"
+fi
 
 # Prompt for confirmation
 alias cp='cp -iv'
