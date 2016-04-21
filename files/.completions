@@ -1,17 +1,17 @@
 BASHMARKS=/opt/bashmarks
 if is_os "darwin"; then
-    BASHMARKS=`brew --prefix bashmarks`/libexec
+    BASHMARKS=$(brew --prefix bashmarks)/libexec
 
-    if [ -f `brew --prefix`/etc/bash_completion.d/vagrant ]; then
-        source `brew --prefix`/etc/bash_completion.d/vagrant
+    if [ -f $(brew --prefix)/etc/bash_completion.d/vagrant ]; then
+        source $(brew --prefix)/etc/bash_completion.d/vagrant
     fi
 
-    if [ -f `brew --prefix`/etc/bash_completion ]; then
-        source `brew --prefix`/etc/bash_completion
+    if [ -f $(brew --prefix)/etc/bash_completion ]; then
+        source $(brew --prefix)/etc/bash_completion
     fi
 
-    if [ -f `brew --repository`/Library/Contributions/brew_bash_completion.sh ]; then
-        source `brew --repository`/Library/Contributions/brew_bash_completion.sh
+    if [ -f $(brew --repository)/Library/Contributions/brew_bash_completion.sh ]; then
+        source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
     fi
 fi
 
