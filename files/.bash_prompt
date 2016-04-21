@@ -3,11 +3,14 @@ if is_os "darwin"; then
     GIT_PROMPT=$(brew --prefix bash-git-prompt)/share
 fi
 
-# Underline the hostname when connected via SSH
-HOST_STYLE=""
-if [ $(hostname | grep '.lan' | wc -l) == 1 ]; then
-    if [[ "${SSH_TTY}" ]]; then
-        HOST_STYLE=$CLI_UNDERLINE
+HOST_STYLE=$CLI_GREEN
+# Set the colour to red when connected via SSH
+if [[ "${SSH_TTY}" ]]; then
+    HOST_COLOR=$CLI_RED
+
+    # Unless on local macs, underline host
+    if [ $(hostname | grep '.lan' | wc -l) == 1 ]; then
+        HOST_STYLE="${CLI_UNDERLINE}${CLI_GREEN}"
     fi
 fi
 
@@ -19,7 +22,7 @@ if [ -f ${GIT_PROMPT}/gitprompt.sh ]; then
     GIT_PROMPT_SEPARATOR=' '
     GIT_PROMPT_BRANCH="${CLI_BLUE}"
 
-    GIT_PROMPT_START="\n${HOST_STYLE}${CLI_GREEN}\u${CLI_RESET} at ${HOST_STYLE}${CLI_GREEN}\h${CLI_RESET} in ${CLI_MAGENTA}\w${CLI_RESET}"
+    GIT_PROMPT_START="\n${HOST_STYLE}\u${CLI_RESET} at ${HOST_STYLE}\h${CLI_RESET} in ${CLI_MAGENTA}\w${CLI_RESET}"
     GIT_PROMPT_END="${CLI_RESET}\n\$ "
 
     source ${GIT_PROMPT}/gitprompt.sh
@@ -32,6 +35,6 @@ else
         git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(_parse_git_dirty)/"
     }
 
-    export PS1="\n${HOST_STYLE}${CLI_GREEN}\u${CLI_RESET} at ${HOST_STYLE}${CLI_GREEN}\h${CLI_RESET} in ${CLI_MAGENTA}\w${CLI_RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${CLI_BLUE}\$(_parse_git_branch)${CLI_RESET}\n$ ${CLI_RESET}"
+    export PS1="\n${HOST_STYLE}\u${CLI_RESET} at ${HOST_STYLE}\h${CLI_RESET} in ${CLI_MAGENTA}\w${CLI_RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${CLI_BLUE}\$(_parse_git_branch)${CLI_RESET}\n$ ${CLI_RESET}"
     export PS2="> "
 fi

@@ -6,6 +6,14 @@ if [ $(hostname | grep '.lan' | wc -l) == 1 ]; then
     return
 fi
 
+# Don't run on linode
+if [ $(hostname | grep 'rebelinblue' | wc -l) == 1 ]; then
+    rm -rf $SSHRCCLEANUP
+    unset SSHRCCLEANUP
+    unset SSHHOME
+    return
+fi
+
 # Make nano the default editor.
 export EDITOR="nano -w"
 
