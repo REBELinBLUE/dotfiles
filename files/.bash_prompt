@@ -1,28 +1,3 @@
-BLACK=$(tput -Txterm-256color setaf 0)
-RED=$(tput -Txterm-256color setaf 1)
-GREEN=$(tput -Txterm-256color setaf 2)
-YELLOW=$(tput -Txterm-256color setaf 3)
-BLUE=$(tput -Txterm-256color setaf 4)
-MAGENTA=$(tput -Txterm-256color setaf 5)
-CYAN=$(tput -Txterm-256color setaf 6)
-WHITE=$(tput -Txterm-256color setaf 7)
-BOLD=$(tput -Txterm-256color bold)
-RESET=$(tput -Txterm-256color sgr0)
-# FIXME: These colours don't seem to fit Afterglow too well
-
-# setab - background
-# smul - underline, rmul - off
-# smso - highlight, rmso - off
-# xterm-256color
-
-# supported colours
-#for C in {0..255}; do
-#    tput setab $C
-#    echo -n "$C "
-#done
-#tput sgr0
-#echo
-
 GIT_PROMPT=/opt/bash-git-prompt
 if [ "$(uname)" == "Darwin" ]; then
     GIT_PROMPT=`brew --prefix bash-git-prompt`/share
@@ -30,14 +5,14 @@ fi
 
 if [ -f ${GIT_PROMPT}/gitprompt.sh ]; then
     GIT_PROMPT_ONLY_IN_REPO=0
-    GIT_PROMPT_PREFIX=" ${RESET}on "
-    GIT_PROMPT_SUFFIX="${RESET}"
+    GIT_PROMPT_PREFIX=" ${CLI_RESET}on "
+    GIT_PROMPT_SUFFIX="${CLI_RESET}"
     GIT_PROMPT_LEADING_SPACE=0
     GIT_PROMPT_SEPARATOR=' '
-    GIT_PROMPT_BRANCH="${BLUE}"
+    GIT_PROMPT_BRANCH="${CLI_BLUE}"
 
-    GIT_PROMPT_START="\n${GREEN}\u ${RESET}at ${GREEN}\h ${RESET}in ${MAGENTA}\w${RESET}"
-    GIT_PROMPT_END="${RESET}\n\$ "
+    GIT_PROMPT_START="\n${CLI_GREEN}\u ${CLI_RESET}at ${CLI_GREEN}\h ${CLI_RESET}in ${CLI_MAGENTA}\w${CLI_RESET}"
+    GIT_PROMPT_END="${CLI_RESET}\n\$ "
 
     source ${GIT_PROMPT}/gitprompt.sh
 else
@@ -49,7 +24,7 @@ else
         git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(_parse_git_dirty)/"
     }
 
-    export PS1="\n${GREEN}\u ${RESET}at ${GREEN}\h ${RESET}in ${MAGENTA}\w${RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${BLUE}\$(_parse_git_branch)${RESET}\n$ ${RESET}"
+    export PS1="\n${CLI_GREEN}\u ${CLI_RESET}at ${CLI_GREEN}\h ${CLI_RESET}in ${CLI_MAGENTA}\w${CLI_RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${CLI_BLUE}\$(_parse_git_branch)${CLI_RESET}\n$ ${CLI_RESET}"
     export PS2="> "
 fi
 

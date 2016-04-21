@@ -37,16 +37,47 @@ man() {
 }
 
 # Helper functions
-function info {
-    echo -e "\033[1;33m => $1\033[0m";
+e_header() {
+    printf "\n${CLI_BOLD}${CLI_MAGENTA}==========  %s  ==========${CLI_RESET}\n" "$@"
 }
 
-function ok {
-    echo -e "\033[1;32m => $1\033[0m";
+e_arrow() {
+    printf "➜ $@\n"
 }
 
-function error {
-    echo -e "\033[1;31m => Error: $1\033[0m";
+e_success() {
+    printf "${CLI_GREEN}✔ %s${CLI_RESET}\n" "$@"
+}
+
+e_error() {
+    printf "${CLI_RED}✖ %s${CLI_RESET}\n" "$@"
+}
+
+e_warning() {
+    printf "${CLI_YELLOW}➜ %s${CLI_RESET}\n" "$@"
+}
+
+e_underline() {
+    printf "${CLI_UNDERLINE}${CLI_BOLD}%s${CLI_RESET}\n" "$@"
+}
+
+e_bold() {
+    printf "${CLI_BOLD}%s${CLI_RESET}\n" "$@"
+}
+
+e_note() {
+    printf "${CLI_UNDERLINE}${CLI_BOLD}${CLI_BLUE}Note:${CLI_RESET} ${CLI_BLUE}%s${CLI_RESET}\n" "$@"
+}
+
+
+e_help() {
+	e_header "I am a head ermessage - e_header"
+	e_success "I am a success message - e_success"
+	e_error "I am an error message - e_error"
+	e_warning "I am a warning message - e_warning"
+	e_underline "I am underlined text - e_underline"
+	e_bold "I am bold text - e_bold"
+	e_note "I am a note - e_note"
 }
 
 # A function to allow cd ../../../.. to be cd ..... instead

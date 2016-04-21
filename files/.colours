@@ -1,0 +1,26 @@
+export CLI_BLACK=$(tput -Txterm-256color setaf 0)
+export CLI_RED=$(tput -Txterm-256color setaf 1)
+export CLI_GREEN=$(tput -Txterm-256color setaf 2)
+export CLI_YELLOW=$(tput -Txterm-256color setaf 3)
+export CLI_BLUE=$(tput -Txterm-256color setaf 4)
+export CLI_MAGENTA=$(tput -Txterm-256color setaf 5)
+export CLI_CYAN=$(tput -Txterm-256color setaf 6)
+export CLI_WHITE=$(tput -Txterm-256color setaf 7)
+export CLI_BOLD=$(tput -Txterm-256color bold)
+export CLI_RESET=$(tput -Txterm-256color sgr0)
+export CLI_UNDERLINE=$(tput -Txterm-256color sgr 0 1)
+
+# FIXME: These colours don't seem to fit Afterglow too well
+
+# setab - background
+# smul - underline, rmul - off
+# smso - highlight, rmso - off
+# xterm-256color
+
+# supported colours
+#for C in {0..255}; do
+#    tput setab $C
+#    echo -n "$C "
+#done
+#tput sgr0
+#echo

@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-source ../files/.functions
+source $HOME/.dotfiles/scripts/utils.sh
 
 if [ "$(uname)" != "Darwin" ]; then
-    error "The setup script is only for OS X"
+    e_error "The setup script is only for OS X"
     exit 1;
 fi
 

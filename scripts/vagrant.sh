@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source $HOME/.dotfiles/files/.functions
+source $HOME/.dotfiles/scripts/utils.sh
 
 # Install vagrant plugins
 vagrant plugin install vagrant-vbguest
