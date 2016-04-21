@@ -10,6 +10,9 @@ export CLI_BOLD=$(tput -Txterm-256color bold)
 export CLI_RESET=$(tput -Txterm-256color sgr0)
 export CLI_UNDERLINE=$(tput -Txterm-256color sgr 0 1)
 
+#export CLI_PURPLE=$(tput -Txterm-256color setaf 125)
+#export CLI_ORANGE=$(tput  -Txterm-256color  setaf 166);
+
 # FIXME: These colours don't seem to fit Afterglow too well
 
 # setab - background

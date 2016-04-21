@@ -1,5 +1,5 @@
 GIT_PROMPT=/opt/bash-git-prompt
-if [ "$(uname)" == "Darwin" ]; then
+if is_os "darwin"; then
     GIT_PROMPT=`brew --prefix bash-git-prompt`/share
 fi
 

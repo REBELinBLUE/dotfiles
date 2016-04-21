@@ -20,7 +20,7 @@ vagrant box add --provider virtualbox laravel/homestead
 vagrant box add --provider virtualbox debian/jessie64
 vagrant box add --provider virtualbox ubuntu/trusty64
 
-if [ "$(uname)" == "Darwin" ]; then
+if is_os "darwin"; then
     if [ ! -d $HOME/VirtualBox\ VMs/ ]; then
         mkdir $HOME/VirtualBox\ VMs/
     fi

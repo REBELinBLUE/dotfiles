@@ -1,5 +1,5 @@
 BASHMARKS=/opt/bashmarks
-if [ "$(uname)" == "Darwin" ]; then
+if is_os "darwin"; then
     BASHMARKS=`brew --prefix bashmarks`/libexec
 
     if [ -f `brew --prefix`/etc/bash_completion.d/vagrant ]; then

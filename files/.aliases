@@ -54,7 +54,7 @@ alias reload="reset; exec $SHELL -l"
 # Update dotfiles
 # alias dotup="git --work-tree=$HOME/.dotfiles/ pull && $HOME/.dotfiles/scripts/dotfiles.sh && exec $SHELL -l"
 
-if [ "$(uname)" == "Darwin" ]; then
+if is_os "darwin"; then
 
     # Update dotfiles
     # alias dotup="git --work-tree=$HOME/.dotfiles/ pull && $HOME/.dotfiles/update.sh"

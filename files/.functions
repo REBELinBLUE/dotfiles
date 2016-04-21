@@ -1,4 +1,4 @@
-if [ "$(uname)" == "Darwin" ]; then
+if is_os "darwin"; then
 
     # Open argument in Dash
     function dash() {
@@ -69,15 +69,45 @@ e_note() {
     printf "${CLI_UNDERLINE}${CLI_BOLD}${CLI_BLUE}Note:${CLI_RESET} ${CLI_BLUE}%s${CLI_RESET}\n" "$@"
 }
 
+seek_confirmation() {
+    printf "\n${CLI_BOLD}$@${CLI_RESET}"
+    read -p " (y/n) " -n 1
+    printf "\n"
+}
+
+# Test whether the result of an 'ask' is a confirmation
+is_confirmed() {
+    if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+        return 0
+    fi
+
+    return 1
+}
+
+type_exists() {
+    if [ $(type -P $1) ]; then
+        return 0
+    fi
+
+    return 1
+}
+
+is_os() {
+    if [[ "${OSTYPE}" == $1* ]]; then
+        return 0
+    fi
+
+    return 1
+}
 
 e_help() {
-	e_header "I am a head ermessage - e_header"
-	e_success "I am a success message - e_success"
-	e_error "I am an error message - e_error"
-	e_warning "I am a warning message - e_warning"
-	e_underline "I am underlined text - e_underline"
-	e_bold "I am bold text - e_bold"
-	e_note "I am a note - e_note"
+    e_header "I am a head ermessage - e_header"
+    e_success "I am a success message - e_success"
+    e_error "I am an error message - e_error"
+    e_warning "I am a warning message - e_warning"
+    e_underline "I am underlined text - e_underline"
+    e_bold "I am bold text - e_bold"
+    e_note "I am a note - e_note"
 }
 
 # A function to allow cd ../../../.. to be cd ..... instead

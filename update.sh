@@ -2,9 +2,9 @@
 
 source $HOME/.dotfiles/scripts/utils.sh
 
-if [ "$(uname)" != "Darwin" ]; then
+if ! is_os "darwin"; then
     e_error "The update script is only for OS X"
-    exit 1;
+    exit 1
 fi
 
 # Ask for the administrator password upfront

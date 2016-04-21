@@ -31,17 +31,12 @@ if [[ ! "$(type -P composer)" ]]; then
      alias composer='php composer.phar'
 fi
 
-CLI_BLACK=$(tput -Txterm-256color setaf 0)
 CLI_RED=$(tput -Txterm-256color setaf 1)
 CLI_GREEN=$(tput -Txterm-256color setaf 2)
 CLI_YELLOW=$(tput -Txterm-256color setaf 3)
 CLI_BLUE=$(tput -Txterm-256color setaf 4)
 CLI_MAGENTA=$(tput -Txterm-256color setaf 5)
-CLI_CYAN=$(tput -Txterm-256color setaf 6)
-CLI_WHITE=$(tput -Txterm-256color setaf 7)
-CLI_BOLD=$(tput -Txterm-256color bold)
 CLI_RESET=$(tput -Txterm-256color sgr0)
-CLI_UNDERLINE=$(tput -Txterm-256color sgr 0 1)
 
 # A function to allow cd ../../../.. to be cd ..... instead
 cd() {
