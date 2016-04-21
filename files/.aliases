@@ -22,6 +22,9 @@ alias edit='$EDITOR'
 # Use sshrc instead of ssh
 alias ssh='sshrc'
 
+# Use hub command instead of git
+alias git='hub'
+
 # Prompt for confirmation
 alias cp='cp -iv'
 alias rm='rm -i'
