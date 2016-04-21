@@ -21,6 +21,8 @@
     "color_inactive_tabs": true,
     "color_scheme": "Packages/Theme - Afterglow/Afterglow.tmTheme",
     "draw_white_space": "all",
+    "trim_trailing_white_space_on_save": false,
+    "word_wrap": false,
     "file_exclude_patterns":
     [
         "sync",
@@ -43,8 +45,7 @@
         "*.class",
         "*.psd",
         "*.db",
-        "*.sublime-workspace",
-        "tpl_*.php"
+        "*.sublime-workspace"
     ],
     "folder_exclude_patterns":
     [
