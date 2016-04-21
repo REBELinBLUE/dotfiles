@@ -1,6 +1,11 @@
 # Make nano the default editor.
 export EDITOR="nano -w"
 
+# Add more paths
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+export PATH="~/.composer/vendor/bin:$PATH"
+
 if is_os "darwin"; then
     # Add additional paths
     export PATH="$(brew --prefix findutils)/bin:$PATH"
@@ -14,11 +19,6 @@ if is_os "darwin"; then
 
     export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 fi
-
-# Add more paths
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
-export PATH="~/.composer/vendor/bin:$PATH"
 
 # Larger bash history (allow 10000 entries; default is 500)
 export HISTSIZE=10000
