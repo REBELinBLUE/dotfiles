@@ -6,7 +6,7 @@ fi
 HOST_STYLE=$CLI_GREEN
 # Set the colour to red when connected via SSH
 if [[ "${SSH_TTY}" ]]; then
-    HOST_COLOR=$CLI_RED
+    HOST_STYLE=$CLI_RED
 
     # Unless on local macs, underline host
     if [ $(hostname | grep '.lan' | wc -l) == 1 ]; then
