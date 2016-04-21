@@ -25,6 +25,8 @@ alias ssh='sshrc'
 # Use hub command instead of git
 alias git='hub'
 
+eval "$(thefuck --alias)"
+
 # Prompt for confirmation
 alias cp='cp -iv'
 alias rm='rm -i'
