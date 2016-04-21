@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source $HOME/.dotfiles/scripts/utils.sh
+
 skip=".gitconfig .bash_prompt .exports .completions .aliases .functions"
 
 # Symlink any files except those listed above
