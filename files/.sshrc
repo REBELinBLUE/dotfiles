@@ -15,7 +15,7 @@ if [ $(hostname | grep 'rebelinblue' | wc -l) == 1 ]; then
 fi
 
 # Make nano the default editor.
-export EDITOR="nano -w"
+export EDITOR='nano -w'
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..='cd ..'         # Go up one directory
@@ -40,7 +40,7 @@ alias mv='mv -iv'
 alias grep='grep --color=auto -in'
 
 # Add edit alias
-alias edit='$EDITOR'
+alias edit=$EDITOR
 
 # Add a composer alias which looks for composer in . if it isn't installed globally
 if ! type_exists 'composer'; then
@@ -72,9 +72,9 @@ cd() {
 }
 
 # Use /etc/is_vagrant_vm to test if vagrant and if so use yellow not red for the user/host
-PROMPT_COLOR=$CLI_RED
+HOST_COLOR=$CLI_RED
 if [ -f /etc/is_vagrant_vm ]; then
-    PROMPT_COLOR=$CLI_YELLOW
+    HOST_COLOR=$CLI_YELLOW
 fi
 
 # Use a folder in home for bash git prompt unless it is installed in /opt or we are running in vagrant
@@ -91,7 +91,7 @@ if [ -f ${GIT_PROMPT}/gitprompt.sh ]; then
     GIT_PROMPT_SEPARATOR=' '
     GIT_PROMPT_BRANCH="${CLI_BLUE}"
 
-    GIT_PROMPT_START="\n${PROMPT_COLOR}\u ${CLI_RESET}at ${PROMPT_COLOR}\h ${CLI_RESET}in ${CLI_MAGENTA}\w${CLI_RESET}"
+    GIT_PROMPT_START="\n${HOST_COLOR}\u ${CLI_RESET}at ${HOST_COLOR}\h ${CLI_RESET}in ${CLI_MAGENTA}\w${CLI_RESET}"
     GIT_PROMPT_END="${CLI_RESET}\n\$ "
 
     source /opt/bash-git-prompt/gitprompt.sh
@@ -105,7 +105,6 @@ else
     }
 
     function _install_git_prompt() {
-
         echo -e "${CLI_YELLOW}➜ Downloading bash-git-prompt${CLI_RESET}";
         sudo git clone https://github.com/magicmonty/bash-git-prompt.git $GIT_PROMPT --depth=1
         reset
@@ -116,9 +115,6 @@ else
 
     echo -e "${CLI_RED}✖ bash-git-prompt is not installed, run _install_git_prompt to install it${CLI_RESET}";
 
-    export PS1="\n${PROMPT_COLOR}\u ${CLI_RESET}at ${PROMPT_COLOR}\h ${CLI_RESET}in ${CLI_MAGENTA}\w${CLI_RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${BLUE}\$(_parse_git_branch)${CLI_RESET}\n$ ${CLI_RESET}"
+    export PS1="\n${HOST_COLOR}\u ${CLI_RESET}at ${HOST_COLOR}\h ${CLI_RESET}in ${CLI_MAGENTA}\w${CLI_RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${BLUE}\$(_parse_git_branch)${CLI_RESET}\n$ ${CLI_RESET}"
     export PS2="> "
 fi
-
-# Check the window size after each command and, if necessary, update the values of LINES and COLUMNS.
-shopt -s checkwinsize

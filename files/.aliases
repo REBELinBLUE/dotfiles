@@ -17,7 +17,7 @@ alias sl='ls'
 alias cat='ccat'
 
 # Use editor
-alias edit='$EDITOR'
+alias edit=$EDITOR
 
 if type_exists 'sshrc'; then
     # Use sshrc instead of ssh

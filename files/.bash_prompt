@@ -1,8 +1,3 @@
-GIT_PROMPT=/opt/bash-git-prompt
-if is_os "darwin"; then
-    GIT_PROMPT=$(brew --prefix bash-git-prompt)/share
-fi
-
 HOST_STYLE=$CLI_GREEN
 # Set the colour to red when connected via SSH
 if [[ "${SSH_TTY}" ]]; then
@@ -12,6 +7,11 @@ if [[ "${SSH_TTY}" ]]; then
     if [ $(hostname | grep '.lan' | wc -l) == 1 ]; then
         HOST_STYLE="${CLI_UNDERLINE}${CLI_GREEN}"
     fi
+fi
+
+GIT_PROMPT=/opt/bash-git-prompt
+if is_os "darwin"; then
+    GIT_PROMPT=$(brew --prefix bash-git-prompt)/share
 fi
 
 if [ -f ${GIT_PROMPT}/gitprompt.sh ]; then
