@@ -1,3 +1,11 @@
+# Don't run on my local machines
+if [ $(hostname | grep '.lan' | wc -l) == 1 ]; then
+    rm -rf $SSHRCCLEANUP
+    unset SSHRCCLEANUP
+    unset SSHHOME
+    return
+fi
+
 # Make nano the default editor.
 export EDITOR="nano -w"
 
