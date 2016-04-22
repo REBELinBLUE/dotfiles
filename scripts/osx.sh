@@ -211,11 +211,11 @@ defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
 ###############################################################################
 
 # FIXME: Add cursor setting & set the theme to default
-# Install the IR_Black and Afterflow theme for iTerm & Terminal
+# Install the IR_Black and Afterglow theme for iTerm & Terminal
 open -g -a /Applications/iTerm.app $HOME/.dotfiles/prefs/IR_Black.itermcolors
 open -g -a /Applications/Utilities/Terminal.app $HOME/.dotfiles/prefs/IR_Black.terminal
-open -g -a /Applications/iTerm.app  $HOME/.dotfiles/prefs/Afterflow.itermcolors
-open -g -a /Applications/Utilities/Terminal.app  $HOME/.dotfiles/prefs/Afterflow.terminal
+open -g -a /Applications/iTerm.app  $HOME/.dotfiles/prefs/Afterglow.itermcolors
+open -g -a /Applications/Utilities/Terminal.app  $HOME/.dotfiles/prefs/Afterglow.terminal
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool true
