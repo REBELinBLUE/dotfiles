@@ -39,5 +39,5 @@ export LC_ALL="en_GB.UTF-8"
 
 # Start keychain
 if type_exists 'keychain'; then
-    $(keychain --quiet --noask --ignore-missing --eval --agents ssh --inherit any id_rsa)
+    eval $(keychain --noask --ignore-missing --eval --agents ssh --inherit any id_rsa)
 fi
