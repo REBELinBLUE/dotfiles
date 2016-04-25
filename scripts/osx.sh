@@ -258,7 +258,7 @@ defaults write com.torusknot.SourceTreeNotMAS fileStatusViewMode -int 0
 defaults write com.torusknot.SourceTreeNotMAS gitCustomPath -string "/usr/local/bin/git"
 defaults write com.torusknot.SourceTreeNotMAS gitFlowCustomPath -string "/usr/local/bin/git-flow"
 defaults write com.torusknot.SourceTreeNotMAS gitFlowWhichOne -int 1
-defaults write com.torusknot.SourceTreeNotMAS gitGlobalIgnoreFile -string "/Users/stephen/.gitignore_global"
+defaults write com.torusknot.SourceTreeNotMAS gitGlobalIgnoreFile -string "${HOME}/.gitignore_global"
 defaults write com.torusknot.SourceTreeNotMAS gitLfsCustomPath -string "/usr/local/bin/git-lfs"
 defaults write com.torusknot.SourceTreeNotMAS gitLfsWhichOne -int 1
 defaults write com.torusknot.SourceTreeNotMAS gitWhichOne -int 1
