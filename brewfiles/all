@@ -101,6 +101,7 @@ brew 'pgcli'
 brew 'bashmarks'
 brew 'mas'
 brew 'thefuck'
+brew 'keychain'
 
 # Apps
 cask 'changes'
