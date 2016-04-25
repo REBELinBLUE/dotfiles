@@ -91,11 +91,9 @@
     autocorrect = 1
 
 [alias]
-    # Amend the currently staged files to the latest commit
-    amend = commit --amend --reuse-message=HEAD
 
-    # Shorthand for branch
-    b = branch
+    # Amend the currently staged files to the latest commit
+    amend = commit --amend
 
     # Show verbose output about branches
     branches = branch -va
@@ -106,54 +104,41 @@
     # Commit all changes
     ca = !git add --all && git commit --all --verbose
 
-    # Switch to a branch
-    co = checkout
-
-    # Show the diff between the latest commit and the current state
-    d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
-
-    # Remove branches that have already been merged with master
-    # a.k.a. ‘delete merged’
-    dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
-
-    # Fetch everything all remotes
-    f = fetch --all
+    # Discard the changes
+    discard = checkout --
 
     # Switch to a branch, creating it if necessary
     go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
+    # Pretty graphi
+    graph = log --graph --oneline --decorate
+
     # View the SHA, description, and history graph of the latest 20 commits
     l = log --format='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --no-merges -n 30
 
-    # Shorthand for merge
-    m = merge
-
-    # Shorthand for push
-    p = push
-
     # Pull in remote changes for the current repository and all its submodules
     pl = !"git pull; git submodule foreach git pull origin master"
-
-    # Shorthand for remote
-    r = remote
 
     # Interactive rebase with the given number of latest commits
     reb = "!r() { git rebase -i HEAD~$1; }; r"
 
     # Remove the old tag with this name and tag the latest commit with it.
-    retag = "!r() { git tag -d $1 && git push origin :refs/tags/$1 && git tag $1; }; r"
+    rmtag = "!r() { git tag -d $1 && git push origin :refs/tags/$1 }; r"
 
     # Show verbose output about remotes
     remotes = remote --verbose
 
-    # View the current working tree status using the short format
-    s = status --short --branch
-
-    # List contributors with number of commits
-    sl = shortlog --summary --numbered
+    # List stashes
+    stashes = stash list
 
     # Show verbose output about tags
     tags = tag --list
+
+    # Uncommit the previous commits
+    uncommit = reset --mixed HEAD~
+
+    # Unstage changes
+    unstage = reset -q HEAD --
 
 [pager]
     diff = diff-so-fancy | less --tabs=4 -RFX --pattern='^(added|deleted|modified):'
