@@ -15,6 +15,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # TODO: Prompt to login to the MAS
 
+# TODO: Move to mas in brewfiles
 mas install 402434720 # Name Mangler
 mas install 1054607607 # Helium
 mas install 407963104 # Pixelmator
