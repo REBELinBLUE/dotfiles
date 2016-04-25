@@ -2,7 +2,7 @@
 
 source $HOME/.dotfiles/scripts/utils.sh
 
-skip=".gitconfig .bash_prompt .exports .completions .aliases .functions"
+skip=".gitconfig .bash_prompt .exports .completions .aliases .functions .colours"
 
 # Symlink any files except those listed above
 for path in $HOME/.dotfiles/files/.*; do
