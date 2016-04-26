@@ -56,8 +56,6 @@ brew 'php70', args: ['with-homebrew-curl', 'with-postgresql', 'without-apache', 
 brew 'ffmpeg'
 
 # Install other tools
-brew 'ed', args: ['with-default-names']
-brew 'wdiff', args: ['with-gettext']
 brew 'httpie'
 brew 'gist'
 brew 'tmux'
