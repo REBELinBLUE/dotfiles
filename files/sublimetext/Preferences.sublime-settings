@@ -21,8 +21,6 @@
     "color_inactive_tabs": true,
     "color_scheme": "Packages/Theme - Afterglow/Afterglow.tmTheme",
     "draw_white_space": "all",
-    "trim_trailing_white_space_on_save": false,
-    "word_wrap": false,
     "file_exclude_patterns":
     [
         "sync",
@@ -69,5 +67,7 @@
     "tab_size": 4,
     "tabs_small": true,
     "theme": "Afterglow.sublime-theme",
-    "translate_tabs_to_spaces": true
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": false,
+    "word_wrap": false
 }
