@@ -45,4 +45,5 @@ $ composer config --global github-oauth.github.com OAUTH_TOKEN
 $ gist --login
 $ ngrok authtoken OAUTH_TOKEN
 $ asciinema auth
+$ hub browse
 ```
