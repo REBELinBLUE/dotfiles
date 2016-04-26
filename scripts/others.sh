@@ -8,14 +8,6 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Install composer
-if ! type_exists 'composer'; then
-    e_arrow 'Installing composer'
-    curl -sS https://getcomposer.org/installer | php
-    mv composer.phar /usr/local/bin/composer
-    chmod +x /usr/local/bin/composer
-fi
-
 # Hide VirtualBox folder
 if [ ! -d $HOME/VirtualBox\ VMs/ ]; then
     mkdir $HOME/VirtualBox\ VMs/
