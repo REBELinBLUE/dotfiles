@@ -20,7 +20,7 @@ export CLI_UNDERLINE=$(tput -Txterm-256color sgr 0 1)
 # xterm-256color
 
 # supported colours
-colors() {
+colours() {
     for C in {0..255}; do
         tput setab $C
         echo -n "$C "
