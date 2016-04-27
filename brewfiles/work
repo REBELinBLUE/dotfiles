@@ -13,4 +13,3 @@ brew 'git-standup'
 
 cask 'charles'
 cask 'near-lock'
-cask 'aerial'
