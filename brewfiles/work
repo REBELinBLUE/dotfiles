@@ -12,4 +12,3 @@ brew 'php70-rdkafka'
 brew 'git-standup'
 
 cask 'charles'
-cask 'near-lock'
