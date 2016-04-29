@@ -45,12 +45,8 @@ if ! type_exists 'tvnamer'; then
     rm -f $HOME/.tvnamer.json
 fi
 
-# Symlink SSH config
-if [ -f $HOME/.ssh/config ]; then
-    rm -f $HOME/.ssh/config
-fi
-
-ln -s $HOME/.dotfiles/files/.ssh/config $HOME/.ssh/config
+# Symlink the ssh config files
+ln -s $HOME/.dotfiles/files/.ssh/config.d/ $HOME/.ssh/config.d
 
 # Symlink Vagrantfile
 if [ -d $HOME/.vagrant.d/ ]; then
