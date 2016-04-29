@@ -1,30 +1,30 @@
 {
-    "bootstrapped": true,
-    "in_process_packages":
-    [
-    ],
-    "installed_packages":
-    [
-        "AdvancedNewFile",
-        "Alignment",
-        "Behat",
-        "DashDoc",
-        "DocBlockr",
-        "DotENV",
-        "EditorConfig",
-        "Function Name Display",
-        "Laravel 5 Snippets",
-        "Laravel Blade Highlighter",
-        "Markdown Extended",
-        "Markdown Preview",
-        "Package Control",
-        "Pretty JSON",
-        "SublimeCodeIntel",
-        "Theme - Afterglow",
-        "TrailingSpaces",
-        "VCS Gutter",
-        "Vue Syntax Highlight",
-        "Vuejs Complete Package",
-        "Vuejs Snippets"
-    ]
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"Alignment",
+		"Behat",
+		"DashDoc",
+		"DocBlockr",
+		"DotENV",
+		"EditorConfig",
+		"Function Name Display",
+		"Laravel 5 Snippets",
+		"Laravel Blade Highlighter",
+		"Markdown Extended",
+		"Markdown Preview",
+		"Package Control",
+		"Pretty JSON",
+		"SublimeCodeIntel",
+		"Theme - Afterglow",
+		"TrailingSpaces",
+		"VCS Gutter",
+		"Vue Syntax Highlight",
+		"Vuejs Complete Package",
+		"Vuejs Snippets"
+	]
 }
