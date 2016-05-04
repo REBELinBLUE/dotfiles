@@ -69,7 +69,6 @@ brew 'ssh-copy-id'
 brew 'node'
 brew 'terminal-notifier'
 brew 'wget'
-brew 'dnsmasq', restart_service: true
 brew 'readline'
 brew 'ccat'
 brew 'gnutls'
