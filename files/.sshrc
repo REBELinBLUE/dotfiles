@@ -115,6 +115,13 @@ else
 
     echo -e "${CLI_RED}✖ bash-git-prompt is not installed, run _install_git_prompt to install it${CLI_RESET}";
 
-    export PS1="\n${HOST_COLOR}\u ${CLI_RESET}at ${HOST_COLOR}\h ${CLI_RESET}in ${CLI_MAGENTA}\w${CLI_RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${BLUE}\$(_parse_git_branch)${CLI_RESET}\n$ ${CLI_RESET}"
+    export PS1="\n${HOST_COLOR}\u ${CLI_RESET}at ${HOST_COLOR}\h ${CLI_RESET}in ${CLI_MAGENTA}\w${CLI_RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${CLI_BLUE}\$(_parse_git_branch)${CLI_RESET}\n$ ${CLI_RESET}"
     export PS2="> "
 fi
+
+# FIXME: Figure out how to do this on work VMs only for the vagrant user $SSHHOME
+#chmod -R 0777 /tmp/.stephen.ball.sshrc.*/
+#sudo su `/bin/ls /home | /bin/grep -v ubuntu | /bin/grep -v vagrant
+#source /tmp/.stephen.ball.sshrc.*/.sshrc
+#cd ~
+#clear
