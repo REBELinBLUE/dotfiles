@@ -104,7 +104,6 @@ brew 'cheat'
 
 # Apps
 cask 'changes'
-cask 'dockertoolbox'
 cask 'dropshare'
 cask 'flux'
 cask 'gpgtools'
