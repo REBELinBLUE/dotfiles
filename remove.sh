@@ -2,8 +2,8 @@
 
 source $HOME/.dotfiles/scripts/utils.sh
 
-e_error "Nothing to remove"
-exit 1
+# e_error "Nothing to remove"
+# exit 1
 
 if ! is_os "darwin"; then
     e_error "The update script is only for OS X"
