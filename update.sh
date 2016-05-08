@@ -16,6 +16,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 brew update
 brew upgrade
 
+composer global install
+
 # Update brew apps
 brew bundle --file=brewfiles/all
 
