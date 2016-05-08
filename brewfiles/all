@@ -57,6 +57,7 @@ brew 'ffmpeg'
 
 # Install other tools
 brew 'httpie'
+brew 'aria2'
 brew 'gist'
 brew 'tmux'
 brew 'asciinema'
