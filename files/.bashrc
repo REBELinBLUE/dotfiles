@@ -10,3 +10,5 @@ unset file
 if [ -r $HOME/.extras ] && [ -f $HOME/.extras ]; then
     source $HOME/.extras
 fi
+
+source $HOME/.dotfiles/files/.clear-colours

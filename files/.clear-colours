@@ -1,0 +1,13 @@
+
+# Stop the colours polluting ENV
+unset CLI_BLACK
+unset CLI_RED
+unset CLI_GREEN
+unset CLI_YELLOW
+unset CLI_BLUE
+unset CLI_MAGENTA
+unset CLI_CYAN
+unset CLI_WHITE
+unset CLI_BOLD
+unset CLI_RESET
+unset CLI_UNDERLINE
