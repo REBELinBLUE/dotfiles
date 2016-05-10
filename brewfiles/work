@@ -13,3 +13,4 @@ brew 'git-standup'
 
 cask 'charles'
 cask 'java'
+cask 'viscocity'
