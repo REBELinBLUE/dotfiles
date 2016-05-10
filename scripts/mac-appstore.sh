@@ -28,7 +28,7 @@ mas install 411643860 # DaisyDisk
 mas install 557168941 # Tweetbot
 mas install 588726889 # ReadKit
 mas install 402383384 # Base
-mas install 803453959 # Slack
+#mas install 803453959 # Slack
 mas install 416812579 # File Multi Tool 5
 mas install 924726344 # Deliveries
 mas install 870659406 # Stache
