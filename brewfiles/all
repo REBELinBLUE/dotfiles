@@ -100,7 +100,6 @@ brew 'pgcli'
 brew 'bashmarks'
 brew 'mas'
 brew 'thefuck'
-brew 'keychain'
 brew 'cheat'
 
 # Apps

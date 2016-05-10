@@ -46,7 +46,9 @@ if ! type_exists 'tvnamer'; then
 fi
 
 # Symlink the ssh config files
-ln -s $HOME/.dotfiles/files/.ssh/config.d/ $HOME/.ssh/config.d
+if [ ! -e $HOME/.ssh/config.d ]; then
+    ln -s $HOME/.dotfiles/files/.ssh/config.d/ $HOME/.ssh/config.d
+fi
 
 # Symlink Vagrantfile
 if [ -d $HOME/.vagrant.d/ ]; then
