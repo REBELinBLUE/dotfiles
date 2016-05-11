@@ -10,8 +10,6 @@ cask 'cleanmymac'
 # cask 'cocktail' # Currently a 404
 cask 'flame'
 cask 'garmin-express'
-cask 'gitter'
-cask 'goofy'
 cask 'houdahgeo'
 cask 'imageoptim'
 # cask 'things' # Version in cask is so ridiculously out of date

@@ -13,7 +13,9 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-brew remove keychain
+brew cask zap keychain
+brew cask zap goofy
+brew cask zap gitter
 
 source $HOME/.dotfiles/scripts/dotfiles.sh
 
