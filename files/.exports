@@ -1,5 +1,9 @@
-# Make nano the default editor.
-export EDITOR='nano -w'
+# Make sublime the default editor locally and nano when via SSH
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+    export EDITOR="nano -w"
+else
+    export EDITOR="subl -w"
+fi
 
 # Add more paths
 export PATH="/usr/local/bin:$PATH"
