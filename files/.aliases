@@ -97,6 +97,9 @@ if is_os "darwin"; then
     # Lock the screen - Screensaver
     alias afk='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine'
 
+    alias php='php -dzend_extension=/usr/local/opt/php70-xdebug/xdebug.so'
+else
+    alias php="php -dzend_extension=xdebug.so"
+    alias phpunit="php $(which php)"
 fi
 
-alias php='php -dzend_extension=/usr/local/opt/php70-xdebug/xdebug.so'
