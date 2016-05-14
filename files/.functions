@@ -152,7 +152,7 @@ phpunit() {
         TITLE="Success!"
         MESSAGE="Tests ran succesfully"
         IMAGE="$HOME/.dotfiles/files/icons/pass.png"
-    else
+    elif [[ $CODE = 1 ]]; then
         TITLE="Failure!"
         MESSAGE="Tests are broken"
         IMAGE="$HOME/.dotfiles/files/icons/fail.png"
