@@ -23,7 +23,6 @@
 	"draw_white_space": "all",
 	"file_exclude_patterns":
 	[
-		"sync",
 		"*.pyc",
 		"*.pyo",
 		"*.exe",
@@ -51,8 +50,26 @@
 		".git",
 		".hg",
 		".vagrant",
-		"CVS",
-		"vendor"
+		"CVS"
+	],
+	"binary_file_patterns": [
+		"_ide_helper*.php",
+		"vendor/**",
+		"node_modules/**",
+		"storage/**",
+		"*.jpg",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.ico",
+		"*.eot",
+		"*.pdf",
+		"*.swf",
+		"*.jar",
+		"*.zip"
 	],
 	"font_face": "Source Code Pro Bold",
 	"font_size": 12.0,
