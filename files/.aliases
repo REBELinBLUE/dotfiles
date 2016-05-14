@@ -98,3 +98,6 @@ if is_os "darwin"; then
     alias afk='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine'
 
 fi
+
+alias php="php -dzend_extension=/usr/local/opt/php70-xdebug/xdebug.so"
+alias phpunit="php $(which phpunit)"
