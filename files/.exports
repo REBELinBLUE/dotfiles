@@ -8,7 +8,8 @@ fi
 # Add more paths
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
-export PATH="$PATH:~/.composer/vendor/bin"
+export PATH="~/.composer/vendor/bin:$PATH"
+export PATH="./vendor/bin:$PATH"
 
 if is_os "darwin"; then
     # Add additional paths
