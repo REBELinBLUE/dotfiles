@@ -142,3 +142,21 @@ if is_os "darwin"; then
     }
 
 fi
+
+# TODO: Extract output from tap to include number of tests in message
+phpunit() {
+    php -dzend_extension=/usr/local/opt/php70-xdebug/xdebug.so $(which phpunit) $@
+    CODE=$?
+
+    if [[ $CODE = 0 ]]; then
+        TITLE="Success!"
+        MESSAGE="Tests ran succesfully"
+        IMAGE="$HOME/.dotfiles/files/icons/pass.png"
+    else
+        TITLE="Failure!"
+        MESSAGE="Tests are broken"
+        IMAGE="$HOME/.dotfiles/files/icons/fail.png"
+    fi
+
+    notify-send -i $IMAGE -- "${TITLE}" "${MESSAGE}" -t 1
+}

@@ -99,5 +99,4 @@ if is_os "darwin"; then
 
 fi
 
-alias php="php -dzend_extension=/usr/local/opt/php70-xdebug/xdebug.so"
-alias phpunit="php $(which phpunit)"
+alias php='php -dzend_extension=/usr/local/opt/php70-xdebug/xdebug.so'
