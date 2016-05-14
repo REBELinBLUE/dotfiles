@@ -143,20 +143,26 @@ if is_os "darwin"; then
 
     # TODO: Extract output from tap to include number of tests in message
     phpunit() {
-        php -dzend_extension=/usr/local/opt/php70-xdebug/xdebug.so $(which phpunit) $@
-        CODE=$?
+        php -dzend_extension=$(brew --prefix php70-xdebug)/xdebug.so $(which phpunit) $@
 
-        if [[ $CODE = 0 ]]; then
-            TITLE="Success!"
+        if [[ $? = 0 ]]; then
+            TITLE="Success"
             MESSAGE="Tests ran succesfully"
-            IMAGE="$HOME/.dotfiles/files/icons/pass.png"
-        elif [[ $CODE = 1 ]]; then
-            TITLE="Failure!"
+            IMAGE="$HOME/.dotfiles/files/icons/Success.icns"
+            SOUND="Glass"
+        elif [[ $? = 1 ]]; then
+            TITLE="Failed"
             MESSAGE="Tests are broken"
-            IMAGE="$HOME/.dotfiles/files/icons/fail.png"
+            IMAGE="$HOME/.dotfiles/files/icons/Failed.icns"
+            SOUND="Basso"
         fi
 
-        notify-send -i $IMAGE -- "${TITLE}" "${MESSAGE}" -t 1
+        terminal-notifier -activate "com.googlecode.iTerm2" \
+                          -appIcon "$IMAGE" \
+                          -title "PHPUnit"\
+                          -subtitle "$TITLE" \
+                          -sound "$SOUND" \
+                          -message "$MESSAGE"
     }
 
 
