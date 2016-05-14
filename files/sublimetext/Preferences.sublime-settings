@@ -58,9 +58,7 @@
 	"font_size": 12.0,
 	"ignored_packages":
 	[
-		"Laravel 5 Snippets",
-		"Vintage",
-		"Vue Syntax Highlight"
+		"Vintage"
 	],
 	"rulers":
 	[
