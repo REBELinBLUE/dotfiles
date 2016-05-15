@@ -1,6 +1,10 @@
 {
 	"binary_file_patterns":
 	[
+		"_ide_helper*.php",
+		"vendor/**",
+		"node_modules/**",
+		"storage/**",
 		"*.jpg",
 		"*.jpeg",
 		"*.png",
@@ -13,10 +17,7 @@
 		"*.pdf",
 		"*.swf",
 		"*.jar",
-		"*.zip",
-		"*.map",
-		"*-*.js",
-		"*-*.css"
+		"*.zip"
 	],
 	"color_inactive_tabs": true,
 	"color_scheme": "Packages/Theme - Afterglow/Afterglow.tmTheme",
@@ -51,25 +52,6 @@
 		".hg",
 		".vagrant",
 		"CVS"
-	],
-	"binary_file_patterns": [
-		"_ide_helper*.php",
-		"vendor/**",
-		"node_modules/**",
-		"storage/**",
-		"*.jpg",
-		"*.jpeg",
-		"*.png",
-		"*.gif",
-		"*.ttf",
-		"*.tga",
-		"*.dds",
-		"*.ico",
-		"*.eot",
-		"*.pdf",
-		"*.swf",
-		"*.jar",
-		"*.zip"
 	],
 	"font_face": "Source Code Pro Bold",
 	"font_size": 12.0,
