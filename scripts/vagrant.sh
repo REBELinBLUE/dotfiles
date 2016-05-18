@@ -8,6 +8,7 @@ vagrant plugin install vagrant-notify
 vagrant plugin install vagrant-reload
 vagrant plugin install vagrant-cachier
 vagrant plugin install vagrant-bindfs
+vagrant plugin install vagrant-hostsupdater
 
 # Install vagrant plugins for work machine
 vagrant plugin install vagrant-proxyconf
