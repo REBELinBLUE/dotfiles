@@ -21,9 +21,9 @@ man() {
 
 # Helper functions
 e_header() {
-    source $HOME/.dotfiles/files/.colours
+    source $HOME/.dotfiles/files/source/colours
     printf "\n${CLI_BOLD}${CLI_MAGENTA}==========  %s  ==========${CLI_RESET}\n" "$@"
-    source $HOME/.dotfiles/files/.clear-colours
+    source $HOME/.dotfiles/files/source/clear-colours
 }
 
 e_arrow() {
@@ -31,47 +31,47 @@ e_arrow() {
 }
 
 e_success() {
-    source $HOME/.dotfiles/files/.colours
+    source $HOME/.dotfiles/files/source/colours
     printf "${CLI_GREEN}✔ %s${CLI_RESET}\n" "$@"
-    source $HOME/.dotfiles/files/.clear-colours
+    source $HOME/.dotfiles/files/source/clear-colours
 }
 
 e_error() {
-    source $HOME/.dotfiles/files/.colours
+    source $HOME/.dotfiles/files/source/colours
     printf "${CLI_RED}✖ %s${CLI_RESET}\n" "$@"
-    source $HOME/.dotfiles/files/.clear-colours
+    source $HOME/.dotfiles/files/source/clear-colours
 }
 
 e_warning() {
-    source $HOME/.dotfiles/files/.colours
+    source $HOME/.dotfiles/files/source/colours
     printf "${CLI_YELLOW}➜ %s${CLI_RESET}\n" "$@"
-    source $HOME/.dotfiles/files/.clear-colours
+    source $HOME/.dotfiles/files/source/clear-colours
 }
 
 e_underline() {
-    source $HOME/.dotfiles/files/.colours
+    source $HOME/.dotfiles/files/source/colours
     printf "${CLI_UNDERLINE}${CLI_BOLD}%s${CLI_RESET}\n" "$@"
-    source $HOME/.dotfiles/files/.clear-colours
+    source $HOME/.dotfiles/files/source/clear-colours
 }
 
 e_bold() {
-    source $HOME/.dotfiles/files/.colours
+    source $HOME/.dotfiles/files/source/colours
     printf "${CLI_BOLD}%s${CLI_RESET}\n" "$@"
-    source $HOME/.dotfiles/files/.clear-colours
+    source $HOME/.dotfiles/files/source/clear-colours
 }
 
 e_note() {
-    source $HOME/.dotfiles/files/.colours
+    source $HOME/.dotfiles/files/source/colours
     printf "${CLI_UNDERLINE}${CLI_BOLD}${CLI_BLUE}Note:${CLI_RESET} ${CLI_BLUE}%s${CLI_RESET}\n" "$@"
-    source $HOME/.dotfiles/files/.clear-colours
+    source $HOME/.dotfiles/files/source/clear-colours
 }
 
 seek_confirmation() {
-    source $HOME/.dotfiles/files/.colours
+    source $HOME/.dotfiles/files/source/colours
     printf "\n${CLI_BOLD}$@${CLI_RESET}"
     read -p " (y/n) " -n 1
     printf "\n"
-    source $HOME/.dotfiles/files/.clear-colours
+    source $HOME/.dotfiles/files/source/clear-colours
 }
 
 # Test whether the result of an 'ask' is a confirmation

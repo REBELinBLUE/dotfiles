@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+gg#!/usr/bin/env bash
 
 source $HOME/.dotfiles/scripts/utils.sh
 
@@ -15,7 +15,7 @@ for path in ${HOME}/.dotfiles/files/sublimetext/*.sublime-settings; do
     fi
 done
 
-skip=".gitconfig .bash_prompt .exports .completions .aliases .functions .colours"
+skip=".gitconfig"
 
 # Symlink any files except those listed above
 for path in $HOME/.dotfiles/files/.*; do
