@@ -41,9 +41,8 @@ sudo sh -c "echo 'Cmnd_Alias VAGRANT_HOSTS_ADD = $(which sh) -c echo \"*\" >> /e
 sudo sh -c "echo 'Cmnd_Alias VAGRANT_HOSTS_REMOVE = $(which sed) -i -e /*/ d /etc/hosts' >> /etc/sudoers.d/vagrant"
 sudo sh -c "echo '%admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE, VAGRANT_HOSTS_ADD, VAGRANT_HOSTS_REMOVE' >> /etc/sudoers.d/vagrant"
 
-
-# Install homestead & debian
-vagrant box add --provider virtualbox laravel/homestead
+# Download debian and ubuntu boxes
+# vagrant box add --provider virtualbox laravel/homestead
 vagrant box add --provider virtualbox debian/jessie64
 vagrant box add --provider virtualbox ubuntu/trusty64
 
