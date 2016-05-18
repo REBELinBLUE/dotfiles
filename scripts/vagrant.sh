@@ -2,6 +2,11 @@
 
 source $HOME/.dotfiles/scripts/utils.sh
 
+if ! is_os "darwin"; then
+    e_error "The setup script is only for OS X"
+    exit 1
+fi
+
 # Install vagrant plugins
 vagrant plugin install vagrant-vbguest
 vagrant plugin install vagrant-notify
@@ -21,18 +26,18 @@ vagrant box add --provider virtualbox laravel/homestead
 vagrant box add --provider virtualbox debian/jessie64
 vagrant box add --provider virtualbox ubuntu/trusty64
 
-if is_os "darwin"; then
-    if [ ! -d $HOME/VirtualBox\ VMs/ ]; then
-        mkdir $HOME/VirtualBox\ VMs/
-    fi
 
-    SetFile -a V $HOME/VirtualBox\ VMs/
-
-    if [ ! -d $HOME/Vagrant/ ]; then
-        mkdir $HOME/Vagrant/
-    fi
-
-    if [ ! -d $HOME/.vagrant.d/ ]; then
-        mkdir $HOME/.vagrant.d/
-    fi
+# Hide VirtualBox folder
+if [ ! -d $HOME/VirtualBox\ VMs/ ]; then
+    mkdir $HOME/VirtualBox\ VMs/
 fi
+
+SetFile -a V $HOME/VirtualBox\ VMs/
+
+if [ ! -d $HOME/Vagrant/ ]; then
+    mkdir $HOME/Vagrant/
+fi
+
+# For some reason 0.6.1 which is in homebrew causes problems with vagrant
+curl https://raw.githubusercontent.com/Russell91/sshrc/0.6/sshrc --silent -o /usr/local/bin/vagrant-sshrc
+chmod +x /usr/local/bin/vagrant-sshrc
