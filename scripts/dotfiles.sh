@@ -3,17 +3,19 @@
 source $HOME/.dotfiles/scripts/utils.sh
 
 # Symlink sublime settings files
-for path in ${HOME}/.dotfiles/files/sublimetext/*.sublime-settings; do
-    if [ -f "${path}" ]; then
-        name=$(basename "${path}")
+if is_os "darwin"; then
+    for path in ${HOME}/.dotfiles/files/sublimetext/*.sublime-settings; do
+        if [ -f "${path}" ]; then
+            name=$(basename "${path}")
 
-        if [ -f "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/${name}" ]; then
-            rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/${name}"
+            if [ -f "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/${name}" ]; then
+                rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/${name}"
+            fi
+
+            ln -s "${path}" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/${name}"
         fi
-
-        ln -s "${path}" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/${name}"
-    fi
-done
+    done
+fi
 
 skip=".gitconfig"
 
