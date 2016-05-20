@@ -19,13 +19,6 @@ alias cat='ccat'
 # Use editor
 alias edit=$EDITOR
 
-if type_exists 'sshrc'; then
-    # Use sshrc instead of ssh
-    alias ssh="cat ~/.ssh/config.d/* > ~/.ssh/config; sshrc"
-else
-    alias ssh="cat ~/.ssh/config.d/* > ~/.ssh/config; ssh"
-fi
-
 if type_exists 'hub'; then
     # Use hub command instead of git
     alias git='hub'

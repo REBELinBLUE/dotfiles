@@ -126,6 +126,19 @@ cd() {
     fi
 }
 
+# Wrapper around sshrc
+ssh() {
+    cat ~/.ssh/config.d/* > ~/.ssh/config;
+
+    if [ $1 = "mycloud" ] || [ $1 = "mypassword" ]; then
+        ssh "$@"
+    elif type_exists "sshrc"; then
+        sshrc "$@"
+    else
+        ssh "$@"
+    fi
+}
+
 if is_os "darwin"; then
 
     # Open argument in Dash
@@ -167,6 +180,5 @@ if is_os "darwin"; then
                                                                  -sound "$SOUND" \
                                                                  -message "$MESSAGE"
     }
-
 
 fi
