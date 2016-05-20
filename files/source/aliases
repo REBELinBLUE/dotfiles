@@ -103,3 +103,5 @@ else
     alias phpunit="php $(which php)"
 fi
 
+alias composer.phar='/usr/local/bin/composer'
+
