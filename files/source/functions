@@ -131,11 +131,11 @@ ssh() {
     cat ~/.ssh/config.d/* > ~/.ssh/config;
 
     if [ $1 = "mycloud" ] || [ $1 = "mypassword" ]; then
-        ssh "$@"
+        $(which ssh) "$@"
     elif type_exists "sshrc"; then
-        sshrc "$@"
+        $(which sshrc) "$@"
     else
-        ssh "$@"
+        $(which ssh) "$@"
     fi
 }
 
