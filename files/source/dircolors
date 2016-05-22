@@ -119,7 +119,7 @@ EXEC                    00;32       # This is for files with execute permission:
 .rar    01;31  # rar
 .ace    01;31  # unace
 .zoo    01;31  # zoo
-.cpio   01;31 # cpio
+.cpio   01;31  # cpio
 .7z     01;31  # p7zip
 .rz     01;31  # rzip
 .apk    01;31  # rzip
@@ -195,7 +195,6 @@ EXEC                    00;32       # This is for files with execute permission:
 .ogg    01;36
 .ra     01;36
 .wav    01;36
-.m4a    01;36
 .axa    01;36
 .oga    01;36
 .spx    01;36
@@ -240,6 +239,7 @@ EXEC                    00;32       # This is for files with execute permission:
 .properties 00;36
 .yaml       00;36
 .vcl        00;36 # Varnish
+.plist      00;36 # OSX properties
 
 ## Source code files (yellow)
 .c              00;33
@@ -254,7 +254,6 @@ EXEC                    00;32       # This is for files with execute permission:
 .bash           00;33
 .php            00;33
 .java           00;33
-.zcml           00;33 # Zope configuration language
 .pl             00;33
 .lua            00;33
 .clj            00;33
@@ -267,7 +266,6 @@ EXEC                    00;32       # This is for files with execute permission:
 .db     00;32
 .sql    00;32
 .json   00;32
-.plist  00;32 # OSX properties
 .xml    00;32
 
 ## Files of special interest (base1 + bold)
@@ -279,6 +277,7 @@ EXEC                    00;32       # This is for files with execute permission:
 .nt                 01;37
 .torrent            01;37
 .xml                01;37
+.xml.dist           01;37
 *Makefile           01;37
 *makefile           01;37
 *Rakefile           01;37
@@ -290,7 +289,6 @@ EXEC                    00;32       # This is for files with execute permission:
 *readme.txt         01;37
 *README.markdown    01;37
 *README.md          01;37
-.cc                 01;37
 
 ## Machine generated files / non-important (bright black)
 .log        01;30
