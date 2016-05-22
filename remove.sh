@@ -18,7 +18,7 @@ sudo rm -f /etc/resolver/app
 sudo rm -f /etc/resolver/vm
 sudo rm -f /usr/local/etc/dnsmasq.conf
 brew services cleanup
-
+rm -f $HOME/.clear-colours
 
 source $HOME/.dotfiles/scripts/dotfiles.sh
 

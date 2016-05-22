@@ -119,6 +119,8 @@ else
     export PS2="> "
 fi
 
+eval $(dircolors $SSHHOME/.sshrc.d/dircolors)
+
 # FIXME: Figure out how to do this on work VMs only for the vagrant user $SSHHOME
 #chmod -R 0777 /tmp/.stephen.ball.sshrc.*/
 #sudo su `/bin/ls /home | /bin/grep -v ubuntu | /bin/grep -v vagrant

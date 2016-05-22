@@ -52,6 +52,11 @@ if [ ! -e $HOME/.ssh/config.d ]; then
     ln -s $HOME/.dotfiles/files/.ssh/config.d/ $HOME/.ssh/config.d
 fi
 
+# Symlink the sshrc.d folder
+if [ ! -e $HOME/.sshrc.d ]; then
+    ln -s $HOME/.dotfiles/files/.sshrc.d $HOME/.sshrc.d
+fi
+
 # Symlink Vagrantfile
 if [ -d $HOME/.vagrant.d/ ]; then
     if [ -f $HOME/.vagrant.d/Vagrantfile ]; then
