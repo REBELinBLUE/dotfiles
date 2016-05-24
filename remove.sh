@@ -19,6 +19,7 @@ sudo rm -f /etc/resolver/vm
 sudo rm -f /usr/local/etc/dnsmasq.conf
 brew services cleanup
 rm -f $HOME/.clear-colours
+brew remove git-flow
 
 source $HOME/.dotfiles/scripts/dotfiles.sh
 
