@@ -33,7 +33,7 @@ export HISTCONTROL="ignoredups:erasedups"
 export HH_CONFIG=hicolor
 
 # Make some commands not show up in history
-export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help:history:clear:reset"
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help:history:clear:reset:afk:lock:reload:"
 
 # Disable El Capitan's session history
 export SHELL_SESSION_HISTORY=0
@@ -47,3 +47,6 @@ export CHEATCOLORS=true
 
 # Should not be needed, load the dir colors
 eval $(dircolors $HOME/.dotfiles/files/source/dircolors)
+
+# Default log level for NPM
+export NPM_CONFIG_LOGLEVEL="error"

@@ -17,6 +17,9 @@ fi
 # Make nano the default editor.
 export EDITOR='nano -w'
 
+# Default log level for NPM
+export NPM_CONFIG_LOGLEVEL='error'
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..='cd ..'         # Go up one directory
 alias ...='cd ../..'     # Go up two directories
