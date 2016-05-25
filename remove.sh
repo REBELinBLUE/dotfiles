@@ -13,13 +13,7 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-brew remove dnsmasq
-sudo rm -f /etc/resolver/app
-sudo rm -f /etc/resolver/vm
-sudo rm -f /usr/local/etc/dnsmasq.conf
-brew services cleanup
-rm -f $HOME/.clear-colours
-brew remove git-flow
+# STUFF HERE
 
 source $HOME/.dotfiles/scripts/dotfiles.sh
 
