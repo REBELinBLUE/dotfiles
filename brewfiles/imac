@@ -14,6 +14,7 @@ brew 'atomicparsley'
 brew 'id3v2'
 brew 'get_iplayer', args: ['with-deps']
 brew 'libdvdcss'
+brew 'hugo' # Used by luna-styleguide
 
 cask 'bbc-iplayer-downloads'
 cask 'crashplan'
