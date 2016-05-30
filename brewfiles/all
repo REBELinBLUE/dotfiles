@@ -122,6 +122,8 @@ cask 'undercover'
 cask 'vagrant'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
+cask 'paw'
+cask 'cakebrew'
 
 # Quicklook
 cask 'qlcolorcode'
