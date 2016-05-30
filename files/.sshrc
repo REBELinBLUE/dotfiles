@@ -108,6 +108,7 @@ else
     }
 
     function _install_git_prompt() {
+        ssh-keyscan -t rsa,dsa -H github.com >> ~/.ssh/known_hosts
         echo -e "${CLI_YELLOW}➜ Downloading bash-git-prompt${CLI_RESET}";
         sudo git clone https://github.com/magicmonty/bash-git-prompt.git $GIT_PROMPT --depth=1
         reset
