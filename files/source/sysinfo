@@ -49,17 +49,13 @@ prompt_sysinfo () {
 
     echo ""
 
-    echo -e "${CLI_BLUE}System Load:${CLI_RESET} ${load}"
-    echo -e "${CLI_BLUE}Uptime:${CLI_RESET} ${uptime}"
+    column -c 2 -s "	" -t <<< "  ${CLI_BLUE}System Load: ${CLI_RESET} ${load}	${CLI_BLUE}Uptime:${CLI_RESET}     ${uptime}
+  ${CLI_BLUE}Memory Usage:${CLI_RESET} ${mem}	${CLI_BLUE}Disk Usage:${CLI_RESET} ${disk}
+  ${CLI_BLUE}Processes:${CLI_RESET}    ${processes}	${CLI_BLUE}IP Address:${CLI_RESET} ${ip}"
 
     if [[ ! -z $battery ]]; then
-        echo -e "${CLI_BLUE}Battery:${CLI_RESET} ${battery}"
+        echo -e "  ${CLI_BLUE}Battery:${CLI_RESET} ${battery}"
     fi
-
-    echo -e "${CLI_BLUE}Processes:${CLI_RESET} ${processes}"
-    echo -e "${CLI_BLUE}Memory Usage:${CLI_RESET} ${mem}"
-    echo -e "${CLI_BLUE}Disk Usage:${CLI_RESET} ${disk}"
-    echo -e "${CLI_BLUE}IP Address:${CLI_RESET} ${ip}"
 }
 
 prompt_sysinfo
