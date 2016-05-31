@@ -1,0 +1,64 @@
+#!/bin/env bash
+
+prompt_sysinfo () {
+    local ipfile="${HOME}/.prompt-ip"
+    local diskfile="${HOME}/.prompt-disk-usage"
+    local memfile="${HOME}/.prompt-mem-usage"
+
+    if [ -a "$ipfile" ] && test `find "$ipfile" -mmin -360`; then
+        local ip=$(cat $ipfile)
+    else
+        local ip=$(curl -sS eth0.me)
+        echo $ip > "$ipfile"
+    fi
+
+    if [ -a "$diskfile" ] && test `find "$diskfile" -mmin -360`; then
+        local disk=$(cat $diskfile)
+    else
+        local disk_percent=$(df -h | head -2 | tail -1 | awk '{print $5}')
+        local disk_used=$(df -h | head -2 | tail -1 | awk '{print $3}')
+        local disk_total=$(df -h | head -2 | tail -1 | awk '{print $2}')
+
+        local disk="${disk_used}B of ${disk_total}B (${disk_percent})"
+        echo $disk > "$diskfile"
+    fi
+
+    if [ -a "$memfile" ] && test `find "$memfile" -mmin -360`; then
+        local mem=$(cat $memfile)
+    else
+        local installed_memory=$(sysctl -n hw.memsize)
+        local installed_memory=$(bc <<< "scale=2; $installed_memory/1024/1024/1024")
+
+        local page_types=("wired down" "active" "inactive")
+        local consumed=0
+        local wired=$(vm_stat | grep "Pages wired down:" | awk -F: '{print $3}' | tr -d '[[:space:]]' | rev | cut -c 2- | rev)
+        local active=$(vm_stat | grep "Pages active:" | awk -F: '{print $3}' | tr -d '[[:space:]]' | rev | cut -c 2- | rev)
+        local inactive=$(vm_stat | grep "Pages inactive:" | awk -F: '{print $3r}' | tr -d '[[:space:]]' | rev | cut -c 2- | rev)
+        local consumed=$(expr $wired + $active + $inactive)
+        local used_memory=$(bc <<< "scale=2; ($consumed*4096)/1024/1024/1024")
+
+        local mem="${used_memory}GB of ${installed_memory}GB"
+        echo $mem > "$memfile"
+    fi
+
+    local uptime=$(uptime | sed 's/.*up \([^,]*\), .*/\1/' | sed -e 's/[[:space:]]*//')
+    local battery=$(ioreg -c AppleSmartBattery -r | awk '$1~/Capacity/{c[$1]=$3} END{OFMT="%.2f%%"; max=c["\"MaxCapacity\""]; if (max>0) { print 100*c["\"CurrentCapacity\""]/max;} }')
+    local processes=$(ps -U `whoami` | wc -l)
+    local load=$(uptime | sed 's/.*average: \([^,]*\), .*/\1/' | sed -e 's/[[:space:]]*//');
+
+    echo ""
+
+    echo -e "${CLI_BLUE}System Load:${CLI_RESET} ${load}"
+    echo -e "${CLI_BLUE}Uptime:${CLI_RESET} ${uptime}"
+
+    if [[ ! -z $battery ]]; then
+        echo -e "${CLI_BLUE}Battery:${CLI_RESET} ${battery}"
+    fi
+
+    echo -e "${CLI_BLUE}Processes:${CLI_RESET} ${processes}"
+    echo -e "${CLI_BLUE}Memory Usage:${CLI_RESET} ${mem}"
+    echo -e "${CLI_BLUE}Disk Usage:${CLI_RESET} ${disk}"
+    echo -e "${CLI_BLUE}IP Address:${CLI_RESET} ${ip}"
+}
+
+prompt_sysinfo
