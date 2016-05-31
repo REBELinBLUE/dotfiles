@@ -124,6 +124,7 @@ cask 'virtualbox'
 cask 'virtualbox-extension-pack'
 cask 'paw'
 cask 'cakebrew'
+cask 'medis'
 
 # Quicklook
 cask 'qlcolorcode'
