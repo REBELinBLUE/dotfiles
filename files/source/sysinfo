@@ -1,9 +1,10 @@
 #!/bin/env bash
 
 prompt_sysinfo () {
-    local ipfile="${HOME}/.prompt-ip"
-    local diskfile="${HOME}/.prompt-disk-usage"
-    local memfile="${HOME}/.prompt-mem-usage"
+    local user="$(whoami)"
+    local ipfile="${TMPDIR}/.${user}-prompt-ip"
+    local diskfile="${TMPDIR}/.${user}-prompt-disk-usage"
+    local memfile="${TMPDIR}/.${user}-prompt-mem-usage"
 
     if [ -a "$ipfile" ] && test `find "$ipfile" -mmin -360`; then
         local ip=$(cat $ipfile)
