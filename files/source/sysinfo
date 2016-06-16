@@ -13,7 +13,7 @@ prompt_sysinfo () {
     if [ -a "$ipfile" ] && test `find "$ipfile" -mmin -360`; then
         local ip=$(cat $ipfile)
     else
-        local ip=$(curl -sS eth0.me)
+        local ip=$(curl -m 5 -sS eth0.me)
         echo $ip > "$ipfile"
     fi
 

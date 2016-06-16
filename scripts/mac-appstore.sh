@@ -25,7 +25,7 @@ mas install 443987910 # 1Password
 mas install 975937182 # Fantastical 2
 mas install 523620159 # CleanMyDrive 2
 mas install 411643860 # DaisyDisk
-mas install 557168941 # Tweetbot
+#mas install 557168941 # Tweetbot
 mas install 588726889 # ReadKit
 mas install 402383384 # Base
 #mas install 803453959 # Slack
