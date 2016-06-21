@@ -89,7 +89,7 @@ if [ -f /etc/is_vagrant_vm ]; then
         sudo su - $user;
     }
 fi
-e
+
 # Use a folder in home for bash git prompt unless it is installed in /opt or we are running in vagrant
 GIT_PROMPT=$HOME/.bash-git-prompt
 if [ -d /opt/bash-git-prompt ] || [ -f /etc/is_vagrant_vm ]; then
