@@ -78,8 +78,18 @@ cd() {
 HOST_COLOR=$CLI_RED
 if [ -f /etc/is_vagrant_vm ]; then
     HOST_COLOR=$CLI_YELLOW
-fi
 
+    # FIXME: This is just horrible!
+    function _su() {
+        user=`/bin/ls /home | /bin/grep -v ubuntu | /bin/grep -v vagrant`
+        chmod -R 0777 $SSHHOME;
+        sudo touch /home/$user/.bash_profile;
+        sudo sh -c "echo \"source $SSHHOME/.sshrc; cd ~; clear\" > /home/$user/.bash_profile";
+        sudo chown $user /home/$user/.bash_profile;
+        sudo su - $user;
+    }
+fi
+e
 # Use a folder in home for bash git prompt unless it is installed in /opt or we are running in vagrant
 GIT_PROMPT=$HOME/.bash-git-prompt
 if [ -d /opt/bash-git-prompt ] || [ -f /etc/is_vagrant_vm ]; then
@@ -123,11 +133,5 @@ else
     export PS2="> "
 fi
 
-eval $(dircolors $SSHHOME/.sshrc.d/dircolors)
-
-# FIXME: Figure out how to do this on work VMs only for the vagrant user $SSHHOME
-#chmod -R 0777 /tmp/.stephen.ball.sshrc.*/
-#sudo su `/bin/ls /home | /bin/grep -v ubuntu | /bin/grep -v vagrant
-#source /tmp/.stephen.ball.sshrc.*/.sshrc
-#cd ~
-#clear
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+eval $(dircolors $DIR/.sshrc.d/dircolors)
