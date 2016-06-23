@@ -51,6 +51,7 @@
 		".svn",
 		".git",
 		".hg",
+		".idea",
 		".vagrant",
 		"CVS"
 	],
