@@ -98,6 +98,8 @@
     # Show verbose output about branches
     branches = branch -va
 
+    branch = branch -vl
+
     # Clone a repository including all submodules
     c = clone --recursive
 
