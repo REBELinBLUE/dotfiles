@@ -74,6 +74,8 @@ cd() {
     fi
 }
 
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help:history:clear:reset:afk:_su"
+
 # Use /etc/is_vagrant_vm to test if vagrant and if so use yellow not red for the user/host
 HOST_COLOR=$CLI_RED
 if [ -f /etc/is_vagrant_vm ]; then
