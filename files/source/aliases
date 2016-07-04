@@ -57,6 +57,8 @@ alias reload="reset; exec $SHELL -l"
 
 if is_os "darwin"; then
 
+    alias workspace=$HOME/.dotfiles/scripts/workspace.sh
+
     # Update dotfiles
     # alias dotup="git --work-tree=$HOME/.dotfiles/ pull && $HOME/.dotfiles/update.sh"
 
