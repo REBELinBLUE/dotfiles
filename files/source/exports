@@ -24,6 +24,7 @@ fi
 export PATH="/usr/local/sbin:$PATH"
 export PATH="~/.composer/vendor/bin:$PATH"
 export PATH="./vendor/bin:$PATH"
+export PATH="./node_modules/.bin:$PATH"
 
 # Larger bash history (allow 10000 entries; default is 500)
 export HISTSIZE=10000
