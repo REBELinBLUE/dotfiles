@@ -45,6 +45,11 @@ alias grep='grep --color=auto -in'
 # Add edit alias
 alias edit=$EDITOR
 
+# Add computer and node to path
+export PATH="~/.composer/vendor/bin:$PATH"
+export PATH="./vendor/bin:$PATH"
+export PATH="./node_modules/.bin:$PATH"
+
 # Add a composer alias which looks for composer in . if it isn't installed globally
 if [[ ! $(type -P composer) ]]; then
      alias composer='php composer.phar'
