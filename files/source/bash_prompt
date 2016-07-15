@@ -9,7 +9,7 @@ if [[ "${SSH_TTY}" ]]; then
     fi
 fi
 
-source $HOME/.dotfiles/files/source/sysinfo
+#source $HOME/.dotfiles/files/source/sysinfo
 
 # SELECT * FROM processes WHERE uid = $UID
 GIT_PROMPT=/opt/bash-git-prompt
