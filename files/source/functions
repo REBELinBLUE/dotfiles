@@ -149,6 +149,8 @@ if is_os "darwin"; then
     update() {
         sudo mas upgrade
         sudo softwareupdate -i -a
+        composer self-update
+        composer global install
         brew update && brew upgrade --all && brew cleanup
         npm install npm -g && npm update -g
         #sudo pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U -q
