@@ -110,21 +110,21 @@ e_help() {
 }
 
 # A function to allow cd ../../../.. to be cd ..... instead
-cd() {
-    if [[ "$1" =~ ^\.\.+$ ]]; then
-        local a dir;
-        a=${#1};
-
-        while [ $a -ne 1 ]; do
-            dir=${dir}"../";
-            ((a--));
-        done
-
-        builtin cd $dir;
-    else
-        builtin cd "$@";
-    fi
-}
+# cd() {
+#     if [[ "$1" =~ ^\.\.+$ ]]; then
+#         local a dir;
+#         a=${#1};
+#
+#         while [ $a -ne 1 ]; do
+#             dir=${dir}"../";
+#             ((a--));
+#         done
+#
+#         builtin cd $dir;
+#     else
+#         builtin cd "$@";
+#     fi
+# }
 
 # Wrapper around sshrc
 ssh() {

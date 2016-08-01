@@ -24,10 +24,6 @@ if type_exists 'hub'; then
     alias git='hub'
 fi
 
-if type_exists 'thefuck'; then
-    eval "$(thefuck --alias)"
-fi
-
 # Prompt for confirmation
 alias cp='cp -iv'
 alias rm='rm -i'

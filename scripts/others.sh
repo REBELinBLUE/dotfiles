@@ -21,3 +21,5 @@ ln -s `which ffmpeg` /usr/local/bin/ffmpeg-static
 
 chmod +x /usr/local/bin/notify-send
 chmod +x /usr/local/bin/ffmpeg-static
+
+git clone https://github.com/shannonmoeller/up.git /opt/up

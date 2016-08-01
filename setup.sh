@@ -45,3 +45,4 @@ source $HOME/.dotfiles/scripts/osx.sh
 # Fixme: do this on linux
 #git clone https://github.com/huyng/bashmarks.git /opt/bashmarks
 #git clone https://github.com/magicmonty/bash-git-prompt.git /opt/bash-git-prompt
+#git clone https://github.com/shannonmoeller/up.git /opt/bash-up

@@ -107,7 +107,6 @@ brew 'mycli'
 brew 'pgcli'
 brew 'bashmarks'
 brew 'mas'
-brew 'thefuck'
 brew 'cheat'
 
 # Apps

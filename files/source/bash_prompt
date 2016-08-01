@@ -9,9 +9,9 @@ if [[ "${SSH_TTY}" ]]; then
     fi
 fi
 
-#source $HOME/.dotfiles/files/source/sysinfo
+# Disable sysinfo for now
+# source $HOME/.dotfiles/files/source/sysinfo
 
-# SELECT * FROM processes WHERE uid = $UID
 GIT_PROMPT=/opt/bash-git-prompt
 if is_os "darwin"; then
     GIT_PROMPT=$(brew --prefix bash-git-prompt)/share
@@ -40,4 +40,12 @@ else
 
     export PS1="\n${HOST_STYLE}\u${CLI_RESET} at ${HOST_STYLE}\h${CLI_RESET} in ${CLI_MAGENTA}\w${CLI_RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${CLI_BLUE}\$(_parse_git_branch)${CLI_RESET}\n$ ${CLI_RESET}"
     export PS2="> "
+fi
+
+
+HAS_WIP=`l | command grep wip | wc -l`
+if [ ! $HAS_WIP -eq 0 ]; then
+    echo ""
+    e_warning "Work in progress directory found at `p wip`"
+    g wip
 fi
