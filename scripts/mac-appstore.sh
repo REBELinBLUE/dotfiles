@@ -25,10 +25,9 @@ mas install 443987910 # 1Password
 mas install 975937182 # Fantastical 2
 mas install 523620159 # CleanMyDrive 2
 mas install 411643860 # DaisyDisk
-#mas install 557168941 # Tweetbot
+# mas install 557168941 # Tweetbot
 mas install 588726889 # ReadKit
 mas install 402383384 # Base
-#mas install 803453959 # Slack
 mas install 416812579 # File Multi Tool 5
 mas install 924726344 # Deliveries
 mas install 870659406 # Stache
@@ -42,4 +41,4 @@ mas install 449589707 # Dash
 # mas install 408981434 # iMovie
 # mas install 465069360 # My Movies Pro
 # mas install 451907568 # Paprika Recipe Manager
-#mas install 425424353 # The Unarchiver
+# mas install 425424353 # The Unarchiver
