@@ -1,7 +1,4 @@
-BASHMARKS=/opt/bashmarks
 if is_os "darwin"; then
-    BASHMARKS=$(brew --prefix bashmarks)/libexec
-
     if [ -f $(brew --prefix)/etc/bash_completion.d/vagrant ]; then
         source $(brew --prefix)/etc/bash_completion.d/vagrant
     fi
@@ -13,10 +10,6 @@ if is_os "darwin"; then
     if [ -f $(brew --repository)/Library/Contributions/brew_bash_completion.sh ]; then
         source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
     fi
-fi
-
-if [ -f ${BASHMARKS}/bashmarks.sh ]; then
-    source ${BASHMARKS}/bashmarks.sh
 fi
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards

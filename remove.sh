@@ -15,6 +15,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # STUFF HERE
 brew remove thefuck
+brew remove bashmarks
+brew untap alexandregz/MXhomebrew
+brew cleanup
 
 source $HOME/.dotfiles/scripts/dotfiles.sh
 

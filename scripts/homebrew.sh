@@ -27,7 +27,4 @@ else
     chsh -s $BASHPATH
 fi
 
-# Patch bashmarks
-curl https://patch-diff.githubusercontent.com/raw/huyng/bashmarks/pull/52.patch | patch -t -d `brew --prefix bashmarks`/libexec/ bashmarks.sh
-
 sudo SetFile -a V /opt

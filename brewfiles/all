@@ -11,7 +11,6 @@ tap 'homebrew/completions'
 tap 'homebrew/binary'
 tap 'homebrew/versions'
 tap 'homebrew/homebrew-php'
-tap 'alexandregz/MXhomebrew'
 tap 'alehouse/homebrew-unofficial'
 
 # Make sure apps get installed in system Applications dir
@@ -105,7 +104,6 @@ brew 'rsync'
 brew 'unzip'
 brew 'mycli'
 brew 'pgcli'
-brew 'bashmarks'
 brew 'mas'
 brew 'cheat'
 

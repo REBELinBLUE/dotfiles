@@ -1,3 +1,11 @@
+if [ -f /opt/bashmarks/bashmarks.sh ]; then
+    source /opt/bashmarks/bashmarks.sh
+fi
+
+if [ -f /opt/bash-up/up.sh ]; then
+    source /opt/bash-up/up.sh
+fi
+
 # Colour man pages
 man() {
     #LESS_TERMCAP_mb=$'\E[01;31m'      # begin blinking

@@ -7,8 +7,6 @@ done
 
 unset file
 
-source /opt/bash-up/up.sh
-
 if [ -r $HOME/.extras ] && [ -f $HOME/.extras ]; then
     source $HOME/.extras
 fi
