@@ -45,7 +45,10 @@ fi
 
 HAS_WIP=`l | command grep wip | wc -l`
 if [ ! $HAS_WIP -eq 0 ]; then
+    WIP=`p wip`
+    WIP=${WIP/$HOME/\~} # Replace the user's home directory with ~
+
     echo ""
-    e_warning "Work in progress directory found at `p wip`"
+    e_warning "A work in progress directory found at $WIP"
     g wip
 fi
