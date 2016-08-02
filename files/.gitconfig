@@ -95,10 +95,11 @@
     # Amend the currently staged files to the latest commit
     amend = commit --amend
 
-    # Show verbose output about branches
-    branches = branch -va
+    # Show verbose output about all branches
+    branches = branch --verbose --all
 
-    branch = branch -vl
+    # Show verbose output about the local branches
+    branch = branch --verbose --list
 
     # Clone a repository including all submodules
     c = clone --recursive
@@ -112,7 +113,7 @@
     # Switch to a branch, creating it if necessary
     go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
-    # Pretty graphi
+    # Pretty graph
     graph = log --graph --oneline --decorate
 
     # View the SHA, description, and history graph of the latest 20 commits
@@ -122,13 +123,16 @@
     pl = !"git pull; git submodule foreach git pull origin master"
 
     # Interactive rebase with the given number of latest commits
-    reb = "!r() { git rebase -i HEAD~$1; }; r"
+    reb = "!r() { git rebase --interactive HEAD~$1; }; r"
 
     # Remove the old tag with this name and tag the latest commit with it.
-    rmtag = "!r() { git tag -d $1 && git push origin :refs/tags/$1 }; r"
+    rmtag = "!r() { git tag --deleteg $1 && git push origin :refs/tags/$1 }; r"
 
     # Show verbose output about remotes
     remotes = remote --verbose
+
+    # Show short status
+    st = status --short
 
     # List stashes
     stashes = stash list
@@ -140,7 +144,7 @@
     uncommit = reset --mixed HEAD~
 
     # Unstage changes
-    unstage = reset -q HEAD --
+    unstage = reset --quiet HEAD --
 
 [pager]
     diff = diff-so-fancy | less --tabs=4 -RFX --pattern='^(added|deleted|modified):'
