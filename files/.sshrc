@@ -79,6 +79,11 @@ cd() {
     fi
 }
 
+_gituser() {
+    git config --global user.name "Stephen Ball"
+    git config --global user.email "stephen@rebelinblue.com"
+}
+
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help:history:clear:reset:afk:_su"
 
 # Use /etc/is_vagrant_vm to test if vagrant and if so use yellow not red for the user/host
@@ -86,7 +91,7 @@ HOST_COLOR=$CLI_RED
 if [ -f /etc/is_vagrant_vm ]; then
     HOST_COLOR=$CLI_YELLOW
 
-    # FIXME: This is just horrible!
+    # FIXME: This is just horrible and is only used at work
     function _su() {
         user=`/bin/ls /home | /bin/grep -v ubuntu | /bin/grep -v vagrant`
         chmod -R 0777 $SSHHOME;
@@ -134,7 +139,7 @@ else
         echo -e "${CLI_GREEN}✔ bash-git-prompt setup!${CLI_RESET}";
     }
 
-    echo -e "${CLI_RED}✖ bash-git-prompt is not installed, run _install_git_prompt to install it${CLI_RESET}";
+    echo -e "${CLI_RED}✖ bash-git-prompt is not installed, run _install_git_prompt to install it followed by _gituser ${CLI_RESET}";
 
     export PS1="\n${HOST_COLOR}\u ${CLI_RESET}at ${HOST_COLOR}\h ${CLI_RESET}in ${CLI_MAGENTA}\w${CLI_RESET}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${CLI_BLUE}\$(_parse_git_branch)${CLI_RESET}\n$ ${CLI_RESET}"
     export PS2="> "
