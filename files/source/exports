@@ -20,7 +20,6 @@ if is_os "darwin"; then
 fi
 
 # Add more paths
-#export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="~/.composer/vendor/bin:$PATH"
 export PATH="./vendor/bin:$PATH"

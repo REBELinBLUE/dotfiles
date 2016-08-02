@@ -1,6 +1,6 @@
-HOST_STYLE=$CLI_GREEN
 # Set the colour to red when connected via SSH
-if [[ "${SSH_TTY}" ]]; then
+HOST_STYLE=$CLI_GREEN
+if [ "${SSH_TTY}" ] || [ "${SSH_CLIENT}" ]; then
     HOST_STYLE=$CLI_RED
 
     # Unless on local macs, underline host
@@ -9,9 +9,8 @@ if [[ "${SSH_TTY}" ]]; then
     fi
 fi
 
-# Disable sysinfo for now
-# source $HOME/.dotfiles/files/source/sysinfo
 
+# Load bash-git-prompt
 GIT_PROMPT=/opt/bash-git-prompt
 if is_os "darwin"; then
     GIT_PROMPT=$(brew --prefix bash-git-prompt)/share
@@ -42,7 +41,7 @@ else
     export PS2="> "
 fi
 
-
+# Change to the directory if a WIP directory exists
 HAS_WIP=`l | command grep wip | wc -l`
 if [ ! $HAS_WIP -eq 0 ]; then
     WIP=`p wip`

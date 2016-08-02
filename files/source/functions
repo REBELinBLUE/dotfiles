@@ -82,6 +82,15 @@ seek_confirmation() {
     source $HOME/.dotfiles/files/source/clear-colours
 }
 
+
+tabname() {
+    printf "\e]1;%s\a" "$@"
+}
+
+winname() {
+    printf "\e]2;%s\a" "$@"
+}
+
 # Test whether the result of an 'ask' is a confirmation
 is_confirmed() {
     if [[ "$REPLY" =~ ^[Yy]$ ]]; then

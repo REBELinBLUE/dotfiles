@@ -14,36 +14,36 @@ alias l1='ls -1 --color=auto --quoting-style=literal'
 alias sl='ls'
 
 # Use ccat
-alias cat='ccat'
+alias cat="ccat"
 
 # Use editor
 alias edit=$EDITOR
 
 if type_exists 'hub'; then
     # Use hub command instead of git
-    alias git='hub'
+    alias git="hub"
 fi
 
 # Prompt for confirmation
-alias cp='cp -iv'
-alias rm='rm -i'
-alias mv='mv -iv'
+alias cp="cp -iv"
+alias rm="rm -i"
+alias mv="mv -iv"
 
 # Other useful aliases
-alias grep='grep --color=auto -in'
-alias _='sudo'
+alias grep="grep --color=auto -in"
+alias _="sudo"
 
 # Enable aliases to be sudo’ed
-alias sudo='sudo '
+alias sudo="sudo "
 
 # Open gists in browser
-alias gist='gist -o'
+alias gist="gist -o"
 
 # Get public IP
-alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 # Tmux in control mode
-alias tmux='tmux -CC'
+alias tmux="tmux -CC"
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="reset; exec $SHELL -l"
@@ -53,29 +53,29 @@ alias reload="reset; exec $SHELL -l"
 
 if is_os "darwin"; then
 
-    alias workspace=$HOME/.dotfiles/scripts/workspace.sh
+    alias workspace="$HOME/.dotfiles/scripts/workspace.sh"
 
     # Update dotfiles
     # alias dotup="git --work-tree=$HOME/.dotfiles/ pull && $HOME/.dotfiles/update.sh"
 
     # OS X has no `md5sum`, so use `md5` as a fallback
-    command -v md5sum > /dev/null || alias md5sum='md5'
+    command -v md5sum > /dev/null || alias md5sum="md5"
 
     # OS X has no `sha1sum`, so use `shasum` as a fallback
-    command -v sha1sum > /dev/null || alias sha1sum='shasum'
+    command -v sha1sum > /dev/null || alias sha1sum="shasum"
 
     # Flush Directory Service cache
-    alias flush='dscacheutil -flushcache'
+    alias flush="dscacheutil -flushcache"
 
     # Remove .DS_Store files
-    alias dsclean='find . -type f -name .DS_Store -delete'
+    alias dsclean="find . -type f -name .DS_Store -delete"
 
     # Toggle hidden files
-    alias showhidden='defaults write com.apple.finder AppleShowAllFiles TRUE'
-    alias hidehidden='defaults write com.apple.finder AppleShowAllFiles FALSE'
+    alias showhidden="defaults write com.apple.finder AppleShowAllFiles TRUE"
+    alias hidehidden="defaults write com.apple.finder AppleShowAllFiles FALSE"
 
     # Update homebrew
-    alias brewup='brew update && brew upgrade --all && brew bundle --file=${HOME}/.dotfiles/brewfiles/all && brew cleanup'
+    alias brewup="brew update && brew upgrade --all && brew bundle --file=${HOME}/.dotfiles/brewfiles/all && brew cleanup"
 
     # Empty the Trash on all mounted volumes and the main HDD.
     # Also, clear Apple’s System Logs to improve shell startup speed.
@@ -83,16 +83,19 @@ if is_os "darwin"; then
     alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 
     # Lock the screen - Lock screen
-    alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
+    alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
     # Lock the screen - Screensaver
-    alias afk='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine'
+    alias afk="/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine"
 
-    alias php='php -dzend_extension=/usr/local/opt/php70-xdebug/xdebug.so'
+    # FIXME: There has to be a nicer way, surely?
+    alias php="php -dzend_extension=$(brew --prefix php70-xdebug)/xdebug.so"
+    alias php55="php -dzend_extension=$(brew --prefix php55-xdebug)/xdebug.so"
+    alias php56="php -dzend_extension=$(brew --prefix php56-xdebug)/xdebug.so"
 else
     alias php="php -dzend_extension=xdebug.so"
     alias phpunit="php $(which php)"
 fi
 
-alias composer.phar='/usr/local/bin/composer'
+alias composer.phar="/usr/local/bin/composer"
 
