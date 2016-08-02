@@ -6,7 +6,6 @@ cask_args appdir: '/Applications'
 
 cask 'cleanmymac'
 # cask 'cocktail' # Currently a 404
-cask 'flame'
 cask 'garmin-express'
 cask 'houdahgeo'
 cask 'imageoptim'
