@@ -26,6 +26,5 @@ git clone https://github.com/shannonmoeller/up.git /opt/bash-up
 
 git clone https://github.com/huyng/bashmarks.git /opt/bashmarks
 
-
 # Patch bashmarks
 curl https://patch-diff.githubusercontent.com/raw/huyng/bashmarks/pull/52.patch | patch -t -d /opt/bashmarks bashmarks.sh
