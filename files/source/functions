@@ -174,7 +174,7 @@ if is_os "darwin"; then
             MESSAGE="Tests ran succesfully"
             IMAGE="$HOME/.dotfiles/files/icons/Success.icns"
             SOUND="Glass"
-        elif [[ $RESULT = 1 ]]; then
+        elif [[ $RESULT = 1 || $RESULT = 2 ]]; then
             TITLE="Failed"
             MESSAGE="Tests are broken"
             IMAGE="$HOME/.dotfiles/files/icons/Failed.icns"
