@@ -126,22 +126,6 @@ e_help() {
     e_note "I am a note - e_note"
 }
 
-# A function to allow cd ../../../.. to be cd ..... instead
-# cd() {
-#     if [[ "$1" =~ ^\.\.+$ ]]; then
-#         local a dir;
-#         a=${#1};
-#
-#         while [ $a -ne 1 ]; do
-#             dir=${dir}"../";
-#             ((a--));
-#         done
-#
-#         builtin cd $dir;
-#     else
-#         builtin cd "$@";
-#     fi
-# }
 
 # Wrapper around sshrc
 ssh() {
@@ -163,15 +147,35 @@ if is_os "darwin"; then
         open "dash://$*"
     }
 
+    # Empty the Trash on all mounted volumes and the main HDD.
+    # Also, clear Apple’s System Logs to improve shell startup speed.
+    # Finally, clear download history from quarantine. https://mths.be/bum
+    emptytrash() {
+        sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash
+        sudo rm -rfv /private/var/log/asl/*.asl
+        sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'
+    }
+
+
+    # Update homebrew
+    brewup() {
+        brew update
+        brew upgrade --all
+        brew bundle --file="${HOME}/.dotfiles/brewfiles/all"
+        brew cleanup
+    }
+
+    # Update everything
     update() {
         sudo mas upgrade
         sudo softwareupdate -i -a
         composer self-update
         composer global install
-        brew update && brew upgrade --all && brew cleanup
+        brewup
         npm install npm -g && npm update -g
         #sudo pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U -q
     }
+
 
     # TODO: Extract output from tap file to include number of tests in message
     phpunit() {

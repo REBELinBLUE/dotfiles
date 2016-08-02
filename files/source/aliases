@@ -48,15 +48,9 @@ alias tmux="tmux -CC"
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="reset; exec $SHELL -l"
 
-# Update dotfiles
-# alias dotup="git --work-tree=$HOME/.dotfiles/ pull && $HOME/.dotfiles/scripts/dotfiles.sh && exec $SHELL -l"
-
 if is_os "darwin"; then
 
     alias workspace="$HOME/.dotfiles/scripts/workspace.sh"
-
-    # Update dotfiles
-    # alias dotup="git --work-tree=$HOME/.dotfiles/ pull && $HOME/.dotfiles/update.sh"
 
     # OS X has no `md5sum`, so use `md5` as a fallback
     command -v md5sum > /dev/null || alias md5sum="md5"
@@ -73,14 +67,6 @@ if is_os "darwin"; then
     # Toggle hidden files
     alias showhidden="defaults write com.apple.finder AppleShowAllFiles TRUE"
     alias hidehidden="defaults write com.apple.finder AppleShowAllFiles FALSE"
-
-    # Update homebrew
-    alias brewup="brew update && brew upgrade --all && brew bundle --file=${HOME}/.dotfiles/brewfiles/all && brew cleanup"
-
-    # Empty the Trash on all mounted volumes and the main HDD.
-    # Also, clear Apple’s System Logs to improve shell startup speed.
-    # Finally, clear download history from quarantine. https://mths.be/bum
-    alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 
     # Lock the screen - Lock screen
     alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
