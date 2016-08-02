@@ -38,11 +38,8 @@ brew bundle --file=brewfiles/all
 source $HOME/.dotfiles/scripts/homebrew.sh
 source $HOME/.dotfiles/scripts/others.sh
 source $HOME/.dotfiles/scripts/phputils.sh
+source $HOME/.dotfiles/scripts/node.sh
 source $HOME/.dotfiles/scripts/vagrant.sh
 source $HOME/.dotfiles/scripts/dotfiles.sh
 source $HOME/.dotfiles/scripts/osx.sh
-
-# Fixme: do this on linux
-#git clone https://github.com/huyng/bashmarks.git /opt/bashmarks
-#git clone https://github.com/magicmonty/bash-git-prompt.git /opt/bash-git-prompt
-#git clone https://github.com/shannonmoeller/up.git /opt/bash-up
+source $HOME/.dotfiles/scripts/bash.sh

@@ -21,10 +21,3 @@ ln -s `which ffmpeg` /usr/local/bin/ffmpeg-static
 
 chmod +x /usr/local/bin/notify-send
 chmod +x /usr/local/bin/ffmpeg-static
-
-git clone https://github.com/shannonmoeller/up.git /opt/bash-up
-
-git clone https://github.com/huyng/bashmarks.git /opt/bashmarks
-
-# Patch bashmarks
-curl https://patch-diff.githubusercontent.com/raw/huyng/bashmarks/pull/52.patch | patch -t -d /opt/bashmarks bashmarks.sh

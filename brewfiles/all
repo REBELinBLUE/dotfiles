@@ -45,8 +45,10 @@ brew 'python'
 # Install bash completions
 brew 'vagrant-completion'
 brew 'bash-completion'
-brew 'bash-git-prompt'
 brew 'composer-completion'
+
+# Install bash git prompt
+brew 'bash-git-prompt'
 
 # Install PHP7
 brew 'php70', args: ['with-homebrew-curl', 'with-postgresql', 'without-apache', 'without-fpm']
