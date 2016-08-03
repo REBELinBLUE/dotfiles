@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
 terminal-notifier -message "$5" -title "$4" -appIcon "$2"
+
+# FIXME: Maybe change to https://github.com/fgrehm/vagrant-notify/blob/master/examples/osx/notify-send_terminal-notifier
