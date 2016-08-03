@@ -55,3 +55,6 @@ SetFile -a V $HOME/VirtualBox\ VMs/
 if [ ! -d $HOME/Vagrant/ ]; then
     mkdir $HOME/Vagrant/
 fi
+
+ln -s $HOME/.dotfiles/bin/notify-send /usr/local/bin/notify-send
+chmod +x /usr/local/bin/notify-send

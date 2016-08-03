@@ -16,8 +16,4 @@ pip install httpie-oauth
 pip install httpie-jwt-auth
 
 # Install additional CLIs
-cp $HOME/.dotfiles/bin/notify-send /usr/local/bin/notify-send
 ln -s `which ffmpeg` /usr/local/bin/ffmpeg-static
-
-chmod +x /usr/local/bin/notify-send
-chmod +x /usr/local/bin/ffmpeg-static
