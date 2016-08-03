@@ -19,9 +19,6 @@ vagrant plugin install vagrant-triggers
 # Install vagrant plugins for work machine
 vagrant plugin install vagrant-proxyconf
 
-# Patch vagrant notify
-# curl https://patch-diff.githubusercontent.com/raw/fgrehm/vagrant-notify/pull/22.patch | patch -t -d ~/.vagrant.d/gems/gems/vagrant-notify-0.4.0/lib/vagrant-notify/ plugin.rb
-
 # For some reason 0.6.1 which is in homebrew causes problems with vagrant
 curl https://raw.githubusercontent.com/Russell91/sshrc/0.6/sshrc --silent -o /usr/local/bin/vagrant-sshrc
 chmod +x /usr/local/bin/vagrant-sshrc
