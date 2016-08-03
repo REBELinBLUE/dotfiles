@@ -58,21 +58,16 @@ if is_os "darwin"; then
     # OS X has no `sha1sum`, so use `shasum` as a fallback
     command -v sha1sum > /dev/null || alias sha1sum="shasum"
 
-    # Flush Directory Service cache
-    alias flush="dscacheutil -flushcache"
+    alias mac="m"
 
     # Remove .DS_Store files
     alias dsclean="find . -type f -name .DS_Store -delete"
 
-    # Toggle hidden files
-    alias showhidden="defaults write com.apple.finder AppleShowAllFiles TRUE"
-    alias hidehidden="defaults write com.apple.finder AppleShowAllFiles FALSE"
-
     # Lock the screen - Lock screen
-    alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+    alias lock="mac lock"
 
     # Lock the screen - Screensaver
-    alias afk="/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine"
+    alias afk="mac screensaver"
 
     # FIXME: There has to be a nicer way, surely?
     alias php="php -dzend_extension=$(brew --prefix php70-xdebug)/xdebug.so"

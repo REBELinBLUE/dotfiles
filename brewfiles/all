@@ -109,6 +109,7 @@ brew 'mycli'
 brew 'pgcli'
 brew 'mas'
 brew 'cheat'
+brew 'm-cli'
 
 # Apps
 cask 'changes'
