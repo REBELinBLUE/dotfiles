@@ -32,5 +32,3 @@ brew bundle --file=brewfiles/all
 # brew bundle --file=brewfiles/imac
 
 source $HOME/.dotfiles/scripts/dotfiles.sh
-
-exec $SHELL -l

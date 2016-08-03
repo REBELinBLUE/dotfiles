@@ -20,7 +20,7 @@ vagrant plugin install vagrant-triggers
 vagrant plugin install vagrant-proxyconf
 
 # Patch vagrant notify
-curl https://patch-diff.githubusercontent.com/raw/fgrehm/vagrant-notify/pull/22.patch | patch -t -d ~/.vagrant.d/gems/gems/vagrant-notify-0.4.0/lib/vagrant-notify/ plugin.rb
+# curl https://patch-diff.githubusercontent.com/raw/fgrehm/vagrant-notify/pull/22.patch | patch -t -d ~/.vagrant.d/gems/gems/vagrant-notify-0.4.0/lib/vagrant-notify/ plugin.rb
 
 # For some reason 0.6.1 which is in homebrew causes problems with vagrant
 curl https://raw.githubusercontent.com/Russell91/sshrc/0.6/sshrc --silent -o /usr/local/bin/vagrant-sshrc
@@ -42,7 +42,6 @@ sudo sh -c "echo 'Cmnd_Alias VAGRANT_HOSTS_REMOVE = $(which sed) -i -e /*/ d /et
 sudo sh -c "echo '%admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE, VAGRANT_HOSTS_ADD, VAGRANT_HOSTS_REMOVE' >> /etc/sudoers.d/vagrant"
 
 # Download debian and ubuntu boxes
-# vagrant box add --provider virtualbox laravel/homestead
 vagrant box add --provider virtualbox debian/jessie64
 vagrant box add --provider virtualbox ubuntu/trusty64
 
