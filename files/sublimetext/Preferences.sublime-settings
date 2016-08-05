@@ -1,76 +1,92 @@
 {
-	"binary_file_patterns":
-	[
-		"_ide_helper*.php",
-		"vendor/**",
-		"node_modules/**",
-		"storage/**",
-		"*.jpg",
-		"*.jpeg",
-		"*.png",
-		"*.gif",
-		"*.ttf",
-		"*.tga",
-		"*.dds",
-		"*.map",
-		"*.ico",
-		"*.eot",
-		"*.pdf",
-		"*.swf",
-		"*.jar",
-		"*.zip"
-	],
-	"color_inactive_tabs": true,
-	"color_scheme": "Packages/Theme - Afterglow/Afterglow.tmTheme",
-	"draw_white_space": "all",
-	"file_exclude_patterns":
-	[
-		"*.pyc",
-		"*.pyo",
-		"*.exe",
-		"*.dll",
-		"*.obj",
-		"*.o",
-		"*.a",
-		"*.lib",
-		"*.so",
-		"*.dylib",
-		"*.ncb",
-		"*.sdf",
-		"*.suo",
-		"*.pdb",
-		"*.idb",
-		".DS_Store",
-		"*.class",
-		"*.psd",
-		"*.db",
-		"*.sublime-workspace"
-	],
-	"folder_exclude_patterns":
-	[
-		".svn",
-		".git",
-		".hg",
-		".idea",
-		".vagrant",
-		"CVS"
-	],
-	"font_face": "Source Code Pro Bold",
-	"font_size": 12.0,
-	"ignored_packages":
-	[
-		"JavaScript",
-		"Vintage"
-	],
-	"rulers":
-	[
-		120
-	],
-	"sublimelinter_popup_errors_on_save": true,
-	"tab_size": 4,
-	"tabs_small": true,
-	"theme": "Afterglow.sublime-theme",
-	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": false,
-	"word_wrap": false
+    "binary_file_patterns":
+    [
+        "_ide_helper*.php",
+        "vendor/**",
+        "node_modules/**",
+        "storage/**",
+        "*.jpg",
+        "*.jpeg",
+        "*.png",
+        "*.gif",
+        "*.ttf",
+        "*.tga",
+        "*.dds",
+        "*.map",
+        "*.ico",
+        "*.eot",
+        "*.pdf",
+        "*.swf",
+        "*.jar",
+        "*.zip"
+    ],
+    "color_inactive_tabs": true,
+    "color_scheme": "Packages/Theme - Afterglow/Afterglow.tmTheme",
+    "draw_white_space": "all",
+    "file_exclude_patterns":
+    [
+        "*.pyc",
+        "*.pyo",
+        "*.exe",
+        "*.dll",
+        "*.obj",
+        "*.o",
+        "*.a",
+        "*.lib",
+        "*.so",
+        "*.dylib",
+        "*.ncb",
+        "*.sdf",
+        "*.suo",
+        "*.pdb",
+        "*.idb",
+        ".DS_Store",
+        "*.class",
+        "*.psd",
+        "*.db",
+        "*.sublime-workspace"
+    ],
+    "folder_exclude_patterns":
+    [
+        ".svn",
+        ".git",
+        ".hg",
+        ".idea",
+        ".vagrant",
+        "CVS"
+    ],
+    "font_face": "Source Code Pro Bold",
+    "font_size": 12.0,
+    "ignored_packages":
+    [
+        "JavaScript",
+        "AdvancedNewFile",
+        "Alignment",
+        "Behat",
+        "DashDoc",
+        "DocBlockr",
+        "DotENV",
+        "EditorConfig",
+        "Fuction Name",
+        "INI",
+        "Laravel 5 Snippets",
+        "Laravel Blade Highlighter",
+        "Markdown Extended",
+        "Markdown Preview",
+        "Pretty JSON",
+        "TrailingSpaces",
+        "VCS Gutter",
+        "Vintage"
+    ],
+    "rulers":
+    [
+        120
+    ],
+    "sublimelinter_popup_errors_on_save": true,
+    "tab_size": 4,
+    "tabs_small": true,
+    "theme": "Afterglow.sublime-theme",
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": false,
+    "word_wrap": false
 }
