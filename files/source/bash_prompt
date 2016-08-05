@@ -9,7 +9,6 @@ if [ "${SSH_TTY}" ] || [ "${SSH_CLIENT}" ]; then
     fi
 fi
 
-
 # Load bash-git-prompt
 GIT_PROMPT=/opt/bash-git-prompt
 if is_os "darwin"; then

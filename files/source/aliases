@@ -69,10 +69,7 @@ if is_os "darwin"; then
     # Lock the screen - Screensaver
     alias afk="mac screensaver"
 
-    # FIXME: There has to be a nicer way, surely?
-    alias php="php -dzend_extension=$(brew --prefix php70-xdebug)/xdebug.so"
-    alias php55="php -dzend_extension=$(brew --prefix php55-xdebug)/xdebug.so"
-    alias php56="php -dzend_extension=$(brew --prefix php56-xdebug)/xdebug.so"
+    alias php="php -dzend_extension=$(brew --prefix php`command cat $HOME/.php_version`-xdebug)/xdebug.so"
 else
     alias php="php -dzend_extension=xdebug.so"
     alias phpunit="php $(which php)"
