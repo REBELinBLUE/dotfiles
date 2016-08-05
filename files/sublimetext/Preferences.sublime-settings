@@ -59,24 +59,21 @@
     "font_size": 12.0,
     "ignored_packages":
     [
-        "JavaScript",
+        "Vintage",
+        "Javascript",
         "AdvancedNewFile",
         "Alignment",
+        "Babel",
         "Behat",
         "DashDoc",
         "DocBlockr",
-        "DotENV",
-        "EditorConfig",
-        "Fuction Name",
-        "INI",
+        "Function Name Display",
         "Laravel 5 Snippets",
         "Laravel Blade Highlighter",
         "Markdown Extended",
         "Markdown Preview",
         "Pretty JSON",
-        "TrailingSpaces",
-        "VCS Gutter",
-        "Vintage"
+        "SublimeCodeIntel"
     ],
     "rulers":
     [
