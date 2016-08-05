@@ -80,3 +80,8 @@ fi
 
 alias composer.phar="/usr/local/bin/composer"
 
+# Who the first 3 lines of the ~/.extras file as they have the git config in
+if [ -f $HOME/.extras ]; then
+    alias gitwho="head -n3 $HOME/.extras"
+fi
+
