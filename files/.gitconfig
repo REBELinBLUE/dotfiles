@@ -93,7 +93,6 @@
     autocorrect = 1
 
 [alias]
-
     # Amend the currently staged files to the latest commit
     amend = commit --amend
 
@@ -101,7 +100,7 @@
     branches = branch -vv --all
 
     # Show verbose output about the local branches
-    br = branch -vv --list
+    br = branch -vv --list # FIXME: Add a function to make "git branch" default to this
 
     # Clone a repository including all submodules
     c = clone --recursive
@@ -118,8 +117,8 @@
     # Pretty graph
     graph = log --graph --oneline --decorate
 
-    # View the SHA, description, and history graph of the latest 20 commits
-    l = log --format='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --no-merges -n 30
+    # View the SHA, description, and history graph of the latest 30 commits
+    l = log --format='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --no-merges -n 30 --abbrev-commit --date=relative
 
     # Pull in remote changes for the current repository and all its submodules
     pl = !"git pull; git submodule foreach git pull origin master"
@@ -133,6 +132,9 @@
     # Show verbose output about remotes
     remotes = remote --verbose
 
+    # Shows changes between branches
+    review = "!r() { git log -U20 --patch --no-merges --reverse $1..; }; r"
+
     # Show short status
     st = status --short
 
@@ -141,6 +143,9 @@
 
     # Show verbose output about tags
     tags = tag --list
+
+    # Reset everythingg
+    trash = reset --hard HEAD
 
     # Uncommit the previous commits
     uncommit = reset --mixed HEAD~
