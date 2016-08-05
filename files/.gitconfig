@@ -37,6 +37,8 @@
 
     tool = chdiff
 
+    orderfile = ~/.gitorder
+
 [core]
     editor = nano
     quotepath = false
