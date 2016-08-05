@@ -15,7 +15,13 @@ if ! type_exists 'composer'; then
     chmod a+x /usr/local/bin/composer
 fi
 
-if ! type_exists 'Symfony'; then
+if ! type_exists 'psysh'; then
+    e_arrow 'Downloading Psysh'
+    curl -LsS https://git.io/psysh -o /usr/local/bin/psysh
+    chmod a+x /usr/local/bin/psysh
+fi
+
+if ! type_exists 'symfony'; then
     e_arrow 'Downloading Symfony Installer'
     curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
     chmod a+x /usr/local/bin/symfony
