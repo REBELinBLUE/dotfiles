@@ -96,10 +96,10 @@
     amend = commit --amend
 
     # Show verbose output about all branches
-    branches = branch --verbose --all
+    branches = branch -vv --all
 
     # Show verbose output about the local branches
-    branch = branch --verbose --list
+    br = branch -vv --list
 
     # Clone a repository including all submodules
     c = clone --recursive
