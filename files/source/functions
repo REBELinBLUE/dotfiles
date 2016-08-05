@@ -205,7 +205,7 @@ if is_os "darwin"; then
                                                                  -message "$MESSAGE"
     }
 
-    function php-switch {
+    php-switch() {
         brew-php-switcher "$@" -s
         echo "$@" > $HOME/.php_version
     }
