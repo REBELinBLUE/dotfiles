@@ -15,6 +15,7 @@ vagrant plugin install vagrant-cachier
 vagrant plugin install vagrant-bindfs
 vagrant plugin install vagrant-hostsupdater
 vagrant plugin install vagrant-triggers
+vagrant plugin install vagrant-rebuild
 
 # Install vagrant plugins for work machine
 vagrant plugin install vagrant-proxyconf
@@ -27,16 +28,34 @@ if [ ! -d /etc/sudoers.d/ ]; then
     sudo mkdir /etc/sudoers.d/
 fi
 
-sudo touch /etc/sudoers.d/vagrant
-sudo sh -c "echo '# Allow Vagrant to manage NFS exports.' > /etc/sudoers.d/vagrant"
-sudo sh -c "echo 'Cmnd_Alias VAGRANT_EXPORTS_ADD = $(which tee) -a /etc/exports' >> /etc/sudoers.d/vagrant"
-sudo sh -c "echo 'Cmnd_Alias VAGRANT_NFSD = $(which nfsd) restart' >> /etc/sudoers.d/vagrant"
-sudo sh -c "echo 'Cmnd_Alias VAGRANT_EXPORTS_REMOVE = $(which sed) -E -e /*/ d -ibak /etc/exports' >> /etc/sudoers.d/vagrant"
-sudo sh -c "echo '' >> /etc/sudoers.d/vagrant"
-sudo sh -c "echo '# Allow Vagant to manage hosts file.' >> /etc/sudoers.d/vagrant"
-sudo sh -c "echo 'Cmnd_Alias VAGRANT_HOSTS_ADD = $(which sh) -c echo \"*\" >> /etc/hosts' >> /etc/sudoers.d/vagrant"
-sudo sh -c "echo 'Cmnd_Alias VAGRANT_HOSTS_REMOVE = $(which sed) -i -e /*/ d /etc/hosts' >> /etc/sudoers.d/vagrant"
-sudo sh -c "echo '%admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE, VAGRANT_HOSTS_ADD, VAGRANT_HOSTS_REMOVE' >> /etc/sudoers.d/vagrant"
+sudo mkdir -p /etc/sudoers.d
+
+cat > /tmp/vagrant << EOF
+# Allow Vagrant to manage NFS exports.
+Cmnd_Alias VAGRANT_EXPORTS_ADD = $(which tee) -a /etc/exports
+Cmnd_Alias VAGRANT_NFSD = $(which nfsd) restart
+Cmnd_Alias VAGRANT_EXPORTS_REMOVE = $(which sed) -E -e /*/ d -ibak /etc/exports
+
+# Allow Vagant to manage hosts file.
+Cmnd_Alias VAGRANT_HOSTS_ADD = $(which sh) -c echo "*" >> /etc/hosts
+Cmnd_Alias VAGRANT_HOSTS_REMOVE = $(which sed) -i -e /*/ d /etc/hosts
+
+%admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE, VAGRANT_HOSTS_ADD, VAGRANT_HOSTS_REMOVE
+EOF
+
+sudo mv /tmp/vagrant /etc/sudoers.d/vagrant2
+
+
+# sudo touch /etc/sudoers.d/vagrant
+# sudo sh -c "echo '# Allow Vagrant to manage NFS exports.' > /etc/sudoers.d/vagrant"
+# sudo sh -c "echo 'Cmnd_Alias VAGRANT_EXPORTS_ADD = $(which tee) -a /etc/exports' >> /etc/sudoers.d/vagrant"
+# sudo sh -c "echo 'Cmnd_Alias VAGRANT_NFSD = $(which nfsd) restart' >> /etc/sudoers.d/vagrant"
+# sudo sh -c "echo 'Cmnd_Alias VAGRANT_EXPORTS_REMOVE = $(which sed) -E -e /*/ d -ibak /etc/exports' >> /etc/sudoers.d/vagrant"
+# sudo sh -c "echo '' >> /etc/sudoers.d/vagrant"
+# sudo sh -c "echo '# Allow Vagant to manage hosts file.' >> /etc/sudoers.d/vagrant"
+# sudo sh -c "echo 'Cmnd_Alias VAGRANT_HOSTS_ADD = $(which sh) -c echo \"*\" >> /etc/hosts' >> /etc/sudoers.d/vagrant"
+# sudo sh -c "echo 'Cmnd_Alias VAGRANT_HOSTS_REMOVE = $(which sed) -i -e /*/ d /etc/hosts' >> /etc/sudoers.d/vagrant"
+# sudo sh -c "echo '%admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE, VAGRANT_HOSTS_ADD, VAGRANT_HOSTS_REMOVE' >> /etc/sudoers.d/vagrant"
 
 # Download debian and ubuntu boxes
 vagrant box add --provider virtualbox debian/jessie64
