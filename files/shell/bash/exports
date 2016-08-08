@@ -46,7 +46,7 @@ export LC_ALL="en_GB.UTF-8"
 export CHEATCOLORS=true
 
 # Should not be needed, load the dir colors
-eval $(dircolors $HOME/.dotfiles/files/source/dircolors)
+eval $(dircolors $HOME/.dotfiles/files/shell/bash/dircolors)
 
 # Default log level for NPM
 export NPM_CONFIG_LOGLEVEL="error"

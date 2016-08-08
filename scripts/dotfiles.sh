@@ -52,6 +52,16 @@ if [ ! -e $HOME/.ssh/config.d ]; then
     ln -s $HOME/.dotfiles/files/.ssh/config.d/ $HOME/.ssh/config.d
 fi
 
+# Make ~/.config directory if missing
+if [ ! -d $HOME/.config ]; then
+    mkdir $HOME/.config
+fi
+
+# Symlink the fish config
+if [ ! -e $HOME/.config/fish ]; then
+    ln -s $HOME/.dotfiles/files/shell/fish $HOME/.config/fish
+fi
+
 # Symlink the sshrc.d folder
 if [ ! -e $HOME/.sshrc.d ]; then
     ln -s $HOME/.dotfiles/files/.sshrc.d $HOME/.sshrc.d
@@ -65,6 +75,7 @@ if [ -d $HOME/.vagrant.d/ ]; then
 
     ln -s $HOME/.dotfiles/files/.vagrant.d/Vagrantfile $HOME/.vagrant.d/Vagrantfile
 fi
+
 
 # Set up extras config
 if [ ! -f $HOME/.extras ]; then

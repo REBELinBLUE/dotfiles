@@ -25,6 +25,10 @@ else
 
     sudo echo $BASHPATH >> /etc/shells
     chsh -s $BASHPATH
+
+    FISHPATH=$(brew --prefix)/bin/fish
+
+    sudo echo $FISHPATH >> /etc/shells
 fi
 
 sudo SetFile -a V /opt
