@@ -22,13 +22,12 @@ if [[ $SIP_STATUS == *"enabled"* ]]; then
     read -p "Press [Enter] to continue..."
 else
     BASHPATH=$(brew --prefix)/bin/bash
-
-    sudo echo $BASHPATH >> /etc/shells
-    chsh -s $BASHPATH
-
     FISHPATH=$(brew --prefix)/bin/fish
 
+    sudo echo $BASHPATH >> /etc/shells
     sudo echo $FISHPATH >> /etc/shells
+
+    chsh -s $FISHPATH
 fi
 
 sudo SetFile -a V /opt

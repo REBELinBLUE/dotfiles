@@ -12,6 +12,7 @@ tap 'homebrew/binary'
 tap 'homebrew/versions'
 tap 'homebrew/homebrew-php'
 tap 'alehouse/homebrew-unofficial'
+tap 'homebrew/command-not-found'
 
 # Make sure apps get installed in system Applications dir
 cask_args appdir: '/Applications'
