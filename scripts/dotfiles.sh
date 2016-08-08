@@ -57,9 +57,14 @@ if [ ! -d $HOME/.config ]; then
     mkdir $HOME/.config
 fi
 
-# Symlink the fish config
-if [ ! -e $HOME/.config/fish ]; then
-    ln -s $HOME/.dotfiles/files/shell/fish $HOME/.config/fish
+# # Symlink the fish config
+# if [ ! -e $HOME/.config/fish ]; then
+#     ln -s $HOME/.dotfiles/files/shell/fish $HOME/.config/fish
+# fi
+
+# Oh-my-fish
+if [ ! -e $HOME/.config/omf ]; then
+    ln -s $HOME/.dotfiles/files/shell/fish $HOME/.config/omf
 fi
 
 # Symlink the sshrc.d folder

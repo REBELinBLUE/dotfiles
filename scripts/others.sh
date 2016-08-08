@@ -17,3 +17,6 @@ pip install httpie-jwt-auth
 
 # Install additional CLIs
 ln -s `which ffmpeg` /usr/local/bin/ffmpeg-static
+
+# Install OMF
+curl -SsL http://get.oh-my.fish | fish
