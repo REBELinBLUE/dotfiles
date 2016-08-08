@@ -33,6 +33,8 @@ function fish_prompt --description 'Write out the prompt'
     set -l color_cwd
     set -l suffix
 
+    # FIXME: Still need to fix the prompt if connected via SSH
+
     switch $USER
         case root toor
             set color_cwd $red

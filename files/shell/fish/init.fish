@@ -8,13 +8,16 @@ end
 set -xg HOMEBREW_CASK_OPTS '--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom'
 
 # Add more paths
-set -xg PATH ~/.composer/vendor/bin ./vendor/bin ./node_modules/.bin (brew --prefix findutils)/bin \
+set -xg PATH ~/.composer/vendor/bin (brew --prefix findutils)/bin \
             (brew --prefix coreutils)/libexec/gnubin /usr/local/bin /usr/bin /bin /usr/local/sbin \
             /usr/sbin /sbin /Applications/VirtualBox.app/Contents/MacOS
 
-
 # Setup terminal, and turn on colors
 set -x TERM xterm-256color
+
+
+# Set LS_COLORS
+eval (dircolors -c $HOME/.dotfiles/files/shell/bash/dircolors | sed 's/>&\/dev\/null$//')
 
 # Prefer UK English and use UTF-8.
 set -xg LANG 'en_GB.UTF-8'
@@ -40,7 +43,6 @@ end
 # TODO
 #
 # Missing history config
-# Missing dir colors
 # Missing man path
 # Missing additional paths
 # Add PHPUnit function

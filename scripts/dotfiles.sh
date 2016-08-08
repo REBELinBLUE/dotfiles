@@ -57,11 +57,6 @@ if [ ! -d $HOME/.config ]; then
     mkdir $HOME/.config
 fi
 
-# # Symlink the fish config
-# if [ ! -e $HOME/.config/fish ]; then
-#     ln -s $HOME/.dotfiles/files/shell/fish $HOME/.config/fish
-# fi
-
 # Oh-my-fish
 if [ ! -e $HOME/.config/omf ]; then
     ln -s $HOME/.dotfiles/files/shell/fish $HOME/.config/omf
@@ -81,11 +76,15 @@ if [ -d $HOME/.vagrant.d/ ]; then
     ln -s $HOME/.dotfiles/files/.vagrant.d/Vagrantfile $HOME/.vagrant.d/Vagrantfile
 fi
 
-
 # Set up extras config
 if [ ! -f $HOME/.extras ]; then
-    echo -e "# Stick any extra functions, aliases and exports in this file" > $HOME/.extras
+    echo -e "# Stick any extra functions, aliases and exports for bash in this file" > $HOME/.extras
     $EDITOR $HOME/.extras
+fi
+
+if [ ! -f $HOME/.extras.fish ]; then
+    echo -e "# Stick any extra functions and exports for fish in this file" > $HOME/.extras.fish
+    $EDITOR $HOME/.extras.fish
 fi
 
 source $HOME/.bashrc
