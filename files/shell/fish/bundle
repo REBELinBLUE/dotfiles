@@ -1,5 +1,9 @@
 package artisan
 package bang-bang
 package brew
+package config
+package homebrew-command-not-found
+package https://github.com/oh-my-fish/plugin-bak
 package proxy
+package ssh-config.d
 theme default
