@@ -1,3 +1,3 @@
 function cat
-    command ccat "$argv"
+    command ccat $argv
 end

@@ -32,6 +32,11 @@ set -xg NPM_CONFIG_LOGLEVEL 'error'
 # Load additional scripts
 source /opt/fishmarks/marks.fish
 
+# Load any additional scripts
+if test -e ~/.extras.fish
+    source ~/.extras.fish
+end
+
 # TODO
 #
 # Missing history config
