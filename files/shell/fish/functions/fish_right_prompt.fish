@@ -25,7 +25,9 @@ end
 function __timestamp -S -d 'Show the current timestamp'
     set -l theme_date_format "+%H:%M:%S"
 
+    set_color cyan
     date $theme_date_format
+    set_color normal
 end
 
 function __vagrant_ids -S -d 'List Vagrant machine ids'
@@ -66,7 +68,7 @@ function __vagrant -S -d 'Display VirtualBox Vagrant status'
 
   set_color yellow
   echo -ns $vagrant_status ' '
-  set_color $fish_color_autosuggestion
+  set_color normal
 end
 
 
@@ -75,16 +77,17 @@ function __docker -S -d 'Show docker machine name'
 
     set_color green
     echo -ns $DOCKER_MACHINE_NAME ' '
-    set_color $fish_color_autosuggestion
+    set_color normal
 end
 
 
 function fish_right_prompt -d 'The right prompt'
-    set_color $fish_color_autosuggestion
+    set_color normal
 
     #__cmd_duration
     #__docker
     __vagrant
     __timestamp
+
     set_color normal
 end
