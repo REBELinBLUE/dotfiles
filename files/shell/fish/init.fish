@@ -1,11 +1,11 @@
 # Load helper files
-source $OMF_CONFIG/helpers.fish
+source $OMF_CONFIG/scripts/helpers.fish
 
 # Load exports
-source $OMF_CONFIG/exports.fish
+source $OMF_CONFIG/scripts/exports.fish
 
 # Load fishmarks
-source /opt/fishmarks/marks.fish
+source $OMF_CONFIG/scripts/marks.fish
 
 # Load any additional scripts
 if test -e ~/.extras.fish

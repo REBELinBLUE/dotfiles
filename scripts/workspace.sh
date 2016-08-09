@@ -71,20 +71,17 @@ compact() {
 }
 
 help() {
-    cat <<EOF
-usage: workspace <command>
-Possible commands:
-   create       Initialize case-sensitive volume (only needed first time)
-   automount    Configure OS X to mount the volume automatically on restart
-   mount        Attach the case-sensitive volume
-   unmount      Detach the case-sensitive volume
-   compact      Remove any unneeded reserved space in the volume
-   help         Display this message
-EOF
+    printf "Possible commands:\n\n";
+    printf "\033[0;33m%-20s\033[0m %s\n" "create" "Initialize case-sensitive volume (only needed first time)";
+    printf "\033[0;33m%-20s\033[0m %s\n" "automount" "Configure OS X to mount the volume automatically on restart";
+    printf "\033[0;33m%-20s\033[0m %s\n" "mount" "Attach the case-sensitive volume";
+    printf "\033[0;33m%-20s\033[0m %s\n" "unmount" "Detach the case-sensitive volume";
+    printf "\033[0;33m%-20s\033[0m %s\n" "compact" "Remove any unneeded reserved space in the volume";
+    printf "\033[0;33m%-20s\033[0m %s\n" "help" "Display this message";
 }
 
 invalid() {
-    printf "workspace: '$1' is not a valid command.\n\n";
+    printf "\033[31m✖ '$1' is not a valid command.\033[0m \n\n";
     help
 }
 

@@ -70,6 +70,13 @@ function e_note
     echo $normal
 end
 
+function e_tabbed
+    set -l normal (set_color normal)
+    set -l yellow (set_color yellow)
+
+    printf "$yellow%-20s$normal%s\n" $argv[1] $argv[2]
+end
+
 function e_help
     e_header "I am a header message - e_header"
     e_success "I am a success message - e_success"
@@ -78,4 +85,5 @@ function e_help
     e_underline "I am underlined text - e_underline"
     e_bold "I am bold text - e_bold"
     e_note "I am a note - e_note"
+    e_tabbed "e_tabbed" "I am a tabbed item"
 end

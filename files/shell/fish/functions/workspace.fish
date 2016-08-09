@@ -1,3 +1,3 @@
 function workspace
-    command sh $HOME/.dotfiles/scripts/workspace.sh
+    command sh $HOME/.dotfiles/scripts/workspace.sh $argv
 end

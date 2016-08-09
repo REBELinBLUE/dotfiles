@@ -68,6 +68,12 @@ e_bold() {
     source $HOME/.dotfiles/files/shell/bash/clear-colours
 }
 
+e_tabbed() {
+    source $HOME/.dotfiles/files/shell/bash/colours
+    printf "${CLI_YELLOW}%s-20s${CLI_RESET}%s\n" "$1" "$2" # fixme: not working
+    source $HOME/.dotfiles/files/shell/bash/clear-colours
+}
+
 e_note() {
     source $HOME/.dotfiles/files/shell/bash/colours
     printf "${CLI_UNDERLINE}${CLI_BOLD}${CLI_BLUE}Note:${CLI_RESET} ${CLI_BLUE}%s${CLI_RESET}\n" "$@"
