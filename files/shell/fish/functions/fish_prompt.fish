@@ -38,7 +38,6 @@ function fish_prompt --description 'Write out the prompt'
     set -l color_cwd
     set -l suffix
 
-    # FIXME: Still need to fix the prompt if connected via SSH
     switch $USER
         case root toor
             set color_cwd $red
@@ -48,6 +47,10 @@ function fish_prompt --description 'Write out the prompt'
             set suffix '$'
     end
 
+    # If connected via SSH should the suffix twice
+    if [ "$SSH_TTY" -o "$SSH_CLIENT" ]
+        set suffix "$suffix$suffix"
+    end
 
     set -l cwd $color_cwd (pwd | sed "s:^$HOME:~:")
 
@@ -67,10 +70,6 @@ function fish_prompt --description 'Write out the prompt'
     # Print VCS status
     echo -n -s (__fish_git_prompt ' on %s')
 
-    if not test $last_status -eq 0
-        set_color $fish_color_error
-    end
-
     echo -e ''
-    echo -e -n -s "$suffix " $normal
+    echo -e -n -s $normal "$suffix " $normal
 end
