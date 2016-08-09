@@ -80,6 +80,10 @@ function __docker -S -d 'Show docker machine name'
     set_color normal
 end
 
+function __file_count
+  ls -1 | wc -l | sed 's/\ //g'
+end
+
 function __prompt_status -S -a last_status -d 'Display symbols for a non zero exit status, root and background jobs'
     set -l nonzero
     set -l superuser
@@ -112,7 +116,7 @@ function __prompt_status -S -a last_status -d 'Display symbols for a non zero ex
         if [ "$superuser" ]
             set_color normal
             set_color --bold yellow
-            echo -n '$'
+            echo -n '$'s
             set_color normal
             echo -n ' '
         end
