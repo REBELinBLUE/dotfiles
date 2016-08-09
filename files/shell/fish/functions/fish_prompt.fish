@@ -7,8 +7,6 @@ function fish_prompt --description 'Write out the prompt'
     set -l green (set_color green)
     set -l normal (set_color normal)
 
-    # FIXME: See about changing to bash-git-prompt
-    # https://github.com/fish-shell/fish-shell/blob/master/share/functions/__fish_git_prompt.fish
     set -g __fish_git_prompt_show_informative_status 1
     set -g __fish_git_prompt_showstashstate 1
     set -g __fish_git_prompt_show_untrackedfiles 1
@@ -41,7 +39,6 @@ function fish_prompt --description 'Write out the prompt'
     set -l suffix
 
     # FIXME: Still need to fix the prompt if connected via SSH
-
     switch $USER
         case root toor
             set color_cwd $red

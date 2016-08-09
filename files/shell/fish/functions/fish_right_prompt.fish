@@ -80,11 +80,62 @@ function __docker -S -d 'Show docker machine name'
     set_color normal
 end
 
+function __prompt_status -S -a last_status -d 'Display symbols for a non zero exit status, root and background jobs'
+    set -l nonzero
+    set -l superuser
+    set -l bg_jobs
+
+    # Last exit was nonzero
+    [ $last_status -ne 0 ]
+        and set nonzero 1
+
+    # if superuser (uid == 0)
+    [ (id -u $USER) -eq 0 ]
+        and set superuser 1
+
+    # Jobs display
+    [ (jobs -l | wc -l) -gt 0 ]
+        and set bg_jobs 1
+
+    if [ "$nonzero" -o "$superuser" -o "$bg_jobs" ]
+        echo -n "[ "
+        if [ "$nonzero" ]
+            set_color normal
+            set_color red --bold
+
+            echo -ns $last_status
+            #echo -n '!'
+            set_color normal
+            echo -n ' '
+        end
+
+        if [ "$superuser" ]
+            set_color normal
+            set_color --bold yellow
+            echo -n '$'
+            set_color normal
+            echo -n ' '
+        end
+
+        if [ "$bg_jobs" ]
+            set_color normal
+            set_color --bold blue
+            echo -n '%'
+            set_color normal
+            echo -n ' '
+        end
+
+        echo -n "] "
+    end
+end
 
 function fish_right_prompt -d 'The right prompt'
+    set -l last_status $status
+
     set_color normal
 
     #__cmd_duration
+    __prompt_status $last_status
     #__docker
     __vagrant
     __timestamp
