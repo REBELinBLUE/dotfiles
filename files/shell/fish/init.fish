@@ -15,7 +15,6 @@ set -xg PATH ~/.composer/vendor/bin (brew --prefix findutils)/bin \
 # Setup terminal, and turn on colors
 set -x TERM xterm-256color
 
-
 # Set LS_COLORS
 eval (dircolors -c $HOME/.dotfiles/files/shell/bash/dircolors | sed 's/>&\/dev\/null$//')
 
