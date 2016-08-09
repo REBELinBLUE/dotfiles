@@ -28,6 +28,7 @@ function fish_prompt --description 'Write out the prompt'
     set -g __fish_git_prompt_color_dirtystate blue
     set -g __fish_git_prompt_color_stagedstate yellow
     set -g __fish_git_prompt_color_invalidstate red
+    set -g __fish_git_prompt_color_branch_detached red
     set -g __fish_git_prompt_color_untrackedfiles $fish_color_normal
     set -g __fish_git_prompt_describe_style "describe"
     set -g __fish_git_prompt_showcolorhints 1
