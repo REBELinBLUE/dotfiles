@@ -40,6 +40,8 @@ if test -e ~/.extras.fish
     source ~/.extras.fish
 end
 
+source $OMF_CONFIG/helpers.fish
+
 # TODO
 #
 # Missing history config
