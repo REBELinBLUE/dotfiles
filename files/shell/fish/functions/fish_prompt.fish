@@ -52,7 +52,7 @@ function fish_prompt --description 'Write out the prompt'
     end
 
 
-    set -l cwd $magenta (pwd | sed "s:^$HOME:~:")
+    set -l cwd $color_cwd (pwd | sed "s:^$HOME:~:")
 
     set -l hostname (hostname | sed "s:.lan::")
 
