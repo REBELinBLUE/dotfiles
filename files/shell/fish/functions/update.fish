@@ -4,6 +4,7 @@ function update -d "Updates all software"
     composer self-update
     composer global install
     brewup
+    omf install
     npm install npm -g; and npm update -g
     #sudo pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U -q
 end
