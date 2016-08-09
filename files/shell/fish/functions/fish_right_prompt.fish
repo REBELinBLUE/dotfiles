@@ -25,14 +25,66 @@ end
 function __timestamp -S -d 'Show the current timestamp'
     set -l theme_date_format "+%H:%M:%S"
 
-    echo -n ' '
     date $theme_date_format
 end
+
+function __vagrant_ids -S -d 'List Vagrant machine ids'
+  for file in .vagrant/machines/**/id
+    read id <$file
+    echo $id
+  end
+end
+
+
+function __vagrant -S -d 'Display VirtualBox Vagrant status'
+  set -l ___vagrant_running_glyph   '↑'
+  set -l ___vagrant_poweroff_glyph  '↓'
+  set -l ___vagrant_aborted_glyph   '✖'
+  set -l ___vagrant_saved_glyph     '⇡'
+  set -l ___vagrant_stopping_glyph  '⇣'
+  set -l ___vagrant_unknown_glyph   '!'
+
+  set -l vagrant_status
+  for id in (__vagrant_ids)
+    set -l vm_status (VBoxManage showvminfo --machinereadable $id ^/dev/null | command grep 'VMState=' | tr -d '"' | cut -d '=' -f 2)
+    switch "$vm_status"
+      case 'running'
+        set vagrant_status "$vagrant_status$___vagrant_running_glyph"
+      case 'poweroff'
+        set vagrant_status "$vagrant_status$___vagrant_poweroff_glyph"
+      case 'aborted'
+        set vagrant_status "$vagrant_status$___vagrant_aborted_glyph"
+      case 'saved'
+        set vagrant_status "$vagrant_status$___vagrant_saved_glyph"
+      case 'stopping'
+        set vagrant_status "$vagrant_status$___vagrant_stopping_glyph"
+      case ''
+        set vagrant_status "$vagrant_status$___vagrant_unknown_glyph"
+    end
+  end
+  [ -z "$vagrant_status" ]; and return
+
+  set_color yellow
+  echo -ns $vagrant_status ' '
+  set_color $fish_color_autosuggestion
+end
+
+
+function __docker -S -d 'Show docker machine name'
+    [ -z "$DOCKER_MACHINE_NAME" ]; and return
+
+    set_color green
+    echo -ns $DOCKER_MACHINE_NAME ' '
+    set_color $fish_color_autosuggestion
+end
+
 
 function fish_right_prompt -d 'The right prompt'
     set_color $fish_color_autosuggestion
 
     #__cmd_duration
+    #__docker
+    __vagrant
     __timestamp
     set_color normal
 end
