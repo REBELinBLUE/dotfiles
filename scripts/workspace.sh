@@ -72,12 +72,12 @@ compact() {
 
 help() {
     printf "Possible commands:\n\n";
-    printf "\033[0;33m%-25s\033[0m%s\n" "create" "Initialize case-sensitive volume (only needed first time)";
-    printf "\033[0;33m%-25s\033[0m%s\n" "automount" "Configure OS X to mount the volume automatically on restart";
-    printf "\033[0;33m%-25s\033[0m%s\n" "mount" "Attach the case-sensitive volume";
-    printf "\033[0;33m%-25s\033[0m%s\n" "unmount" "Detach the case-sensitive volume";
-    printf "\033[0;33m%-25s\033[0m%s\n" "compact" "Remove any unneeded reserved space in the volume";
-    printf "\033[0;33m%-25s\033[0m%s\n" "help" "Display this message";
+    printf "\033[0;33m%-20s\033[0m%s\n" "create" "Initialize case-sensitive volume (only needed first time)";
+    printf "\033[0;33m%-20s\033[0m%s\n" "automount" "Configure OS X to mount the volume automatically on restart";
+    printf "\033[0;33m%-20s\033[0m%s\n" "mount" "Attach the case-sensitive volume";
+    printf "\033[0;33m%-20s\033[0m%s\n" "unmount" "Detach the case-sensitive volume";
+    printf "\033[0;33m%-20s\033[0m%s\n" "compact" "Remove any unneeded reserved space in the volume";
+    printf "\033[0;33m%-20s\033[0m%s\n" "help" "Display this message";
 }
 
 invalid() {

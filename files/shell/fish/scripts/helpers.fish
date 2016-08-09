@@ -74,7 +74,7 @@ function e_tabbed
     set -l normal (set_color normal)
     set -l yellow (set_color yellow)
 
-    printf "$yellow%-25s$normal%s\n" $argv[1] $argv[2]
+    printf "$yellow%-20s$normal%s\n" $argv[1] $argv[2]
 end
 
 function e_help
