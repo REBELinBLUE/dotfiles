@@ -52,6 +52,16 @@ if [ ! -e $HOME/.ssh/config.d ]; then
     ln -s $HOME/.dotfiles/files/.ssh/config.d/ $HOME/.ssh/config.d
 fi
 
+# Make ~/.config directory if missing
+if [ ! -d $HOME/.config ]; then
+    mkdir $HOME/.config
+fi
+
+# Oh-my-fish
+if [ ! -e $HOME/.config/omf ]; then
+    ln -s $HOME/.dotfiles/files/shell/fish $HOME/.config/omf
+fi
+
 # Symlink the sshrc.d folder
 if [ ! -e $HOME/.sshrc.d ]; then
     ln -s $HOME/.dotfiles/files/.sshrc.d $HOME/.sshrc.d
@@ -68,8 +78,13 @@ fi
 
 # Set up extras config
 if [ ! -f $HOME/.extras ]; then
-    echo -e "# Stick any extra functions, aliases and exports in this file" > $HOME/.extras
+    echo -e "# Stick any extra functions, aliases and exports for bash in this file" > $HOME/.extras
     $EDITOR $HOME/.extras
+fi
+
+if [ ! -f $HOME/.extras.fish ]; then
+    echo -e "# Stick any extra functions and exports for fish in this file" > $HOME/.extras.fish
+    $EDITOR $HOME/.extras.fish
 fi
 
 source $HOME/.bashrc
