@@ -125,9 +125,10 @@ end
 
 function list_bookmarks --description "List all available bookmarks"
     if not _check_help $argv[1];
+        echo 'Available bookmarks:'
         echo ''
         cat $SDIRS | grep "^export DIR_" | sed "s/^export /set -x /" | sed "s/=/ /" | .
-        env | sort | awk '/DIR_.+/{split(substr($0,5),parts,"="); printf("\033[0;33m%-20s\033[0m %s\n", parts[1], parts[2]);}'
+        env | sort | awk '/DIR_.+/{split(substr($0,5),parts,"="); printf("\033[0;33m%-25s\033[0m%s\n", parts[1], parts[2]);}'
     end
 end
 
@@ -136,6 +137,7 @@ function _check_help
         return 1
     end
     if begin; [ "-h" = $argv[1] ]; or [ "-help" = $argv[1] ]; or [ "--help" = $argv[1] ]; end
+        echo 'Possible commands:'
         echo ''
         e_tabbed 's <bookmark_name>' 'Saves the current directory as "bookmark_name"'
         e_tabbed 'g <bookmark_name>' 'Changes to the directory associated with "bookmark_name"'
@@ -143,7 +145,6 @@ function _check_help
         e_tabbed 'p <bookmark_name>' 'Prints the directory associated with "bookmark_name"'
         e_tabbed 'd <bookmark_name>' 'Deletes the bookmark'
         e_tabbed 'l' 'Lists all available bookmarks'
-        echo ''
 
         return 0
     end

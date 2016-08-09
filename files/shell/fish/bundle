@@ -6,4 +6,5 @@ package homebrew-command-not-found
 package https://github.com/decors/fish-colored-man
 package https://github.com/oh-my-fish/plugin-bak
 package kill-on-port
+package sudope
 theme default
