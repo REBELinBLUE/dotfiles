@@ -14,7 +14,7 @@ alias l1='ls -1 --color=auto --quoting-style=literal'
 alias sl='ls'
 
 # Use ccat
-alias cat="ccat"
+alias ccat="pygmentize -g"
 
 # Use editor
 alias edit=$EDITOR
