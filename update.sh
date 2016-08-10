@@ -33,4 +33,4 @@ brew bundle --file=brewfiles/all
 
 source $HOME/.dotfiles/scripts/dotfiles.sh
 
-brew-php-switcher $(cat ~/.php_version) -s
+brew-php-switcher $(cat ~/.cache/php_version) -s

@@ -97,9 +97,6 @@ if [ ! -e $HOME/.config/npm/npmrc ]; then
     ln -s $HOME/.dotfiles/files/config/npmrc $HOME/.config/npm/npmrc
 fi
 
-
-
-$XDG_CONFIG_HOME/npm/npmrc
 # Set up extras config
 if [ ! -f $HOME/.config/extras.bash ]; then
     echo -e "# Stick any extra functions, aliases and exports for bash in this file" > $HOME/.config/extras.bash
