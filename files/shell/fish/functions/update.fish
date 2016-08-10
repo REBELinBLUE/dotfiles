@@ -1,8 +1,8 @@
 function update -d "Updates all software"
     sudo mas upgrade
     sudo softwareupdate -i -a
-    composer self-update
-    composer global install
+    command composer self-update
+    command composer global install
     brewup
     omf install
     npm install npm -g; and npm update -g

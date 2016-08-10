@@ -1,7 +1,7 @@
 function fish_greeting -d "Greeting"
     set_color $fish_color_autosuggestion
     uname -nmsr
-    uptime
+    command uptime
     set_color normal
 
     # Change to the directory if a WIP directory exists

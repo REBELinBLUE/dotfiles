@@ -1,6 +1,6 @@
 function brewup -d 'Updates homebrew'
-    brew update
-    brew upgrade --all
-    brew bundle --file="$HOME/.dotfiles/brewfiles/all"
-    brew cleanup
+    command brew update
+    command brew upgrade --all
+    command brew bundle --file="$HOME/.dotfiles/brewfiles/all"
+    command brew cleanup
 end
