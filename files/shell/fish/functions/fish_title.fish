@@ -3,5 +3,6 @@ function fish_title
     echo $_ ' '
 
     # Display the PWD
-    prompt_pwd
+    echo (pwd | sed "s:^$HOME:~:")
+    #prompt_pwd
 end

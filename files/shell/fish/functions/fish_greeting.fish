@@ -1,5 +1,5 @@
 function fish_greeting -d "Greeting"
-    _logo
+    #_logo
 
     set_color $fish_color_autosuggestion
     uname -nmsr
