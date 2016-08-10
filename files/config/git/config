@@ -37,13 +37,13 @@
 
     tool = chdiff
 
-    orderfile = ~/.gitorder
+    orderfile = ~/.dotfiles/files/config/git/order
 
 [core]
     editor = nano
     quotepath = false
-    excludesfile = ~/.gitignore
-    #attributesfile = ~/.gitattributes
+    excludesfile = ~/.dotfiles/files/config/git/ignore
+    #attributesfile = ~/.dotfiles/files/config/git/attributes
 
     # Treat spaces before tabs and all kinds of trailing whitespace as an error
     # [default] trailing-space: looks for spaces at the end of a line

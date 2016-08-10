@@ -1,40 +1,75 @@
 # Make sublime the default editor locally and nano when via SSH
 if begin; test -z $SSH_CLIENT; and test -z $SSH_TTY; end
-    set -xg EDITOR 'subl -w'
+    set -xg EDITOR "subl -w"
 else
-    set -xg EDITOR 'nano -w'
+    set -xg EDITOR "nano -w"
 end
 
-set -xg HOMEBREW_CASK_OPTS '--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom'
+# XDG directories
+set -xg XDG_CONFIG_HOME $HOME/.config
+set -xg XDG_CACHE_HOME $HOME/.cache
+set -xg XDG_DATA_HOME $HOME/.local/share
+set -xg XDG_RUNTIME_DIR $XDG_CACHE_HOME
 
-# Add more paths
-set -xg PATH ~/.composer/vendor/bin (brew --prefix findutils)/bin \
-            (brew --prefix coreutils)/libexec/gnubin /usr/local/bin /usr/bin /bin /usr/local/sbin \
-            /usr/sbin /sbin /Applications/VirtualBox.app/Contents/MacOS
-
-set -xg MANPATH (brew --prefix findutils)/libexec/gnuman (brew --prefix coreutils)/share/man:
+# Homebrew options
+set -xg HOMEBREW_CASK_OPTS "--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom"
 
 # Setup terminal, and turn on colors
-set -x TERM xterm-256color
-
-# Set LS_COLORS
-eval (dircolors -c $HOME/.dotfiles/files/shell/bash/dircolors | sed 's/>&\/dev\/null$//')
+set -x TERM "xterm-256color"
 
 # Prefer UK English and use UTF-8.
-set -xg LANG 'en_GB.UTF-8'
-set -xg LC_CTYPE 'en_GB.UTF-8'
-set -xg LC_ALL 'en_GB.UTF-8'
-set -xg LC_MESSAGES 'en_GB.UTF-8'
+set -xg LANG "en_GB.UTF-8"
+set -xg LC_CTYPE "en_GB.UTF-8"
+set -xg LC_ALL "en_GB.UTF-8"
+set -xg LC_MESSAGES "en_GB.UTF-8"
 set -xg LC_COLLATE C
 
 # Enable colours for cheat command
-set -xg CHEATCOLORS true
+set -xg CHEATCOLORS 1
 
 # Default log level for NPM
-set -xg NPM_CONFIG_LOGLEVEL 'error'
+set -xg NPM_CONFIG_LOGLEVEL "error"
 
 # Colour man pages
 set -xg man_blink -o yellow
 set -xg man_bold -o red
 set -xg man_standout -b blue
 set -xg man_underline -u green
+
+# Set the session ssh-agent socket path (If it's not set)
+set -xg SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent
+
+# Look for terminfo files under data
+set -xg TERMINFO $XDG_RUNTIME_DIR/terminfo
+
+# Set the composer home dir
+set -xg COMPOSER_HOME $XDG_CONFIG_HOME/composer
+set -xg COMPOSER_CACHE_DIR $XDG_CACHE_HOME/composer
+
+# Other config files
+set -xg SSHHOME $XDG_CONFIG_HOME/sshrc
+set -xg INPUTRC $XDG_CONFIG_HOME/readline/inputrc
+set -xg ACKRC $XDG_CONFIG_HOME/ack/ackrc
+set -xg MYSQL_HISTFILE $XDG_CACHE_HOME/mysql_history
+set -xg LESSHISTFILE $XDG_CACHE_HOME/less_history
+set -xg SDIRS $XDG_CONFIG_HOME/marks
+set -xg VAGRANT_HOME $XDG_DATA_HOME/vagrant
+set -xg PGCLIRC $XDG_CONFIG_HOME/pgcli/config
+set -xg MYCLIRC $XDG_CONFIG_HOME/mycli/config
+set -xg WGETRC $XDG_CONFIG_HOME/wget/config
+set -xg HTTPIE_CONFIG_DIR $XDG_CONFIG_HOME/httpie
+set -xg NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
+set -xg SCREENRC $XDG_CONFIG_HOME/screen/screenrc
+set -xg TIGRC_USER $XDG_CONFIG_HOME/tig/tigrc
+set -xg NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
+
+# Add more paths
+set -xg PATH $HOME/.local/bin $COMPOSER_HOME/vendor/bin (brew --prefix findutils)/bin \
+            (brew --prefix coreutils)/libexec/gnubin /usr/local/bin /usr/bin /bin /usr/local/sbin \
+            /usr/sbin /sbin /Applications/VirtualBox.app/Contents/MacOS
+
+set -xg MANPATH (brew --prefix findutils)/libexec/gnuman (brew --prefix coreutils)/share/man:
+
+
+# Set LS_COLORS
+eval (dircolors -c $HOME/.dotfiles/files/shell/bash/dircolors | sed 's/>&\/dev\/null$//')

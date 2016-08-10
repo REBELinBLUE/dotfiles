@@ -17,17 +17,10 @@ if is_os "darwin"; then
     done
 fi
 
-skip=".gitconfig"
-
-# Symlink any files except those listed above
+#Symlink any files except those listed above
 for path in $HOME/.dotfiles/files/.*; do
     if [ -f $path ]; then
         name=$(basename $path)
-
-        # If file is in list to skip continue
-        if [[ $skip =~ $name ]]; then
-            continue
-        fi
 
         if [ -f $HOME/$name ]; then
             rm $HOME/$name
@@ -38,8 +31,12 @@ for path in $HOME/.dotfiles/files/.*; do
 done
 
 #  Setup initial git config
-if [ ! -f $HOME/.gitconfig ]; then
-    echo -e "[include]\n    path = $HOME/.dotfiles/files/.gitconfig" > $HOME/.gitconfig
+if [ ! -d HOME/.config/git ]; then
+    mkdir -p HOME/.config/git
+fi
+
+if [ ! -f $HOME/.config/git/config ]; then
+    echo -e "[include]\n    path = $HOME/.dotfiles/files/config/git/config" > $HOME/.config/git/config
 fi
 
 # Remove tvnamer config if not installed
@@ -52,9 +49,15 @@ if [ ! -e $HOME/.ssh/config.d ]; then
     ln -s $HOME/.dotfiles/files/.ssh/config.d/ $HOME/.ssh/config.d
 fi
 
+
 # Make ~/.config directory if missing
 if [ ! -d $HOME/.config ]; then
     mkdir $HOME/.config
+fi
+
+# Make ~/.local directory if missing
+if [ ! -d $HOME/.local ]; then
+    mkdir -p $HOME/.local/share/
 fi
 
 # Oh-my-fish
@@ -62,29 +65,50 @@ if [ ! -e $HOME/.config/omf ]; then
     ln -s $HOME/.dotfiles/files/shell/fish $HOME/.config/omf
 fi
 
-# Symlink the sshrc.d folder
-if [ ! -e $HOME/.sshrc.d ]; then
-    ln -s $HOME/.dotfiles/files/.sshrc.d $HOME/.sshrc.d
+# Symlink the sshrc.d config
+if [ ! -e $HOME/.config/sshrc/ ]; then
+    ln -s $HOME/.dotfiles/files/config/sshrc $HOME/.config/sshrc
 fi
 
 # Symlink Vagrantfile
-if [ -d $HOME/.vagrant.d/ ]; then
-    if [ -f $HOME/.vagrant.d/Vagrantfile ]; then
-        rm -f $HOME/.vagrant.d/Vagrantfile
-    fi
-
-    ln -s $HOME/.dotfiles/files/.vagrant.d/Vagrantfile $HOME/.vagrant.d/Vagrantfile
+if [ ! -d $HOME/.local/share/vagrant/ ]; then
+    mkdir -p $HOME/.local/share/vagrant/
 fi
 
+if [ ! -e $HOME/.local/share/vagrant/Vagrantfile ]; then
+    ln -s $HOME/.dotfiles/files/config/Vagrantfile $HOME/.local/share/vagrant/Vagrantfile
+fi
+
+# Symlink inputrc
+if [ ! -d $HOME/.config/readline/ ]; then
+    mkdir -p $HOME/.config/readline/
+fi
+
+if [ ! -e $HOME/.config/readline/inputrc ]; then
+    ln -s $HOME/.dotfiles/files/config/inputrc $HOME/.config/readline/inputrc
+fi
+
+# Symlink npmrc
+if [ ! -d $HOME/.config/npm/ ]; then
+    mkdir -p $HOME/.config/npm/
+fi
+
+if [ ! -e $HOME/.config/npm/npmrc ]; then
+    ln -s $HOME/.dotfiles/files/config/npmrc $HOME/.config/npm/npmrc
+fi
+
+
+
+$XDG_CONFIG_HOME/npm/npmrc
 # Set up extras config
-if [ ! -f $HOME/.extras ]; then
-    echo -e "# Stick any extra functions, aliases and exports for bash in this file" > $HOME/.extras
-    $EDITOR $HOME/.extras
+if [ ! -f $HOME/.config/extras.bash ]; then
+    echo -e "# Stick any extra functions, aliases and exports for bash in this file" > $HOME/.config/extras.bash
+    $EDITOR $HOME/.config/extras.bash
 fi
 
-if [ ! -f $HOME/.extras.fish ]; then
-    echo -e "# Stick any extra functions and exports for fish in this file" > $HOME/.extras.fish
-    $EDITOR $HOME/.extras.fish
+if [ ! -f $HOME/.config/extras.fish ]; then
+    echo -e "# Stick any extra functions and exports for fish in this file" > $HOME/.config/extras.fish
+    $EDITOR $HOME/.config/extras.fish
 fi
 
 source $HOME/.bashrc

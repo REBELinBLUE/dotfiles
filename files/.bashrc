@@ -7,8 +7,8 @@ done
 
 unset file
 
-if [ -r $HOME/.extras ] && [ -f $HOME/.extras ]; then
-    source $HOME/.extras
+if [ -r $HOME/.config/extras.bash ] && [ -f $HOME/.config/extras.bash ]; then
+    source $HOME/.config/extras.bash
 fi
 
 source $HOME/.dotfiles/files/shell/bash/clear-colours

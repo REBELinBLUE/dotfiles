@@ -18,11 +18,17 @@ if is_os "darwin"; then
     export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom"
 fi
 
-# Add more paths
-export PATH="/usr/local/sbin:$PATH"
-export PATH="~/.composer/vendor/bin:$PATH"
-export PATH="./vendor/bin:$PATH"
-export PATH="./node_modules/.bin:$PATH"
+# XDG directories
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_RUNTIME_DIR="$XDG_CACHE_HOME"
+
+# Setup terminal, and turn on colors
+export TERM="xterm-256color"
+
+# Should not be needed, load the dir colors
+eval $(dircolors $HOME/.dotfiles/files/shell/bash/dircolors)
 
 # Larger bash history (allow 10000 entries; default is 500)
 export HISTSIZE=10000
@@ -39,13 +45,47 @@ export SHELL_SESSION_HISTORY=0
 
 # Prefer UK English and use UTF-8.
 export LANG="en_GB.UTF-8"
+export LC_CTYPE="en_GB.UTF-8"
 export LC_ALL="en_GB.UTF-8"
+export LC_MESSAGES="en_GB.UTF-8"
+export LC_COLLATE="C"
 
 # Enable colours for cheat command
 export CHEATCOLORS=true
 
-# Should not be needed, load the dir colors
-eval $(dircolors $HOME/.dotfiles/files/shell/bash/dircolors)
-
 # Default log level for NPM
 export NPM_CONFIG_LOGLEVEL="error"
+
+# Set the session ssh-agent socket path (If it's not set)
+export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent
+
+# Look for terminfo files under data
+export TERMINFO=$XDG_RUNTIME_DIR/terminfo
+
+# Set the composer home dir
+export COMPOSER_HOME=$XDG_CONFIG_HOME/composer
+export COMPOSER_CACHE_DIR=$XDG_CACHE_HOME/composer
+
+# Other config files
+export SSHHOME=$XDG_CONFIG_HOME/sshrc
+export INPUTRC=$XDG_CONFIG_HOME/readline/inputrc
+export ACKRC=$XDG_CONFIG_HOME/ack/ackrc
+export MYSQL_HISTFILE=$XDG_CACHE_HOME/mysql_history
+export LESSHISTFILE=$XDG_CACHE_HOME/less_history
+export SDIRS=$XDG_CONFIG_HOME/marks
+export VAGRANT_HOME=$XDG_DATA_HOME/vagrant
+export PGCLIRC=$XDG_CONFIG_HOME/pgcli/config
+export MYCLIRC=$XDG_CONFIG_HOME/mycli/config
+export WGETRC=$XDG_CONFIG_HOME/wget/config
+export HTTPIE_CONFIG_DIR=$XDG_CONFIG_HOME/httpie
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+export SCREENRC=$XDG_CONFIG_HOME/screen/screenrc
+export TIGRC_USER=$XDG_CONFIG_HOME/tig/tigrc
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+
+# Add more paths
+export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$COMPOSER_HOME/vendor/bin:$PATH"
+export PATH="./vendor/bin:$PATH"
+export PATH="./node_modules/.bin:$PATH"

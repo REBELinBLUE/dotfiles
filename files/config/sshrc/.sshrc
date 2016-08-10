@@ -20,10 +20,7 @@ export EDITOR='nano -w'
 # Default log level for NPM
 export NPM_CONFIG_LOGLEVEL='error'
 
-# Easier navigation: .., ..., ...., ....., ~ and -
-alias ..='cd ..'         # Go up one directory
-alias ...='cd ../..'     # Go up two directories
-alias ....='cd ../../..' # Go up three directories
+# Easier navigation ~ and -
 alias -- -='cd -'        # Go back
 alias ~='cd ~'           # `cd` is probably faster to type though
 

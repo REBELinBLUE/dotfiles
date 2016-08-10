@@ -213,7 +213,7 @@ if is_os "darwin"; then
 
     php-switch() {
         brew-php-switcher "$@" -s
-        echo "$@" > $HOME/.php_version
+        echo "$@" > $XDG_DATA_HOME/php_version
     }
 
 fi

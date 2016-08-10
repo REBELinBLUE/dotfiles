@@ -42,9 +42,6 @@ alias gist="gist -o"
 # Get public IP
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
-# Tmux in control mode
-alias tmux="tmux -CC"
-
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="reset; exec $SHELL -l"
 
@@ -69,7 +66,7 @@ if is_os "darwin"; then
     # Lock the screen - Screensaver
     alias afk="mac screensaver"
 
-    alias php="php -dzend_extension=$(brew --prefix php`command cat $HOME/.php_version`-xdebug)/xdebug.so"
+    alias php="php -dzend_extension=$(brew --prefix php`command cat $XDG_DATA_HOME/php_version`-xdebug)/xdebug.so"
 else
     alias php="php -dzend_extension=xdebug.so"
     alias phpunit="php $(which php)"
@@ -77,8 +74,8 @@ fi
 
 alias composer.phar="/usr/local/bin/composer"
 
-# Who the first 3 lines of the ~/.extras file as they have the git config in
-if [ -f $HOME/.extras ]; then
-    alias gitwho="head -n3 $HOME/.extras"
+# Who the first 3 lines of the ~/.config/extras.bash file as they have the git config in
+if [ -f $HOME/.config/extras.bash ]; then
+    alias gitwho="head -n3 $HOME/.config/extras.bash"
 fi
 

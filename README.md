@@ -12,7 +12,7 @@ $ ./setup.sh
 
 ### Add custom commands
 
-If `~/.extras` exists, it will be sourced along with the other files. You can use this to add a few custom commands, or to add commands you don’t want to commit to a public repository.
+If `~/.config/extras.bash` exists, it will be sourced along with the other files. You can use this to add a few custom commands, or to add commands you don’t want to commit to a public repository.
 
 For example
 

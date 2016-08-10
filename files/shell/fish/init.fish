@@ -8,8 +8,8 @@ source $OMF_CONFIG/scripts/exports.fish
 source $OMF_CONFIG/scripts/marks.fish
 
 # Load any additional scripts
-if test -e ~/.extras.fish
-    source ~/.extras.fish
+if test -e $HOME/.config/extras.fish
+    source $HOME/.config/extras.fish
 end
 
 # TODO

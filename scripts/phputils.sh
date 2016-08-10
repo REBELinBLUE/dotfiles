@@ -75,21 +75,12 @@ if ! type_exists 'phpcpd'; then
     chmod a+x /usr/local/bin/phpcpd
 fi
 
-
-if [ ! -d $HOME/.composer/ ]; then
-    mkdir $HOME/.composer/
+if [ ! -d $HOME/.config/composer/ ]; then
+    mkdir -p $HOME/.config/composer/
 fi
 
-if [ -f $HOME/.composer/composer.json ]; then
-    rm -f $HOME/.composer/composer.json
-fi
-
-if [ -f $HOME/.composer/composer.lock ]; then
-    rm -f $HOME/.composer/composer.lock
-fi
-
-ln -s $HOME/.dotfiles/files/.composer/composer.json $HOME/.composer/composer.json
-ln -s $HOME/.dotfiles/files/.composer/composer.lock $HOME/.composer/composer.lock
+ln -s $HOME/.dotfiles/files/config/composer/composer.json $HOME/.config/composer/composer.json
+ln -s $HOME/.dotfiles/files/config/composer/composer.lock $HOME/.config/composer/composer.lock
 
 /usr/local/bin/composer global install
 
