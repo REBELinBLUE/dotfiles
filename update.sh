@@ -32,3 +32,5 @@ brew bundle --file=brewfiles/all
 # brew bundle --file=brewfiles/imac
 
 source $HOME/.dotfiles/scripts/dotfiles.sh
+
+brew-php-switcher $(cat ~/.php_version) -s
