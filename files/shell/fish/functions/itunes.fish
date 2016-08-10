@@ -3,7 +3,6 @@ function itunes -d "Control iTunes. Use -h or --help for a more detailed descrip
         set -l opt $argv[1]
         switch $opt
             case status
-                # TODO: Add colour
                 set state (osascript -e 'tell application "iTunes" to player state as string')
                 echo -n "iTunes is currently "
                 set_color green
