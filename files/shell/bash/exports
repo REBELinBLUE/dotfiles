@@ -36,6 +36,7 @@ export HISTFILESIZE=${HISTSIZE}
 export HISTCONTROL="ignoredups:erasedups"
 #export HISTTIMEFORMAT="%F %T "
 export HH_CONFIG=hicolor
+export HISTFILE=$XDG_DATA_HOME/bash/history
 
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help:history:clear:reset:afk:lock:reload:brewup:hh:"
