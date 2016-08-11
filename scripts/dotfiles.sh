@@ -99,12 +99,12 @@ fi
 
 # Set up extras config
 if [ ! -f $HOME/.config/extras.bash ]; then
-    echo -e "# Stick any extra functions, aliases and exports for bash in this file" > $HOME/.config/extras.bash
+    echo -e "#!/usr/bin/env bash\n\n# Stick any extra functions, aliases and exports for bash in this file" > $HOME/.config/extras.bash
     $EDITOR $HOME/.config/extras.bash
 fi
 
 if [ ! -f $HOME/.config/extras.fish ]; then
-    echo -e "# Stick any extra functions and exports for fish in this file" > $HOME/.config/extras.fish
+    echo -e "#!/usr/bin/env fish\n\n# Stick any extra functions and exports for fish in this file" > $HOME/.config/extras.fish
     $EDITOR $HOME/.config/extras.fish
 fi
 
