@@ -36,7 +36,7 @@ if [ ! -d $HOME/.config/git ]; then
 fi
 
 if [ ! -f $HOME/.config/git/config ]; then
-    echo -e "[include]\n    path = $HOME/.dotfiles/files/config/git/config" > $HOME/.config/git/config
+    echo -e "[include]\n	path = $HOME/.dotfiles/files/config/git/config" > $HOME/.config/git/config
 fi
 
 # Remove tvnamer config if not installed
