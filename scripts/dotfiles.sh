@@ -31,8 +31,8 @@ for path in $HOME/.dotfiles/files/.*; do
 done
 
 #  Setup initial git config
-if [ ! -d HOME/.config/git ]; then
-    mkdir -p HOME/.config/git
+if [ ! -d $HOME/.config/git ]; then
+    mkdir -p $HOME/.config/git
 fi
 
 if [ ! -f $HOME/.config/git/config ]; then
