@@ -170,6 +170,7 @@ if is_os "darwin"; then
         brew upgrade --all
         brew bundle --file="${HOME}/.dotfiles/brewfiles/all"
         brew cleanup
+        brew-php-switcher $(cat ~/.cache/php_version) -s
     }
 
     # Update everything
