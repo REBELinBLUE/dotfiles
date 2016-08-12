@@ -83,6 +83,10 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export SCREENRC=$XDG_CONFIG_HOME/screen/screenrc
 export TIGRC_USER=$XDG_CONFIG_HOME/tig/tigrc
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+export BABEL_CACHE_PATH=$XDG_CACHE_HOME/babel.json
+export GEMRC=$XDG_CONFIG_HOME/gemrc/config
+export GEM_HOME="$HOME/.local/lib/ruby/gems/$(ruby -e 'puts RbConfig::CONFIG["ruby_version"]')"
+export GEM_SPEC_CACHE=$XDG_CACHE_HOME/gem/specs
 
 # Add more paths
 export PATH="/usr/local/sbin:$PATH"

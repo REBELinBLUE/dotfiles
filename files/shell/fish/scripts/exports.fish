@@ -46,6 +46,8 @@ set -xg TERMINFO $XDG_RUNTIME_DIR/terminfo
 set -xg COMPOSER_HOME $XDG_CONFIG_HOME/composer
 set -xg COMPOSER_CACHE_DIR $XDG_CACHE_HOME/composer
 
+set RUBY_VERSION (ruby -e 'puts RbConfig::CONFIG["ruby_version"]')
+
 # Other config files
 set -xg SSHHOME $XDG_CONFIG_HOME/sshrc
 set -xg INPUTRC $XDG_CONFIG_HOME/readline/inputrc
@@ -61,7 +63,12 @@ set -xg HTTPIE_CONFIG_DIR $XDG_CONFIG_HOME/httpie
 set -xg NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
 set -xg SCREENRC $XDG_CONFIG_HOME/screen/screenrc
 set -xg TIGRC_USER $XDG_CONFIG_HOME/tig/tigrc
-set -xg NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
+set -xg BABEL_CACHE_PATH $XDG_CACHE_HOME/babel.json
+set -xg EMRC $XDG_CONFIG_HOME/gemrc/config
+set -xg GEM_HOME $HOME/.local/lib/ruby/gems/$RUBY_VERSION
+set -xg GEM_SPEC_CACHE $XDG_CACHE_HOME/gem/specs
+
+set -e RUBY_VERSION
 
 # Add more paths
 set -xg PATH $HOME/.local/bin $COMPOSER_HOME/vendor/bin (brew --prefix findutils)/bin \
