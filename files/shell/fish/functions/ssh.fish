@@ -5,13 +5,13 @@ function ssh
 
     # TODO: Clean this up
     if [ $argv = "mycloud" ]
-        set SSHCOMMAND 'ssh'
+        set SSHCOMMAND 'command ssh'
     else if [ $argv = "mypassword" ]
-        set SSHCOMMAND 'ssh'
+        set SSHCOMMAND 'command ssh'
     else if [ $argv = "imac"  ]
-        set SSHCOMMAND 'ssh'
+        set SSHCOMMAND 'command ssh'
     else if [ $argv = "mba" ]
-        set SSHCOMMAND 'ssh'
+        set SSHCOMMAND 'command ssh'
     end
 
     eval $SSHCOMMAND $argv
