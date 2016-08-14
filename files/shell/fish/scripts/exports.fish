@@ -67,6 +67,7 @@ set -xg BABEL_CACHE_PATH $XDG_CACHE_HOME/babel.json
 set -xg EMRC $XDG_CONFIG_HOME/gemrc/config
 set -xg GEM_HOME $HOME/.local/lib/ruby/gems/$RUBY_VERSION
 set -xg GEM_SPEC_CACHE $XDG_CACHE_HOME/gem/specs
+set -xg DEFAULT_CHEAT_DIR $XDG_CONFIG_HOME/cheats
 
 set -e RUBY_VERSION
 
