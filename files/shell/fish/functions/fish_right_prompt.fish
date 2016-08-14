@@ -37,31 +37,52 @@ function __vagrant_ids -S -d 'List Vagrant machine ids'
   end
 end
 
-
 function __vagrant -S -d 'Display VirtualBox Vagrant status'
-  set -l ___vagrant_running_glyph   '↑'
-  set -l ___vagrant_poweroff_glyph  '↓'
-  set -l ___vagrant_aborted_glyph   '✖'
-  set -l ___vagrant_saved_glyph     '⇡'
-  set -l ___vagrant_stopping_glyph  '⇣'
-  set -l ___vagrant_unknown_glyph   '!'
+  set -l __vagrant_running_glyph   '↑'
+  set -l __vagrant_poweroff_glyph  '↓'
+  set -l __vagrant_aborted_glyph   '✖'
+  set -l __vagrant_saved_glyph     '⇡'
+  set -l __vagrant_stopping_glyph  '⇣'
+  set -l __vagrant_unknown_glyph   '!'
+  set -l __vagrant_seperator_glyph '·'
+
+  set -l vagrant_ids (__vagrant_ids)
+
+  set -l show_vm_names "no"
+  if test (count $vagrant_ids) -gt 1
+    set show_vm_names "yes"
+  end
 
   set -l vagrant_status
-  for id in (__vagrant_ids)
+  for id in $vagrant_ids
+    # FIXME: showvminfo is duplicated, clean up.
+    # FIXME: Remove common prefix, i.e. debian-
     set -l vm_status (VBoxManage showvminfo --machinereadable $id ^/dev/null | command grep 'VMState=' | tr -d '"' | cut -d '=' -f 2)
+
+    set -l vm_name
+    if [ "$show_vm_names" = "yes" ]
+      set vm_name (VBoxManage showvminfo --machinereadable $id ^/dev/null | command grep 'name=' | tr -d '"' | cut -d '=' -f 2)
+      set vm_name " $vm_name"
+    end
+
+    # If the status is not empty it is not the first VM so add the seperator
+    if [ ! -z "$vagrant_status" ]
+      set vagrant_status "$vagrant_status $__vagrant_seperator_glyph "
+    end
+
     switch "$vm_status"
       case 'running'
-        set vagrant_status "$vagrant_status$___vagrant_running_glyph"
+        set vagrant_status "$vagrant_status$__vagrant_running_glyph$vm_name"
       case 'poweroff'
-        set vagrant_status "$vagrant_status$___vagrant_poweroff_glyph"
+        set vagrant_status "$vagrant_status$__vagrant_poweroff_glyph$vm_name"
       case 'aborted'
-        set vagrant_status "$vagrant_status$___vagrant_aborted_glyph"
+        set vagrant_status "$vagrant_status$__vagrant_aborted_glyph$vm_name"
       case 'saved'
-        set vagrant_status "$vagrant_status$___vagrant_saved_glyph"
+        set vagrant_status "$vagrant_status$__vagrant_saved_glyph$vm_name"
       case 'stopping'
-        set vagrant_status "$vagrant_status$___vagrant_stopping_glyph"
+        set vagrant_status "$vagrant_status$__vagrant_stopping_glyph$vm_name"
       case ''
-        set vagrant_status "$vagrant_status$___vagrant_unknown_glyph"
+        set vagrant_status "$vagrant_status$__vagrant_unknown_glyph$vm_name"
     end
   end
   [ -z "$vagrant_status" ]; and return
@@ -69,15 +90,6 @@ function __vagrant -S -d 'Display VirtualBox Vagrant status'
   set_color yellow
   echo -ns $vagrant_status ' '
   set_color normal
-end
-
-
-function __docker -S -d 'Show docker machine name'
-    [ -z "$DOCKER_MACHINE_NAME" ]; and return
-
-    set_color green
-    echo -ns $DOCKER_MACHINE_NAME ' '
-    set_color normal
 end
 
 function __file_count
@@ -140,7 +152,6 @@ function fish_right_prompt -d 'The right prompt'
 
     #__cmd_duration
     __prompt_status $last_status
-    #__docker
     __vagrant
     __timestamp
 
