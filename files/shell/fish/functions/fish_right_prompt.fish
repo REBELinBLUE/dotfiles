@@ -61,13 +61,14 @@ function __vagrant -S -d 'Display VirtualBox Vagrant status'
 
     set -l vm_name
     if [ "$show_vm_names" = "yes" ]
-      set vm_name (VBoxManage showvminfo --machinereadable $id ^/dev/null | command grep 'name=' | tr -d '"' | cut -d '=' -f 2)
-      set vm_name " $vm_name"
+      set -l basename (basename (pwd))
+      set vm_name (VBoxManage showvminfo --machinereadable $id ^/dev/null | command grep 'name=' | tr -d '"' | cut -d '=' -f 2 | sed -e "s/$basename\-//g")
+      set vm_name "$__vagrant_seperator_glyph$vm_name"
     end
 
     # If the status is not empty it is not the first VM so add the seperator
     if [ ! -z "$vagrant_status" ]
-      set vagrant_status "$vagrant_status $__vagrant_seperator_glyph "
+      set vagrant_status "$vagrant_status "
     end
 
     switch "$vm_status"
