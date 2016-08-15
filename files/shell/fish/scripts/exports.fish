@@ -68,7 +68,7 @@ set -xg GEMRC $XDG_CONFIG_HOME/gemrc/config
 set -xg GEM_HOME $HOME/.local/lib/ruby/gems/$RUBY_VERSION
 set -xg GEM_SPEC_CACHE $XDG_CACHE_HOME/gem/specs
 set -xg DEFAULT_CHEAT_DIR $XDG_CONFIG_HOME/cheats
-set -xg VBOX_USER_HOME $XDG_CONFIG_HOME/VirtualBox
+set -xg VBOX_USER_HOME $XDG_CONFIG_HOME/virtualbox
 
 set -e RUBY_VERSION
 

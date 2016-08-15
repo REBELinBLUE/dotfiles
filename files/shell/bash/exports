@@ -88,7 +88,7 @@ export GEMRC=$XDG_CONFIG_HOME/gemrc/config
 export GEM_HOME="$HOME/.local/lib/ruby/gems/$(ruby -e 'puts RbConfig::CONFIG["ruby_version"]')"
 export GEM_SPEC_CACHE=$XDG_CACHE_HOME/gem/specs
 export DEFAULT_CHEAT_DIR=$XDG_CONFIG_HOME/cheats
-export VBOX_USER_HOME=$XDG_CONFIG_HOME/VirtualBox
+export VBOX_USER_HOME=$XDG_CONFIG_HOME/virtualbox
 
 # Add more paths
 export PATH="/usr/local/sbin:$PATH"
