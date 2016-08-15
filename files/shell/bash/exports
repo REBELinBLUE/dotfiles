@@ -81,6 +81,7 @@ export WGETRC=$XDG_CONFIG_HOME/wget/config
 export HTTPIE_CONFIG_DIR=$XDG_CONFIG_HOME/httpie
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export SCREENRC=$XDG_CONFIG_HOME/screen/screenrc
+export HGRCPATH=$XDG_CONFIG_HOME/hg/hgrc
 export TIGRC_USER=$XDG_CONFIG_HOME/tig/tigrc
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export BABEL_CACHE_PATH=$XDG_CACHE_HOME/babel.json
@@ -89,6 +90,8 @@ export GEM_HOME="$HOME/.local/lib/ruby/gems/$(ruby -e 'puts RbConfig::CONFIG["ru
 export GEM_SPEC_CACHE=$XDG_CACHE_HOME/gem/specs
 export DEFAULT_CHEAT_DIR=$XDG_CONFIG_HOME/cheats
 export VBOX_USER_HOME=$XDG_CONFIG_HOME/virtualbox
+export DOCKER_CONFIG=$XDG_CONFIG_HOME/docker
+export GNUPGHOME=$XDG_CONFIG_HOME/gnupg
 
 # Add more paths
 export PATH="/usr/local/sbin:$PATH"
