@@ -47,13 +47,6 @@ sudo mv /tmp/vagrant /etc/sudoers.d/vagrant
 vagrant box add --provider virtualbox debian/jessie64
 vagrant box add --provider virtualbox ubuntu/trusty64
 
-# Hide VirtualBox folder
-if [ ! -d $HOME/VirtualBox\ VMs/ ]; then
-    mkdir $HOME/VirtualBox\ VMs/
-fi
-
-SetFile -a V $HOME/VirtualBox\ VMs/
-
 if [ ! -d $HOME/Vagrant/ ]; then
     mkdir $HOME/Vagrant/
 fi

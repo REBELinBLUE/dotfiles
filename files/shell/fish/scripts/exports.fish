@@ -64,10 +64,11 @@ set -xg NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
 set -xg SCREENRC $XDG_CONFIG_HOME/screen/screenrc
 set -xg TIGRC_USER $XDG_CONFIG_HOME/tig/tigrc
 set -xg BABEL_CACHE_PATH $XDG_CACHE_HOME/babel.json
-set -xg EMRC $XDG_CONFIG_HOME/gemrc/config
+set -xg GEMRC $XDG_CONFIG_HOME/gemrc/config
 set -xg GEM_HOME $HOME/.local/lib/ruby/gems/$RUBY_VERSION
 set -xg GEM_SPEC_CACHE $XDG_CACHE_HOME/gem/specs
 set -xg DEFAULT_CHEAT_DIR $XDG_CONFIG_HOME/cheats
+set -xg VBOX_USER_HOME $XDG_CONFIG_HOME/VirtualBox
 
 set -e RUBY_VERSION
 
