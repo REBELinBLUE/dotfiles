@@ -15,7 +15,7 @@ end.parse!
 
 
 if ARGV.length == 0
-  puts "No summary specified"
+  #puts "No summary specified"
   exit 1
 elsif ARGV.length == 1
   message = "-message '\\#{ARGV[0]}'"
