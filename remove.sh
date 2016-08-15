@@ -13,8 +13,6 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-brew remove ccat
-brew remove htop-osx
-brew remove tmux
+# Remove things
 
 source $HOME/.dotfiles/scripts/dotfiles.sh
