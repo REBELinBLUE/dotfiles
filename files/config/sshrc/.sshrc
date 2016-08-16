@@ -81,6 +81,15 @@ _gituser() {
     git config --global user.email "stephen@rebelinblue.com"
 }
 
+#if [[ -v SSHHOME ]]; then
+#    _gitconfig() {
+#        cp -f $SSHHOME/.sshrc.d/.gitconfig ~/.gitconfig
+#        cp -f $SSHHOME/.sshrc.d/.gitignore ~/.gitignore_global
+#        git config --global core.excludesfile ~/.gitignore_global
+#        git config --global --unset diff.orderfile
+#    }
+#fi
+
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help:history:clear:reset:afk:_su"
 
 # Use /etc/is_vagrant_vm to test if vagrant and if so use yellow not red for the user/host
@@ -127,6 +136,7 @@ else
     }
 
     function _install_git_prompt() {
+        #_gitconfig
         ssh-keyscan -t rsa,dsa -H github.com >> ~/.ssh/known_hosts
         echo -e "${CLI_YELLOW}➜ Downloading bash-git-prompt${CLI_RESET}";
         sudo git clone https://github.com/magicmonty/bash-git-prompt.git $GIT_PROMPT --depth=1
