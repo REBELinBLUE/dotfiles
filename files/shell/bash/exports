@@ -24,6 +24,11 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_RUNTIME_DIR="$XDG_CACHE_HOME"
 
+export WORKSPACE=$HOME/Workspace
+
+# Go
+export GOPATH=$WORKSPACE/go
+
 # Setup terminal, and turn on colors
 export TERM="xterm-256color"
 

@@ -11,6 +11,11 @@ set -xg XDG_CACHE_HOME $HOME/.cache
 set -xg XDG_DATA_HOME $HOME/.local/share
 set -xg XDG_RUNTIME_DIR $XDG_CACHE_HOME
 
+set -xg WORKSPACE $HOME/Workspace
+
+# Go
+set -xg GOPATH $WORKSPACE/go
+
 # Homebrew options
 set -xg HOMEBREW_CASK_OPTS "--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom"
 
