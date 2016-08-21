@@ -115,6 +115,7 @@ brew 'pgcli'
 brew 'mas'
 brew 'cheat'
 brew 'm-cli'
+brew 'go'
 
 # Apps
 cask 'changes'
