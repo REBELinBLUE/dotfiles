@@ -6,7 +6,7 @@ function ssh
     # TODO: Clean this up
     if [ $argv = "mycloud" ]
         set SSHCOMMAND 'command ssh'
-    else if [ $argv = "mypassword" ]
+    else if [ $argv = "mypassport" ]
         set SSHCOMMAND 'command ssh'
     else if [ $argv = "imac"  ]
         set SSHCOMMAND 'command ssh'
