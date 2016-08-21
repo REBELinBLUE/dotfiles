@@ -81,7 +81,7 @@ _gituser() {
     git config --global user.email "stephen@rebelinblue.com"
 }
 
-export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help:history:clear:reset:afk:_su"
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help:history:clear:reset:_su"
 
 # Use /etc/is_vagrant_vm to test if vagrant and if so use yellow not red for the user/host
 HOST_COLOR=$CLI_RED

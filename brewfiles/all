@@ -138,6 +138,7 @@ cask 'virtualbox-extension-pack'
 cask 'cakebrew'
 cask 'medis'
 cask 'aerial'
+cask 'viscosity'
 
 # Quicklook
 cask 'qlcolorcode'
