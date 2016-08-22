@@ -438,16 +438,16 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v5.2.37",
+            "version": "v5.2.43",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
-                "reference": "7ec395833738b9059f829348ddc9a59d0118ac88"
+                "reference": "5139cebc8293b6820b91aef6f4b4e18bde33c9b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/container/zipball/7ec395833738b9059f829348ddc9a59d0118ac88",
-                "reference": "7ec395833738b9059f829348ddc9a59d0118ac88",
+                "url": "https://api.github.com/repos/illuminate/container/zipball/5139cebc8293b6820b91aef6f4b4e18bde33c9b2",
+                "reference": "5139cebc8293b6820b91aef6f4b4e18bde33c9b2",
                 "shasum": ""
             },
             "require": {
@@ -472,25 +472,25 @@
             "authors": [
                 {
                     "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
+                    "email": "taylor@laravel.com"
                 }
             ],
             "description": "The Illuminate Container package.",
             "homepage": "http://laravel.com",
-            "time": "2016-05-29 02:18:23"
+            "time": "2016-08-01 13:49:14"
         },
         {
             "name": "illuminate/contracts",
-            "version": "v5.2.37",
+            "version": "v5.2.43",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "f4f44d7c6d20404da8dfc655bd3d6dd788dfdce5"
+                "reference": "22bde7b048a33c702d9737fc1446234fff9b1363"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/f4f44d7c6d20404da8dfc655bd3d6dd788dfdce5",
-                "reference": "f4f44d7c6d20404da8dfc655bd3d6dd788dfdce5",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/22bde7b048a33c702d9737fc1446234fff9b1363",
+                "reference": "22bde7b048a33c702d9737fc1446234fff9b1363",
                 "shasum": ""
             },
             "require": {
@@ -514,12 +514,12 @@
             "authors": [
                 {
                     "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
+                    "email": "taylor@laravel.com"
                 }
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "http://laravel.com",
-            "time": "2016-05-31 21:36:13"
+            "time": "2016-08-08 11:46:08"
         },
         {
             "name": "laravel/homestead",
@@ -658,16 +658,16 @@
         },
         {
             "name": "laravel/valet",
-            "version": "v1.1.13",
+            "version": "v1.1.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/valet.git",
-                "reference": "b64bad501b2bc77307bb8492bddfb7354b3c9aa5"
+                "reference": "86d0c6b1a75a6fb80380d2ddaba71935680045d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/valet/zipball/b64bad501b2bc77307bb8492bddfb7354b3c9aa5",
-                "reference": "b64bad501b2bc77307bb8492bddfb7354b3c9aa5",
+                "url": "https://api.github.com/repos/laravel/valet/zipball/86d0c6b1a75a6fb80380d2ddaba71935680045d7",
+                "reference": "86d0c6b1a75a6fb80380d2ddaba71935680045d7",
                 "shasum": ""
             },
             "require": {
@@ -716,20 +716,20 @@
                 "wwdhhd",
                 "zonda"
             ],
-            "time": "2016-06-11 21:38:41"
+            "time": "2016-08-17 21:08:46"
         },
         {
             "name": "mnapoli/silly",
-            "version": "1.3.1",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mnapoli/silly.git",
-                "reference": "b95e1be1a669991c9c1c532b9efe985f1063ece7"
+                "reference": "2f53397797d992fa2862105992b198b25679d283"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mnapoli/silly/zipball/b95e1be1a669991c9c1c532b9efe985f1063ece7",
-                "reference": "b95e1be1a669991c9c1c532b9efe985f1063ece7",
+                "url": "https://api.github.com/repos/mnapoli/silly/zipball/2f53397797d992fa2862105992b198b25679d283",
+                "reference": "2f53397797d992fa2862105992b198b25679d283",
                 "shasum": ""
             },
             "require": {
@@ -760,7 +760,7 @@
                 "micro-framework",
                 "silly"
             ],
-            "time": "2016-08-01 11:29:53"
+            "time": "2016-08-13 18:47:51"
         },
         {
             "name": "nategood/httpful",
@@ -906,16 +906,16 @@
         },
         {
             "name": "psr/http-message",
-            "version": "1.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-message.git",
-                "reference": "85d63699f0dbedb190bbd4b0d2b9dc707ea4c298"
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message/zipball/85d63699f0dbedb190bbd4b0d2b9dc707ea4c298",
-                "reference": "85d63699f0dbedb190bbd4b0d2b9dc707ea4c298",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
                 "shasum": ""
             },
             "require": {
@@ -943,6 +943,7 @@
                 }
             ],
             "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
             "keywords": [
                 "http",
                 "http-message",
@@ -951,7 +952,7 @@
                 "request",
                 "response"
             ],
-            "time": "2015-05-04 20:22:00"
+            "time": "2016-08-06 14:39:51"
         },
         {
             "name": "symfony/class-loader",
@@ -1514,16 +1515,16 @@
         },
         {
             "name": "tightenco/collect",
-            "version": "v5.2.41",
+            "version": "v5.2.43",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tightenco/collect.git",
-                "reference": "cb6c548aac9c8dd49ab8a36a1e477c739e235927"
+                "reference": "6add72fba3816232c71a3338081ed8cbef41974d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tightenco/collect/zipball/cb6c548aac9c8dd49ab8a36a1e477c739e235927",
-                "reference": "cb6c548aac9c8dd49ab8a36a1e477c739e235927",
+                "url": "https://api.github.com/repos/tightenco/collect/zipball/6add72fba3816232c71a3338081ed8cbef41974d",
+                "reference": "6add72fba3816232c71a3338081ed8cbef41974d",
                 "shasum": ""
             },
             "require": {
@@ -1557,7 +1558,7 @@
                 "collection",
                 "laravel"
             ],
-            "time": "2016-07-22 18:59:39"
+            "time": "2016-08-10 15:40:20"
         }
     ],
     "packages-dev": [],
