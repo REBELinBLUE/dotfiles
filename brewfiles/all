@@ -116,6 +116,7 @@ brew 'mas'
 brew 'cheat'
 brew 'm-cli'
 brew 'go'
+brew 'miller'
 
 # Apps
 cask 'changes'
