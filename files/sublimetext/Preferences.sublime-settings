@@ -1,51 +1,7 @@
 {
-	"binary_file_patterns":
-	[
-		"_ide_helper*.php",
-		"vendor/**",
-		"node_modules/**",
-		"storage/**",
-		"*.jpg",
-		"*.jpeg",
-		"*.png",
-		"*.gif",
-		"*.ttf",
-		"*.tga",
-		"*.dds",
-		"*.map",
-		"*.ico",
-		"*.eot",
-		"*.pdf",
-		"*.swf",
-		"*.jar",
-		"*.zip"
-	],
 	"color_inactive_tabs": true,
 	"color_scheme": "Packages/Theme - Afterglow/Afterglow.tmTheme",
 	"draw_white_space": "all",
-	"file_exclude_patterns":
-	[
-		"*.pyc",
-		"*.pyo",
-		"*.exe",
-		"*.dll",
-		"*.obj",
-		"*.o",
-		"*.a",
-		"*.lib",
-		"*.so",
-		"*.dylib",
-		"*.ncb",
-		"*.sdf",
-		"*.suo",
-		"*.pdb",
-		"*.idb",
-		".DS_Store",
-		"*.class",
-		"*.psd",
-		"*.db",
-		"*.sublime-workspace"
-	],
 	"folder_exclude_patterns":
 	[
 		".svn",
