@@ -13,6 +13,7 @@ brew 'php70-intl'
 brew 'php70-apcu-bc'
 brew 'git-standup'
 brew 'kafkacat'
+brew 'noti'
 
 cask 'charles'
 cask 'java'
