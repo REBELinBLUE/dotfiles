@@ -22,7 +22,7 @@ function behat -d "Wraps behat to make the colours fit my terminal better"
     if [ -e './vendor/bin/behat' ]
         eval ./vendor/bin/behat --format-settings='$FORMATTING' $argv
     else
-        eval behat --format-settings='$FORMATTING' $argv
+        eval command behat --format-settings='$FORMATTING' $argv
     end
 end
 
