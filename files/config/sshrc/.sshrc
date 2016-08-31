@@ -171,3 +171,6 @@ fi
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 eval $(dircolors $DIR/.sshrc.d/dircolors)
+
+# Fix Behat colours
+export BEHAT_PARAMS='{"formatters": {"pretty": {"output_styles": {"comment": ["blue"]}}}}'

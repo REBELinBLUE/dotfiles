@@ -104,3 +104,9 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$COMPOSER_HOME/vendor/bin:$PATH"
 export PATH="./vendor/bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
+
+
+# Fix behat colours
+export BEHAT_PARAMS='{"formatters": {"pretty": {"output_styles":{"comment": ["blue"]}}}}'
+
+

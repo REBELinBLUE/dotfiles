@@ -90,3 +90,26 @@ set -xg MANPATH (brew --prefix findutils)/libexec/gnuman (brew --prefix coreutil
 
 # Set LS_COLORS
 eval (dircolors -c $HOME/.dotfiles/files/shell/bash/dircolors | sed 's/>&\/dev\/null$//')
+
+
+# Fix behat colours
+export BEHAT_PARAMS='{"formatters": {"pretty": {"output_styles": {"comment": ["blue"]}}}}'
+
+#    set -l FORMATTING '{
+#    "output_styles": {
+#        "keyboard": [null, null, ["bold"]],
+#        "stdout": [null, null, []],
+#        "exception": ["red"],
+#        "undefined": ["yellow"],
+#        "pending": ["yellow"],
+#        "pending_param": ["yellow", null, ["bold"]],
+#        "failed": ["red"],
+#        "failed_param": ["red", null, ["bold"]],
+#        "passed": ["green"],
+#        "passed_param": ["green", null, ["bold"]],
+#        "skipped": ["cyan"],
+#        "skipped_param": ["cyan", null, ["bold"]],
+#        "comment":["blue"],
+#        "tag": ["cyan"]
+#    }
+#}'
