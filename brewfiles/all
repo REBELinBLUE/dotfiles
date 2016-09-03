@@ -117,8 +117,10 @@ brew 'cheat'
 brew 'm-cli'
 brew 'go'
 brew 'miller'
+brew 'keybase'
 
 # Apps
+cask 'keybase'
 cask 'changes'
 cask 'dropshare'
 cask 'flux'
