@@ -141,6 +141,7 @@ cask 'cakebrew'
 cask 'medis'
 cask 'aerial'
 cask 'viscosity'
+cask 'flycut'
 
 # Quicklook
 cask 'qlcolorcode'
