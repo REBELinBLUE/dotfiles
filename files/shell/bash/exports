@@ -91,8 +91,12 @@ export TIGRC_USER=$XDG_CONFIG_HOME/tig/tigrc
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export BABEL_CACHE_PATH=$XDG_CACHE_HOME/babel.json
 export GEMRC=$XDG_CONFIG_HOME/gemrc/config
-export GEM_HOME="$HOME/.local/lib/ruby/gems/$(ruby -e 'puts RbConfig::CONFIG["ruby_version"]')"
-export GEM_SPEC_CACHE=$XDG_CACHE_HOME/gem/specs
+
+if type_exists 'ruby'; then
+    export GEM_HOME="$HOME/.local/lib/ruby/gems/$(ruby -e 'puts RbConfig::CONFIG["ruby_version"]')"
+    export GEM_SPEC_CACHE=$XDG_CACHE_HOME/gem/specs
+fi
+
 export DEFAULT_CHEAT_DIR=$XDG_CONFIG_HOME/cheats
 export VBOX_USER_HOME=$XDG_CONFIG_HOME/virtualbox
 export DOCKER_CONFIG=$XDG_CONFIG_HOME/docker
@@ -104,7 +108,6 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$COMPOSER_HOME/vendor/bin:$PATH"
 export PATH="./vendor/bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
-
 
 # Fix behat colours
 export BEHAT_PARAMS='{"formatters": {"pretty": {"output_styles":{"comment": ["blue"]}}}}'
