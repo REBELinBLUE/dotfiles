@@ -15,6 +15,12 @@ if ! type_exists 'composer'; then
     chmod a+x /usr/local/bin/composer
 fi
 
+if ! type_exists 'melody'; then
+    e_arrow 'Downloading Melody'
+    curl -LsS http://get.sensiolabs.org/melody.phar -o /usr/local/bin/melody
+    chmod a+x /usr/local/bin/melody
+fi
+
 if ! type_exists 'psysh'; then
     e_arrow 'Downloading Psysh'
     curl -LsS https://git.io/psysh -o /usr/local/bin/psysh
