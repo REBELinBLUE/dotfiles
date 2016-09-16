@@ -100,7 +100,6 @@ fi
 export DEFAULT_CHEAT_DIR=$XDG_CONFIG_HOME/cheats
 export VBOX_USER_HOME=$XDG_CONFIG_HOME/virtualbox
 export DOCKER_CONFIG=$XDG_CONFIG_HOME/docker
-export GNUPGHOME=$XDG_CONFIG_HOME/gnupg
 
 # Add more paths
 export PATH="/usr/local/sbin:$PATH"

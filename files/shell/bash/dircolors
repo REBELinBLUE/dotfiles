@@ -252,6 +252,7 @@ EXEC                    00;32       # This is for files with execute permission:
 .zsh            00;33
 .env            00;33
 .bash           00;33
+.fish           00;33
 .php            00;33
 .java           00;33
 .pl             00;33

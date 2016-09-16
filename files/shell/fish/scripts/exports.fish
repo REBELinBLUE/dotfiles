@@ -76,7 +76,6 @@ set -xg GEM_SPEC_CACHE $XDG_CACHE_HOME/gem/specs
 set -xg DEFAULT_CHEAT_DIR $XDG_CONFIG_HOME/cheats
 set -xg VBOX_USER_HOME $XDG_CONFIG_HOME/virtualbox
 set -xg DOCKER_CONFIG $XDG_CONFIG_HOME/docker
-set -xg GNUPGHOME $XDG_CONFIG_HOME/gnupg
 
 set -e RUBY_VERSION
 
