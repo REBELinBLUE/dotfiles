@@ -117,6 +117,7 @@ brew 'cheat'
 brew 'm-cli'
 brew 'go'
 brew 'miller'
+brew 'httpstat'
 brew 'keybase'
 
 # Apps
