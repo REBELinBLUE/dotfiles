@@ -306,6 +306,15 @@ if [ -e /Applications/Transmission.app ]; then
 fi
 
 ###############################################################################
+# Fairmount                                                                   #
+###############################################################################
+
+if [ -e /Applications/Fairmount.app ]; then
+    mkdir "${HOME}/Library/Application Support/Fairmount"
+    ln -s /usr/local/lib/libdvdcss.* "${HOME}/Library/Application Support/Fairmount"
+fi
+
+###############################################################################
 # Pixelmator                                                                  #
 ###############################################################################
 

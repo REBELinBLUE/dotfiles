@@ -14,7 +14,6 @@ brew 'atomicparsley'
 brew 'id3v2'
 brew 'get_iplayer', args: ['with-deps']
 brew 'libdvdcss'
-brew 'hugo' # Used by luna-styleguide
 
 cask 'bbc-iplayer-downloads'
 cask 'crashplan'
@@ -25,6 +24,6 @@ cask 'mdrp'
 cask 'otomatic'
 cask 'videomonkey'
 cask 'batch-rip-actions-for-automator'
-cask 'fairmount'
 cask 'garmin-virb-edit'
 cask 'disablemonitor'
+cask 'boxofsnoo-fairmount'

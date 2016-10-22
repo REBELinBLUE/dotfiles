@@ -14,6 +14,7 @@ brew 'php70-apcu-bc'
 brew 'git-standup'
 brew 'kafkacat'
 brew 'noti'
+brew 'hugo' # Used by luna-styleguide
 
 cask 'charles'
 cask 'java'
