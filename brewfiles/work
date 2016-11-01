@@ -6,7 +6,7 @@ tap 'homebrew/homebrew-php'
 
 cask_args appdir: '/Applications'
 
-brew 'ansible' # Edit /usr/local/bin/ansible-galaxy and add --ignore-certs to work behind the proxy
+brew 'ansible'
 brew 'awscli'
 brew 'php70-rdkafka'
 brew 'php70-intl'
