@@ -27,6 +27,12 @@ if ! type_exists 'psysh'; then
     chmod a+x /usr/local/bin/psysh
 fi
 
+if ! type_exists 'behat'; then
+    e_arrow 'Downloading Behat'
+    curl -LsS https://github.com/Behat/Behat/releases/download/v3.2.1/behat.phar -o /usr/local/bin/behat
+    chmod a+x /usr/local/bin/behat
+fi
+
 if ! type_exists 'symfony'; then
     e_arrow 'Downloading Symfony Installer'
     curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
