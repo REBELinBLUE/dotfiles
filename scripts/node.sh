@@ -12,4 +12,4 @@ brew remove node
 sudo rm -rf /usr/local/{lib/node{,/.npm,_modules},bin,share/man}/{npm*,node*,man1/node*}
 brew install node
 
-npm install -g eslint gulp
+npm install -g eslint gulp dredd
