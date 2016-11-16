@@ -2,7 +2,6 @@ package artisan
 package bang-bang
 package brew
 package config
-package docker-machine
 package homebrew-command-not-found
 package https://github.com/decors/fish-colored-man
 package https://github.com/oh-my-fish/plugin-bak
