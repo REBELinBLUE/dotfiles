@@ -81,7 +81,7 @@ set -xg DOCKER_CONFIG $XDG_CONFIG_HOME/docker
 set -e RUBY_VERSION
 
 # Add more paths
-set -xg PATH /usr/local/sbin $HOME/.local/bin $HOME/.yarn/bin $COMPOSER_HOME/vendor/bin \
+set -xg PATH /usr/local/sbin $HOME/.local/bin $GOBIN $HOME/.yarn/bin $COMPOSER_HOME/vendor/bin \
             (brew --prefix findutils)/bin (brew --prefix coreutils)/libexec/gnubin /usr/local/bin \
             /usr/bin /bin /usr/sbin /sbin /Applications/VirtualBox.app/Contents/MacOS
 
