@@ -28,6 +28,7 @@ export WORKSPACE=$HOME/Workspace
 
 # Go
 export GOPATH=$XDG_DATA_HOME/go
+export GOBIN=$GOPATH/bin
 
 # Setup terminal, and turn on colors
 export TERM="xterm-256color"

@@ -15,6 +15,7 @@ set -xg WORKSPACE $HOME/Workspace
 
 # Go
 set -xg GOPATH $XDG_DATA_HOME/go
+set -xg GOBIN $GOPATH/bin
 
 # Homebrew options
 set -xg HOMEBREW_CASK_OPTS "--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom"
