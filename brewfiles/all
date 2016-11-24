@@ -72,6 +72,7 @@ brew 'ffmpeg'
 # Install other tools
 brew 'httpie'
 brew 'aria2'
+brew 'borg'
 brew 'gist'
 brew 'asciinema'
 brew 'asciinema2gif'
