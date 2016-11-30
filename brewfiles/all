@@ -146,6 +146,7 @@ cask 'medis'
 cask 'aerial'
 cask 'viscosity'
 cask 'flycut'
+cask 'paw'
 
 # Quicklook
 cask 'qlcolorcode'
