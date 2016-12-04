@@ -1,3 +1,3 @@
-function mac
-    command m
+function mac --wraps=m
+    command m $argv
 end
