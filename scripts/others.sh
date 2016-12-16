@@ -14,6 +14,7 @@ pip install --upgrade pip
 sudo chown -R $(whoami) /usr/local
 pip install httpie-oauth
 pip install httpie-jwt-auth
+pip install http-prompt
 
 # Install additional CLIs
 ln -s `which ffmpeg` /usr/local/bin/ffmpeg-static
