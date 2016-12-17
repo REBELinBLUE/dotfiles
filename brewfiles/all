@@ -142,10 +142,7 @@ cask 'vagrant'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
 cask 'cakebrew'
-cask 'medis'
-cask 'aerial'
 cask 'viscosity'
-cask 'flycut'
 cask 'paw'
 
 # Quicklook
