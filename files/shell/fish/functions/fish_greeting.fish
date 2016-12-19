@@ -1,10 +1,13 @@
 function fish_greeting -d "Greeting"
     #_logo
 
-    set_color $fish_color_autosuggestion
-    uname -nmsr
-    command uptime
-    set_color normal
+    echo ""
+    command neofetch
+
+    #set_color $fish_color_autosuggestion
+    #uname -nmsr
+    #command uptime
+    #set_color normal
 
     # Change to the directory if a WIP directory exists
     set -l HAS_WIP (l | command grep wip | wc -l)

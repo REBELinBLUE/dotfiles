@@ -70,6 +70,11 @@ if [ ! -e $HOME/.config/sshrc/ ]; then
     ln -s $HOME/.dotfiles/files/config/sshrc $HOME/.config/sshrc
 fi
 
+# Symlink the neofetch config
+if [ ! -e $HOME/.config/neofetch/ ]; then
+    ln -s $HOME/.dotfiles/files/config/neofetch $HOME/.config/neofetch
+fi
+
 # Symlink Vagrantfile
 if [ ! -d $HOME/.local/share/vagrant/ ]; then
     mkdir -p $HOME/.local/share/vagrant/
