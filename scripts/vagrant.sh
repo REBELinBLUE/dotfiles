@@ -53,3 +53,7 @@ fi
 
 ln -s $HOME/.dotfiles/bin/notify-send /usr/local/bin/notify-send
 chmod +x /usr/local/bin/notify-send
+
+mkdir -p ~/.local/share/vagrant/
+mkdir -p ~/.config/vagrant/
+ln -s ~/.local/share/vagrant/cache ~/.config/vagrant
