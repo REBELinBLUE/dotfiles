@@ -14,11 +14,11 @@ brew 'atomicparsley'
 brew 'id3v2'
 brew 'get_iplayer', args: ['with-deps']
 brew 'libdvdcss'
+brew 'handbrake'
 
 cask 'bbc-iplayer-downloads'
 cask 'crashplan'
 cask 'handbrake'
-cask 'handbrakecli'
 cask 'logitech-myharmony'
 cask 'mdrp'
 cask 'otomatic'
