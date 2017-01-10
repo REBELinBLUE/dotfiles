@@ -14,6 +14,6 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Remove stuff
-# NOTHING HERE
+brew remove php55 php55-xdebug
 
 source $HOME/.dotfiles/scripts/dotfiles.sh

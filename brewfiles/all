@@ -65,9 +65,6 @@ brew 'php70-xdebug', args:['without-config-file']
 brew 'php56', args: ['with-homebrew-curl', 'with-postgresql', 'without-apache', 'without-fpm']
 brew 'php56-xdebug', args:['without-config-file']
 
-brew 'php55', args: ['with-homebrew-curl', 'with-postgresql', 'without-apache', 'without-fpm']
-brew 'php55-xdebug', args:['without-config-file']
-
 # Install media tools
 brew 'ffmpeg'
 
