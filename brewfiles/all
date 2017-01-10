@@ -56,7 +56,9 @@ brew 'bash-git-prompt'
 
 brew 'brew-php-switcher'
 
-# Install PHP7
+brew 'php71', args: ['with-homebrew-curl', 'with-postgresql', 'without-fpm']
+brew 'php71-xdebug', args:['without-config-file']
+
 brew 'php70', args: ['with-homebrew-curl', 'with-postgresql', 'without-apache', 'without-fpm']
 brew 'php70-xdebug', args:['without-config-file']
 
