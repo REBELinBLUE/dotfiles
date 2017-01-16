@@ -824,16 +824,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.2.1",
+            "version": "v3.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "d12aa9ca20f4db83ec58410978dab6afcb9d6aaa"
+                "reference": "4f9e449e76996adf310498a8ca955c6deebe29dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/d12aa9ca20f4db83ec58410978dab6afcb9d6aaa",
-                "reference": "d12aa9ca20f4db83ec58410978dab6afcb9d6aaa",
+                "url": "https://api.github.com/repos/symfony/console/zipball/4f9e449e76996adf310498a8ca955c6deebe29dd",
+                "reference": "4f9e449e76996adf310498a8ca955c6deebe29dd",
                 "shasum": ""
             },
             "require": {
@@ -883,20 +883,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-11T14:34:22+00:00"
+            "time": "2017-01-08T20:47:33+00:00"
         },
         {
             "name": "symfony/debug",
-            "version": "v3.2.1",
+            "version": "v3.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "9f923e68d524a3095c5a2ae5fc7220c7cbc12231"
+                "reference": "810ba5c1c5352a4ddb15d4719e8936751dff0b05"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/9f923e68d524a3095c5a2ae5fc7220c7cbc12231",
-                "reference": "9f923e68d524a3095c5a2ae5fc7220c7cbc12231",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/810ba5c1c5352a4ddb15d4719e8936751dff0b05",
+                "reference": "810ba5c1c5352a4ddb15d4719e8936751dff0b05",
                 "shasum": ""
             },
             "require": {
@@ -940,7 +940,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-16T22:18:16+00:00"
+            "time": "2017-01-02T20:32:22+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -1003,16 +1003,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v3.2.1",
+            "version": "v3.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "02ea84847aad71be7e32056408bb19f3a616cdd3"
+                "reference": "350e810019fc52dd06ae844b6a6d382f8a0e8893"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/02ea84847aad71be7e32056408bb19f3a616cdd3",
-                "reference": "02ea84847aad71be7e32056408bb19f3a616cdd3",
+                "url": "https://api.github.com/repos/symfony/process/zipball/350e810019fc52dd06ae844b6a6d382f8a0e8893",
+                "reference": "350e810019fc52dd06ae844b6a6d382f8a0e8893",
                 "shasum": ""
             },
             "require": {
@@ -1048,20 +1048,20 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-24T10:40:28+00:00"
+            "time": "2017-01-02T20:32:22+00:00"
         },
         {
             "name": "tightenco/collect",
-            "version": "v5.3.28",
+            "version": "v5.3.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tightenco/collect.git",
-                "reference": "bb49526e3681c429cb1651b59da6ca215a5230a8"
+                "reference": "7d5bce2658143340a9b1e0dd1cb5d67c28654dd3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tightenco/collect/zipball/bb49526e3681c429cb1651b59da6ca215a5230a8",
-                "reference": "bb49526e3681c429cb1651b59da6ca215a5230a8",
+                "url": "https://api.github.com/repos/tightenco/collect/zipball/7d5bce2658143340a9b1e0dd1cb5d67c28654dd3",
+                "reference": "7d5bce2658143340a9b1e0dd1cb5d67c28654dd3",
                 "shasum": ""
             },
             "require": {
@@ -1095,7 +1095,7 @@
                 "collection",
                 "laravel"
             ],
-            "time": "2016-12-15T18:17:20+00:00"
+            "time": "2017-01-13T21:31:20+00:00"
         }
     ],
     "packages-dev": [],
