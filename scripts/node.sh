@@ -8,8 +8,8 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-brew remove node
+brew remove node yarn
 sudo rm -rf /usr/local/{lib/node{,/.npm,_modules},bin,share/man}/{npm*,node*,man1/node*}
-brew install node
+brew install node yarn
 
-npm install -g eslint gulp dredd
+npm install -g eslint gulp dredd bower jslint jshint
