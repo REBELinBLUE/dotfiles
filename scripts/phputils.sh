@@ -49,6 +49,10 @@ e_arrow 'Downloading PHPUnit'
 curl -LsS https://phar.phpunit.de/phpunit.phar -o /usr/local/bin/phpunit
 chmod a+x /usr/local/bin/phpunit
 
+e_arrow 'Downloading PHPSpec'
+curl -LsS https://github.com/phpspec/phpspec/releases/download/3.2.2/phpspec.phar -o /usr/local/bin/phpspec
+chmod a+x /usr/local/bin/phpspec
+
 e_arrow 'Downloading PHP Mess Detector'
 curl -LsS http://static.phpmd.org/php/latest/phpmd.phar -o /usr/local/bin/phpmd
 chmod a+x /usr/local/bin/phpmd
