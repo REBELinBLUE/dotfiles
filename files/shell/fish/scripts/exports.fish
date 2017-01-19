@@ -81,12 +81,11 @@ set -xg DOCKER_CONFIG $XDG_CONFIG_HOME/docker
 set -e RUBY_VERSION
 
 # Add more paths
-set -xg PATH /usr/local/sbin $HOME/.local/bin $GOBIN $HOME/.yarn/bin $COMPOSER_HOME/vendor/bin \
-            (brew --prefix findutils)/bin (brew --prefix coreutils)/libexec/gnubin /usr/local/bin \
-            /usr/bin /bin /usr/sbin /sbin /Applications/VirtualBox.app/Contents/MacOS
+set -xg PATH /usr/local/sbin $HOME/.local/bin $HOME/.local/lib/nodejs/bin $GOBIN $HOME/.yarn/bin \
+            $COMPOSER_HOME/vendor/bin (brew --prefix findutils)/bin (brew --prefix coreutils)/libexec/gnubin \
+            /usr/local/bin /usr/bin /bin /usr/sbin /sbin /Applications/VirtualBox.app/Contents/MacOS
 
 set -xg MANPATH (brew --prefix findutils)/libexec/gnuman (brew --prefix coreutils)/share/man:
-
 
 # Set LS_COLORS
 eval (dircolors -c $HOME/.dotfiles/files/shell/bash/dircolors | sed 's/>&\/dev\/null$//')
