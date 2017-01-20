@@ -15,7 +15,6 @@ brew 'php71-rdkafka'
 brew 'kafkacat'
 brew 'noti'
 brew 'hugo' # Used by luna-styleguide
-brew 'mysql'
 brew 'gitup'
 
 cask 'charles'
