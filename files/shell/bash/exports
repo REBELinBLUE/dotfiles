@@ -92,6 +92,7 @@ export TIGRC_USER=$XDG_CONFIG_HOME/tig/tigrc
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export BABEL_CACHE_PATH=$XDG_CACHE_HOME/babel.json
 export GEMRC=$XDG_CONFIG_HOME/gemrc/config
+export GRIPHOME=$XDG_CONFIG_HOME/grip
 
 if type_exists 'ruby'; then
     export GEM_HOME="$HOME/.local/lib/ruby/gems/$(ruby -e 'puts RbConfig::CONFIG["ruby_version"]')"
