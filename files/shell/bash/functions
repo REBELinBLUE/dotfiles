@@ -173,7 +173,7 @@ if is_os "darwin"; then
 
     # TODO: Extract output from tap file to include number of tests in message
     phpunit() {
-        php -dzend_extension=$(brew --prefix php`command cat $HOME/.php_version`-xdebug)/xdebug.so $(which phpunit) $@
+        php -dzend_extension=$(brew --prefix php`command cat ~/.cache/php_version`-xdebug)/xdebug.so $(which phpunit) $@
         RESULT=$?
 
         if [[ $RESULT = 0 ]]; then
