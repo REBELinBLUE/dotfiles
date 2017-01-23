@@ -65,6 +65,10 @@ e_arrow 'Downloading PHPLoc'
 curl -LsS https://phar.phpunit.de/phploc.phar -o /usr/local/bin/phploc
 chmod a+x /usr/local/bin/phploc
 
+e_arrow 'Downloading PHP Metrics'
+curl -LsS  https://github.com/phpmetrics/PhpMetrics/raw/master/build/phpmetrics.phar -o /usr/local/bin/phpmetrics
+chmod a+x /usr/local/bin/phpmetrics
+
 e_arrow 'Downloading PHP Copy & Paste Detector'
 curl -LsS https://phar.phpunit.de/phpcpd.phar -o /usr/local/bin/phpcpd
 chmod a+x /usr/local/bin/phpcpd
