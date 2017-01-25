@@ -49,7 +49,6 @@ brew 'python'
 # Install bash completions
 brew 'vagrant-completion'
 brew 'bash-completion'
-brew 'composer-completion'
 
 # Install bash git prompt
 brew 'bash-git-prompt'
@@ -127,6 +126,7 @@ brew 'keybase'
 cask 'changes'
 cask 'dropshare'
 cask 'flux'
+cask 'postico'
 cask 'franz'
 cask 'gpgtools'
 cask 'iterm2'
