@@ -17,7 +17,7 @@ brew 'noti'
 brew 'hugo' # Used by luna-styleguide
 brew 'gitup'
 
-cask 'charles'
-cask 'java'
-cask 'adpassmon'
-cask 'visual-studio-code'
+# cask 'charles'
+# cask 'java'
+# cask 'adpassmon'
+# cask 'visual-studio-code'

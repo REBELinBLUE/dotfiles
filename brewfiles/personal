@@ -4,16 +4,16 @@ tap 'caskroom/cask'
 
 cask_args appdir: '/Applications'
 
-cask 'cleanmymac'
-# cask 'cocktail' # Currently a 404
-cask 'garmin-express'
-cask 'houdahgeo'
-cask 'imageoptim'
-# cask 'things' # Version in cask is so ridiculously out of date
-cask 'transmission'
-cask 'transmit'
-cask 'vlc'
-cask 'versions'
-cask 'gitbook-editor'
-cask 'medis'
-cask 'charles'
+# cask 'cleanmymac'
+# # cask 'cocktail' # Currently a 404
+# cask 'garmin-express'
+# cask 'houdahgeo'
+# cask 'imageoptim'
+# # cask 'things' # Version in cask is so ridiculously out of date
+# cask 'transmission'
+# cask 'transmit'
+# cask 'vlc'
+# cask 'versions'
+# cask 'gitbook-editor'
+# cask 'medis'
+# cask 'charles'
