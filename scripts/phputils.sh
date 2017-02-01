@@ -73,6 +73,14 @@ e_arrow 'Downloading PHP Copy & Paste Detector'
 curl -LsS https://phar.phpunit.de/phpcpd.phar -o /usr/local/bin/phpcpd
 chmod a+x /usr/local/bin/phpcpd
 
+e_arrow 'Installing PHP Parallel Lint'
+cp $HOME/.dotfiles/bin/php-parallel-lint-0.9.2.phar /usr/local/bin/php-parallel-lint
+chmod a+x /usr/local/bin/php-parallel-lint
+
+e_arrow 'Installing PHPDoccheck'
+cp $HOME/.dotfiles/bin/phpdoccheck-1.1.0.phar /usr/local/bin/phpdoccheck
+chmod a+x /usr/local/bin/phpdoccheck
+
 if [ ! -d $HOME/.config/composer/ ]; then
     mkdir -p $HOME/.config/composer/
 fi

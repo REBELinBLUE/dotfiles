@@ -2,7 +2,6 @@
     "require": {
         "laravel/installer": "^1.3",
         "laravel/lumen-installer": "^1.0",
-        "block8/php-docblock-checker": "^1.0",
         "laravel/homestead": "^3.0",
         "laravel/valet": "^1.0"
     }

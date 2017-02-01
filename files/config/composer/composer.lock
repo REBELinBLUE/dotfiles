@@ -4,61 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e67648b998a515d2faeaf08a184dbcf0",
+    "content-hash": "847f75bc185163add471dbb636066b60",
     "packages": [
-        {
-            "name": "block8/php-docblock-checker",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Block8/php-docblock-checker.git",
-                "reference": "e1c2e1c6294a25cf91feb4d0c4dee0152ef4e112"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Block8/php-docblock-checker/zipball/e1c2e1c6294a25cf91feb4d0c4dee0152ef4e112",
-                "reference": "e1c2e1c6294a25cf91feb4d0c4dee0152ef4e112",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "phpunit/php-token-stream": "1.*",
-                "symfony/console": "3.*"
-            },
-            "require-dev": {
-                "phploc/phploc": "~2.0",
-                "phpmd/phpmd": "~2.0",
-                "squizlabs/php_codesniffer": "~1.5"
-            },
-            "bin": [
-                "phpdoccheck"
-            ],
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Dan Cryer",
-                    "email": "dan.cryer@block8.co.uk",
-                    "homepage": "http://www.block8.co.uk",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A simple tool for checking that your PHP classes and methods use docblocks.",
-            "homepage": "https://www.phptesting.org/",
-            "keywords": [
-                "checker",
-                "code quality",
-                "comment",
-                "docblock",
-                "php",
-                "phpci",
-                "testing"
-            ],
-            "time": "2016-08-25T13:11:15+00:00"
-        },
         {
             "name": "container-interop/container-interop",
             "version": "1.1.0",
@@ -259,26 +206,26 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v5.3.23",
+            "version": "v5.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
-                "reference": "8047b47e1f731c975d9aa0fe0b269064d3f1346d"
+                "reference": "f1e4caaaa9af6204d3877198b42d99658e593513"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/container/zipball/8047b47e1f731c975d9aa0fe0b269064d3f1346d",
-                "reference": "8047b47e1f731c975d9aa0fe0b269064d3f1346d",
+                "url": "https://api.github.com/repos/illuminate/container/zipball/f1e4caaaa9af6204d3877198b42d99658e593513",
+                "reference": "f1e4caaaa9af6204d3877198b42d99658e593513",
                 "shasum": ""
             },
             "require": {
-                "illuminate/contracts": "5.3.*",
+                "illuminate/contracts": "5.4.*",
                 "php": ">=5.6.4"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.3-dev"
+                    "dev-master": "5.4-dev"
                 }
             },
             "autoload": {
@@ -298,20 +245,20 @@
             ],
             "description": "The Illuminate Container package.",
             "homepage": "https://laravel.com",
-            "time": "2016-10-02T01:14:30+00:00"
+            "time": "2017-01-21T16:09:27+00:00"
         },
         {
             "name": "illuminate/contracts",
-            "version": "v5.3.23",
+            "version": "v5.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "ce5d73c6015b2054d32f3f8530767847b358ae4e"
+                "reference": "4ec919d294aca396d172e644b243b49885cd2cc7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/ce5d73c6015b2054d32f3f8530767847b358ae4e",
-                "reference": "ce5d73c6015b2054d32f3f8530767847b358ae4e",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/4ec919d294aca396d172e644b243b49885cd2cc7",
+                "reference": "4ec919d294aca396d172e644b243b49885cd2cc7",
                 "shasum": ""
             },
             "require": {
@@ -320,7 +267,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.3-dev"
+                    "dev-master": "5.4-dev"
                 }
             },
             "autoload": {
@@ -340,7 +287,7 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "https://laravel.com",
-            "time": "2016-09-26T20:36:27+00:00"
+            "time": "2017-01-18T20:23:54+00:00"
         },
         {
             "name": "laravel/homestead",
@@ -677,55 +624,6 @@
             "time": "2016-07-14T13:09:58+00:00"
         },
         {
-            "name": "phpunit/php-token-stream",
-            "version": "1.4.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "3b402f65a4cc90abf6e1104e388b896ce209631b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/3b402f65a4cc90abf6e1104e388b896ce209631b",
-                "reference": "3b402f65a4cc90abf6e1104e388b896ce209631b",
-                "shasum": ""
-            },
-            "require": {
-                "ext-tokenizer": "*",
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.2"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.4-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de"
-                }
-            ],
-            "description": "Wrapper around PHP's tokenizer extension.",
-            "homepage": "https://github.com/sebastianbergmann/php-token-stream/",
-            "keywords": [
-                "tokenizer"
-            ],
-            "time": "2016-11-15T14:06:22+00:00"
-        },
-        {
             "name": "psr/http-message",
             "version": "1.0.1",
             "source": {
@@ -1052,24 +950,24 @@
         },
         {
             "name": "tightenco/collect",
-            "version": "v5.3.29",
+            "version": "v5.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tightenco/collect.git",
-                "reference": "7d5bce2658143340a9b1e0dd1cb5d67c28654dd3"
+                "reference": "705a25fbbfee688353351f0bc13f34d61f9f668a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tightenco/collect/zipball/7d5bce2658143340a9b1e0dd1cb5d67c28654dd3",
-                "reference": "7d5bce2658143340a9b1e0dd1cb5d67c28654dd3",
+                "url": "https://api.github.com/repos/tightenco/collect/zipball/705a25fbbfee688353351f0bc13f34d61f9f668a",
+                "reference": "705a25fbbfee688353351f0bc13f34d61f9f668a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6.4"
             },
             "require-dev": {
-                "mockery/mockery": "~0.9.4",
-                "phpunit/phpunit": "~4.1"
+                "mockery/mockery": "^0.9.7",
+                "phpunit/phpunit": "^5.7"
             },
             "type": "library",
             "autoload": {
@@ -1095,7 +993,7 @@
                 "collection",
                 "laravel"
             ],
-            "time": "2017-01-13T21:31:20+00:00"
+            "time": "2017-01-24T16:58:09+00:00"
         }
     ],
     "packages-dev": [],
