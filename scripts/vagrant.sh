@@ -16,6 +16,8 @@ vagrant plugin install vagrant-bindfs
 vagrant plugin install vagrant-hostsupdater
 vagrant plugin install vagrant-triggers
 vagrant plugin install vagrant-rebuild
+vagrant plugin install vagrant-clean
+vagrant plugin install vagrant-nuke
 
 # Install vagrant plugins for work machine
 vagrant plugin install vagrant-proxyconf
