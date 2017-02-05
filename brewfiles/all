@@ -55,13 +55,13 @@ brew 'bash-git-prompt'
 
 brew 'brew-php-switcher'
 
-brew 'php71', args: ['with-homebrew-curl', 'with-postgresql', 'without-fpm']
+brew 'php71', args: ['with-phpdbg', 'with-homebrew-curl', 'with-postgresql', 'without-fpm']
 brew 'php71-xdebug'
 
-brew 'php70', args: ['with-homebrew-curl', 'with-postgresql', 'without-apache', 'without-fpm']
+brew 'php70', args: ['with-phpdbg', 'with-homebrew-curl', 'with-postgresql', 'without-fpm']
 brew 'php70-xdebug'
 
-brew 'php56', args: ['with-homebrew-curl', 'with-postgresql', 'without-apache', 'without-fpm']
+brew 'php56', args: ['with-phpdbg', 'with-homebrew-curl', 'with-postgresql', 'without-fpm']
 brew 'php56-xdebug'
 
 # Install media tools
