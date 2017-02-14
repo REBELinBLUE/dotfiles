@@ -126,6 +126,10 @@ if [ -f /etc/is_vagrant_vm ]; then
                         export TEMP=/home/$user/tmp
                     fi
 
+                    if [ -f /home/$user/.venv ]; then
+                        source /home/$user/.venv
+                    fi
+
                     clear\" > /home/$user/.bash_profile";
 
         #sudo chown $user /home/$user/.bash_profile;
