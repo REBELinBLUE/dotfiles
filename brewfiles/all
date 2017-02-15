@@ -123,9 +123,9 @@ brew 'm-cli'
 brew 'go'
 brew 'miller'
 brew 'httpstat'
-brew 'keybase'
 
 # Apps
+cask 'keybase'
 # cask 'changes'
 # cask 'dropshare'
 # cask 'flux'
