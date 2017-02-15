@@ -61,6 +61,11 @@ e_arrow 'Downloading Phing'
 curl -LsS http://www.phing.info/get/phing-latest.phar -o /usr/local/bin/phing
 chmod a+x /usr/local/bin/phing
 
+e_arrow 'Downloading Box'
+curl -LSs https://box-project.github.io/box2/installer.php | php
+mv ./box.phar /usr/local/bin/box2
+chmod a+x /usr/local/bin/box2
+
 e_arrow 'Downloading PHPLoc'
 curl -LsS https://phar.phpunit.de/phploc.phar -o /usr/local/bin/phploc
 chmod a+x /usr/local/bin/phploc
@@ -78,7 +83,7 @@ cp $HOME/.dotfiles/bin/php-parallel-lint-0.9.2.phar /usr/local/bin/php-parallel-
 chmod a+x /usr/local/bin/php-parallel-lint
 
 e_arrow 'Installing PHPDoccheck'
-cp $HOME/.dotfiles/bin/phpdoccheck-1.1.0.phar /usr/local/bin/phpdoccheck
+cp $HOME/.dotfiles/bin/phpdoccheck-1.2.1.phar /usr/local/bin/phpdoccheck
 chmod a+x /usr/local/bin/phpdoccheck
 
 if [ ! -d $HOME/.config/composer/ ]; then
