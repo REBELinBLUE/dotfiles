@@ -32,6 +32,7 @@ brew 'gnu-getopt', args: ['with-default-names']
 brew 'gnu-tar', args: ['with-default-names']
 brew 'gnu-which', args: ['with-default-names']
 brew 'gnu-sed', args: ['with-default-names']
+brew 'make', args: ['with-default-names']
 
 # Install Bash 4
 brew 'bash'
