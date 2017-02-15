@@ -18,6 +18,7 @@ vagrant plugin install vagrant-triggers
 vagrant plugin install vagrant-rebuild
 vagrant plugin install vagrant-clean
 vagrant plugin install vagrant-nuke
+vagrant plugin install deep_merge
 
 # Install vagrant plugins for work machine
 vagrant plugin install vagrant-proxyconf
