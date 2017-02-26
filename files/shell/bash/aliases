@@ -42,6 +42,9 @@ alias gist="gist -o"
 # Get public IP
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
+# Wake the NAS
+alias wakenas="wakeonlan 00:90:A9:E3:92:19"
+
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="reset; exec $SHELL -l"
 
