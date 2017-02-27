@@ -139,7 +139,7 @@ ssh() {
 
 sleepnas() {
     cat ~/.ssh/config.d/* > ~/.ssh/config;
-    #$(which ssh) mycloud "/usr/sbin/shutdown.sh -h -P now"
+    $(which ssh) mycloud "halt &"
 }
 
 if is_os "darwin"; then
