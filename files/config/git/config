@@ -93,6 +93,9 @@
     autocorrect = 1
 
 [alias]
+    # List all aliases
+    aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort
+
     # Amend the currently staged files to the latest commit
     amend = commit --amend
 
