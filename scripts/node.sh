@@ -13,4 +13,4 @@ sudo rm -rf /usr/local/{lib/node{,/.npm,_modules},bin,share/man}/{npm*,node*,man
 sudo rm -rf /uca/local/lib/node_modules
 brew install node yarn
 
-npm install -g eslint gulp dredd bower jslint jshint
+npm install -g eslint gulp dredd bower jslint jshint create-project
