@@ -152,16 +152,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.4.1",
+            "version": "1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "0d6c7ca039329247e4f0f8f8f6506810e8248855"
+                "reference": "f5b8a8512e2b58b0071a7280e39f14f72e05d87c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/0d6c7ca039329247e4f0f8f8f6506810e8248855",
-                "reference": "0d6c7ca039329247e4f0f8f8f6506810e8248855",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/f5b8a8512e2b58b0071a7280e39f14f72e05d87c",
+                "reference": "f5b8a8512e2b58b0071a7280e39f14f72e05d87c",
                 "shasum": ""
             },
             "require": {
@@ -213,7 +213,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2017-02-27T10:51:17+00:00"
+            "time": "2017-03-20T17:10:46+00:00"
         },
         {
             "name": "illuminate/container",
@@ -1011,16 +1011,16 @@
         },
         {
             "name": "tightenco/collect",
-            "version": "v5.4.14",
+            "version": "v5.4.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tightenco/collect.git",
-                "reference": "f2761d8ed33e43c66f4f1f59c67f8e6a3d34c887"
+                "reference": "5354af0857dec8bc08a0663d92b2b27d5b213ffd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tightenco/collect/zipball/f2761d8ed33e43c66f4f1f59c67f8e6a3d34c887",
-                "reference": "f2761d8ed33e43c66f4f1f59c67f8e6a3d34c887",
+                "url": "https://api.github.com/repos/tightenco/collect/zipball/5354af0857dec8bc08a0663d92b2b27d5b213ffd",
+                "reference": "5354af0857dec8bc08a0663d92b2b27d5b213ffd",
                 "shasum": ""
             },
             "require": {
@@ -1054,7 +1054,7 @@
                 "collection",
                 "laravel"
             ],
-            "time": "2017-03-01T20:10:48+00:00"
+            "time": "2017-03-24T23:04:26+00:00"
         }
     ],
     "packages-dev": [],

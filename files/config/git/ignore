@@ -42,3 +42,7 @@ Thumbs.db
 #####################
 *.sublime-*
 .idea
+
+# Tools #
+#########
+.bash-git-rc
