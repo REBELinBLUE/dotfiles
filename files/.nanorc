@@ -1,1 +1,11 @@
-include /usr/local/share/nano/*.nanorc
+set constantshow
+set smooth
+set autoindent
+set suspend
+set tabsize 4
+set titlecolor brightwhite,green
+set statuscolor brightwhite,blue
+set keycolor red
+set functioncolor yellow
+
+include "/usr/local/share/nano/*.nanorc"
