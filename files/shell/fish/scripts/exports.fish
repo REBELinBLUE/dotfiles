@@ -82,7 +82,7 @@ set -xg GRIPHOME $XDG_CONFIG_HOME/grip
 set -e RUBY_VERSION
 
 # Add more paths
-set -xg PATH /usr/local/sbin $HOME/.local/bin $GOBIN $HOME/.yarn/bin \
+set -xg PATH /usr/local/sbin $HOME/.local/bin $GOBIN $HOME/.yarn/bin /usr/local/opt/sqlite/bin \
             $COMPOSER_HOME/vendor/bin (brew --prefix findutils)/bin (brew --prefix coreutils)/libexec/gnubin \
             /usr/local/bin /usr/bin /bin /usr/sbin /sbin /Applications/VirtualBox.app/Contents/MacOS
 

@@ -108,6 +108,7 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$GOBIN:$PATH"
 export PATH="$HOME/.yarn/bin:$PATH" # FIXME See if we can move this to .local
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="$COMPOSER_HOME/vendor/bin:$PATH"
 export PATH="./vendor/bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
