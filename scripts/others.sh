@@ -31,3 +31,5 @@ ln -s `which ffmpeg` /usr/local/bin/ffmpeg-static
 # cd -
 
 cp -f "$HOME/.dotfiles/files/Monaco for Powerline.otf" $HOME/Library/Fonts/
+
+git clone  https://github.com/serialhex/nano-highlight.git /opt/nano-highlight
