@@ -98,45 +98,45 @@ if [ -f /etc/is_vagrant_vm ]; then
         git config --global user.email "stephen@rebelinblue.com"
     }
 
-    function _service() {
-        sudo service `/bin/ls /home | /bin/grep -v ubuntu | /bin/grep -v vagrant` restart;
-    }
+    #function _service() {
+    #    sudo service `/bin/ls /home | /bin/grep -v ubuntu | /bin/grep -v vagrant` restart;
+    #}
 
-    function _su() {
-        user=`/bin/ls /home | /bin/grep -v ubuntu | /bin/grep -v vagrant`
-        chmod -R 0777 $SSHHOME;
-        sudo touch /home/$user/.bash_profile;
+    #function _su() {
+    #    user=`/bin/ls /home | /bin/grep -v ubuntu | /bin/grep -v vagrant`
+    #    chmod -R 0777 $SSHHOME;
+    #    sudo touch /home/$user/.bash_profile;
 
-        sudo sh -c "echo \" cp -f $SSHHOME/.sshrc.d/.gitconfig ~/.gitconfig
-                    cp -f $SSHHOME/.sshrc.d/.gitignore ~/.gitignore_global
-                    cp -f $SSHHOME/.sshrc.d/.gitignore ~/.gitignore_global
-                    git config --global --unset diff.orderfile
-                    git config --global --unset merge.tool
-                    git config --global --remove-section pager
-                    git config --global --remove-section mergetool.chdiff
-                    git config --global --remove-section difftool.chdiff
-                    source $SSHHOME/.sshrc
-                    source /home/$user/.bashrc
+    #    sudo sh -c "echo \" cp -f $SSHHOME/.sshrc.d/.gitconfig ~/.gitconfig
+    #                cp -f $SSHHOME/.sshrc.d/.gitignore ~/.gitignore_global
+    #                cp -f $SSHHOME/.sshrc.d/.gitignore ~/.gitignore_global
+    #                git config --global --unset diff.orderfile
+    #                git config --global --unset merge.tool
+    #                git config --global --remove-section pager
+    #                git config --global --remove-section mergetool.chdiff
+    #                git config --global --remove-section difftool.chdiff
+    #                source $SSHHOME/.sshrc
+    #                source /home/$user/.bashrc
 
-                    cd ~
+    #                cd ~
 
-                    if [ -d /home/$user/tmp ]; then
-                        export TMP=/home/$user/tmp
-                        export TMPDIR=/home/$user/tmp
-                        export TEMP=/home/$user/tmp
-                    fi
+    #                if [ -d /home/$user/tmp ]; then
+    #                    export TMP=/home/$user/tmp
+    #                    export TMPDIR=/home/$user/tmp
+    #                    export TEMP=/home/$user/tmp
+    #                fi
 
-                    if [ -f /home/$user/.venv ]; then
-                        source /home/$user/.venv
-                    fi
+    #                if [ -f /home/$user/.venv ]; then
+    #                    source /home/$user/.venv
+    #                fi
 
-                    clear\" > /home/$user/.bash_profile";
+    #                clear\" > /home/$user/.bash_profile";
 
-        #sudo chown $user /home/$user/.bash_profile;
-        sudo chown $user /home/$user/.gitconfig /home/$user/.gitignore_global;
-        sudo chmod 664 /home/$user/.gitconfig /home/$user/.gitignore_global;
-        sudo su - $user;
-    }
+    #    #sudo chown $user /home/$user/.bash_profile;
+    #    sudo chown $user /home/$user/.gitconfig /home/$user/.gitignore_global;
+    #    sudo chmod 664 /home/$user/.gitconfig /home/$user/.gitignore_global;
+    #    sudo su - $user;
+    #}
 fi
 
 # Use a folder in home for bash git prompt unless it is installed in /opt or we are running in vagrant
