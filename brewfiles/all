@@ -41,10 +41,10 @@ brew 'bash'
 brew 'fish'
 
 # Install more recent versions of some OS X tools
-brew 'homebrew/dupes/grep', args: ['with-default-names']
+brew 'grep', args: ['with-default-names']
 brew 'vim', args: ['override-system-vi']
-brew 'homebrew/dupes/diffutils'
-brew 'homebrew/dupes/nano', args: ['HEAD', 'disable-nls', 'enable-color', 'enable-extra', 'enable-multibuffer', 'enable-nanorc', 'enable-utf8']
+brew 'diffutils'
+brew 'nano', args: ['HEAD', 'disable-nls', 'enable-color', 'enable-extra', 'enable-multibuffer', 'enable-nanorc', 'enable-utf8']
 brew 'python'
 
 # Install bash completions
@@ -143,6 +143,7 @@ cask 'keybase'
 # cask 'sourcetree'
 # cask 'sublime-text'
 cask 'undercover'
+# cask 'unclutter'
 cask 'vagrant'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
