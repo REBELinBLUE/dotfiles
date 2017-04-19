@@ -63,7 +63,7 @@ cd() {
     fi
 }
 
-export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help:history:clear:reset:_su"
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help:history:clear:reset"
 
 # Use /etc/is_vagrant_vm to test if vagrant and if so use yellow not red for the user/host
 HOST_COLOR=$CLI_RED
@@ -76,6 +76,11 @@ export BEHAT_PARAMS='{"formatters": {"pretty": {"output_styles": {"comment": ["b
 
 # FIXME: This is just horrible and is only used at work
 if [ -f /etc/is_vagrant_vm ]; then
+    export HISTIGNORE="${HISTIGNORE}:_su"
+    #export PHP_IDE_CONFIG="serverName=deployer.app"
+
+    alias debugphp="php -d zend_extension=xdebug.so"
+
     # FIXME: Do this automatically and use the correct work email
     function _gituser() {
         git config --global user.name "Stephen Ball"
@@ -91,6 +96,32 @@ if [ -f /etc/is_vagrant_vm ]; then
         if [ -f /home/$service/.venv ]; then
             source /home/$service/.venv
         fi
+    }
+
+    function xdebug()
+    {
+        sudo phpdismod -s cli xdebug
+
+        version=$(phpquery -V)
+
+        sudo echo 'zend_extension=xdebug.so' >> /etc/php/$version/fpm/conf.d/20-xdebug.ini
+        sudo echo '' >> /etc/php/$version/fpm/conf.d/20-xdebug.ini
+        sudo echo "xdebug.remote_enable = 1" >> /etc/php/$version/fpm/conf.d/20-xdebug.ini
+        sudo echo "xdebug.remote_connect_back = 1" >> /etc/php/$version/fpm/conf.d/20-xdebug.ini
+        sudo echo "xdebug.remote_port = 9000" >> /etc/php/$version/fpm/conf.d/20-xdebug.ini
+        sudo echo "xdebug.remote_host = 10.0.2.2" >> /etc/php/$version/fpm/conf.d/20-xdebug.ini
+        sudo echo "xdebug.max_nesting_level = 512" >> /etc/php/$version/fpm/conf.d/20-xdebug.ini
+        sudo echo "xdebug.profiler_enable = 1" >> /etc/php/$version/fpm/conf.d/20-xdebug.ini
+        sudo echo "xdebug.profiler_enable_trigger = 1" >> /etc/php/$version/fpm/conf.d/20-xdebug.ini
+        sudo echo "xdebug.profiler_output_dir = /vagrant/cachegrind" >> /etc/php/$version/fpm/conf.d/20-xdebug.ini
+        sudo echo "xdebug.idekey = PHPSTORM" >> /etc/php/$version/fpm/conf.d/20-xdebug.ini
+
+        sudo echo "xdebug.remote_enable = 1" >> /etc/php/$version/cli/conf.d/20-xdebug.ini
+        sudo echo "xdebug.remote_connect_back = 0" >> /etc/php/$version/cli/conf.d/20-xdebug.ini
+        sudo echo "xdebug.remote_autostart = 1" >> /etc/php/$version/cli/conf.d/20-xdebug.ini
+        sudo echo "xdebug.remote_port = 9000" >> /etc/php/$version/cli/conf.d/20-xdebug.ini
+        sudo echo "xdebug.remote_host = 10.0.2.2" >> /etc/php/$version/cli/conf.d/20-xdebug.ini
+        sudo echo "xdebug.idekey = PHPSTORM" >> /etc/php/$version/cli/conf.d/20-xdebug.ini
     }
 
     #function _su() {
@@ -164,7 +195,7 @@ else
         echo -e "${CLI_YELLOW}➜ Downloading bash-git-prompt${CLI_RESET}";
         sudo git clone https://github.com/magicmonty/bash-git-prompt.git $GIT_PROMPT --depth=1
         reset
-        source $SSHHOME/sshrc.bashrc
+        source "${SSHHOME}/sshrc.bashrc"
 
         echo -e "${CLI_GREEN}✔ bash-git-prompt setup!${CLI_RESET}";
     }
