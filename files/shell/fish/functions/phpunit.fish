@@ -1,25 +1,26 @@
 function phpunit -d "Runs PHPUnit"
-    php $(which phpunit) $@
-    RESULT=$?
+    php (which phpunit) "$argv"
 
-    if [[ $RESULT = 0 ]]; then
-        TITLE="Success"
-        MESSAGE="Tests ran succesfully"
-        IMAGE="$HOME/.dotfiles/files/icons/Success.icns"
-        SOUND="Glass"
-    elif [[ $RESULT = 1 || $RESULT = 2 ]]; then
-        TITLE="Failed"
-        MESSAGE="Tests are broken"
-        IMAGE="$HOME/.dotfiles/files/icons/Failed.icns"
-        SOUND="Basso"
+    if [ $status -eq 0 ]
+        set TITLE "Success"
+        set MESSAGE "Tests ran succesfully"
+        set IMAGE "$HOME/.dotfiles/files/icons/Success.icns"
+        set SOUND "Glass"
+    else if [ $status -eq 1 ]; or [ $status -eq 2 ]
+        set TITLE "Failed"
+        set MESSAGE "Tests are broken"
+        set IMAGE "$HOME/.dotfiles/files/icons/Failed.icns"
+        set SOUND "Basso"
     else
-        return $RESULT
-    fi
+        return $status
+    end
 
-    $(brew --prefix terminal-notifier)/bin/terminal-notifier -activate "com.googlecode.iTerm2" \
-                                                             -contentImage "$IMAGE" \
-                                                             -title "PHPUnit"\
-                                                             -subtitle "$TITLE" \
-                                                             -sound "$SOUND" \
-                                                             -message "$MESSAGE"
+    set -l PREFIX (brew --prefix terminal-notifier)
+
+    eval $PREFIX/bin/terminal-notifier -activate "com.googlecode.iTerm2" \
+                                       -contentImage "$IMAGE" \
+                                       -title P"HPUnit" \
+                                       -subtitle "$TITLE" \
+                                       -sound "$SOUND" \
+                                       -message "$MESSAGE"
 end
