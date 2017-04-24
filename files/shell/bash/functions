@@ -209,3 +209,5 @@ if is_os "darwin"; then
     }
 
 fi
+
+eval "$(direnv hook bash)"

@@ -126,6 +126,7 @@ brew 'm-cli'
 brew 'go'
 brew 'miller'
 brew 'kryptco/tap/kr'
+brew 'direnv'
 brew 'httpstat'
 
 # Apps

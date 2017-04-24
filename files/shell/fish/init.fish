@@ -12,7 +12,5 @@ if test -e $HOME/.config/extras.fish
     source $HOME/.config/extras.fish
 end
 
-# TODO
+eval (direnv hook fish)
 
-# Missing history config
-# Add PHPUnit function
