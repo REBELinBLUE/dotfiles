@@ -125,6 +125,7 @@ brew 'cheat'
 brew 'm-cli'
 brew 'go'
 brew 'miller'
+brew 'kryptco/tap/kr'
 brew 'httpstat'
 
 # Apps
