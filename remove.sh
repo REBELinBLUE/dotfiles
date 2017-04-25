@@ -15,6 +15,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Remove stuff
 # STUFF HERE
-brew remove homebrew/dupes/grep homebrew/dupes/diffutils homebrew/dupes/nano
+brew remove kryptco/tap/kr
+brew untap kryptco/tap
 
 source $HOME/.dotfiles/scripts/dotfiles.sh

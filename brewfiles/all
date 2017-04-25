@@ -13,7 +13,6 @@ tap 'homebrew/versions'
 tap 'homebrew/homebrew-php'
 tap 'alehouse/homebrew-unofficial'
 tap 'homebrew/command-not-found'
-tap 'kryptco/tap'
 
 # Make sure apps get installed in system Applications dir
 cask_args appdir: '/Applications'
@@ -126,7 +125,6 @@ brew 'cheat'
 brew 'm-cli'
 brew 'go'
 brew 'miller'
-brew 'kryptco/tap/kr'
 brew 'direnv'
 brew 'httpstat'
 
