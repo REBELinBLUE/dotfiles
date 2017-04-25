@@ -41,6 +41,10 @@ e_arrow 'Downloading PHPCS Fixer'
 curl -LsS https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.0.0/php-cs-fixer.phar -o /usr/local/bin/php-cs-fixer
 chmod a+x /usr/local/bin/php-cs-fixer
 
+e_arrow 'Downloading Faker'
+curl -LsS https://github.com/bit3/faker-cli/releases/download/1.4/faker.phar -o /usr/local/bin/faker
+chmod a+x /usr/local/bin/faker
+
 e_arrow 'Downloading PHPDoc'
 curl -LsS http://www.phpdoc.org/phpDocumentor.phar -o /usr/local/bin/phpdoc
 chmod a+x /usr/local/bin/phpdoc
