@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo find /mnt/HD/HD_a2/Media -name ".DS_Store" -type f -delete
+

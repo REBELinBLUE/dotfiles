@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sqlite3 /mnt/HD/HD_a2/plex_conf/Plex\ Media\ Server/Plug-in\ Support/Databases/com.plexapp.plugins.library.db "UPDATE metadata_items SET title = replace(title, '(1)', '(Part 1)'), title_sort = replace(title_sort, '(1)', '(Part 1)') WHERE metadata_type = 4;"
+sqlite3 /mnt/HD/HD_a2/plex_conf/Plex\ Media\ Server/Plug-in\ Support/Databases/com.plexapp.plugins.library.db "UPDATE metadata_items SET title = replace(title, '(2)', '(Part 2)'), title_sort = replace(title_sort, '(2)', '(Part 2)') WHERE metadata_type = 4;"
+sqlite3 /mnt/HD/HD_a2/plex_conf/Plex\ Media\ Server/Plug-in\ Support/Databases/com.plexapp.plugins.library.db "UPDATE metadata_items SET title = replace(title, '(3)', '(Part 3)'), title_sort = replace(title_sort, '(3)', '(Part 3)') WHERE metadata_type = 4;"

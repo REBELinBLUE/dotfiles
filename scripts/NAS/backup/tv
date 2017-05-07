@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rsync --exclude .plexignore --exclude _un --times --size-only -r -av /mnt/HD/HD_a2/Media/TV/ /mnt/USB/USB2_d3/
+rsync --exclude .plexignore --exclude _un -r -av /mnt/HD/HD_a2/Media/TV/ /mnt/USB/USB2_d3/

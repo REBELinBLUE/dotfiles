@@ -1,0 +1,46 @@
+#!/bin/sh
+
+source /mnt/HD/HD_a2/scripts/support/mount
+
+eval $(/opt/bin/dircolors /mnt/HD/HD_a2/scripts/support/dircolors)
+
+# Make nano the default editor.
+export EDITOR='nano -w'
+
+# Default log level for NPM
+export NPM_CONFIG_LOGLEVEL='error'
+
+# Easier navigation ~ and -
+alias ~='cd ~'           # `cd` is probably faster to type though
+
+# List files
+alias ls='ls -F --color=auto'
+alias ll='ls -l --color=auto'
+alias la='ls -lA --color=auto'
+alias l1='ls -1 --color=auto'
+alias sl='ls'
+
+# Prompt for confirmation
+alias cp='cp -iv'
+alias rm='rm -i'
+alias mv='mv -iv'
+
+# Other useful aliases
+alias grep='grep --color=auto -in'
+
+# Add edit alias
+alias edit=$EDITOR
+
+CLI_RED=$(tput -Txterm-256color setaf 1)
+CLI_GREEN=$(tput -Txterm-256color setaf 2)
+CLI_YELLOW=$(tput -Txterm-256color setaf 3)
+CLI_BLUE=$(tput -Txterm-256color setaf 4)
+CLI_MAGENTA=$(tput -Txterm-256color setaf 5)
+CLI_RESET=$(tput -Txterm-256color sgr0)
+
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help:history:clear:reset"
+
+export PS1="\n${CLI_RED}\h ${CLI_RESET}in ${CLI_MAGENTA}\w${CLI_RESET}\n$ ${CLI_RESET}"
+export PS2="> "
+
+cd /mnt/HD/HD_a2/

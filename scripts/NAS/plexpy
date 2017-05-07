@@ -1,0 +1,6 @@
+#!/bin/sh
+
+source /mnt/HD/HD_a2/scripts/support/mount
+
+cd /mnt/HD/HD_a2/plexpy
+/opt/bin/python2.7 /mnt/HD/HD_a2/plexpy/PlexPy.py > /dev/null 2>&1 &
