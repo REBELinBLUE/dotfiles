@@ -46,3 +46,4 @@ Thumbs.db
 # Tools #
 #########
 .bash-git-rc
+.freshignore
