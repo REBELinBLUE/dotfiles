@@ -54,7 +54,7 @@ curl -LsS https://phar.phpunit.de/phpunit.phar -o /usr/local/bin/phpunit
 chmod a+x /usr/local/bin/phpunit
 
 e_arrow 'Downloading PHPSpec'
-curl -LsS https://github.com/phpspec/phpspec/releases/download/3.2.2/phpspec.phar -o /usr/local/bin/phpspec
+curl -LsS https://github.com/phpspec/phpspec/releases/download/3.4.0/phpspec.phar -o /usr/local/bin/phpspec
 chmod a+x /usr/local/bin/phpspec
 
 e_arrow 'Downloading PHP Mess Detector'
@@ -73,6 +73,10 @@ chmod a+x /usr/local/bin/box2
 e_arrow 'Downloading PHPLoc'
 curl -LsS https://phar.phpunit.de/phploc.phar -o /usr/local/bin/phploc
 chmod a+x /usr/local/bin/phploc
+
+e_arrow 'Downloading Codeception'
+curl -LsS http://codeception.com/releases/2.2.11/codecept.phar -o /usr/local/bin/codecept
+chmod a+x /usr/local/bin/codecept
 
 e_arrow 'Downloading PHP Metrics'
 curl -LsS  https://github.com/phpmetrics/PhpMetrics/raw/master/build/phpmetrics.phar -o /usr/local/bin/phpmetrics
