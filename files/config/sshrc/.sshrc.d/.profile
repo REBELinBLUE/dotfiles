@@ -1,6 +1,3 @@
-
-
-
 # Make nano the default editor.
 export EDITOR='nano -w'
 
