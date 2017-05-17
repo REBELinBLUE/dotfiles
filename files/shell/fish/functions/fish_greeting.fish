@@ -1,8 +1,8 @@
 function fish_greeting -d "Greeting"
     #_logo
 
-    echo ""
-    command neofetch
+    #echo ""
+    #command neofetch
 
     #set_color $fish_color_autosuggestion
     #uname -nmsr
