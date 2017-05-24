@@ -34,6 +34,7 @@ mas install 1107421413 # 1blocker
 mas install 441258766 # Magnet
 mas install 603117688 # CCMenu
 mas install 1179623856 # Pastebot
+mas install 904280696 # Things
 
 # mas install 409201541 # Pages
 # mas install 409183694 # Keynote

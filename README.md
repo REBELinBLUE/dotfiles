@@ -12,7 +12,7 @@ $ ./setup.sh
 
 ### Add custom commands
 
-If `~/.config/extras.bash` exists, it will be sourced along with the other files. You can use this to add a few custom commands, or to add commands you don’t want to commit to a public repository.
+If `~/.config/extras.bash` or `~/.config/extras.fish` exists, it will be sourced along with the other files. You can use this to add a few custom commands, or to add commands you don’t want to commit to a public repository.
 
 For example
 
@@ -31,8 +31,7 @@ The following apps need to be installed manually
 * MetaX
 * Moneywiz 2
 * Tuneskit
-* Things - Out of date version in cask
-* WD Access & TPLink PLC Device Scan
+* TPLink PLC Device Scan
 
 Mac appstore apps can be installed with `scripts/mac-appstore.sh`
 
