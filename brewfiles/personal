@@ -9,7 +9,6 @@ cask_args appdir: '/Applications'
 # cask 'garmin-express'
 # cask 'houdahgeo'
 # cask 'imageoptim'
-# cask 'things' # Version in cask is so ridiculously out of date
 # cask 'transmission'
 # cask 'transmit'
 # cask 'vlc'
