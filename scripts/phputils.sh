@@ -29,6 +29,10 @@ e_arrow 'Downloading Behat'
 curl -LsS https://github.com/Behat/Behat/releases/download/v3.3.0/behat.phar -o /usr/local/bin/behat
 chmod a+x /usr/local/bin/behat
 
+e_arrow 'Downloading Couscous'
+curl -LsS http://couscous.io/couscous.phar -o /usr/local/bin/couscous
+chmod a+x /usr/local/bin/couscous
+
 e_arrow 'Downloading Symfony Installer'
 curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
 chmod a+x /usr/local/bin/symfony
