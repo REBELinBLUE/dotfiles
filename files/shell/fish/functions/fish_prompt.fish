@@ -7,10 +7,11 @@ function fish_prompt --description 'Write out the prompt'
     set -l green (set_color green)
     set -l normal (set_color normal)
 
-    set -g __fish_git_prompt_show_informative_status 1
-    set -g __fish_git_prompt_showstashstate 1
-    set -g __fish_git_prompt_show_untrackedfiles 1
+    # set -g __fish_git_prompt_show_informative_status "yes"
     set -g __fish_git_prompt_showupstream "informative"
+    set -g __fish_git_prompt_showdirtystate "yes"
+    set -g __fish_git_prompt_showstashstate "yes"
+    set -g __fish_git_prompt_showuntrackedfiles "yes"
     set -g __fish_git_prompt_char_upstream_ahead "↑·"
     set -g __fish_git_prompt_char_upstream_behind "↓·"
     set -g __fish_git_prompt_char_upstream_prefix " "
@@ -19,7 +20,7 @@ function fish_prompt --description 'Write out the prompt'
     set -g __fish_git_prompt_char_stateseparator " "
     set -g __fish_git_prompt_char_untrackedfiles "…"
     set -g __fish_git_prompt_char_stashstate "⚑ "
-    set -g __fish_git_prompt_char_conflictedstate "✖ "
+    set -g __fish_git_prompt_char_invalidstate "✖ "
     set -g __fish_git_prompt_char_cleanstate "✔"
     set -g __fish_git_prompt_color_branch blue
     set -g __fish_git_prompt_color_cleanstate green
@@ -29,7 +30,7 @@ function fish_prompt --description 'Write out the prompt'
     set -g __fish_git_prompt_color_branch_detached red
     set -g __fish_git_prompt_color_untrackedfiles $fish_color_normal
     set -g __fish_git_prompt_describe_style "describe"
-    set -g __fish_git_prompt_showcolorhints 1
+    set -g __fish_git_prompt_showcolorhints "yes"
 
     set -l last_status $status
 
