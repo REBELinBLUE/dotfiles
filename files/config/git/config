@@ -88,7 +88,6 @@
     required = true
 
 [help]
-
     # Automatically correct and execute mistyped commands
     autocorrect = 1
 
@@ -125,6 +124,9 @@
 
     # Pull in remote changes for the current repository and all its submodules
     pl = !"git pull; git submodule foreach git pull origin master"
+
+    # Push the branch to origin
+    po = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\""
 
     # Interactive rebase with the given number of latest commits
     reb = "!r() { git rebase --interactive HEAD~$1; }; r"
