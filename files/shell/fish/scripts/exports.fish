@@ -92,7 +92,7 @@ set -xg MANPATH (brew --prefix findutils)/libexec/gnuman (brew --prefix coreutil
 eval (dircolors -c $HOME/.dotfiles/files/shell/bash/dircolors | sed 's/>&\/dev\/null$//')
 
 # Fix behat colours
-export BEHAT_PARAMS='{"formatters": {"pretty": {"output_styles": {"comment": ["blue"]}}}}'
+set -xg BEHAT_PARAMS '{"formatters": {"pretty": {"output_styles": {"comment": ["blue"]}}}}'
 
 #    set -l FORMATTING '{
 #    "output_styles": {
