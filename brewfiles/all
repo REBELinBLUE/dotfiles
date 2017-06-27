@@ -44,7 +44,7 @@ brew 'fish'
 brew 'grep', args: ['with-default-names']
 brew 'vim', args: ['override-system-vi']
 brew 'diffutils'
-brew 'nano', args: ['HEAD', 'disable-nls', 'enable-color', 'enable-extra', 'enable-multibuffer', 'enable-nanorc', 'enable-utf8']
+brew 'nano', args: ['disable-nls', 'enable-color', 'enable-extra', 'enable-multibuffer', 'enable-nanorc', 'enable-utf8']
 brew 'python'
 
 # Install bash completions
@@ -130,7 +130,7 @@ brew 'direnv'
 brew 'httpstat'
 
 # Apps
-cask 'keybase'
+# cask 'keybase'
 # cask 'changes'
 # cask 'dropshare'
 # cask 'flux'
