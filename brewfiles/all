@@ -1,9 +1,6 @@
 # brewfile for all machines
 
 # Taps
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
 tap 'homebrew/bundle'
 tap 'homebrew/services'
 tap 'homebrew/dupes'
@@ -13,9 +10,6 @@ tap 'homebrew/versions'
 tap 'homebrew/homebrew-php'
 tap 'alehouse/homebrew-unofficial'
 tap 'homebrew/command-not-found'
-
-# Make sure apps get installed in system Applications dir
-cask_args appdir: '/Applications'
 
 # Install `wget` with IRI support
 brew 'wget', args: ['with-iri']
@@ -129,43 +123,3 @@ brew 'go'
 brew 'miller'
 brew 'direnv'
 brew 'httpstat'
-
-# Apps
-# cask 'keybase'
-# cask 'changes'
-# cask 'dropshare'
-# cask 'flux'
-# cask 'postico'
-# cask 'franz'
-# cask 'gpgtools'
-# cask 'iterm2'
-# cask 'macdown'
-# cask 'onyx'
-# cask 'postman'
-# cask 'sequel-pro'
-# cask 'sourcetree'
-# cask 'sublime-text'
-cask 'undercover'
-# cask 'unclutter'
-cask 'vagrant'
-cask 'virtualbox'
-cask 'virtualbox-extension-pack'
-# cask 'cakebrew'
-# cask 'viscosity'
-# cask 'paw'
-cask 'ngrok'
-
-# Quicklook
-cask 'qlcolorcode'
-cask 'qlmarkdown'
-cask 'quicklook-json'
-cask 'quicklook-csv'
-cask 'qlstephen'
-cask 'qlprettypatch'
-cask 'qlimagesize'
-
-# Fonts
-cask 'font-source-code-pro'
-cask 'font-source-sans-pro'
-cask 'font-source-serif-pro'
-cask 'font-fira-code'
