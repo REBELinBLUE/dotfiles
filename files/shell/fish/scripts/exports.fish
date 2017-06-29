@@ -78,6 +78,7 @@ set -xg DEFAULT_CHEAT_DIR $XDG_CONFIG_HOME/cheats
 set -xg VBOX_USER_HOME $XDG_CONFIG_HOME/virtualbox
 set -xg DOCKER_CONFIG $XDG_CONFIG_HOME/docker
 set -xg GRIPHOME $XDG_CONFIG_HOME/grip
+set -xg VIMINIT 'let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 
 set -e RUBY_VERSION
 

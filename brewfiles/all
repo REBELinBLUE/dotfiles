@@ -69,6 +69,7 @@ brew 'php56-xdebug'
 brew 'ffmpeg'
 
 # Install other tools
+brew 'neovim'
 brew 'httpie'
 brew 'aria2'
 brew 'borg'

@@ -68,6 +68,9 @@ if is_os "darwin"; then
 
     # Lock the screen - Screensaver
     alias afk="mac screensaver"
+
+    # Neovim
+    alias vim="nvim"
 fi
 
 alias composer.phar="/usr/local/bin/composer"
