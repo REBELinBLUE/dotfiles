@@ -24,6 +24,7 @@ brew update
 # Install brew apps
 brew tap homebrew/bundle
 brew bundle --file=brewfiles/all
+brew bundle --file=brewfiles/extras
 
 # On work computer
 #brew bundle --file=brewfiles/work
