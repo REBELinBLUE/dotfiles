@@ -19,6 +19,7 @@ brew 'kafkacat'
 brew 'noti'
 brew 'hugo' # Used by luna-styleguide
 brew 'gitup'
+brew 'mailhog'
 
 # cask 'charles'
 # cask 'java'
