@@ -5,7 +5,7 @@ tap 'caskroom/cask'
 cask_args appdir: '/Applications'
 
 # cask 'cleanmymac'
-# # cask 'cocktail' # Currently a 404
+# cask 'cocktail' # Currently a 404
 # cask 'garmin-express'
 # cask 'houdahgeo'
 # cask 'imageoptim'
