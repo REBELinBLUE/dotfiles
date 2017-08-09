@@ -9,5 +9,4 @@ set keycolor red
 set functioncolor yellow
 
 include "/opt/nano-highlight/*.nanorc"
-include "/usr/local/share/nano/*.nanorc"
 
