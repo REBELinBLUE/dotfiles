@@ -27,12 +27,12 @@ mas install 588726889 # ReadKit
 mas install 402383384 # Base
 mas install 416812579 # File Multi Tool 5
 mas install 924726344 # Deliveries
-mas install 870659406 # Stache
-mas install 449589707 # Dash
+# mas install 870659406 # Stache
+# mas install 449589707 # Dash
 mas install 1176895641 # Spark
 mas install 1107421413 # 1blocker
-mas install 441258766 # Magnet
-mas install 603117688 # CCMenu
+# mas install 441258766 # Magnet
+# mas install 603117688 # CCMenu
 mas install 1179623856 # Pastebot
 mas install 904280696 # Things
 
