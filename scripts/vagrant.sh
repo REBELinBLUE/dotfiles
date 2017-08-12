@@ -42,7 +42,7 @@ EOF
 
 sudo mv /tmp/vagrant /etc/sudoers.d/vagrant
 sudo chown root:wheel /private/etc/sudoers.d/vagrant
-sudo chmod 440 /private/etc/sudoers.d/vagrant
+sudo chmod 644 /private/etc/sudoers.d/vagrant
 
 # Download debian and ubuntu boxes
 #vagrant box add --provider virtualbox debian/jessie64
