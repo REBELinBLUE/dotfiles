@@ -18,10 +18,6 @@ vagrant plugin install vagrant-triggers
 vagrant plugin install vagrant-rebuild
 vagrant plugin install vagrant-clean
 vagrant plugin install vagrant-nuke
-#vagrant plugin install deep_merge
-
-# Install vagrant plugins for work machine
-vagrant plugin install vagrant-proxyconf
 
 # For some reason 0.6.1 which is in homebrew causes problems with vagrant
 curl https://raw.githubusercontent.com/Russell91/sshrc/0.6/sshrc --silent -o /usr/local/bin/vagrant-sshrc
@@ -49,8 +45,8 @@ sudo chown root:wheel /private/etc/sudoers.d/vagrant
 sudo chmod 440 /private/etc/sudoers.d/vagrant
 
 # Download debian and ubuntu boxes
-vagrant box add --provider virtualbox debian/jessie64
-vagrant box add --provider virtualbox ubuntu/trusty64
+#vagrant box add --provider virtualbox debian/jessie64
+#vagrant box add --provider virtualbox ubuntu/trusty64
 
 if [ ! -d $HOME/Vagrant/ ]; then
     mkdir $HOME/Vagrant/
