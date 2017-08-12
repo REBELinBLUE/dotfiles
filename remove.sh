@@ -14,6 +14,7 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Remove stuff
-# STUFF HERE
+sudo npm uninstall -g dredd
+vagrant plugin uninstall vagrant-proxyconf
 
 source $HOME/.dotfiles/scripts/dotfiles.sh
