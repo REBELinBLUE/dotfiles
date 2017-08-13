@@ -17,4 +17,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 sudo npm uninstall -g dredd
 vagrant plugin uninstall vagrant-proxyconf
 
+sudo launchctl unload -w /Library/LaunchDaemons/limit.maxfiles.plist
+sudo launchctl unload -w /Library/LaunchDaemons/limit.maxproc.plist
+
+sudo rm /Library/LaunchDaemons/limit.maxfiles.plist
+sudo rm /Library/LaunchDaemons/limit.maxproc.plist
+
 source $HOME/.dotfiles/scripts/dotfiles.sh
