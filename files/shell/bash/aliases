@@ -37,7 +37,7 @@ alias _="sudo"
 alias sudo="sudo "
 
 # Open gists in browser
-alias gist="gist -o"
+alias gist="gist -o -p"
 
 # Get public IP
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
