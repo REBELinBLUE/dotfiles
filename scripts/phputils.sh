@@ -24,6 +24,8 @@ chmod a+x /usr/local/bin/melody
 e_arrow 'Downloading Psysh'
 curl -LsS https://git.io/psysh -o /usr/local/bin/psysh
 chmod a+x /usr/local/bin/psysh
+mkdir -p ~/.local/share/psysh/
+curl -LsS http://psysh.org/manual/en/php_manual.sqlite -o ~/.local/share/psysh/php_manual.sqlite
 
 e_arrow 'Downloading Behat'
 curl -LsS https://github.com/Behat/Behat/releases/download/v3.3.0/behat.phar -o /usr/local/bin/behat
