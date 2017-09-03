@@ -28,6 +28,9 @@
     header = white dim
     untracked = cyan
 
+[commit]
+    gpgsign = true
+
 [diff]
     # Use more time to create better diffs
     algorithm = patience
