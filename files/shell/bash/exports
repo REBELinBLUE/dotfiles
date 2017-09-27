@@ -114,6 +114,7 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="$COMPOSER_HOME/vendor/bin:$PATH"
 export PATH="./vendor/bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
+export PATH="$PATH:$GEM_HOME/bin"
 
 # Fix behat colours
 export BEHAT_PARAMS='{"formatters": {"pretty": {"output_styles":{"comment": ["blue"]}}}}'

@@ -12,3 +12,6 @@ if [ -r $HOME/.config/extras.bash ] && [ -f $HOME/.config/extras.bash ]; then
 fi
 
 source $HOME/.dotfiles/files/shell/bash/clear-colours
+
+# added by travis gem
+[ -f /Users/stephen.ball/.travis/travis.sh ] && source /Users/stephen.ball/.travis/travis.sh

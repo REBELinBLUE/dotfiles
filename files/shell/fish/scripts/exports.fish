@@ -86,7 +86,7 @@ set -e RUBY_VERSION
 # Add more paths
 set -xg PATH /usr/local/sbin $HOME/.local/bin $GOBIN $HOME/.yarn/bin /usr/local/opt/sqlite/bin \
             $COMPOSER_HOME/vendor/bin (brew --prefix findutils)/bin (brew --prefix coreutils)/libexec/gnubin \
-            /usr/local/bin /usr/bin /bin /usr/sbin /sbin /Applications/VirtualBox.app/Contents/MacOS
+            $GEM_HOME/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /Applications/VirtualBox.app/Contents/MacOS
 
 set -xg MANPATH (brew --prefix findutils)/libexec/gnuman (brew --prefix coreutils)/share/man:
 
