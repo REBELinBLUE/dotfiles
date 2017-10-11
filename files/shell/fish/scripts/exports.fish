@@ -13,10 +13,6 @@ set -xg XDG_RUNTIME_DIR $XDG_CACHE_HOME
 
 set -xg WORKSPACE $HOME/Workspace
 
-# Go
-set -xg GOPATH $XDG_DATA_HOME/go
-set -xg GOBIN $GOPATH/bin
-
 # Homebrew options
 set -xg HOMEBREW_CASK_OPTS "--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom"
 
@@ -84,7 +80,7 @@ set -xg NVM_DIR $XDG_CONFIG_HOME/nvm
 set -e RUBY_VERSION
 
 # Add more paths
-set -xg PATH /usr/local/sbin $HOME/.local/bin $GOBIN $HOME/.yarn/bin /usr/local/opt/sqlite/bin \
+set -xg PATH /usr/local/sbin $HOME/.local/bin $HOME/.yarn/bin /usr/local/opt/sqlite/bin \
             $COMPOSER_HOME/vendor/bin (brew --prefix findutils)/bin (brew --prefix coreutils)/libexec/gnubin \
             $GEM_HOME/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /Applications/VirtualBox.app/Contents/MacOS
 

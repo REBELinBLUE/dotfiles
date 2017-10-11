@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+cd#!/usr/bin/env bash
 
 source $HOME/.dotfiles/scripts/utils.sh
 
@@ -103,7 +103,9 @@ if [ ! -e $HOME/.config/vim/vimrc ]; then
 	ln -s $HOME/.dotfiles/files/config/vimrc $HOME/.config/vim/vimrc
 fi
 
-mkdir $XDG_CACHE_HOME/vim
+if [ ! -d $XDG_CACHE_HOME/vim ]; then
+	mkdir -p $XDG_CACHE_HOME/vim
+fi
 
 # Symlink npmrc
 if [ ! -d $HOME/.config/npm/ ]; then
