@@ -14,3 +14,5 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 #brew install node yarn
 
 npm install -g eslint gulp bower jslint jshint create-project jscs npm-check
+
+npm config -g set init-license MIT
