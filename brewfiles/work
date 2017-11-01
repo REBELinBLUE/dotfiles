@@ -20,6 +20,7 @@ brew 'awscli'
 # brew 'hugo' # Used by luna-styleguide
 # brew 'gitup'
 # brew 'mailhog'
+brew 'watchman'
 
 # cask 'charles'
 # cask 'java'
