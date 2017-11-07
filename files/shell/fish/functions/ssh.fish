@@ -10,7 +10,7 @@ function ssh
         set SSHCOMMAND 'command ssh'
     else if [ $argv = "imac"  ]
         set SSHCOMMAND 'command ssh'
-    else if [ $argv = "mba" ]
+    else if [ $argv = "mbp" ]
         set SSHCOMMAND 'command ssh'
     end
 
