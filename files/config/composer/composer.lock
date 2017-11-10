@@ -1089,16 +1089,16 @@
         },
         {
             "name": "tightenco/collect",
-            "version": "v5.5.16",
+            "version": "v5.5.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tightenco/collect.git",
-                "reference": "b4f148060842eeebb08edb005978360767af3630"
+                "reference": "ea6c2f9df3786d0997f34ef4f12e66bba85774c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tightenco/collect/zipball/b4f148060842eeebb08edb005978360767af3630",
-                "reference": "b4f148060842eeebb08edb005978360767af3630",
+                "url": "https://api.github.com/repos/tightenco/collect/zipball/ea6c2f9df3786d0997f34ef4f12e66bba85774c3",
+                "reference": "ea6c2f9df3786d0997f34ef4f12e66bba85774c3",
                 "shasum": ""
             },
             "require": {
@@ -1107,6 +1107,9 @@
             "require-dev": {
                 "mockery/mockery": "~1.0",
                 "phpunit/phpunit": "~6.0"
+            },
+            "suggest": {
+                "symfony/var-dumper": "Required to prettify dd() and dump() (~3.3)."
             },
             "type": "library",
             "autoload": {
@@ -1132,7 +1135,7 @@
                 "collection",
                 "laravel"
             ],
-            "time": "2017-10-16T16:11:46+00:00"
+            "time": "2017-11-09T17:52:28+00:00"
         }
     ],
     "packages-dev": [],
