@@ -30,6 +30,8 @@ function itunes -d "Control iTunes. Use -h or --help for a more detailed descrip
                 end
 
                 return 0
+            case resume
+                set opt "play"
             case launch play pause stop quit
             #case shuffle
             #    set opt "set shuffle of current playlist to 1"
@@ -41,6 +43,8 @@ function itunes -d "Control iTunes. Use -h or --help for a more detailed descrip
                 set opt "set mute to false"
             case next previous
                 set opt "$opt track"
+            case prev
+                set opt "previous track"
             case vol volume
                 set vol (osascript -e 'tell application "iTunes" to sound volume as integer')
                 set newvol 100
@@ -54,7 +58,7 @@ function itunes -d "Control iTunes. Use -h or --help for a more detailed descrip
                 end
 
                 set opt "set sound volume to $newvol"
-            case "" -h --help -help
+            case "" help -h --help -help
                 __show_help
                 return 0
             case '*'
@@ -84,8 +88,8 @@ function __show_help
     e_tabbed 'next' 'Play the next track'
     e_tabbed 'previous' 'Play the previous track'
     e_tabbed 'vol <volume>' 'Set the volume, takes an argument from 0 to 100'
-    e_tabbed 'vol up' 'Increases the volumn'
-    e_tabbed 'vol down' 'Decreases the volumn'
+    e_tabbed 'vol up' 'Increases the volume'
+    e_tabbed 'vol down' 'Decreases the volume'
     e_tabbed 'help' 'Show this message and exit'
 
     return 0
