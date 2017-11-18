@@ -1,6 +1,6 @@
 # Additional brewfile only for main computer
 
-tap 'dinkypumpkin/get_iplayer'
+tap 'get-iplayer/get_iplayer'
 tap 'caskroom/cask'
 
 cask_args appdir: '/Applications'
