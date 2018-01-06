@@ -92,7 +92,7 @@ brew 'gnutls'
 brew 'gawk'
 brew 'sqlite'
 brew 'osquery'
-brew 'htop'
+# brew 'htop' # Broken, badly on High Sierra
 brew 'diff-so-fancy'
 brew 'ack'
 brew 'gzip'
