@@ -14,6 +14,13 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Remove stuff
-brew remove htop thefuck
+brew remove htop
+brew remove thefuck
+omf remove artisan
+omf remove brew
+omf remove bak
+omf remove kill-on-port
+omf remove sudope
+omf remove homebrew-command-not-found
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh
