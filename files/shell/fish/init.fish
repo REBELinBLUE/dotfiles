@@ -14,6 +14,4 @@ end
 
 eval (direnv hook fish)
 
-thefuck --alias | source
-
-touchbar
+#touchbar
