@@ -30,7 +30,7 @@ fi
 # The path to tee now hard coded in vagrant 1.9.7 instead of replying on $PATH
 cat > /tmp/vagrant << EOF
 # Allow Vagrant to manage NFS exports.
-Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
+Cmnd_Alias VAGRANT_EXPORTS_ADD = $(which tee) -a /etc/exports
 Cmnd_Alias VAGRANT_NFSD = $(which nfsd) restart
 Cmnd_Alias VAGRANT_EXPORTS_REMOVE = $(which sed) -E -e /*/ d -ibak /etc/exports
 
