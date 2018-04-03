@@ -17,6 +17,27 @@ else
     /usr/local/bin/composer self-update
 fi
 
+brew link php@5.6 --force
+pecl channel-update pecl.php.net
+pecl install xdebug
+
+brew unlink php@5.6
+brew link php@7.0 --force
+pecl channel-update pecl.php.net
+pecl install xdebug
+
+brew unlink php@7.0
+brew link php@7.1 --force
+pecl channel-update pecl.php.net
+pecl install xdebug
+
+brew unlink php@7.1
+brew link php@7.2 --force
+pecl channel-update pecl.php.net
+pecl install xdebug
+
+brew-php-switcher $(cat ~/.cache/php_version) -s
+
 e_arrow 'Downloading Melody'
 curl -LsS http://get.sensiolabs.org/melody.phar -o /usr/local/bin/melody
 chmod a+x /usr/local/bin/melody

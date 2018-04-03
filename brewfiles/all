@@ -50,17 +50,13 @@ brew 'bash-git-prompt'
 
 brew 'brew-php-switcher'
 
-brew 'php72', args: ['with-phpdbg', 'with-homebrew-curl', 'with-postgresql', 'without-fpm']
-brew 'php72-xdebug'
+brew 'php@7.2', args: ['with-phpdbg', 'with-homebrew-curl', 'with-postgresql', 'without-fpm']
 
-brew 'php71', args: ['with-phpdbg', 'with-homebrew-curl', 'with-postgresql', 'without-fpm']
-brew 'php71-xdebug'
+brew 'php@7.1', args: ['with-phpdbg', 'with-homebrew-curl', 'with-postgresql', 'without-fpm']
 
-brew 'php70', args: ['with-phpdbg', 'with-homebrew-curl', 'with-postgresql', 'without-fpm']
-brew 'php70-xdebug'
+brew 'php@7.0', args: ['with-phpdbg', 'with-homebrew-curl', 'with-postgresql', 'without-fpm']
 
-brew 'php56', args: ['with-phpdbg', 'with-homebrew-curl', 'with-postgresql', 'without-fpm']
-brew 'php56-xdebug'
+brew 'php@5.6', args: ['with-phpdbg', 'with-homebrew-curl', 'with-postgresql', 'without-fpm']
 
 # Install media tools
 brew 'ffmpeg'
