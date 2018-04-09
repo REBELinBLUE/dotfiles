@@ -14,10 +14,5 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Remove stuff
-# brew remove htop
-# brew remove thefuck
-brew untap homebrew/homebrew-php
-brew remove php@7.2 php@7.1 php@7.0 php@5.6  php72-xdebug php71-xdebug php70-xdebug php56-xdebug
-rm -rf /usr/local/etc/php /usr/local/lib/php
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh

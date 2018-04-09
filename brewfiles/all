@@ -63,6 +63,7 @@ brew 'ffmpeg'
 
 # Install other tools
 brew 'neovim'
+brew 'autoconf'
 brew 'nvm'
 brew 'httpie'
 brew 'aria2'
