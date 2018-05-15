@@ -72,7 +72,6 @@ chmod a+x /usr/local/bin/symfony
 e_arrow 'Downloading PHP Code Sniffer'
 curl -LsS https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar -o /usr/local/bin/phpcs
 chmod a+x /usr/local/bin/phpcs
-/usr/local/bin/phpcs --config-set installed_paths $COMPOSER_HOME/vendor/escapestudios/symfony2-coding-standard/
 
 e_arrow 'Downloading PHPCS Fixer'
 curl -LsS https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.0.0/php-cs-fixer.phar -o /usr/local/bin/php-cs-fixer
