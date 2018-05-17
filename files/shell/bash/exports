@@ -15,7 +15,7 @@ if is_os "darwin"; then
     export MANPATH="$(brew --prefix findutils)/libexec/gnuman:$MANPATH"
     export MANPATH="$(brew --prefix coreutils)/share/man:$MANPATH"
 
-    export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom"
+    export HOMEBREW_CASK_OPTS="--appdir=/Applications" # --caskroom=/opt/homebrew-cask/Caskroom"
 fi
 
 # XDG directories

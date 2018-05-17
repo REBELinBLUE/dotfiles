@@ -14,7 +14,7 @@ set -xg XDG_RUNTIME_DIR $XDG_CACHE_HOME
 set -xg WORKSPACE $HOME/Workspace
 
 # Homebrew options
-set -xg HOMEBREW_CASK_OPTS "--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom"
+set -xg HOMEBREW_CASK_OPTS "--appdir=/Applications" # --caskroom=/opt/homebrew-cask/Caskroom"
 
 # Setup terminal, and turn on colors
 set -x TERM "xterm-256color"
