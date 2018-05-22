@@ -126,6 +126,10 @@ e_arrow 'Installing PHP Parallel Lint'
 cp $HOME/.dotfiles/bin/php-parallel-lint-0.9.2.phar /usr/local/bin/php-parallel-lint
 chmod a+x /usr/local/bin/php-parallel-lint
 
+e_arrow 'Installing PHPStand'
+curl -LsS https://github.com/phpstan/phpstan/releases/download/0.9.2/phpstan.phar -o /usr/local/bin/phpstan
+chmod a+x /usr/local/bin/phpstan
+
 e_arrow 'Installing PHPDoccheck'
 cp $HOME/.dotfiles/bin/phpdoccheck-1.3.4.phar /usr/local/bin/phpdoccheck
 chmod a+x /usr/local/bin/phpdoccheck
