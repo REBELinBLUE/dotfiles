@@ -14,5 +14,8 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Remove stuff
+rm $(brew --prefix php@5.6)/pecl/20131226/xdebug.so
+rm -rf usr/local/Cellar/php@5.6/
+brew remove php@5.6
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh

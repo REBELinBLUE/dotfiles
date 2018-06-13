@@ -56,8 +56,6 @@ brew 'php@7.1', args: ['with-phpdbg', 'with-homebrew-curl', 'with-postgresql', '
 
 brew 'php@7.0', args: ['with-phpdbg', 'with-homebrew-curl', 'with-postgresql', 'without-fpm']
 
-brew 'php@5.6', args: ['with-phpdbg', 'with-homebrew-curl', 'with-postgresql', 'without-fpm']
-
 # Install media tools
 brew 'ffmpeg'
 
