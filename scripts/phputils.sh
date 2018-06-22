@@ -128,6 +128,10 @@ e_arrow 'Installing PHPDoccheck'
 cp $HOME/.dotfiles/bin/phpdoccheck-1.3.4.phar /usr/local/bin/phpdoccheck
 chmod a+x /usr/local/bin/phpdoccheck
 
+rm -f /usr/local/bin/pstorm
+ln -s $HOME/.dotfiles/bin/pstorm /usr/local/bin/pstorm
+chmod +x /usr/local/bin/pstorm
+
 if [ ! -d $HOME/.config/composer/ ]; then
     mkdir -p $HOME/.config/composer/
 fi
