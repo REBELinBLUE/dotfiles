@@ -15,6 +15,7 @@ pip3 install --upgrade pip
 pip3 install httpie-oauth
 pip3 install httpie-jwt-auth
 pip3 install http-prompt
+pip3 install glances
 #pip3 install --user 'cozmo[camera]'
 #pip3 install localstack
 
