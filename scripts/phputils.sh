@@ -68,12 +68,8 @@ curl -LsS https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar -o /usr/local/b
 chmod a+x /usr/local/bin/phpcs
 
 e_arrow 'Downloading PHPCS Fixer'
-curl -LsS https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.0.0/php-cs-fixer.phar -o /usr/local/bin/php-cs-fixer
+curl -LsS https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.12.1/php-cs-fixer.phar -o /usr/local/bin/php-cs-fixer
 chmod a+x /usr/local/bin/php-cs-fixer
-
-e_arrow 'Downloading Faker'
-curl -LsS https://github.com/bit3/faker-cli/releases/download/1.4/faker.phar -o /usr/local/bin/faker
-chmod a+x /usr/local/bin/faker
 
 e_arrow 'Downloading PHPDoc'
 curl -LsS http://www.phpdoc.org/phpDocumentor.phar -o /usr/local/bin/phpdoc
@@ -105,7 +101,7 @@ curl -LsS https://phar.phpunit.de/phploc.phar -o /usr/local/bin/phploc
 chmod a+x /usr/local/bin/phploc
 
 e_arrow 'Downloading Codeception'
-curl -LsS http://codeception.com/releases/2.2.11/codecept.phar -o /usr/local/bin/codecept
+curl -LsS http://codeception.com/releases/2.4.3/codecept.phar -o /usr/local/bin/codecept
 chmod a+x /usr/local/bin/codecept
 
 e_arrow 'Downloading PHP Metrics'
@@ -120,8 +116,8 @@ e_arrow 'Installing PHP Parallel Lint'
 cp $HOME/.dotfiles/bin/php-parallel-lint-0.9.2.phar /usr/local/bin/php-parallel-lint
 chmod a+x /usr/local/bin/php-parallel-lint
 
-e_arrow 'Installing PHPStand'
-curl -LsS https://github.com/phpstan/phpstan/releases/download/0.9.2/phpstan.phar -o /usr/local/bin/phpstan
+e_arrow 'Installing PHPStan'
+curl -LsS https://github.com/phpstan/phpstan/releases/download/0.10.1/phpstan.phar -o /usr/local/bin/phpstan
 chmod a+x /usr/local/bin/phpstan
 
 e_arrow 'Installing PHPDoccheck'
