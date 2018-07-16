@@ -1,28 +1,5 @@
 # Additional brewfile only for work Mac
 
-# tap 'caskroom/cask'
-# tap 'homebrew/versions'
-# tap 'homebrew/homebrew-php'
-
-# cask_args appdir: '/Applications'
-
-# brew 'ansible'
-# brew 'ansible@2.0'
 brew 'awscli'
-# brew 'php70-rdkafka'
-# brew 'php70-intl'
-# brew 'php70-apcu-bc'
-# brew 'php71-rdkafka'
-# brew 'php70-redis'
-# brew 'php71-redis'
-# brew 'kafkacat'
-# brew 'noti'
-# brew 'hugo' # Used by luna-styleguide
-# brew 'gitup'
-# brew 'mailhog'
 brew 'watchman'
-
-# cask 'charles'
-# cask 'java'
-# cask 'adpassmon'
-# cask 'visual-studio-code'
+brew 'postgresql'
