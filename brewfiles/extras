@@ -30,6 +30,7 @@ cask 'virtualbox-extension-pack'
 # cask 'viscosity'
 # cask 'paw'
 cask 'ngrok'
+cask 'java'
 
 # Quicklook
 cask 'qlcolorcode'
