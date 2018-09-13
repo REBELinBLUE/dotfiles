@@ -3,3 +3,4 @@
 brew 'awscli'
 brew 'watchman'
 brew 'postgresql'
+brew 'terraform'
