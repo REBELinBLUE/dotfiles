@@ -135,7 +135,7 @@
     reb = "!r() { git rebase --interactive HEAD~$1; }; r"
 
     # Remove the old tag with this name and tag the latest commit with it.
-    rmtag = "!r() { git tag --deleteg $1 && git push origin :refs/tags/$1 }; r"
+    rmtag = "!r() { git tag --delete $1 && git push origin :refs/tags/$1; }; r"
 
     # Show verbose output about remotes
     remotes = remote --verbose
