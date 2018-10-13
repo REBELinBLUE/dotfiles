@@ -18,5 +18,6 @@ rm -f /usr/local/bin/faker
 rm -f /Library/LaunchDaemons/com.docker.loopback.plist
 
 omf remove foreign-env
+brew remove yarn
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh

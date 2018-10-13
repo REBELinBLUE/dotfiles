@@ -80,7 +80,7 @@ set -xg NVM_DIR $XDG_CONFIG_HOME/nvm
 set -e RUBY_VERSION
 
 # Add more paths
-set -xg PATH /usr/local/sbin $HOME/.local/bin $HOME/.yarn/bin /usr/local/opt/sqlite/bin \
+set -xg PATH /usr/local/sbin $HOME/.local/bin /usr/local/opt/sqlite/bin \
             $COMPOSER_HOME/vendor/bin /usr/local/opt/findutils/bin /usr/local/opt/coreutils/libexec/gnubin \
             $GEM_HOME/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /Applications/VirtualBox.app/Contents/MacOS
 
