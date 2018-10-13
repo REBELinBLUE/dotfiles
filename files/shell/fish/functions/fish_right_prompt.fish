@@ -153,7 +153,7 @@ function fish_right_prompt -d 'The right prompt'
 
     #__cmd_duration
     __prompt_status $last_status
-    __vagrant
+    #__vagrant
     __timestamp
 
     set_color normal

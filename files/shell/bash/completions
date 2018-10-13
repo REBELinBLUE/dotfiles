@@ -1,14 +1,14 @@
 if is_os "darwin"; then
-    if [ -f $(brew --prefix)/etc/bash_completion.d/vagrant ]; then
-        source $(brew --prefix)/etc/bash_completion.d/vagrant
+    if [ -f /usr/local/etc/bash_completion.d/vagrant ]; then
+        source /usr/local/etc/bash_completion.d/vagrant
     fi
 
-    if [ -f $(brew --prefix)/etc/bash_completion ]; then
-        source $(brew --prefix)/etc/bash_completion
+    if [ -f /usr/local/etc/bash_completion ]; then
+        source /usr/local/etc/bash_completion
     fi
 
-    if [ -f $(brew --repository)/Library/Contributions/brew_bash_completion.sh ]; then
-        source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
+    if [ -f /usr/local/Homebrew/Library/Contributions/brew_bash_completion.sh ]; then
+        source /usr/local/Homebrew/Library/Contributions/brew_bash_completion.sh
     fi
 fi
 

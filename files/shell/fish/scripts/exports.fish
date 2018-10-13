@@ -81,12 +81,12 @@ set -e RUBY_VERSION
 
 # Add more paths
 set -xg PATH /usr/local/sbin $HOME/.local/bin $HOME/.yarn/bin /usr/local/opt/sqlite/bin \
-            $COMPOSER_HOME/vendor/bin (brew --prefix findutils)/bin (brew --prefix coreutils)/libexec/gnubin \
+            $COMPOSER_HOME/vendor/bin /usr/local/opt/findutils/bin /usr/local/opt/coreutils/libexec/gnubin \
             $GEM_HOME/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /Applications/VirtualBox.app/Contents/MacOS
 
-set -xg MANPATH (brew --prefix findutils)/libexec/gnuman (brew --prefix coreutils)/share/man:
+set -xg MANPATH /usr/local/opt/findutils/libexec/gnuman /usr/local/opt/coreutils/share/man:
 
-# Set LS_COLORS
+# # Set LS_COLORS
 eval (dircolors -c $HOME/.dotfiles/files/shell/bash/dircolors | sed 's/>&\/dev\/null$//')
 
 # Fix behat colours

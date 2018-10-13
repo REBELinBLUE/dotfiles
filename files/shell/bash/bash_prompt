@@ -12,7 +12,7 @@ fi
 # Load bash-git-prompt
 GIT_PROMPT=/opt/bash-git-prompt
 if is_os "darwin"; then
-    GIT_PROMPT=$(brew --prefix bash-git-prompt)/share
+    GIT_PROMPT=/usr/local/opt/bash-git-prompt/share
 fi
 
 if [ -f ${GIT_PROMPT}/gitprompt.sh ]; then
@@ -41,12 +41,12 @@ else
 fi
 
 # Change to the directory if a WIP directory exists
-HAS_WIP=`l | command grep wip | wc -l`
-if [ ! $HAS_WIP -eq 0 ]; then
-    WIP=`p wip`
-    WIP=${WIP/$HOME/\~} # Replace the user's home directory with ~
-
-    echo ""
-    e_warning "A work in progress directory found at $WIP"
-    g wip
-fi
+# HAS_WIP=`l | command grep wip | wc -l`
+# if [ ! $HAS_WIP -eq 0 ]; then
+#     WIP=`p wip`
+#     WIP=${WIP/$HOME/\~} # Replace the user's home directory with ~
+#
+#     echo ""
+#     e_warning "A work in progress directory found at $WIP"
+#     g wip
+# fi

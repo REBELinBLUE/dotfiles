@@ -17,4 +17,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 rm -f /usr/local/bin/faker
 rm -f /Library/LaunchDaemons/com.docker.loopback.plist
 
+omf remove foreign-env
+
 #source $HOME/.dotfiles/scripts/dotfiles.sh
