@@ -49,7 +49,6 @@ if [ ! -e $HOME/.ssh/config.d ]; then
 	ln -s $HOME/.dotfiles/files/.ssh/config.d/ $HOME/.ssh/config.d
 fi
 
-
 # Make ~/.config directory if missing
 if [ ! -d $HOME/.config ]; then
 	mkdir $HOME/.config
@@ -103,8 +102,8 @@ if [ ! -e $HOME/.config/vim/vimrc ]; then
 	ln -s $HOME/.dotfiles/files/config/vimrc $HOME/.config/vim/vimrc
 fi
 
-if [ ! -d $XDG_CACHE_HOME/vim ]; then
-	mkdir -p $XDG_CACHE_HOME/vim
+if [ ! -d $HOME/.cache/vim ]; then
+	mkdir -p $HOME/.cache/vim
 fi
 
 # Symlink npmrc
