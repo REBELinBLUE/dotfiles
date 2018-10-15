@@ -3,11 +3,6 @@
 # Taps
 tap 'homebrew/bundle'
 tap 'homebrew/services'
-tap 'homebrew/dupes'
-tap 'homebrew/completions'
-tap 'homebrew/binary'
-tap 'homebrew/versions'
-tap 'homebrew/homebrew-php'
 tap 'alehouse/homebrew-unofficial'
 tap 'homebrew/command-not-found'
 
@@ -60,7 +55,6 @@ brew 'php@7.0', args: ['with-phpdbg', 'with-homebrew-curl', 'with-postgresql', '
 brew 'ffmpeg'
 
 # Install other tools
-brew 'neovim'
 brew 'autoconf'
 brew 'nvm'
 brew 'httpie'
@@ -121,4 +115,3 @@ brew 'httpstat'
 brew 'docker-completion'
 brew 'docker-compose-completion'
 brew 'mysql-client'
-brew 'darksky-weather'
