@@ -46,7 +46,7 @@ curl -LsS http://get.sensiolabs.org/melody.phar -o /usr/local/bin/melody
 chmod a+x /usr/local/bin/melody
 
 e_arrow 'Downloading Psysh'
-curl -LsS https://git.io/psysh -o /usr/local/bin/psysh
+curl -LsS https://psysh.org/psysh -o /usr/local/bin/psysh
 chmod a+x /usr/local/bin/psysh
 mkdir -p ~/.local/share/psysh/
 curl -LsS http://psysh.org/manual/en/php_manual.sqlite -o ~/.local/share/psysh/php_manual.sqlite
