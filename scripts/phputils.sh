@@ -39,7 +39,7 @@ cp /tmp/php7.0-xdebug.so $(brew --prefix php@7.0)/pecl/20151012/xdebug.so
 cp /tmp/php7.1-xdebug.so $(brew --prefix php@7.1)/pecl/20160303/xdebug.so
 cp /tmp/php7.2-xdebug.so $(brew --prefix php@7.2)/pecl/20170718/xdebug.so
 
-brew-php-switcher 7.0 -s
+brew-php-switcher 7.2 -s
 
 e_arrow 'Downloading Melody'
 curl -LsS http://get.sensiolabs.org/melody.phar -o /usr/local/bin/melody
@@ -52,7 +52,7 @@ mkdir -p ~/.local/share/psysh/
 curl -LsS http://psysh.org/manual/en/php_manual.sqlite -o ~/.local/share/psysh/php_manual.sqlite
 
 e_arrow 'Downloading Behat'
-curl -LsS https://github.com/Behat/Behat/releases/download/v3.3.0/behat.phar -o /usr/local/bin/behat
+curl -LsS https://github.com/Behat/Behat/releases/download/v3.5.0/behat.phar -o /usr/local/bin/behat
 chmod a+x /usr/local/bin/behat
 
 e_arrow 'Downloading Couscous'
@@ -68,7 +68,7 @@ curl -LsS https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar -o /usr/local/b
 chmod a+x /usr/local/bin/phpcs
 
 e_arrow 'Downloading PHPCS Fixer'
-curl -LsS https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.12.1/php-cs-fixer.phar -o /usr/local/bin/php-cs-fixer
+curl -LsS https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.13.1/php-cs-fixer.phar -o /usr/local/bin/php-cs-fixer
 chmod a+x /usr/local/bin/php-cs-fixer
 
 e_arrow 'Downloading PHPDoc'
