@@ -1,9 +1,6 @@
 {
     "require": {
-        "laravel/installer": "^1.3",
-        "laravel/lumen-installer": "^1.0",
-        "laravel/homestead": "^3.0",
-        "laravel/valet": "^1.0",
-        "hirak/prestissimo": "^0.3.7"
+        "hirak/prestissimo": "^0.3.7",
+        "localheinz/composer-normalize": "^1.1"
     }
 }
