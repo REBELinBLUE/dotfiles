@@ -5,6 +5,7 @@ tap 'homebrew/bundle'
 tap 'homebrew/services'
 tap 'alehouse/homebrew-unofficial'
 tap 'homebrew/command-not-found'
+tap 'wagoodman/dive'
 
 # Install `wget` with IRI support
 brew 'wget', args: ['with-iri']
@@ -116,3 +117,6 @@ brew 'docker-completion'
 brew 'docker-compose-completion'
 brew 'mysql-client'
 brew 'iproute2mac'
+brew 'dive'
+brew 'stern'
+brew 'kubectx'
