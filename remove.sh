@@ -14,5 +14,6 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Remove stuff
+brew remove php@7.0
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh

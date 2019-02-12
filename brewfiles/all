@@ -46,11 +46,11 @@ brew 'bash-git-prompt'
 
 brew 'brew-php-switcher'
 
+brew 'php@7.3', args: ['with-phpdbg', 'with-homebrew-curl', 'with-postgresql', 'without-fpm']
+
 brew 'php@7.2', args: ['with-phpdbg', 'with-homebrew-curl', 'with-postgresql', 'without-fpm']
 
 brew 'php@7.1', args: ['with-phpdbg', 'with-homebrew-curl', 'with-postgresql', 'without-fpm']
-
-brew 'php@7.0', args: ['with-phpdbg', 'with-homebrew-curl', 'with-postgresql', 'without-fpm']
 
 # Install media tools
 brew 'ffmpeg'
