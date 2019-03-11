@@ -17,7 +17,6 @@ else
     /usr/local/bin/composer self-update
 fi
 
-brew-php-switcher 7.0 -s
 pecl channel-update pecl.php.net
 pecl uninstall xdebug
 pecl install xdebug
@@ -35,11 +34,18 @@ pecl uninstall xdebug
 pecl install xdebug
 cp $(brew --prefix php@7.2)/pecl/20170718/xdebug.so /tmp/php7.2-xdebug.so
 
-cp /tmp/php7.0-xdebug.so $(brew --prefix php@7.0)/pecl/20151012/xdebug.so
+
+brew-php-switcher 7.3 -s
+pecl channel-update pecl.php.net
+pecl uninstall xdebug
+pecl install xdebug
+cp $(brew --prefix php@7.3)/pecl/20180731/xdebug.so /tmp/php7.3-xdebug.so
+
 cp /tmp/php7.1-xdebug.so $(brew --prefix php@7.1)/pecl/20160303/xdebug.so
 cp /tmp/php7.2-xdebug.so $(brew --prefix php@7.2)/pecl/20170718/xdebug.so
+cp /tmp/php7.3-xdebug.so $(brew --prefix php@7.3)/pecl/20180731/xdebug.so
 
-brew-php-switcher 7.2 -s
+brew-php-switcher 7.3 -s
 
 e_arrow 'Downloading Melody'
 curl -LsS http://get.sensiolabs.org/melody.phar -o /usr/local/bin/melody
