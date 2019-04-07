@@ -6,6 +6,7 @@ tap 'homebrew/services'
 tap 'alehouse/homebrew-unofficial'
 tap 'homebrew/command-not-found'
 tap 'wagoodman/dive'
+tap 'c-bata/kube-prompt'
 
 # Install `wget` with IRI support
 brew 'wget', args: ['with-iri']
@@ -122,5 +123,5 @@ brew 'dive'
 brew 'stern'
 brew 'kubectx'
 #brew 'kubens'
-brew 'c-bata/kube-prompt/kube-prompt'
+brew 'kube-prompt'
 brew 'kubernetes-helm'
