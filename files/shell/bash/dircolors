@@ -238,6 +238,7 @@ EXEC                    00;32       # This is for files with execute permission:
 .ini        00;36
 .properties 00;36
 .yaml       00;36
+.yml        00;36
 .vcl        00;36 # Varnish
 .plist      00;36 # OSX properties
 
