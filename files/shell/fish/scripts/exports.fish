@@ -60,7 +60,7 @@ set -xg SDIRS $XDG_CONFIG_HOME/marks
 set -xg VAGRANT_HOME $XDG_DATA_HOME/vagrant
 set -xg PGCLIRC $XDG_CONFIG_HOME/pgcli/config
 set -xg MYCLIRC $XDG_CONFIG_HOME/mycli/config
-set -xg WGETRC $XDG_CONFIG_HOME/wget/config
+#set -xg WGETRC $XDG_CONFIG_HOME/wget/config
 set -xg HTTPIE_CONFIG_DIR $XDG_CONFIG_HOME/httpie
 set -xg NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
 set -xg SCREENRC $XDG_CONFIG_HOME/screen/screenrc
