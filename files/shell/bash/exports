@@ -105,6 +105,7 @@ export DOCKER_CONFIG=$XDG_CONFIG_HOME/docker
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
+export PATH="$HOME/.krew/bin:$PATH"
 export PATH="$COMPOSER_HOME/vendor/bin:$PATH"
 export PATH="./vendor/bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"

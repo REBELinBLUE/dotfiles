@@ -38,3 +38,11 @@ cp -f "$HOME/.dotfiles/files/Monaco for Powerline.otf" $HOME/Library/Fonts/
 git clone  https://github.com/serialhex/nano-highlight.git /opt/nano-highlight
 
 gem install travis -v 1.8.8 --no-rdoc --no-ri
+
+(
+  set -x; cd "$(mktemp -d)" &&
+  curl -fsSLO "https://storage.googleapis.com/krew/v0.2.1/krew.{tar.gz,yaml}" &&
+  tar zxvf krew.tar.gz &&
+  ./krew-"$(uname | tr '[:upper:]' '[:lower:]')_amd64" install \
+    --manifest=krew.yaml --archive=krew.tar.gz
+)
