@@ -46,3 +46,8 @@ gem install travis -v 1.8.8 --no-rdoc --no-ri
   ./krew-"$(uname | tr '[:upper:]' '[:lower:]')_amd64" install \
     --manifest=krew.yaml --archive=krew.tar.gz
 )
+
+kubectl krew install get-all
+kubectl krew install access-matrix
+kubectl krew install resource-capacity
+kubectl krew install rbac-lookup
