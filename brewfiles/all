@@ -7,6 +7,8 @@ tap 'alehouse/homebrew-unofficial'
 tap 'homebrew/command-not-found'
 tap 'wagoodman/dive'
 tap 'c-bata/kube-prompt'
+tap 'derailed/k9s'
+
 
 # Install `wget` with IRI support
 brew 'wget', args: ['with-iri']
@@ -126,3 +128,4 @@ brew 'kube-prompt'
 brew 'kubernetes-helm'
 brew 'pv'
 brew 'dnsmasq'
+brew 'k9s'
