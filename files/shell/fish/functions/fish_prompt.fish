@@ -55,7 +55,7 @@ function fish_prompt --description 'Write out the prompt'
 
     set -l cwd $color_cwd (pwd | sed "s:^$HOME:~:")
 
-    set -l host (hostname | sed "s:.lan::" | sed "s:.local::")
+    set -l host (hostname | sed "s:.lan::" | sed "s:.local::" | sed "s:.cable.virginmedia.net::")
 
     set -l whowhere $green (whoami) $normal ' at ' $green $host $normal ' in '
 
