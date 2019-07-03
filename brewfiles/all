@@ -8,7 +8,7 @@ tap 'homebrew/command-not-found'
 tap 'wagoodman/dive'
 tap 'c-bata/kube-prompt'
 tap 'derailed/k9s'
-
+tap 'jesseduffield/lazydocker'
 
 # Install `wget` with IRI support
 brew 'wget', args: ['with-iri']
@@ -128,3 +128,4 @@ brew 'kube-prompt'
 brew 'kubernetes-helm'
 brew 'pv'
 brew 'k9s'
+brew 'lazydocker'
