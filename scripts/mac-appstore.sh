@@ -23,7 +23,7 @@ mas install 443987910 # 1Password
 mas install 975937182 # Fantastical 2
 mas install 523620159 # CleanMyDrive 2
 mas install 411643860 # DaisyDisk
-mas install 588726889 # ReadKit
+# mas install 588726889 # ReadKit
 mas install 402383384 # Base
 mas install 416812579 # File Multi Tool 5
 mas install 924726344 # Deliveries
@@ -34,7 +34,7 @@ mas install 1107421413 # 1blocker
 # mas install 441258766 # Magnet
 # mas install 603117688 # CCMenu
 mas install 1179623856 # Pastebot
-mas install 904280696 # Things
+# mas install 904280696 # Things
 
 # mas install 409201541 # Pages
 # mas install 409183694 # Keynote
