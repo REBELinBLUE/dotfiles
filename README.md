@@ -28,10 +28,8 @@ The following apps need to be installed manually
 
 * Firefox - Needs to be installed manually so 1password will run
 * Google Chrome - Needs to be installed manually so 1password will run
-* MetaX
-* Moneywiz 2
-* Tuneskit
-* TPLink PLC Device Scan
+* MetaZ
+* Moneywiz
 
 Mac appstore apps can be installed with `scripts/mac-appstore.sh`
 
