@@ -52,3 +52,4 @@ kubectl krew install access-matrix
 kubectl krew install resource-capacity
 kubectl krew install rbac-lookup
 kubectl krew install kubesec-scan
+kubectl krew install who-can
