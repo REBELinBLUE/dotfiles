@@ -40,7 +40,7 @@ source $HOME/.dotfiles/scripts/homebrew.sh
 source $HOME/.dotfiles/scripts/others.sh
 source $HOME/.dotfiles/scripts/phputils.sh
 source $HOME/.dotfiles/scripts/node.sh
-source $HOME/.dotfiles/scripts/vagrant.sh
+#source $HOME/.dotfiles/scripts/vagrant.sh
 source $HOME/.dotfiles/scripts/dotfiles.sh
 source $HOME/.dotfiles/scripts/osx.sh
 source $HOME/.dotfiles/scripts/bash.sh
