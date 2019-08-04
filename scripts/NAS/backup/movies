@@ -2,4 +2,3 @@
 
 rsync --exclude .plexignore --exclude _un --times --size-only -r -av /mnt/HD/HD_a2/Media/Movies/ /mnt/USB/USB2_d2/Movies/
 rsync --exclude .plexignore --exclude _un -r -av /mnt/HD/HD_a2/Media/Movies/ /mnt/USB/USB2_d2/Movies/
-

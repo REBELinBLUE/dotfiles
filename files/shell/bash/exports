@@ -113,5 +113,3 @@ export PATH="$PATH:$GEM_HOME/bin"
 
 # Fix behat colours
 export BEHAT_PARAMS='{"formatters": {"pretty": {"output_styles":{"comment": ["blue"]}}}}'
-
-

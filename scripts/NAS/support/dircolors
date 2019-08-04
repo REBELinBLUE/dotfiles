@@ -318,4 +318,3 @@ EXEC                    00;32       # This is for files with execute permission:
 .class      01;30
 .cache      01;30
 .egg-info   01;30
-

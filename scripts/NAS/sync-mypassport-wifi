@@ -1,21 +1,21 @@
 #!/bin/bash
 
 for D in /mnt/USB/USB2_d2/Media/Downloads/*; do
-	if [ -d "${D}" ]; then
-		echo "${D}"   # your processing here
-		NAME=$(basename "${D}")
+    if [ -d "${D}" ]; then
+        echo "${D}"   # your processing here
+        NAME=$(basename "${D}")
 
-		rsync --delete --exclude _un --times --size-only -r -av "/mnt/HD/HD_a2/Media/Downloads/${NAME}/" "${D}/"
-		rsync --delete --exclude _un -r -av "/mnt/HD/HD_a2/Media/Downloads/${NAME}/" "${D}/"
-	fi
+        rsync --delete --exclude _un --times --size-only -r -av "/mnt/HD/HD_a2/Media/Downloads/${NAME}/" "${D}/"
+        rsync --delete --exclude _un -r -av "/mnt/HD/HD_a2/Media/Downloads/${NAME}/" "${D}/"
+    fi
 done
 
 for D in /mnt/USB/USB2_d2/Media/TV/*; do
-	if [ -d "${D}" ]; then
-		echo "${D}"   # your processing here
-		NAME=$(basename "${D}")
+    if [ -d "${D}" ]; then
+        echo "${D}"   # your processing here
+        NAME=$(basename "${D}")
 
-		rsync --delete --exclude _un --times --size-only -r -av "/mnt/HD/HD_a2/Media/TV/${NAME}/" "${D}/"
-		rsync --delete --exclude _un -r -av "/mnt/HD/HD_a2/Media/TV/${NAME}/" "${D}/"
-	fi
+        rsync --delete --exclude _un --times --size-only -r -av "/mnt/HD/HD_a2/Media/TV/${NAME}/" "${D}/"
+        rsync --delete --exclude _un -r -av "/mnt/HD/HD_a2/Media/TV/${NAME}/" "${D}/"
+    fi
 done

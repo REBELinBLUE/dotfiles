@@ -2,4 +2,3 @@
 
 mount -o bind /mnt/USB/USB1_c1 /opt
 source /mnt/HD/HD_a2/scripts/support/setpath
-
