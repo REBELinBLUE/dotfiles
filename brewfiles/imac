@@ -16,6 +16,7 @@ brew 'libdvdcss'
 brew 'handbrake'
 brew 'winetricks'
 brew 'wine'
+brew 'k3d'
 
 # cask 'bbc-iplayer-downloads'
 # cask 'crashplan'
