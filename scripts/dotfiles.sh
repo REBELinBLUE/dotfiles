@@ -60,8 +60,8 @@ if [ ! -d $HOME/.local ]; then
 fi
 
 # Oh-my-fish
-if [ ! -e $HOME/.config/omf ]; then
-    ln -s $HOME/.dotfiles/files/shell/fish $HOME/.config/omf
+if [ ! -e $HOME/.config/starship.toml ]; then
+    ln -s $HOME/.dotfiles/files/config/starship.toml $HOME/.config/starship.toml
 fi
 
 # Symlink the sshrc.d config

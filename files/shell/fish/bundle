@@ -1,6 +1,0 @@
-package bang-bang
-package config
-package foreign-env
-package https://github.com/decors/fish-colored-man
-package nvm
-theme default
