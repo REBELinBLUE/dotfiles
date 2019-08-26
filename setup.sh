@@ -44,5 +44,6 @@ source $HOME/.dotfiles/scripts/node.sh
 source $HOME/.dotfiles/scripts/dotfiles.sh
 source $HOME/.dotfiles/scripts/osx.sh
 source $HOME/.dotfiles/scripts/bash.sh
+source $HOME/.dotfiles/scripts/fish.sh
 
 #scutil --set HostName iMac.local
