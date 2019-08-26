@@ -129,7 +129,6 @@ brew 'kubernetes-helm'
 brew 'pv'
 brew 'k9s'
 brew 'lazydocker'
-brew 'rust'
 
 # Trying out a replacement to fish
 brew 'starship'
