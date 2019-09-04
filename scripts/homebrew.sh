@@ -23,9 +23,11 @@ if [[ $SIP_STATUS == *"enabled"* ]]; then
 else
     BASHPATH=$(brew --prefix)/bin/bash
     FISHPATH=$(brew --prefix)/bin/fish
+    ZSHPATH=$(brew --prefix)/bin/zsh
 
     sudo echo $BASHPATH >> /etc/shells
     sudo echo $FISHPATH >> /etc/shells
+    sudo echo $ZSHPATH >> /etc/shells
 
     chsh -s $FISHPATH
 fi
