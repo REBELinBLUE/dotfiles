@@ -11,7 +11,7 @@ brew 'tvnamer'
 brew 'rtmpdump'
 brew 'atomicparsley'
 brew 'id3v2'
-brew 'get_iplayer', args: ['with-deps']
+brew 'get_iplayer'
 brew 'libdvdcss'
 brew 'handbrake'
 brew 'winetricks'

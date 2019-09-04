@@ -11,21 +11,21 @@ tap 'derailed/k9s'
 tap 'jesseduffield/lazydocker'
 
 # Install `wget` with IRI support
-brew 'wget', args: ['with-iri']
+brew 'wget'
 
 # Install curl
-brew 'curl', args: ['with-openssl']
+brew 'curl'
 
 # Install GNU tool
-brew 'findutils', args: ['with-default-names']
+brew 'findutils'
 brew 'coreutils'
 brew 'moreutils'
-brew 'gnu-indent', args: ['with-default-names']
-brew 'gnu-getopt', args: ['with-default-names']
-brew 'gnu-tar', args: ['with-default-names']
-brew 'gnu-which', args: ['with-default-names']
-brew 'gnu-sed', args: ['with-default-names']
-brew 'make', args: ['with-default-names']
+brew 'gnu-indent'
+brew 'gnu-getopt'
+brew 'gnu-tar'
+brew 'gnu-which'
+brew 'gnu-sed'
+brew 'make'
 
 # Install Bash 4
 brew 'bash'
@@ -34,10 +34,11 @@ brew 'bash'
 brew 'fish'
 
 # Install more recent versions of some OS X tools
-brew 'grep', args: ['with-default-names']
-brew 'vim', args: ['override-system-vi']
+brew 'grep'
+brew 'vim'
 brew 'diffutils'
-brew 'nano', args: ['disable-nls', 'enable-color', 'enable-extra', 'enable-multibuffer', 'enable-nanorc', 'enable-utf8']
+brew 'nano'
+#brew 'nano', args: ['disable-nls', 'enable-color', 'enable-extra', 'enable-multibuffer', 'enable-nanorc', 'enable-utf8']
 brew 'python'
 
 # Install bash completions
@@ -48,12 +49,9 @@ brew 'bash-completion'
 brew 'bash-git-prompt'
 
 brew 'brew-php-switcher'
-
-brew 'php@7.3', args: ['with-phpdbg', 'with-homebrew-curl', 'with-postgresql', 'without-fpm']
-
-brew 'php@7.2', args: ['with-phpdbg', 'with-homebrew-curl', 'with-postgresql', 'without-fpm']
-
-brew 'php@7.1', args: ['with-phpdbg', 'with-homebrew-curl', 'with-postgresql', 'without-fpm']
+brew 'php@7.3'
+brew 'php@7.2'
+brew 'php@7.1'
 
 # Install media tools
 brew 'ffmpeg'

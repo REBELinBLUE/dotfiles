@@ -7,13 +7,27 @@ fi
 
 if is_os "darwin"; then
     # Add additional paths
-    export PATH="/usr/local/opt/findutils/bin:$PATH"
-    export PATH="/Applications/VirtualBox.app/Contents/MacOS:$PATH"
+    export PATH="/usr/local/opt/vim/bin:$PATH"
+    export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
     export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+    export PATH="/usr/local/opt/gnu-indent/libexec/gnubin:$PATH"
+    export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+    export PATH="/usr/local/opt/gnu-which/libexec/gnubin:$PATH"
+    export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
+    export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+    export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+    export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+    export PATH="/usr/local/opt/nano/bin:$PATH"
+    export PATH="/Applications/VirtualBox.app/Contents/MacOS:$PATH"
 
     # Add additional manpath
     export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
     export MANPATH="/usr/local/opt/coreutils/share/man:$MANPATH"
+    export MANPATH="/usr/local/opt/gnu-tar/libexec/gnuman:$MANPATH"
+    export MANPATH="/usr/local/opt/gnu-which/libexec/gnuman:$MANPATH"
+    export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
+    export MANPATH="/usr/local/opt/make/libexec/gnuman:$MANPATH"
+    export MANPATH="/usr/local/opt/grep/libexec/gnuman:$MANPATH"
 
     export HOMEBREW_CASK_OPTS="--appdir=/Applications" # --caskroom=/opt/homebrew-cask/Caskroom"
 fi
@@ -107,8 +121,8 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="$HOME/.krew/bin:$PATH"
 export PATH="$COMPOSER_HOME/vendor/bin:$PATH"
-export PATH="./vendor/bin:$PATH"
-export PATH="./node_modules/.bin:$PATH"
+#export PATH="./vendor/bin:$PATH"
+#export PATH="./node_modules/.bin:$PATH"
 export PATH="$PATH:$GEM_HOME/bin"
 
 # Fix behat colours

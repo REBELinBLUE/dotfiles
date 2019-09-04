@@ -81,12 +81,37 @@ set -xg nvm_prefix /usr/local/opt/nvm
 set -e RUBY_VERSION
 
 # Add more paths
-set -xg PATH /usr/local/sbin $HOME/.local/bin /usr/local/opt/sqlite/bin \
+set -xg PATH /usr/local/sbin \
+            $HOME/.local/bin /usr/local/opt/sqlite/bin \
             $HOME/.krew/bin \
-            $COMPOSER_HOME/vendor/bin /usr/local/opt/findutils/bin /usr/local/opt/coreutils/libexec/gnubin \
-            $GEM_HOME/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /Applications/VirtualBox.app/Contents/MacOS
+            $COMPOSER_HOME/vendor/bin \
+            /usr/local/opt/vim/bin \
+            /usr/local/opt/nano/bin \
+            /usr/local/opt/gnu-sed/libexec/gnubin \
+            /usr/local/opt/findutils/libexec/gnubin \
+            /usr/local/opt/coreutils/libexec/gnubin \
+            /usr/local/opt/gnu-indent/libexec/gnubin \
+            /usr/local/opt/gnu-tar/libexec/gnubin \
+            /usr/local/opt/gnu-which/libexec/gnubin \
+            /usr/local/opt/make/libexec/gnubin \
+            /usr/local/opt/gnu-getopt/bin \
+            /usr/local/opt/grep/libexec/gnubin \
+            /Applications/VirtualBox.app/Contents/MacOS \
+            $GEM_HOME/bin \
+            /usr/local/bin \
+            /usr/bin \
+            /bin \
+            /usr/sbin \
+            /sbin
 
-set -xg MANPATH /usr/local/opt/findutils/libexec/gnuman /usr/local/opt/coreutils/share/man:
+set -xg MANPATH /usr/local/opt/findutils/libexec/gnuman \
+                /usr/local/opt/coreutils/share/man \
+                /usr/local/opt/gnu-tar/libexec/gnuman \
+                /usr/local/opt/gnu-which/libexec/gnuman \
+                /usr/local/opt/gnu-which/libexec/gnuman \
+                /usr/local/opt/gnu-sed/libexec/gnuman \
+                /usr/local/opt/make/libexec/gnuman \
+                $MANPATH
 
 # # Set LS_COLORS
 eval (dircolors -c $HOME/.dotfiles/files/shell/bash/dircolors | sed 's/>&\/dev\/null$//')
