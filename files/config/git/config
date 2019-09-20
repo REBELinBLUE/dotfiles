@@ -161,6 +161,9 @@
     # Unstage changes
     unstage = reset --quiet HEAD --
 
+    # Switches to master and removes all local branches not master
+    wash = !"git reset --hard HEAD && git checkout master && (git branch | grep -v '^*' | xargs git branch -D)"
+
 [pager]
     diff = diff-so-fancy | less --tabs=4 -RFX --pattern='^(added|deleted|modified):'
     show = diff-so-fancy | less --tabs=4 -RFX --pattern='^(added|deleted|modified):'
