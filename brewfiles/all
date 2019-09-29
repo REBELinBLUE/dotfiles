@@ -127,7 +127,6 @@ brew 'kubernetes-helm'
 brew 'pv'
 brew 'k9s'
 brew 'lazydocker'
-
-# Trying out a replacement to fish
+brew 'vault'
 brew 'starship'
 brew 'zsh'
