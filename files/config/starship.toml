@@ -1,3 +1,6 @@
 [directory]
 truncate_to_repo = false
 truncation_length = 8
+
+[kubernetes]
+disabled = false
