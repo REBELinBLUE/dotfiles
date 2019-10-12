@@ -130,3 +130,5 @@ brew 'lazydocker'
 brew 'vault'
 brew 'starship'
 brew 'zsh'
+brew 'kubespy'
+
