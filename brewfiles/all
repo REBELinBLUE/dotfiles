@@ -132,3 +132,4 @@ brew 'starship'
 brew 'zsh'
 brew 'kubespy'
 
+cask '1password-cli'
