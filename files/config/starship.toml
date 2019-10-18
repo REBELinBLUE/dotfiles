@@ -4,3 +4,6 @@ truncation_length = 8
 
 [kubernetes]
 disabled = false
+
+[aws]
+disabled = true
