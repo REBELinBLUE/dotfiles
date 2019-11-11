@@ -9,6 +9,7 @@ tap 'wagoodman/dive'
 tap 'c-bata/kube-prompt'
 tap 'derailed/k9s'
 tap 'jesseduffield/lazydocker'
+tap 'derailed/popeye'
 
 # Install `wget` with IRI support
 brew 'wget'
