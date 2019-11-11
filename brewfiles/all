@@ -131,5 +131,6 @@ brew 'vault'
 brew 'starship'
 brew 'zsh'
 brew 'kubespy'
+brew 'derailed/popeye/popeye'
 
 #cask '1password-cli'
