@@ -135,5 +135,6 @@ brew 'kubespy'
 brew 'derailed/popeye/popeye'
 brew 'octant'
 brew 'fluxctl'
+brew 'hadolint'
 
 #cask '1password-cli'
