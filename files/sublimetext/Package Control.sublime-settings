@@ -2,8 +2,6 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
-		"DotENV",
-		"fish"
 	],
 	"installed_packages":
 	[

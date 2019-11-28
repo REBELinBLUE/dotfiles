@@ -105,6 +105,7 @@ export GEMRC=$XDG_CONFIG_HOME/gemrc/config
 export GRIPHOME=$XDG_CONFIG_HOME/grip
 export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 export NVM_DIR=$XDG_CONFIG_HOME/nvm
+export FLUX_FORWARD_NAMESPACE=flux
 
 if type_exists 'ruby'; then
     export GEM_HOME="$HOME/.local/lib/ruby/gems/$(ruby -e 'puts RbConfig::CONFIG["ruby_version"]')"

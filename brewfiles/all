@@ -134,5 +134,6 @@ brew 'zsh'
 brew 'kubespy'
 brew 'derailed/popeye/popeye'
 brew 'octant'
+brew 'fluxctl'
 
 #cask '1password-cli'
