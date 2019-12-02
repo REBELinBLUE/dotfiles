@@ -53,7 +53,6 @@ brew 'brew-php-switcher'
 brew 'php@7.4'
 brew 'php@7.3'
 brew 'php@7.2'
-brew 'php@7.1'
 
 # Install media tools
 brew 'ffmpeg'
@@ -137,5 +136,6 @@ brew 'derailed/popeye/popeye'
 brew 'octant'
 brew 'fluxctl'
 brew 'hadolint'
+brew 'speedtest-cli'
 
 #cask '1password-cli'
