@@ -137,5 +137,6 @@ brew 'octant'
 brew 'fluxctl'
 brew 'hadolint'
 brew 'speedtest-cli'
+brew 'velero'
 
 #cask '1password-cli'
