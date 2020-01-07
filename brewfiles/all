@@ -138,5 +138,6 @@ brew 'fluxctl'
 brew 'hadolint'
 brew 'speedtest-cli'
 brew 'velero'
+brew 'shellcheck'
 
 #cask '1password-cli'
