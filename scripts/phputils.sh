@@ -17,12 +17,6 @@ else
     /usr/local/bin/composer self-update
 fi
 
-brew-php-switcher 7.1 -s
-pecl channel-update pecl.php.net
-pecl uninstall xdebug
-pecl install xdebug
-cp $(brew --prefix php@7.1)/pecl/20160303/xdebug.so /tmp/php7.1-xdebug.so
-
 brew-php-switcher 7.2 -s
 pecl channel-update pecl.php.net
 pecl uninstall xdebug
@@ -35,11 +29,17 @@ pecl uninstall xdebug
 pecl install xdebug
 cp $(brew --prefix php@7.3)/pecl/20180731/xdebug.so /tmp/php7.3-xdebug.so
 
-cp /tmp/php7.1-xdebug.so $(brew --prefix php@7.1)/pecl/20160303/xdebug.so
+brew-php-switcher 7.4 -s
+pecl channel-update pecl.php.net
+pecl uninstall xdebug
+pecl install xdebug
+cp $(brew --prefix php@7.4)/pecl/20190902/xdebug.so /tmp/php7.4-xdebug.so
+
 cp /tmp/php7.2-xdebug.so $(brew --prefix php@7.2)/pecl/20170718/xdebug.so
 cp /tmp/php7.3-xdebug.so $(brew --prefix php@7.3)/pecl/20180731/xdebug.so
+cp /tmp/php7.4-xdebug.so $(brew --prefix php@7.4)/pecl/20190902/xdebug.so
 
-brew-php-switcher 7.3 -s
+brew-php-switcher 7.4 -s
 
 e_arrow 'Downloading Psysh'
 curl -LsS https://psysh.org/psysh -o /usr/local/bin/psysh
