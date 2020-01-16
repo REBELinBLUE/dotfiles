@@ -13,5 +13,5 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # sudo rm -rf /uca/local/lib/node_modules
 # brew install node nvm
 
-npm install -g eslint create-project jscs npm-check json5 serve markdownlint
+npm install -g eslint create-project jscs npm-check json5 serve markdownlint-cli
 npm config -g set init-license MIT
