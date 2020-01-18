@@ -14,8 +14,8 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Remove stuff
-sudo rm -rf $(brew --prefix php@7.1)/pecl/20160303/xdebug.so
-brew remove php@7.1
+
+kubectl krew remove doctor
 
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh

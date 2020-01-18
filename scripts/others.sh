@@ -54,6 +54,5 @@ kubectl krew install kubesec-scan
 kubectl krew install who-can
 kubectl krew install outdated
 kubectl krew install tree
-kubectl krew install doctor
 kubectl krew install pod-dive
 
