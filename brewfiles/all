@@ -139,5 +139,6 @@ brew 'hadolint'
 brew 'speedtest-cli'
 brew 'velero'
 brew 'shellcheck'
+brew 'ctop'
 
 #cask '1password-cli'
