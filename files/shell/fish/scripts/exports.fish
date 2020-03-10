@@ -81,10 +81,13 @@ set -xg FLUX_FORWARD_NAMESPACE flux
 
 set -e RUBY_VERSION
 
+set -xg GOPATH $HOME/go
+
 # Add more paths
 set -xg PATH /usr/local/sbin \
             $HOME/.local/bin /usr/local/opt/sqlite/bin \
             $HOME/.krew/bin \
+            $GOPATH/bin \
             $COMPOSER_HOME/vendor/bin \
             /usr/local/opt/vim/bin \
             /usr/local/opt/nano/bin \
