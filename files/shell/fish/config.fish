@@ -1,4 +1,4 @@
-if test -z "$INTELLIJ_ENVIRONMENT_READER"
+if test -z "$__INTELLIJ_COMMAND_HISTFILE__"
     eval (starship init fish)
 
     # Load helper files
@@ -8,7 +8,7 @@ end
 # Load exports
 source $HOME/.dotfiles/files/shell/fish/scripts/exports.fish
 
-if test -z "$INTELLIJ_ENVIRONMENT_READER"
+if test -z "$__INTELLIJ_COMMAND_HISTFILE__"
     # # Load fishmarks
     source $HOME/.dotfiles/files/shell/fish/scripts/marks.fish
 
