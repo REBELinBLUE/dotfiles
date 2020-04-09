@@ -13,7 +13,7 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Add bash to the shells - Rootless needs to be disabled
+# Add bash, fish and zsh to the shells - Rootless needs to be disabled
 # http://osxdaily.com/2015/10/05/disable-rootless-system-integrity-protection-mac-os-x/
 # will set for current user only.
 SIP_STATUS=$(csrutil status)
