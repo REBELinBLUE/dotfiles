@@ -13,11 +13,18 @@
     remote = green
 
 [color "diff"]
-    # Yellow meta; Magenta line info; Red for deleltions; Green for additions.
-    frag = magenta
-    meta = yellow
-    new = green
-    old = red
+    meta = 11
+    frag = magenta bold
+    commit = yellow bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
 
 [color "status"]
     # Changed files are yellow. Staged files are green. New (untracked) files are cyan.
@@ -47,6 +54,8 @@
     quotepath = false
     excludesfile = ~/.dotfiles/files/config/git/ignore
     #attributesfile = ~/.dotfiles/files/config/git/attributes
+
+    pager = diff-so-fancy | less --tabs=4 -RFX
 
     # Treat spaces before tabs and all kinds of trailing whitespace as an error
     # [default] trailing-space: looks for spaces at the end of a line
@@ -125,6 +134,8 @@
     # View the SHA, description, and history graph of the latest 30 commits
     l = log --format='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --no-merges -n 30 --abbrev-commit --date=relative
 
+    patch = !git --no-pager diff --no-color
+
     # Pull in remote changes for the current repository and all its submodules
     pl = !"git pull; git submodule foreach git pull origin master"
 
@@ -165,5 +176,8 @@
     wash = !"git reset --hard HEAD && git checkout master && (git branch | grep -v '^*' | xargs git branch -D)"
 
 [pager]
-    diff = diff-so-fancy | less --tabs=4 -RFX --pattern='^(added|deleted|modified):'
-    show = diff-so-fancy | less --tabs=4 -RFX --pattern='^(added|deleted|modified):'
+    diff = diff-so-fancy | less --tabs=4 -RFX --pattern='^(Date|added|deleted|modified): '
+    show = diff-so-fancy | less --tabs=4 -RFX --pattern='^(Date|added|deleted|modified): '
+
+[diff-so-fancy]
+    markEmptyLines = false
