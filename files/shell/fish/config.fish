@@ -11,8 +11,6 @@ source $HOME/.dotfiles/files/shell/fish/scripts/exports.fish
 if test -z "$__INTELLIJ_COMMAND_HISTFILE__"
     # Load fishmarks
     source $HOME/.dotfiles/files/shell/fish/scripts/marks.fish
-
-    eval (direnv hook fish)
 end
 
 # Load any additional scripts
