@@ -1,6 +1,6 @@
 {
     "require": {
-        "hirak/prestissimo": "^0.3.7",
-        "localheinz/composer-normalize": "^1.1"
+        "hirak/prestissimo": "^0.3.10",
+        "ergebnis/composer-normalize": "^2.5"
     }
 }
