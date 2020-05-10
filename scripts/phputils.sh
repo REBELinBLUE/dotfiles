@@ -24,7 +24,7 @@ pecl install xdebug
 cp $(brew --prefix php@7.2)/pecl/20170718/xdebug.so /tmp/php7.2-xdebug.so
 pecl uninstall pcov
 pecl install pcov
-cp $(brew --prefix php@7.2)/pecl/20170718/xdebug.so /tmp/php7.2-pcov.so
+cp $(brew --prefix php@7.2)/pecl/20170718/pcov.so /tmp/php7.2-pcov.so
 
 
 brew-php-switcher 7.3 -s
@@ -34,7 +34,7 @@ pecl install xdebug
 cp $(brew --prefix php@7.3)/pecl/20180731/xdebug.so /tmp/php7.3-xdebug.so
 pecl uninstall pcov
 pecl install pcov
-cp $(brew --prefix php@7.3)/pecl/20180731/xdebug.so /tmp/php7.3-pcov.so
+cp $(brew --prefix php@7.3)/pecl/20180731/pcov.so /tmp/php7.3-pcov.so
 
 brew-php-switcher 7.4 -s
 pecl channel-update pecl.php.net
@@ -43,7 +43,7 @@ pecl install xdebug
 cp $(brew --prefix php@7.4)/pecl/20190902/xdebug.so /tmp/php7.4-xdebug.so
 pecl uninstall pcov
 pecl install pcov
-cp $(brew --prefix php@7.4)/pecl/20190902/xdebug.so /tmp/php7.4-pcov.so
+cp $(brew --prefix php@7.4)/pecl/20190902/pcov.so /tmp/php7.4-pcov.so
 
 cp /tmp/php7.2-xdebug.so $(brew --prefix php@7.2)/pecl/20170718/xdebug.so
 cp /tmp/php7.3-xdebug.so $(brew --prefix php@7.3)/pecl/20180731/xdebug.so
