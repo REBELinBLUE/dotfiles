@@ -81,7 +81,7 @@ set -xg FLUX_FORWARD_NAMESPACE flux
 
 set -e RUBY_VERSION
 
-set -xg GOPATH $HOME/go
+set -xg GOPATH $HOME/.go
 
 # Add more paths
 set -xg PATH /usr/local/sbin \
