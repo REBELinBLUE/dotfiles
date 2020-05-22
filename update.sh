@@ -24,12 +24,8 @@ brew bundle --file=brewfiles/all
 # On work computer
 #brew bundle --file=brewfiles/work
 
-# On MacBook Air
+# On home computer
 # brew bundle --file=brewfiles/personal
-
-# On iMac
-# brew bundle --file=brewfiles/personal
-# brew bundle --file=brewfiles/imac
 
 source $HOME/.dotfiles/scripts/dotfiles.sh
 

@@ -128,7 +128,7 @@ e_help() {
 ssh() {
     cat ~/.ssh/config.d/* > ~/.ssh/config;
 
-    if [ $1 = "mycloud" ] || [ $1 = "mypassword" ] || [ $1 = "imac" ] || [ $1 = "mba" ]; then
+    if [ $1 = "mycloud" ] || [ $1 = "mypassword" ] || [ $1 = "mbp" ]; then
         $(which ssh) "$@"
     elif type_exists "sshrc"; then
         $(which sshrc) "$@"
