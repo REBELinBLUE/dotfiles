@@ -1,11 +1,10 @@
 # Taps
 #tap 'caskroom/cask'
-#tap 'caskroom/fonts'
+tap 'homebrew/cask-fonts'
 #tap 'caskroom/versions'
 
 # Make sure apps get installed in system Applications dir
 cask_args appdir: '/Applications'
-
 
 # Apps
 # cask 'keybase'
@@ -18,24 +17,24 @@ cask_args appdir: '/Applications'
 # cask 'postman'
 # cask 'sourcetree'
 # cask 'sublime-text'
-#cask 'vagrant'
-####cask 'virtualbox'
-####cask 'virtualbox-extension-pack'
+# cask 'vagrant'
+# cask 'virtualbox'
+# cask 'virtualbox-extension-pack'
 # cask 'paw'
-####cask 'ngrok'
+cask 'ngrok'
 ####cask 'java'
 
 # Quicklook
-####cask 'qlcolorcode'
-####cask 'qlmarkdown'
-####cask 'quicklook-json'
-####cask 'quicklook-csv'
-####cask 'qlstephen'
-####cask 'qlprettypatch'
-####cask 'qlimagesize'
+cask 'qlcolorcode'
+cask 'qlmarkdown'
+cask 'quicklook-json'
+cask 'quicklook-csv'
+cask 'qlstephen'
+cask 'qlprettypatch'
+cask 'qlimagesize'
 
 # Fonts
-####cask 'font-source-code-pro'
-####cask 'font-source-sans-pro'
-####cask 'font-source-serif-pro'
-####cask 'font-fira-code'
+cask 'font-source-code-pro'
+cask 'font-source-sans-pro'
+cask 'font-source-serif-pro'
+cask 'font-fira-code'
