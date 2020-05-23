@@ -51,7 +51,7 @@ export HISTSIZE=10000
 export HISTFILESIZE=${HISTSIZE}
 export HISTCONTROL="ignoredups:erasedups"
 #export HISTTIMEFORMAT="%F %T "
-export HH_CONFIG=hicolor
+#export HH_CONFIG=hicolor
 export HISTFILE=$XDG_DATA_HOME/bash/history
 
 # Make some commands not show up in history

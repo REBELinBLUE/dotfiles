@@ -15,7 +15,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Remove stuff
 
-brew remove vagrant-completion osquery
+brew remove vagrant-completion osquery aria2 neofetch cheat ssh-copy-id doitlive pick the_silver_searcher tree hh pv
 
 brew untap caskroom/homebrew-fonts
 brew untap caskroom/homebrew-versions

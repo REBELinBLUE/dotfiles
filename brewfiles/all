@@ -11,13 +11,7 @@ tap 'derailed/k9s'
 tap 'jesseduffield/lazydocker'
 tap 'derailed/popeye'
 
-# Install `wget` with IRI support
-brew 'wget'
-
-# Install curl
-brew 'curl'
-
-# Install GNU tool
+# Install standard tools
 brew 'findutils'
 brew 'coreutils'
 brew 'moreutils'
@@ -27,12 +21,22 @@ brew 'gnu-tar'
 brew 'gnu-which'
 brew 'gnu-sed'
 brew 'make'
+brew 'autoconf'
+brew 'readline'
+brew 'gnutls'
+brew 'gzip'
+brew 'gawk'
+brew 'openssh'
+brew 'rsync'
+brew 'less'
+brew 'ack'
+brew 'unzip'
 
-# Install Bash 4
+# Install shells
 brew 'bash'
-
-# Install Fish
 brew 'fish'
+brew 'zsh'
+brew 'starship' # Not strictly a shell
 
 # Install more recent versions of some OS X tools
 brew 'grep'
@@ -41,6 +45,7 @@ brew 'diffutils'
 brew 'nano'
 #brew 'nano', args: ['disable-nls', 'enable-color', 'enable-extra', 'enable-multibuffer', 'enable-nanorc', 'enable-utf8']
 brew 'python'
+brew 'python3'
 
 # Install bash completions
 #brew 'vagrant-completion'
@@ -49,6 +54,7 @@ brew 'bash-completion'
 # Install bash git prompt
 brew 'bash-git-prompt'
 
+# PHP related
 brew 'brew-php-switcher'
 brew 'php@7.4'
 brew 'php@7.3'
@@ -57,87 +63,87 @@ brew 'php@7.2'
 # Install media tools
 brew 'ffmpeg'
 
-# Install other tools
-brew 'autoconf'
-brew 'nvm'
-brew 'httpie'
-brew 'aria2'
-brew 'doitlive'
-brew 'gist'
-brew 'asciinema'
-brew 'hub'
-brew 'hh'
-brew 'neofetch'
-brew 'grip'
-brew 'tree'
-brew 'ssh-copy-id'
-brew 'node'
-brew 'terminal-notifier'
-brew 'wget'
-brew 'grc'
-brew 'gitup'
-brew 'wakeonlan'
-brew 'readline'
-brew 'gnutls'
-brew 'gawk'
-brew 'sqlite'
-#brew 'osquery'
-brew 'htop'
-brew 'diff-so-fancy'
-brew 'ack'
-brew 'gzip'
-brew 'watch'
-brew 'peco'
+# Git related
 brew 'git'
+brew 'tig'
 brew 'git-lfs'
 brew 'git-fresh'
 brew 'git-when-merged'
 brew 'git-cal'
-brew 'python3'
 brew 'git-extras'
 brew 'git-quick-stats'
 brew 'git-flow-avh'
-brew 'the_silver_searcher'
-brew 'psgrep'
-brew 'sshrc'
-brew 'tig'
-brew 'less'
-brew 'pick'
-brew 'openssh'
-brew 'rsync'
-brew 'unzip'
-brew 'jq'
-brew 'jsonpp'
-brew 'mycli'
-brew 'pgcli'
-brew 'mas'
-brew 'cheat'
-brew 'm-cli'
-brew 'httpstat'
+brew 'hub'
+brew 'gist'
+brew 'gitup'
+brew 'diff-so-fancy'
+brew 'grip'
+
+# Docker related
+brew 'hadolint'
+brew 'lazydocker'
+brew 'ctop'
+brew 'dive'
 brew 'docker-completion'
 brew 'docker-compose-completion'
-brew 'mysql-client'
-brew 'graphviz'
-brew 'iproute2mac'
-brew 'dive'
+
+# Kubernetes related
 brew 'stern'
 brew 'kubectx'
 brew 'kube-prompt'
-brew 'helm'
-brew 'pv'
-brew 'k9s'
-brew 'lazydocker'
-brew 'vault'
-brew 'starship'
-brew 'zsh'
 brew 'kubespy'
+brew 'k9s'
+brew 'helm'
 brew 'derailed/popeye/popeye'
 brew 'octant'
 brew 'fluxctl'
-brew 'hadolint'
-brew 'speedtest-cli'
 brew 'velero'
+brew 'vault'
+
+# Node related
+brew 'nvm'
+brew 'node'
+
+# DB related
+brew 'mycli'
+brew 'pgcli'
+brew 'mysql-client'
+brew 'sqlite'
+
+# HTTP related
+brew 'httpie'
+brew 'wget'
+brew 'curl'
+brew 'httpstat'
+
+# JSON related
+brew 'jq'
+brew 'jsonpp'
+
+# Mac related
+brew 'mas'
+brew 'm-cli'
+
+# Network related
+brew 'speedtest-cli'
+brew 'wakeonlan'
+brew 'iproute2mac'
+brew 'sshrc'
+
+# Useful commands
+brew 'htop'
+brew 'watch'
+brew 'peco'
+brew 'psgrep'
 brew 'shellcheck'
-brew 'ctop'
+brew 'asciinema'
+
+# Used to colorise some output
+brew 'grc'
+
+# Install other tools
+brew 'terminal-notifier'
+brew 'graphviz'
+
 
 #cask '1password-cli'
