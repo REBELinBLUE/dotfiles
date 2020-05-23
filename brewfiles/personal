@@ -1,6 +1,6 @@
 # Additional brewfile only for personal Macs
 
-tap 'caskroom/cask'
+####tap 'caskroom/cask'
 
 cask_args appdir: '/Applications'
 
@@ -37,4 +37,4 @@ brew 'k3d'
 # cask 'garmin-virb-edit'
 # cask 'disablemonitor'
 # cask 'boxofsnoo-fairmount'
-cask 'xquartz'
+####cask 'xquartz'
