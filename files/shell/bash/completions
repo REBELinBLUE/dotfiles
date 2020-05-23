@@ -1,7 +1,7 @@
 if is_os "darwin"; then
-    if [ -f /usr/local/etc/bash_completion.d/vagrant ]; then
-        source /usr/local/etc/bash_completion.d/vagrant
-    fi
+    #if [ -f /usr/local/etc/bash_completion.d/vagrant ]; then
+    #    source /usr/local/etc/bash_completion.d/vagrant
+    #fi
 
     if [ -f /usr/local/etc/bash_completion ]; then
         source /usr/local/etc/bash_completion

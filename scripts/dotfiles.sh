@@ -75,13 +75,13 @@ if [ ! -e $HOME/.config/neofetch/ ]; then
 fi
 
 # Symlink Vagrantfile
-if [ ! -d $HOME/.local/share/vagrant/ ]; then
-    mkdir -p $HOME/.local/share/vagrant/
-fi
+# if [ ! -d $HOME/.local/share/vagrant/ ]; then
+#     mkdir -p $HOME/.local/share/vagrant/
+# fi
 
-if [ ! -e $HOME/.local/share/vagrant/Vagrantfile ]; then
-    ln -s $HOME/.dotfiles/files/config/Vagrantfile $HOME/.local/share/vagrant/Vagrantfile
-fi
+#if [ ! -e $HOME/.local/share/vagrant/Vagrantfile ]; then
+#    ln -s $HOME/.dotfiles/files/config/Vagrantfile $HOME/.local/share/vagrant/Vagrantfile
+#fi
 
 # Symlink inputrc
 if [ ! -d $HOME/.config/readline/ ]; then

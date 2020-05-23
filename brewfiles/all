@@ -43,7 +43,7 @@ brew 'nano'
 brew 'python'
 
 # Install bash completions
-brew 'vagrant-completion'
+#brew 'vagrant-completion'
 brew 'bash-completion'
 
 # Install bash git prompt
