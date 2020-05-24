@@ -1,7 +1,6 @@
 # Taps
-#tap 'caskroom/cask'
+
 tap 'homebrew/cask-fonts'
-#tap 'caskroom/versions'
 
 # Make sure apps get installed in system Applications dir
 cask_args appdir: '/Applications'
@@ -15,14 +14,13 @@ cask_args appdir: '/Applications'
 # cask 'macdown'
 # cask 'onyx'
 # cask 'postman'
-# cask 'sourcetree'
 # cask 'sublime-text'
 # cask 'vagrant'
 # cask 'virtualbox'
 # cask 'virtualbox-extension-pack'
 # cask 'paw'
 cask 'ngrok'
-####cask 'java'
+#cask 'java'
 
 # Quicklook
 cask 'qlcolorcode'

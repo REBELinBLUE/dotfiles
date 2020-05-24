@@ -145,5 +145,4 @@ brew 'grc'
 brew 'terminal-notifier'
 brew 'graphviz'
 
-
 #cask '1password-cli'

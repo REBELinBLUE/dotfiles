@@ -18,7 +18,6 @@ if is_os "darwin"; then
     export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
     export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
     export PATH="/usr/local/opt/nano/bin:$PATH"
-    export PATH="/Applications/VirtualBox.app/Contents/MacOS:$PATH"
 
     # Add additional manpath
     export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
@@ -67,9 +66,6 @@ export LC_ALL="en_GB.UTF-8"
 export LC_MESSAGES="en_GB.UTF-8"
 export LC_COLLATE="C"
 
-# Enable colours for cheat command
-export CHEATCOLORS=true
-
 # Default log level for NPM
 export NPM_CONFIG_LOGLEVEL="error"
 
@@ -93,7 +89,6 @@ export SDIRS=$XDG_CONFIG_HOME/marks
 #export VAGRANT_HOME=$XDG_DATA_HOME/vagrant
 export PGCLIRC=$XDG_CONFIG_HOME/pgcli/config
 export MYCLIRC=$XDG_CONFIG_HOME/mycli/config
-#export WGETRC=$XDG_CONFIG_HOME/wget/config
 export HTTPIE_CONFIG_DIR=$XDG_CONFIG_HOME/httpie
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export SCREENRC=$XDG_CONFIG_HOME/screen/screenrc

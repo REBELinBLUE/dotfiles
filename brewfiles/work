@@ -1,6 +1,3 @@
 # Additional brewfile only for work Mac
 
 brew 'awscli'
-#brew 'watchman'
-#brew 'postgresql'
-#brew 'terraform'

@@ -9,15 +9,10 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Install HTTPie plugins
-#sudo chown -R $(whoami) /usr/local
 pip3 install --upgrade pip
-#sudo chown -R $(whoami) /usr/local
 pip3 install httpie-oauth
 pip3 install httpie-jwt-auth
 pip3 install http-prompt
-#pip3 install glances
-#pip3 install --user 'cozmo[camera]'
-#pip3 install localstack
 
 # Install additional CLIs
 ln -s `which ffmpeg` /usr/local/bin/ffmpeg-static

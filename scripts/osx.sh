@@ -200,13 +200,6 @@ defaults write com.apple.TextEdit PlainTextEncoding -int 4
 defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 
 ###############################################################################
-# Tweetbot.app                                                                #
-###############################################################################
-
-# Bypass the annoyingly slow t.co URL shortener
-#defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
-
-###############################################################################
 # iTerm 2                                                                     #
 ###############################################################################
 
@@ -243,34 +236,6 @@ defaults write com.googlecode.iterm2 OpenTmuxWindowsIn -int 2
 defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreadedMode" -string "yes"
 defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortedDescending" -string "yes"
 defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -string "received-date"
-
-###############################################################################
-# Source Tree                                                                 #
-###############################################################################
-
-# FIXME: Still not working correctly, damn you Atlassian
-defaults write com.torusknot.SourceTreeNotMAS AtlassianAccountEmail -string "hipchat@stephen.rebelinblue.com"
-defaults write com.torusknot.SourceTreeNotMAS agreedToEULA -bool true
-defaults write com.torusknot.SourceTreeNotMAS agreedToEULA2 -bool true
-defaults write com.torusknot.SourceTreeNotMAS diffTool -int 4
-defaults write com.torusknot.SourceTreeNotMAS fileStatusFilterMode -int 1
-defaults write com.torusknot.SourceTreeNotMAS fileStatusViewMode -int 0
-defaults write com.torusknot.SourceTreeNotMAS gitCustomPath -string "/usr/local/bin/git"
-defaults write com.torusknot.SourceTreeNotMAS gitFlowCustomPath -string "/usr/local/bin/git-flow"
-defaults write com.torusknot.SourceTreeNotMAS gitFlowWhichOne -int 1
-defaults write com.torusknot.SourceTreeNotMAS gitGlobalIgnoreFile -string "${HOME}/.gitignore_global"
-defaults write com.torusknot.SourceTreeNotMAS gitLfsCustomPath -string "/usr/local/bin/git-lfs"
-defaults write com.torusknot.SourceTreeNotMAS gitLfsWhichOne -int 1
-defaults write com.torusknot.SourceTreeNotMAS gitWhichOne -int 1
-defaults write com.torusknot.SourceTreeNotMAS terminalApp -int 2
-defaults write com.torusknot.SourceTreeNotMAS STWelcomeStageAtlassianAccount -bool false
-defaults write com.torusknot.SourceTreeNotMAS STWelcomeStageCloning -bool false
-defaults write com.torusknot.SourceTreeNotMAS STWelcomeStageLicense -bool false
-defaults write com.torusknot.SourceTreeNotMAS STWelcomeStageRemotes -bool false
-defaults write com.torusknot.SourceTreeNotMAS SUEnableAutomaticChecks -bool true
-
-cp -r ./prefs/sourcetree/actions.plist "${HOME}/Library/Application Support/SourceTree/" 2> /dev/null
-plutil -convert binary1 "${HOME}/Library/Application Support/SourceTree/actions.plist"
 
 ###############################################################################
 # Sublime Text                                                                #

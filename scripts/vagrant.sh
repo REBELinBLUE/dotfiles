@@ -1,10 +1,21 @@
 #!/usr/bin/env bash
 
+# Not really used anymore but may occasionally need vagrant
+
 source $HOME/.dotfiles/scripts/utils.sh
 
 if ! is_os "darwin"; then
     e_error "The setup script is only for OS X"
     exit 1
+fi
+
+# Symlink Vagrantfile
+if [ ! -d $HOME/.local/share/vagrant/ ]; then
+    mkdir -p $HOME/.local/share/vagrant/
+fi
+
+if [ ! -e $HOME/.local/share/vagrant/Vagrantfile ]; then
+   ln -s $HOME/.dotfiles/files/config/Vagrantfile $HOME/.local/share/vagrant/Vagrantfile
 fi
 
 # Install vagrant plugins

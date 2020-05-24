@@ -13,7 +13,6 @@ fi
 
 source $HOME/.dotfiles/files/shell/bash/clear-colours
 
-# added by travis gem
 if [ -f $HOME/.travis/travis.sh ]; then
     source $HOME/.travis/travis.sh
 fi

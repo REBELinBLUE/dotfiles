@@ -26,9 +26,6 @@ set -xg LC_ALL "en_GB.UTF-8"
 set -xg LC_MESSAGES "en_GB.UTF-8"
 set -xg LC_COLLATE C
 
-# Enable colours for cheat command
-set -xg CHEATCOLORS 1
-
 # Default log level for NPM
 set -xg NPM_CONFIG_LOGLEVEL "error"
 
@@ -60,7 +57,6 @@ set -xg SDIRS $XDG_CONFIG_HOME/marks
 #set -xg VAGRANT_HOME $XDG_DATA_HOME/vagrant
 set -xg PGCLIRC $XDG_CONFIG_HOME/pgcli/config
 set -xg MYCLIRC $XDG_CONFIG_HOME/mycli/config
-#set -xg WGETRC $XDG_CONFIG_HOME/wget/config
 set -xg HTTPIE_CONFIG_DIR $XDG_CONFIG_HOME/httpie
 set -xg NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
 set -xg SCREENRC $XDG_CONFIG_HOME/screen/screenrc
@@ -100,7 +96,6 @@ set -xg PATH /usr/local/sbin \
             /usr/local/opt/make/libexec/gnubin \
             /usr/local/opt/gnu-getopt/bin \
             /usr/local/opt/grep/libexec/gnubin \
-            /Applications/VirtualBox.app/Contents/MacOS \
             $GEM_HOME/bin \
             /usr/local/bin \
             /usr/bin \
