@@ -14,6 +14,8 @@ pip3 install httpie-oauth
 pip3 install httpie-jwt-auth
 pip3 install http-prompt
 
+curl -fsSL https://raw.githubusercontent.com/rgcr/m-cli/master/install.sh | sudo sh
+
 # Install additional CLIs
 ln -s `which ffmpeg` /usr/local/bin/ffmpeg-static
 

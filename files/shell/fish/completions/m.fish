@@ -1,1 +1,1 @@
-source (brew --prefix m-cli)/share/fish/vendor_completions.d/m.fish
+source /usr/local/m-cli/completion/fish/m.fish
