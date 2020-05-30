@@ -80,7 +80,7 @@ export COMPOSER_HOME=$XDG_CONFIG_HOME/composer
 export COMPOSER_CACHE_DIR=$XDG_CACHE_HOME/composer
 
 # Other config files
-export SSHHOME=$XDG_CONFIG_HOME/sshrc
+#export SSHHOME=$XDG_CONFIG_HOME/sshrc
 export INPUTRC=$XDG_CONFIG_HOME/readline/inputrc
 export ACKRC=$XDG_CONFIG_HOME/ack/ackrc
 export MYSQL_HISTFILE=$XDG_CACHE_HOME/mysql_history

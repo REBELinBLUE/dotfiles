@@ -49,10 +49,10 @@ brew 'python3'
 
 # Install bash completions
 #brew 'vagrant-completion'
-brew 'bash-completion'
+#brew 'bash-completion'
 
 # Install bash git prompt
-brew 'bash-git-prompt'
+#brew 'bash-git-prompt'
 
 # PHP related
 brew 'brew-php-switcher'
@@ -108,6 +108,7 @@ brew 'node'
 brew 'mycli'
 brew 'pgcli'
 brew 'mysql-client'
+brew 'postgresql'
 brew 'sqlite'
 
 # HTTP related
@@ -128,7 +129,7 @@ brew 'mas'
 brew 'speedtest-cli'
 brew 'wakeonlan'
 brew 'iproute2mac'
-brew 'sshrc'
+#brew 'sshrc'
 
 # Useful commands
 brew 'htop'

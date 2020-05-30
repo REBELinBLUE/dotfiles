@@ -19,8 +19,9 @@ cask_args appdir: '/Applications'
 # cask 'virtualbox'
 # cask 'virtualbox-extension-pack'
 # cask 'paw'
-cask 'ngrok'
 #cask 'java'
+
+cask 'ngrok'
 
 # Quicklook
 cask 'qlcolorcode'

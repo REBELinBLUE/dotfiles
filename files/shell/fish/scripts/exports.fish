@@ -48,7 +48,7 @@ set -xg COMPOSER_CACHE_DIR $XDG_CACHE_HOME/composer
 set RUBY_VERSION (ruby -e 'puts RbConfig::CONFIG["ruby_version"]')
 
 # Other config files
-set -xg SSHHOME $XDG_CONFIG_HOME/sshrc
+#set -xg SSHHOME $XDG_CONFIG_HOME/sshrc
 set -xg INPUTRC $XDG_CONFIG_HOME/readline/inputrc
 set -xg ACKRC $XDG_CONFIG_HOME/ack/ackrc
 set -xg MYSQL_HISTFILE $XDG_CACHE_HOME/mysql_history

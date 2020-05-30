@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+
+### WARNING SOMETHING IN THIS SCRIPT BREAKS CATALINA
+
 source $HOME/.dotfiles/scripts/utils.sh
 
 if ! is_os "darwin"; then
@@ -206,9 +209,9 @@ defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 # FIXME: Add cursor setting & set the theme to default
 # Install the IR_Black and Afterglow theme for iTerm & Terminal
 open -g -a /Applications/iTerm.app $HOME/.dotfiles/prefs/IR_Black.itermcolors
-open -g -a /Applications/Utilities/Terminal.app $HOME/.dotfiles/prefs/IR_Black.terminal
+open -g -a /System/Applications/Utilities/Terminal.app $HOME/.dotfiles/prefs/IR_Black.terminal
 open -g -a /Applications/iTerm.app  $HOME/.dotfiles/prefs/Afterglow.itermcolors
-open -g -a /Applications/Utilities/Terminal.app  $HOME/.dotfiles/prefs/Afterglow.terminal
+open -g -a /System/Applications/Utilities/Terminal.app  $HOME/.dotfiles/prefs/Afterglow.terminal
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool true

@@ -26,6 +26,8 @@ brew untap caskroom/homebrew-cask
 rm /usr/local/bin/phpdoccheck /usr/local/bin/phpmd /usr/local/bin/phpcs /usr/local/bin/php-cs-fixer /usr/local/bin/notify-send
 rm /private/etc/sudoers.d/vagrant /usr/local/bin/vagrant-sshrc m-cli
 
+brew remove bash-completion bash-git-prompt
+
 rm -rf ~/.local/share/vagrant/ ~/.cache/vagrant/ ~/.config/neofetch
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh

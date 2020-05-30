@@ -4,7 +4,7 @@
 
 cask_args appdir: '/Applications'
 
-brew 'mplayer'
+#brew 'mplayer'
 brew 'media-info'
 brew 'xvid'
 brew 'tvnamer'

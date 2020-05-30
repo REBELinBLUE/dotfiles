@@ -27,19 +27,19 @@ brew bundle --file=brewfiles/all
 brew bundle --file=brewfiles/extras
 
 # On work computer
-#brew bundle --file=brewfiles/work
+# brew bundle --file=brewfiles/work
 
 # On home computer
 # brew bundle --file=brewfiles/personal
 
 source $HOME/.dotfiles/scripts/homebrew.sh
 source $HOME/.dotfiles/scripts/others.sh
-source $HOME/.dotfiles/scripts/phputils.sh
 source $HOME/.dotfiles/scripts/node.sh
 #source $HOME/.dotfiles/scripts/vagrant.sh
 source $HOME/.dotfiles/scripts/dotfiles.sh
-source $HOME/.dotfiles/scripts/osx.sh
-source $HOME/.dotfiles/scripts/bash.sh
+#source $HOME/.dotfiles/scripts/osx.sh
+#source $HOME/.dotfiles/scripts/bash.sh
 source $HOME/.dotfiles/scripts/fish.sh
+source $HOME/.dotfiles/scripts/phputils.sh
 
 #scutil --set HostName iMac.local

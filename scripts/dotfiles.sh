@@ -65,14 +65,9 @@ if [ ! -e $HOME/.config/starship.toml ]; then
 fi
 
 # Symlink the sshrc.d config
-if [ ! -e $HOME/.config/sshrc/ ]; then
-    ln -s $HOME/.dotfiles/files/config/sshrc $HOME/.config/sshrc
-fi
-
-# Symlink the neofetch config
-if [ ! -e $HOME/.config/neofetch/ ]; then
-    ln -s $HOME/.dotfiles/files/config/neofetch $HOME/.config/neofetch
-fi
+# if [ ! -e $HOME/.config/sshrc/ ]; then
+#     ln -s $HOME/.dotfiles/files/config/sshrc $HOME/.config/sshrc
+# fi
 
 # Symlink inputrc
 if [ ! -d $HOME/.config/readline/ ]; then
@@ -107,10 +102,10 @@ if [ ! -e $HOME/.config/npm/npmrc ]; then
 fi
 
 # Set up extras config
-if [ ! -f $HOME/.config/extras.bash ]; then
-    echo -e "#!/usr/bin/env bash\n\n# Stick any extra functions, aliases and exports for bash in this file" > $HOME/.config/extras.bash
-    $EDITOR $HOME/.config/extras.bash
-fi
+# if [ ! -f $HOME/.config/extras.bash ]; then
+#     echo -e "#!/usr/bin/env bash\n\n# Stick any extra functions, aliases and exports for bash in this file" > $HOME/.config/extras.bash
+#     $EDITOR $HOME/.config/extras.bash
+# fi
 
 if [ ! -f $HOME/.config/extras.fish ]; then
     echo -e "#!/usr/bin/env fish\n\n# Stick any extra functions and exports for fish in this file" > $HOME/.config/extras.fish
