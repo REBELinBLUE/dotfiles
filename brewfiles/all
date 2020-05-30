@@ -47,13 +47,6 @@ brew 'nano'
 brew 'python'
 brew 'python3'
 
-# Install bash completions
-#brew 'vagrant-completion'
-#brew 'bash-completion'
-
-# Install bash git prompt
-#brew 'bash-git-prompt'
-
 # PHP related
 brew 'brew-php-switcher'
 brew 'php@7.4'

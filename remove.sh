@@ -28,6 +28,6 @@ rm /private/etc/sudoers.d/vagrant /usr/local/bin/vagrant-sshrc m-cli
 
 brew remove bash-completion bash-git-prompt
 
-rm -rf ~/.local/share/vagrant/ ~/.cache/vagrant/ ~/.config/neofetch
+rm -rf ~/.local/share/vagrant/ ~/.cache/vagrant/ ~/.config/neofetch ~/.bashrc ~/.profile ~/.bash_profile ~/.bash_history
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh
