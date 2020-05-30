@@ -12,6 +12,7 @@ brew install dockutil
 dockutil --remove all --no-restart
 dockutil --add /Applications/Safari.app --no-restart
 dockutil --add /Applications/Spark.app --no-restart
+dockutil --add /Applications/Ferdi.app --no-restart
 dockutil --add /Applications/Transmission.app --no-restart
 dockutil --add /System/Applications/Music.app --no-restart
 dockutil --add /System/Applications/Podcasts.app --no-restart
