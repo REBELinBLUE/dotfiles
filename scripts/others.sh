@@ -54,6 +54,8 @@ kubectl krew install outdated
 kubectl krew install tree
 kubectl krew install pod-dive
 
+#kubectl krew install tap
+
 helm plugin install https://github.com/databus23/helm-diff.git --version master
 helm plugin install https://github.com/chartmuseum/helm-push.git
 
