@@ -60,9 +60,9 @@ chmod a+x /usr/local/bin/psysh
 mkdir -p ~/.local/share/psysh/
 curl -LsS http://psysh.org/manual/en/php_manual.sqlite -o ~/.local/share/psysh/php_manual.sqlite
 
-rm -f /usr/local/bin/pstorm
-ln -s $HOME/.dotfiles/bin/pstorm /usr/local/bin/pstorm
-chmod +x /usr/local/bin/pstorm
+# rm -f /usr/local/bin/pstorm
+# ln -s $HOME/.dotfiles/bin/pstorm /usr/local/bin/pstorm
+# chmod +x /usr/local/bin/pstorm
 
 if [ ! -d $HOME/.config/composer/ ]; then
     mkdir -p $HOME/.config/composer/

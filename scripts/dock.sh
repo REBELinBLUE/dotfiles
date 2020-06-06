@@ -21,6 +21,7 @@ dockutil --add /System/Applications/Reminders.app --no-restart
 dockutil --add /System/Applications/Notes.app --no-restart
 dockutil --add /Applications/PhpStorm.app --no-restart
 dockutil --add /Applications/DataGrip.app --no-restart
+dockutil --add /Applications/Fork.app --no-restart
 dockutil --add /Applications/Paw.app --no-restart
 dockutil --add /Applications/Patterns.app --no-restart
 dockutil --add /Applications/Sublime\ Text.app --no-restart
