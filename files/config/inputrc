@@ -16,6 +16,23 @@ set mark-symlinked-directories on
 "\e[1;5C": forward-word
 "\e[1;5D": backward-word
 
+# CTRL - A - Beginning
+# CTRL - E - End
+# CTRL - B - Left
+# CTRL - F - Right
+# CTRL - U - Cut all
+# CTRL - K - Cut to right
+# CTRL - H - Delete left
+# CTRL - D - Delete right or exit
+# CTRL - W - Cut one word to left
+# ???? - Cut one word to right
+# CTRL - Y - Paste
+# CTRL - L - Clear
+# CTRL - Z - Suspend
+# CTRL - C - Terminate
+# CTRL - P = Up
+# CTRL - N = Down
+
 # Do not autocomplete hidden files unless the pattern explicitly begins with a dot
 set match-hidden-files off
 

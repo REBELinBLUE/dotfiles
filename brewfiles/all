@@ -31,6 +31,7 @@ brew 'rsync'
 brew 'less'
 brew 'ack'
 brew 'unzip'
+brew 'pidof'
 
 # Install shells
 brew 'bash'
