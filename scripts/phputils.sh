@@ -64,6 +64,19 @@ curl -LsS http://psysh.org/manual/en/php_manual.sqlite -o ~/.local/share/psysh/p
 # ln -s $HOME/.dotfiles/bin/pstorm /usr/local/bin/pstorm
 # chmod +x /usr/local/bin/pstorm
 
+e_arrow 'Downloading PHP Code Sniffer'
+curl -LsS https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar -o /usr/local/bin/phpcs
+curl -LsS https://squizlabs.github.io/PHP_CodeSniffer/phpcbf.phar -o /usr/local/bin/phpcbf
+chmod a+x /usr/local/bin/phpcs /usr/local/bin/phpcbf
+
+e_arrow 'Downloading PHPCS Fixer'
+curl -LsS https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.16.3/php-cs-fixer.phar -o /usr/local/bin/php-cs-fixer
+chmod a+x /usr/local/bin/php-cs-fixer
+
+e_arrow 'Downloading PHP Mess Detector'
+curl -LsS https://github.com/phpmd/phpmd/releases/download/2.8.2/phpmd.phar -o /usr/local/bin/phpmd
+chmod a+x /usr/local/bin/phpmd
+
 if [ ! -d $HOME/.config/composer/ ]; then
     mkdir -p $HOME/.config/composer/
 fi
