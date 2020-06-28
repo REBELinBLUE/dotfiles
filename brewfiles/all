@@ -127,6 +127,12 @@ brew 'iproute2mac'
 
 # Useful commands
 brew 'htop'
+brew 'tldr'
+brew 'ripgrep'
+brew 'exa'
+brew 'bat'
+brew 'ncdu'
+brew 'fd'
 brew 'watch'
 brew 'peco'
 brew 'psgrep'
