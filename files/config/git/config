@@ -79,6 +79,9 @@
 [push]
     default = simple
 
+[pull]
+    rebase = false
+
 [mergetool "chdiff"]
     cmd = /usr/bin/env chdiff --wait "$LOCAL" "$REMOTE"
     keepBackup = false
