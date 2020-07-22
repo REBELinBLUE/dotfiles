@@ -81,10 +81,6 @@ set -xg GOPATH $HOME/.go
 
 # Add more paths
 set -xg PATH /usr/local/sbin \
-            $HOME/.local/bin /usr/local/opt/sqlite/bin \
-            $HOME/.krew/bin \
-            $GOPATH/bin \
-            $COMPOSER_HOME/vendor/bin \
             /usr/local/opt/vim/bin \
             /usr/local/opt/nano/bin \
             /usr/local/opt/gnu-sed/libexec/gnubin \
@@ -101,7 +97,11 @@ set -xg PATH /usr/local/sbin \
             /usr/bin \
             /bin \
             /usr/sbin \
-            /sbin
+            /sbin \
+            $HOME/.local/bin /usr/local/opt/sqlite/bin \
+            $HOME/.krew/bin \
+            $GOPATH/bin \
+            $COMPOSER_HOME/vendor/bin
 
 set -xg MANPATH /usr/local/opt/findutils/libexec/gnuman \
                 /usr/local/opt/coreutils/share/man \
