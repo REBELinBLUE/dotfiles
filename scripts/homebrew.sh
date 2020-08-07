@@ -33,3 +33,5 @@ else
 fi
 
 sudo SetFile -a V /opt
+
+brew install https://raw.githubusercontent.com/shtirlic/yubikeylockd/master/yubikeylockd.rb
