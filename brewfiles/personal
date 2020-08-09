@@ -5,6 +5,7 @@
 cask_args appdir: '/Applications'
 
 #brew 'mplayer'
+brew 'switchaudio-osx'
 brew 'media-info'
 brew 'xvid'
 brew 'tvnamer'
