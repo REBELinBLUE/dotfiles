@@ -145,5 +145,6 @@ brew 'grc'
 # Install other tools
 brew 'terminal-notifier'
 brew 'graphviz'
+brew 'switchaudio-osx'
 
 #cask '1password-cli'
