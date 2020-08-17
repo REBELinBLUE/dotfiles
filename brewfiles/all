@@ -147,3 +147,5 @@ brew 'terminal-notifier'
 brew 'graphviz'
 
 #cask '1password-cli'
+
+brew 'pinentry-mac'
