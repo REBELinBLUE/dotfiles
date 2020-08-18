@@ -105,7 +105,7 @@ fi
 if [ ! -f $HOME/.gnupg/ggpgagent.conf ]; then
     ln -s $HOME/.dotfiles/files/config/gpg-agent.conf $HOME/.gnupg/gpg-agent.conf
 fi
-gpgconf --kill gpg-agent
+/usr/local/MacGPG2/bin/gpgconf --kill gpg-agent
 
 if [ ! -f $HOME/.config/extras.fish ]; then
     echo -e "#!/usr/bin/env fish\n\n# Stick any extra functions and exports for fish in this file" > $HOME/.config/extras.fish
