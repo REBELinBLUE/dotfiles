@@ -74,8 +74,8 @@ KEYID=$(gpg --card-status | grep 'Signature key' | cut -f2 -d: | tr -d ' ')
 BIN_GPG_PUBKEY=$KEYID.gpg.pub.bin
 ASC_GPG_PUBKEY=$KEYID.gpg.pub.asc
 
-gpg --export "$KEYID" > "~/Desktop/$BIN_GPG_PUBKEY"
-gpg --armor --export "$KEYID" > "~/Desktop/$ASC_GPG_PUBKEY"
+gpg --export "$KEYID" > ~/Desktop/$BIN_GPG_PUBKEY
+gpg --armor --export "$KEYID" > ~/Desktop/$ASC_GPG_PUBKEY
 cp ~/.gnupg/openpgp-revocs.d/$KEYID.rev ~/Desktop/$KEYID.rev
 rm ~/.gnupg/openpgp-revocs.d/$KEYID.rev
 
