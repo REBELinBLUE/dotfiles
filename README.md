@@ -22,17 +22,6 @@ git config --global user.name "Stephen Ball"
 git config --global user.email "stephen@rebelinblue.com"
 ```
 
-## Addtional Apps
-
-The following apps need to be installed manually
-
-* Firefox - Needs to be installed manually so 1password will run
-* Google Chrome - Needs to be installed manually so 1password will run
-* MetaZ
-* Moneywiz
-
-Mac appstore apps can be installed with `scripts/mac-appstore.sh`
-
 ## Final steps
 
 Run the following commands to authenticate with various services
