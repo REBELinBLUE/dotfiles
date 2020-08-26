@@ -82,4 +82,3 @@ rm ~/.gnupg/openpgp-revocs.d/$KEYID.rev
 /usr/local/MacGPG2/bin/gpgconf --kill all
 
 git config --global user.signingkey "$KEYID"
-
