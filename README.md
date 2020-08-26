@@ -20,6 +20,7 @@ For example
 # Git credentials
 git config --global user.name "Stephen Ball"
 git config --global user.email "stephen@rebelinblue.com"
+git config --global user.signingkey "???"
 ```
 
 ## Final steps

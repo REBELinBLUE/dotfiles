@@ -106,6 +106,9 @@
     # Automatically correct and execute mistyped commands
     autocorrect = 1
 
+[tag]
+    forceSignAnnotated = true
+
 [alias]
     # List all aliases
     aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort -u
