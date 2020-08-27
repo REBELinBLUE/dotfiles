@@ -92,13 +92,15 @@ set -xg PATH /usr/local/sbin \
             /usr/local/opt/make/libexec/gnubin \
             /usr/local/opt/gnu-getopt/bin \
             /usr/local/opt/grep/libexec/gnubin \
+            /usr/local/MacGPG2/bin/ \
             $GEM_HOME/bin \
             /usr/local/bin \
             /usr/bin \
             /bin \
             /usr/sbin \
             /sbin \
-            $HOME/.local/bin /usr/local/opt/sqlite/bin \
+            $HOME/.local/bin \
+            /usr/local/opt/sqlite/bin \
             $HOME/.krew/bin \
             $GOPATH/bin \
             $COMPOSER_HOME/vendor/bin
@@ -110,6 +112,7 @@ set -xg MANPATH /usr/local/opt/findutils/libexec/gnuman \
                 /usr/local/opt/gnu-which/libexec/gnuman \
                 /usr/local/opt/gnu-sed/libexec/gnuman \
                 /usr/local/opt/make/libexec/gnuman \
+                /usr/local/MacGPG2/share/man \
                 $MANPATH
 
 # # Set LS_COLORS

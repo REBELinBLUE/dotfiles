@@ -148,6 +148,6 @@ brew 'graphviz'
 
 #cask '1password-cli'
 
-brew 'pinentry-mac'
+brew 'pinentry'
 brew 'ykman'
 

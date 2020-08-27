@@ -14,6 +14,7 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Remove stuff
+brew remove pinentry-mac
 
 # Stuff to remove on work mac when lockdown is over
 
