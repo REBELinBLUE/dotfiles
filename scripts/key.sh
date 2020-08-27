@@ -15,12 +15,13 @@ ykman info
 gpg --card-status
 ykman openpgp reset
 
-
 # Turning off YubiKey OTP
 ykman mode "FIDO+CCID"
 
 # Now generating your GPG keys on the YubiKey itself
 gpg --card-edit
+
+#https://github.com/drduh/YubiKey-Guide/tree/master#export-secret-keys
 
 # admin
 # passwd
