@@ -102,9 +102,10 @@ if [ ! -e $HOME/.config/npm/npmrc ]; then
     ln -s $HOME/.dotfiles/files/config/npmrc $HOME/.config/npm/npmrc
 fi
 
-if [ ! -f $HOME/.gnupg/ggpgagent.conf ]; then
+if [ ! -f $HOME/.gnupg/gpg-agent.conf ]; then
     ln -s $HOME/.dotfiles/files/config/gpg-agent.conf $HOME/.gnupg/gpg-agent.conf
 fi
+
 /usr/local/MacGPG2/bin/gpgconf --kill gpg-agent
 
 if [ ! -f $HOME/.config/extras.fish ]; then
