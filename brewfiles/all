@@ -150,4 +150,4 @@ brew 'graphviz'
 
 brew 'pinentry'
 brew 'ykman'
-
+brew 'hopenpgp-tools'

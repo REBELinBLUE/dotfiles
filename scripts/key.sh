@@ -41,9 +41,6 @@ gpg --edit-key $KEYID
 
 # adduid
 
-
-gpg --armor --export-secret-keys $KEYID > $GNUPGHOME/master.key
-
 gpg --expert --edit-key $KEYID
 
 # addkey
@@ -65,9 +62,15 @@ gpg --expert --edit-key $KEYID
 # 4069
 # 10y
 
-gpg --armor --export-secret-keys $KEYID > $GNUPGHOME/mastersub.key
 
-gpg --armor --export-secret-subkeys $KEYID > $GNUPGHOME/sub.key
+
+gpg --armor --export $KEYID > pubkey.asc
+
+gpg --export $KEYID | hokey lint
+
+gpg --armor --export-secret-keys $KEYID > $GNUPGHOME/mastersub.asc
+
+gpg --armor --export-secret-subkeys $KEYID > $GNUPGHOME/sub.asc
 
 sudo cp -avi $GNUPGHOME ~/Scratch
 
@@ -104,7 +107,11 @@ gpg --edit-key $KEYID
 # key 3
 # 3 - Authentication key
 
-gpg --import < ~/Scratch/tmp.KYulRI1xDa/pubkey.txt
+rm -rf $GNUPGHOME
+unset $GNUPGHOME
+gpgconf --kill all
+
+gpg --import < ~/Scratch/????/pubkey.asc
 
 # Turn on touch for SIGNATURES.
 ykman openpgp set-touch sig cached
@@ -118,19 +125,7 @@ ykman openpgp set-touch aut on
 ykman openpgp set-touch enc on
 # $PUK
 
+hkt export-pubkeys ???? --keyring ~/.gnupg/pubring.gpg | hokey lint
+
 #KEYID=$(gpg --card-status | grep 'Signature key' | cut -f2 -d: | tr -d ' ')
 
-
-
-
-#BIN_GPG_PUBKEY=$KEYID.gpg.pub.bin
-#ASC_GPG_PUBKEY=$KEYID.gpg.pub.asc
-#
-#gpg --export "$KEYID" > ~/Desktop/$BIN_GPG_PUBKEY
-#gpg --armor --export "$KEYID" > ~/Desktop/$ASC_GPG_PUBKEY
-#cp ~/.gnupg/openpgp-revocs.d/$KEYID.rev ~/Desktop/$KEYID.rev
-#rm ~/.gnupg/openpgp-revocs.d/$KEYID.rev
-#
-#/usr/local/MacGPG2/bin/gpgconf --kill all
-#
-#git config --global user.signingkey "$KEYID"
