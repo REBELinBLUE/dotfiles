@@ -59,15 +59,10 @@ if [ ! -d $HOME/.local ]; then
     mkdir -p $HOME/.local/share/
 fi
 
-# Oh-my-fish
+# Starship
 if [ ! -e $HOME/.config/starship.toml ]; then
     ln -s $HOME/.dotfiles/files/config/starship.toml $HOME/.config/starship.toml
 fi
-
-# Symlink the sshrc.d config
-# if [ ! -e $HOME/.config/sshrc/ ]; then
-#     ln -s $HOME/.dotfiles/files/config/sshrc $HOME/.config/sshrc
-# fi
 
 # Symlink inputrc
 if [ ! -d $HOME/.config/readline/ ]; then
@@ -97,11 +92,11 @@ if [ ! -d $HOME/.config/npm/ ]; then
     mkdir -p $HOME/.config/npm/
 fi
 
-
 if [ ! -e $HOME/.config/npm/npmrc ]; then
     ln -s $HOME/.dotfiles/files/config/npmrc $HOME/.config/npm/npmrc
 fi
 
+# Symlink gnupg
 if [ ! -f $HOME/.gnupg/gpg-agent.conf ]; then
     ln -s $HOME/.dotfiles/files/config/gpg-agent.conf $HOME/.gnupg/gpg-agent.conf
 fi

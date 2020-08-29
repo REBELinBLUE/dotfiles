@@ -48,13 +48,14 @@ set -xg COMPOSER_CACHE_DIR $XDG_CACHE_HOME/composer
 set RUBY_VERSION (ruby -e 'puts RbConfig::CONFIG["ruby_version"]')
 
 # Other config files
-#set -xg SSHHOME $XDG_CONFIG_HOME/sshrc
+#set -xg VAGRANT_HOME $XDG_DATA_HOME/vagrant
+#set -xg VBOX_USER_HOME $XDG_CONFIG_HOME/virtualbox
+set -xg GETIPLAYER_PROFILE $XDG_CONFIG_HOME/get_iplayer
 set -xg INPUTRC $XDG_CONFIG_HOME/readline/inputrc
 set -xg ACKRC $XDG_CONFIG_HOME/ack/ackrc
 set -xg MYSQL_HISTFILE $XDG_CACHE_HOME/mysql_history
 set -xg LESSHISTFILE $XDG_CACHE_HOME/less_history
 set -xg SDIRS $XDG_CONFIG_HOME/marks
-#set -xg VAGRANT_HOME $XDG_DATA_HOME/vagrant
 set -xg PGCLIRC $XDG_CONFIG_HOME/pgcli/config
 set -xg MYCLIRC $XDG_CONFIG_HOME/mycli/config
 set -xg HTTPIE_CONFIG_DIR $XDG_CONFIG_HOME/httpie
@@ -66,8 +67,6 @@ set -xg BABEL_CACHE_PATH $XDG_CACHE_HOME/babel.json
 set -xg GEMRC $XDG_CONFIG_HOME/gemrc/config
 set -xg GEM_HOME $HOME/.local/lib/ruby/gems/$RUBY_VERSION
 set -xg GEM_SPEC_CACHE $XDG_CACHE_HOME/gem/specs
-set -xg DEFAULT_CHEAT_DIR $XDG_CONFIG_HOME/cheats
-#set -xg VBOX_USER_HOME $XDG_CONFIG_HOME/virtualbox
 set -xg DOCKER_CONFIG $XDG_CONFIG_HOME/docker
 set -xg GRIPHOME $XDG_CONFIG_HOME/grip
 set -xg VIMINIT 'let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
