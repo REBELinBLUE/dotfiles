@@ -53,6 +53,7 @@ kubectl krew install who-can
 kubectl krew install outdated
 kubectl krew install tree
 kubectl krew install pod-dive
+kubectl krew install neat
 
 #kubectl krew install tap
 
