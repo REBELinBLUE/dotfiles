@@ -89,6 +89,7 @@ gpg --card-edit
 # lang
 # login
 # salutation
+# url
 # quit
 
 gpg --edit-key $KEYID
