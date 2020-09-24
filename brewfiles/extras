@@ -24,13 +24,13 @@ cask_args appdir: '/Applications'
 cask 'ngrok'
 
 # Quicklook
-cask 'qlcolorcode'
-cask 'qlmarkdown'
-cask 'quicklook-json'
-cask 'quicklook-csv'
-cask 'qlstephen'
-cask 'qlprettypatch'
-cask 'qlimagesize'
+#cask 'qlcolorcode'
+#cask 'qlmarkdown'
+#cask 'quicklook-json'
+#cask 'quicklook-csv'
+#cask 'qlstephen'
+#cask 'qlprettypatch'
+#cask 'qlimagesize'
 
 # Fonts
 cask 'font-source-code-pro'

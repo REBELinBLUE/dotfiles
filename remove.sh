@@ -17,4 +17,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Stuff to remove on work mac when lockdown is over
 
+brew remove qlcolorcode qlmarkdown quicklook-json quicklook-csv qlstephen qlprettypatch qlimagesize
+
 #source $HOME/.dotfiles/scripts/dotfiles.sh
