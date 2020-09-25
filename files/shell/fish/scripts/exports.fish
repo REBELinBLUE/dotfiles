@@ -120,6 +120,9 @@ eval (dircolors -c $HOME/.dotfiles/files/shell/bash/dircolors | sed 's/>&\/dev\/
 # Fix behat colours
 set -xg BEHAT_PARAMS '{"formatters": {"pretty": {"output_styles": {"comment": ["blue"]}}}}'
 
+set -xg GPG_TTY (tty)
+set -xg SSH_AUTH_SOCK $HOME/.gnupg/S.gpg-agent.ssh
+
 #    set -l FORMATTING '{
 #    "output_styles": {
 #        "keyboard": [null, null, ["bold"]],

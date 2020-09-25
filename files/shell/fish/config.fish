@@ -19,3 +19,6 @@ if test -e $HOME/.config/extras.fish
 end
 
 set fish_greeting
+
+
+gpgconf --launch gpg-agent
