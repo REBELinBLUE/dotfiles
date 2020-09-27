@@ -36,7 +36,9 @@ set -xg man_standout -b blue
 set -xg man_underline -u green
 
 # Set the session ssh-agent socket path (If it's not set)
-set -xg SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent
+#set -xg SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent
+set -xg GPG_TTY (tty)
+#set -xg SSH_AUTH_SOCK $HOME/.gnupg/S.gpg-agent.ssh
 
 # Look for terminfo files under data
 set -xg TERMINFO $XDG_RUNTIME_DIR/terminfo
@@ -119,9 +121,6 @@ eval (dircolors -c $HOME/.dotfiles/files/shell/bash/dircolors | sed 's/>&\/dev\/
 
 # Fix behat colours
 set -xg BEHAT_PARAMS '{"formatters": {"pretty": {"output_styles": {"comment": ["blue"]}}}}'
-
-set -xg GPG_TTY (tty)
-set -xg SSH_AUTH_SOCK $HOME/.gnupg/S.gpg-agent.ssh
 
 #    set -l FORMATTING '{
 #    "output_styles": {
