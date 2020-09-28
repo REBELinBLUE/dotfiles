@@ -111,3 +111,11 @@ if [ ! -f $HOME/.config/extras.fish ]; then
     echo -e "#!/usr/bin/env fish\n\n# Stick any extra functions and exports for fish in this file" > $HOME/.config/extras.fish
     $EDITOR $HOME/.config/extras.fish
 fi
+
+if [ ! -e $HOME/.wakeup ]; then
+    ln -s $HOME/.dotfiles/files/.wakeup $HOME/.wakeup
+fi
+
+if [ ! -e $HOME/.sleep ]; then
+    ln -s $HOME/.dotfiles/files/.sleep $HOME/.sleep
+fi
