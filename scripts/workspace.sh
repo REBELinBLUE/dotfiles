@@ -85,7 +85,8 @@ compact() {
 
 help() {
     cat <<EOF
-usage: casesafe <command>
+usage: workspace <command>
+
 Possible commands:
     create       Initialize case-sensitive volume (only needed first time)
     automount    Configure macOS to mount the volume automatically on restart
@@ -119,7 +120,7 @@ EOF
 }
 
 invalid() {
-    printf "casesafe: '$1' is not a valid command.\n\n";
+    printf "workspace: '$1' is not a valid command.\n\n";
     help
 }
 
