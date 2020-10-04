@@ -154,3 +154,4 @@ brew 'ykman'
 brew 'hopenpgp-tools'
 
 brew 'sleepwatcher'
+brew 'topgrade'

@@ -37,10 +37,11 @@ git clone https://github.com/serialhex/nano-highlight.git /opt/nano-highlight
 gem install travis
 
 (
-    set -x; cd "$(mktemp -d)" &&
-    curl -fsSLO "https://storage.googleapis.com/krew/v0.2.1/krew.{tar.gz,yaml}" &&
-    tar zxvf krew.tar.gz &&
-    ./krew-"$(uname | tr '[:upper:]' '[:lower:]')_amd64" install --manifest=krew.yaml --archive=krew.tar.gz
+  set -x; cd "$(mktemp -d)" &&
+  curl -fsSLO "https://github.com/kubernetes-sigs/krew/releases/latest/download/krew.tar.gz" &&
+  tar zxvf krew.tar.gz &&
+  KREW=./krew-"$(uname | tr '[:upper:]' '[:lower:]')_amd64" &&
+  "$KREW" install krew
 )
 
 kubectl krew install get-all
