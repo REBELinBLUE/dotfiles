@@ -64,6 +64,11 @@ if [ ! -e $HOME/.config/starship.toml ]; then
     ln -s $HOME/.dotfiles/files/config/starship.toml $HOME/.config/starship.toml
 fi
 
+# Topgrade
+if [ ! -e $HOME/.config/topgrade.toml ]; then
+    ln -s $HOME/.dotfiles/files/config/topgrade.toml $HOME/.config/topgrade.toml
+fi
+
 # Symlink inputrc
 if [ ! -d $HOME/.config/readline/ ]; then
     mkdir -p $HOME/.config/readline/
