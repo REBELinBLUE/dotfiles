@@ -5,7 +5,7 @@ assume_yes = true
 notify_each_step = true
 
 # Disable specific steps - same options as the command line flag
-disable = ["composer", "npm"]
+disable = ["composer", "node"]
 
 # Ignore failures for these steps
 #ignore_failures = ["powershell"]
