@@ -7,7 +7,7 @@
 # ---------------------------------------------------------
 
 # where to store the sparse-image
-VOLUME_PATH="${CASE_SAFE_VOLUME_PATH:-${HOME}/.workspace.dmg.sparseimage}"
+VOLUME_PATH="${CASE_SAFE_VOLUME_PATH:-${HOME}/.workspace.dmg.sparsebundle}"
 
 # location where workspace will be mounted
 MOUNT_POINT="${CASE_SAFE_MOUNT_POINT:-${HOME}/Workspace}"
@@ -23,7 +23,7 @@ VOLUME_SIZE="${CASE_SAFE_VOLUME_SIZE:-60g}"
 # ---------------------------------------------------------
 
 create() {
-    hdiutil create -type SPARSE -fs 'Case-sensitive Journaled HFS+' -size ${VOLUME_SIZE} -volname ${VOLUME_NAME} ${VOLUME_PATH}
+    hdiutil create -type SPARSEBUNDLE -fs 'Case-sensitive Journaled HFS+' -size ${VOLUME_SIZE} -volname ${VOLUME_NAME} ${VOLUME_PATH}
 }
 
 automount() {
