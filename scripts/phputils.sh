@@ -71,10 +71,6 @@ chmod a+x /usr/local/bin/psysh
 mkdir -p ~/.local/share/psysh/
 curl -LsS http://psysh.org/manual/en/php_manual.sqlite -o ~/.local/share/psysh/php_manual.sqlite
 
-# rm -f /usr/local/bin/pstorm
-# ln -s $HOME/.dotfiles/bin/pstorm /usr/local/bin/pstorm
-# chmod +x /usr/local/bin/pstorm
-
 e_arrow 'Downloading PHP Code Sniffer'
 curl -LsS https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar -o /usr/local/bin/phpcs
 curl -LsS https://squizlabs.github.io/PHP_CodeSniffer/phpcbf.phar -o /usr/local/bin/phpcbf
