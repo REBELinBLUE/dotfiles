@@ -2,10 +2,10 @@
 assume_yes = true
 
 # Send desktop notification
-notify_each_step = true
+notify_each_step = false
 
 # Disable specific steps - same options as the command line flag
-disable = ["composer", "node"]
+disable = ["composer", "node", "git_repos"]
 
 # Ignore failures for these steps
 #ignore_failures = ["powershell"]
@@ -35,7 +35,7 @@ disable = ["composer", "node"]
 set_title = true
 
 # Cleanup temporary or old files
-#cleanup = true
+cleanup = true
 
 #[git]
 #max_concurrency = 5
@@ -80,5 +80,5 @@ set_title = true
 
 # Causes Topgrade to rename itself during the run to allow package managers
 # to upgrade it. Use this only if you installed Topgrade by using a package
-# manager such as Scoop to Cargo
+# manager such as Scoop or Cargo
 #self_rename = false

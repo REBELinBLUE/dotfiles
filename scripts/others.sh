@@ -34,8 +34,6 @@ cp -f "$HOME/.dotfiles/files/Monaco for Powerline.otf" $HOME/Library/Fonts/
 
 git clone https://github.com/serialhex/nano-highlight.git /opt/nano-highlight
 
-gem install travis
-
 (
   set -x; cd "$(mktemp -d)" &&
   curl -fsSLO "https://github.com/kubernetes-sigs/krew/releases/latest/download/krew.tar.gz" &&
