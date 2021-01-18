@@ -129,3 +129,6 @@ ykman openpgp set-touch enc on
 hkt export-pubkeys ???? --keyring ~/.gnupg/pubring.gpg | hokey lint
 
 #KEYID=$(gpg --card-status | grep 'Signature key' | cut -f2 -d: | tr -d ' ')
+
+# gpg-connect-agent 'keyinfo --list' /bye
+# gpg-connect-agent 'scd serialno' 'learn --force' /bye
