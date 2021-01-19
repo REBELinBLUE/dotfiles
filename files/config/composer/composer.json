@@ -1,6 +1,5 @@
 {
     "require": {
-        "hirak/prestissimo": "^0.3.10",
         "ergebnis/composer-normalize": "^2.5",
         "icanhazstring/composer-unused": "^0.7.3"
     }
