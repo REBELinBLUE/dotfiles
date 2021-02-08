@@ -44,12 +44,10 @@ pecl uninstall pcov
 pecl install pcov
 cp $(brew --prefix php@8.0)/pecl/20200930/pcov.so /tmp/php8.0-pcov.so
 
-cp /tmp/php7.2-xdebug.so $(brew --prefix php@7.2)/pecl/20170718/xdebug.so
 cp /tmp/php7.3-xdebug.so $(brew --prefix php@7.3)/pecl/20180731/xdebug.so
 cp /tmp/php7.4-xdebug.so $(brew --prefix php@7.4)/pecl/20190902/xdebug.so
 cp /tmp/php8.0-xdebug.so $(brew --prefix php@8.0)/pecl/20200930/xdebug.so
 
-cp /tmp/php7.2-pcov.so $(brew --prefix php@7.2)/pecl/20170718/pcov.so
 cp /tmp/php7.3-pcov.so $(brew --prefix php@7.3)/pecl/20180731/pcov.so
 cp /tmp/php7.4-pcov.so $(brew --prefix php@7.4)/pecl/20190902/pcov.so
 cp /tmp/php8.0-pcov.so $(brew --prefix php@8.0)/pecl/20200930/pcov.so
