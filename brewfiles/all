@@ -53,7 +53,6 @@ brew 'brew-php-switcher'
 brew 'php@8.0'
 brew 'php@7.4'
 brew 'php@7.3'
-brew 'php@7.2'
 
 # Install media tools
 brew 'ffmpeg'
