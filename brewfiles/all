@@ -155,3 +155,6 @@ brew 'hopenpgp-tools'
 
 brew 'sleepwatcher'
 brew 'topgrade'
+brew 'terraform'
+brew 'terraformer'
+
