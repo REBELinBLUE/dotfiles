@@ -47,7 +47,7 @@ set -xg TERMINFO $XDG_RUNTIME_DIR/terminfo
 set -xg COMPOSER_HOME $XDG_CONFIG_HOME/composer
 set -xg COMPOSER_CACHE_DIR $XDG_CACHE_HOME/composer
 
-set RUBY_VERSION (ruby -e 'puts RbConfig::CONFIG["ruby_version"]')
+##set RUBY_VERSION (ruby -e 'puts RbConfig::CONFIG["ruby_version"]')
 
 # Other config files
 #set -xg VAGRANT_HOME $XDG_DATA_HOME/vagrant
@@ -67,7 +67,7 @@ set -xg HGRCPATH $XDG_CONFIG_HOME/hg/hgrc
 set -xg TIGRC_USER $XDG_CONFIG_HOME/tig/tigrc
 set -xg BABEL_CACHE_PATH $XDG_CACHE_HOME/babel.json
 set -xg GEMRC $XDG_CONFIG_HOME/gemrc/config
-set -xg GEM_HOME $HOME/.local/lib/ruby/gems/$RUBY_VERSION # FIXME: Why is this not working?
+#set -xg GEM_HOME $HOME/.local/lib/ruby/gems/$RUBY_VERSION # FIXME: Why is this not working?
 set -xg GEM_SPEC_CACHE $XDG_CACHE_HOME/gem/specs
 set -xg DOCKER_CONFIG $XDG_CONFIG_HOME/docker
 set -xg GRIPHOME $XDG_CONFIG_HOME/grip
@@ -76,7 +76,7 @@ set -xg NVM_DIR $XDG_CONFIG_HOME/nvm
 set -xg nvm_prefix /usr/local/opt/nvm
 set -xg FLUX_FORWARD_NAMESPACE flux
 
-set -e RUBY_VERSION
+#set -e RUBY_VERSION
 
 set -xg GOPATH $HOME/.go
 
@@ -100,7 +100,7 @@ set -xg PATH /usr/local/sbin \
             /usr/local/opt/grep/libexec/gnubin \
             /usr/local/MacGPG2/bin/ \
             $GEM_HOME/bin \
-            $HOME/.gem/ruby/2.6.0/bin \
+            #$HOME/.gem/ruby/2.6.0/bin \
             /usr/local/bin \
             /usr/bin \
             /bin \
