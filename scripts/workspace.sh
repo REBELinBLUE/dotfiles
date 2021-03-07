@@ -23,7 +23,7 @@ VOLUME_SIZE="${CASE_SAFE_VOLUME_SIZE:-60g}"
 # ---------------------------------------------------------
 
 create() {
-    hdiutil create -type SPARSEBUNDLE -fs 'Case-sensitive Journaled HFS+' -size ${VOLUME_SIZE} -volname ${VOLUME_NAME} ${VOLUME_PATH}
+    hdiutil create -type SPARSEBUNDLE -fs 'Case-sensitive APFS' -size ${VOLUME_SIZE} -volname ${VOLUME_NAME} ${VOLUME_PATH}
 }
 
 automount() {
