@@ -1,2 +1,2 @@
-#prefix = ${HOME}/.local/lib/nodejs
-cache  = ${XDG_CACHE_HOME}/npm
+cache=/Users/stephen/.cache/npm
+

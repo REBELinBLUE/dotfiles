@@ -1,5 +1,5 @@
 if test -z "$__INTELLIJ_COMMAND_HISTFILE__"
-    # starship init fish | source
+    starship init fish | source
 
     # Load helper files
     source $HOME/.dotfiles/files/shell/fish/scripts/helpers.fish
