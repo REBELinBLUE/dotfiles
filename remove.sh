@@ -15,8 +15,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Remove stuff
 
-rm -rf /usr/local/opt/php/pecl/20170718/
-brew remove php@7.2
-rm -rf /usr/local/etc/php/7.2/
+# rm -rf /usr/local/opt/php/pecl/20170718/
+# brew remove php@7.2
+# rm -rf /usr/local/etc/php/7.2/
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh
