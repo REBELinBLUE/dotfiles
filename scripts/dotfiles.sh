@@ -77,12 +77,9 @@ if [ ! -d $HOME/.config/tvnamer/ ]; then
     mkdir -p $HOME/.config/tvnamer/
 fi
 
-
 if [ ! -e $HOME/.config/tvnamer/tvnamer.json ]; then
-    ln -s $HOME/.dotfiles/files/config/tvnamer/tvnamer.json $HOME/.config/tvnamer/tvnamer.json
+    ln -s $HOME/.dotfiles/files/config/tvnamer.json $HOME/.config/tvnamer/tvnamer.json
 fi
-
-
 
 # Symlink vimrc
 if [ ! -d $HOME/.config/vim/ ]; then
