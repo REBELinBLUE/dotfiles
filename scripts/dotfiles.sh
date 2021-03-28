@@ -39,11 +39,6 @@ if [ ! -f $HOME/.config/git/config ]; then
     echo -e "[include]\n    path = $HOME/.dotfiles/files/config/git/config" > $HOME/.config/git/config
 fi
 
-# Remove tvnamer config if not installed
-if ! type_exists 'tvnamer'; then
-    rm -f $HOME/.tvnamer.json
-fi
-
 # Symlink the ssh config files
 if [ ! -e $HOME/.ssh/config.d ]; then
     ln -s $HOME/.dotfiles/files/.ssh/config.d/ $HOME/.ssh/config.d
@@ -77,6 +72,16 @@ fi
 if [ ! -e $HOME/.config/readline/inputrc ]; then
     ln -s $HOME/.dotfiles/files/config/inputrc $HOME/.config/readline/inputrc
 fi
+
+if [ ! -d $HOME/.config/tvnamer/ ]; then
+    mkdir -p $HOME/.config/tvnamer/
+fi
+
+
+if [ ! -e $HOME/.config/tvnamer/tvnamer.json ]; then
+    ln -s $HOME/.dotfiles/files/config/tvnamer/tvnamer.json $HOME/.config/tvnamer/tvnamer.json
+fi
+
 
 
 # Symlink vimrc

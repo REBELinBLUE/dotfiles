@@ -1,7 +1,7 @@
 {
     "valid_extensions": ["m4v"],
     "search_all_languages": false,
-    "langauge": "en",
+    "language": "en",
     "filename_with_episode": "%(episode)s %(episodename)s%(ext)s",
     "filename_without_episode": "%(seriesname)s - [%(seasonno)02dx%(episode)s]%(ext)s",
     "filename_with_episode_no_season": "%(seriesname)s - %(episodename)s%(ext)s",
