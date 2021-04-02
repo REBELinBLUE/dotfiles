@@ -3,7 +3,7 @@
 #truncation_length = 3
 
 [kubernetes]
-disabled = false
+disabled = true
 
 [aws]
 disabled = true
