@@ -2,5 +2,6 @@
 
 /usr/bin/pkill -9 gpg-agent
 /usr/local/MacGPG2/bin/gpgconf --launch gpg-agent
+/usr/local/MacGPG2/bin/gpg --card-status > /dev/null
 
 exit $?
