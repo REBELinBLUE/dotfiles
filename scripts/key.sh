@@ -115,15 +115,15 @@ gpgconf --kill all
 gpg --import < ~/Scratch/????/pubkey.asc
 
 # Turn on touch for SIGNATURES.
-ykman openpgp set-touch sig cached
+ykman openpgp keys set-touch sig cached -f
 # $PUK
 
 # Turn on touch for AUTHENTICATION.
-ykman openpgp set-touch aut on
+ykman openpgp keys set-touch aut on -f
 # $PUK
 
 # Turn on touch for ENCRYPTION.
-ykman openpgp set-touch enc on
+ykman openpgp keys set-touch enc on -f
 # $PUK
 
 hkt export-pubkeys ???? --keyring ~/.gnupg/pubring.gpg | hokey lint
