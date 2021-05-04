@@ -1,5 +1,5 @@
 set constantshow
-set smooth
+#set smooth
 set autoindent
 set suspend
 set tabsize 4

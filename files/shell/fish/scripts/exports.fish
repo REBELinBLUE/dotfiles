@@ -1,6 +1,6 @@
-# Make sublime the default editor locally and nano when via SSH
+# Make vscode the default editor locally and nano when via SSH
 if begin; test -z $SSH_CLIENT; and test -z $SSH_TTY; end
-    set -xg EDITOR "subl -w"
+    set -xg EDITOR "code -w"
 else
     set -xg EDITOR "nano -w"
 end
