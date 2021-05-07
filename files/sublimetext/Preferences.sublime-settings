@@ -11,8 +11,10 @@
 		".vagrant",
 		"CVS"
 	],
-	"font_face": "Source Code Pro Bold",
-	"font_size": 12.0,
+	"font_face": "Fira Code",
+	"font_size": 13.0,
+	"line_padding_bottom": 2,
+	"line_padding_top": 2,
 	"ignored_packages":
 	[
 		"AdvancedNewFile",
