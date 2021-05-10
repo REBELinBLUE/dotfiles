@@ -66,7 +66,7 @@ curl -LsS https://squizlabs.github.io/PHP_CodeSniffer/phpcbf.phar -o /usr/local/
 chmod a+x /usr/local/bin/phpcs /usr/local/bin/phpcbf
 
 e_arrow 'Downloading PHPCS Fixer'
-curl -LsS https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.16.3/php-cs-fixer.phar -o /usr/local/bin/php-cs-fixer
+curl -LsS https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v3.0.0/php-cs-fixer.phar -o /usr/local/bin/php-cs-fixer
 chmod a+x /usr/local/bin/php-cs-fixer
 
 e_arrow 'Downloading PHP Mess Detector'
