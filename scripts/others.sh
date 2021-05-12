@@ -53,6 +53,7 @@ kubectl krew install outdated
 kubectl krew install tree
 kubectl krew install pod-dive
 kubectl krew install neat
+kubectl krew install cert-manager
 
 #kubectl krew install tap
 
