@@ -70,7 +70,7 @@ curl -LsS https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v3.0.0/
 chmod a+x /usr/local/bin/php-cs-fixer
 
 e_arrow 'Downloading PHP Mess Detector'
-curl -LsS https://github.com/phpmd/phpmd/releases/download/2.8.2/phpmd.phar -o /usr/local/bin/phpmd
+curl -LsS https://github.com/phpmd/phpmd/releases/download/2.10.1/phpmd.phar -o /usr/local/bin/phpmd
 chmod a+x /usr/local/bin/phpmd
 
 if [ ! -d $HOME/.config/composer/ ]; then
@@ -83,4 +83,3 @@ if [ ! -f $HOME/.config/composer/composer.json ]; then
 fi
 
 /usr/local/bin/composer global install
-
