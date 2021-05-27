@@ -8,7 +8,6 @@ tap 'homebrew/command-not-found'
 tap 'wagoodman/dive'
 tap 'c-bata/kube-prompt'
 tap 'derailed/k9s'
-tap 'jesseduffield/lazydocker'
 tap 'derailed/popeye'
 
 # Install standard tools
@@ -52,7 +51,7 @@ brew 'python3'
 brew 'brew-php-switcher'
 brew 'php@8.0'
 brew 'php@7.4'
-brew 'php@7.3'
+# brew 'php@7.3'
 
 # Install media tools
 brew 'ffmpeg'
@@ -67,7 +66,7 @@ brew 'git-cal'
 brew 'git-extras'
 brew 'git-quick-stats'
 brew 'git-flow-avh'
-#brew 'hub'
+brew 'hub'
 brew 'gh'
 brew 'gist'
 brew 'gitup'
@@ -75,7 +74,7 @@ brew 'diff-so-fancy'
 brew 'grip'
 
 # Docker related
-brew 'hadolint'
+brew 'hadolint' # May not have an arm binary
 brew 'lazydocker'
 brew 'ctop'
 brew 'dive'
@@ -137,7 +136,6 @@ brew 'fd'
 brew 'watch'
 brew 'peco'
 brew 'psgrep'
-brew 'shellcheck'
 brew 'asciinema'
 
 # Used to colorise some output
@@ -151,10 +149,7 @@ brew 'graphviz'
 
 brew 'pinentry'
 brew 'ykman'
-brew 'hopenpgp-tools'
+brew 'hopenpgp-tools' # May not have an arm binary
 
 brew 'sleepwatcher'
 brew 'topgrade'
-brew 'terraform'
-brew 'terraformer'
-

@@ -8,16 +8,16 @@ if is_os "darwin"; then
         if [ -f "${path}" ]; then
             name=$(basename "${path}")
 
-            if [ -f "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/${name}" ]; then
-                rm "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/${name}"
+            if [ -f "${HOME}/Library/Application Support/Sublime Text/Packages/User/${name}" ]; then
+                rm "${HOME}/Library/Application Support/Sublime Text/Packages/User/${name}"
             fi
 
-            ln -s "${path}" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/${name}"
+            ln -s "${path}" "${HOME}/Library/Application Support/Sublime Text/Packages/User/${name}"
         fi
     done
 fi
 
-#Symlink any files except those listed above
+# Symlink any files except those listed above
 for path in $HOME/.dotfiles/files/.*; do
     if [ -f $path ]; then
         name=$(basename $path)

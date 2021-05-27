@@ -5,6 +5,8 @@ tap 'homebrew/cask-fonts'
 # Make sure apps get installed in system Applications dir
 cask_args appdir: '/Applications'
 
+brew 'svn'
+
 # Apps
 # cask 'keybase'
 # cask 'changes'

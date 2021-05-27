@@ -48,3 +48,4 @@ Thumbs.db
 #########
 .freshignore
 .env
+docker-compose.override.yml

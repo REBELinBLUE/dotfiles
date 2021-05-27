@@ -9,8 +9,8 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # brew remove node nvm
-# sudo rm -rf /usr/local/{lib/node{,/.npm,_modules},bin,share/man}/{npm*,node*,man1/node*}
-# sudo rm -rf /uca/local/lib/node_modules
+# sudo rm -rf /opt/homebrew/{lib/node{,/.npm,_modules},bin,share/man}/{npm*,node*,man1/node*}
+# sudo rm -rf /opt/homebrew/lib/node_modules
 # rm -rf ~/.cache/npm/ ~/.config/nvm/
 # brew install node nvm
 

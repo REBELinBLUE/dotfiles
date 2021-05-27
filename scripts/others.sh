@@ -30,7 +30,7 @@ ln -s `which ffmpeg` /usr/local/bin/ffmpeg-static
 # curl -fLo "Sauce Code Pro Semibold Nerd Font Complete.ttf" https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/SourceCodePro/Semibold/complete/Sauce%20Code%20Pro%20Semibold%20Nerd%20Font%20Complete.ttf
 # cd -
 
-cp -f "$HOME/.dotfiles/files/Monaco for Powerline.otf" $HOME/Library/Fonts/
+cp -f "$HOME/.dotfiles/prefs/Monaco for Powerline.otf" $HOME/Library/Fonts/
 
 git clone https://github.com/serialhex/nano-highlight.git /opt/nano-highlight
 
@@ -59,4 +59,3 @@ kubectl krew install cert-manager
 
 helm plugin install https://github.com/databus23/helm-diff.git --version master
 helm plugin install https://github.com/chartmuseum/helm-push.git
-

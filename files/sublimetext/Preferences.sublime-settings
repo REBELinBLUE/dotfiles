@@ -30,7 +30,7 @@
 		"Laravel Blade Highlighter",
 		"Markdown Extended",
 		"SublimeCodeIntel",
-		"Vintage"
+		"Vintage",
 	],
 	"rulers":
 	[
@@ -42,5 +42,5 @@
 	"theme": "Afterglow.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": false,
-	"word_wrap": false
+	"word_wrap": false,
 }
