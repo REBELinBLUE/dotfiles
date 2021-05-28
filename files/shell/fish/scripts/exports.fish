@@ -56,7 +56,6 @@ set -xg COMPOSER_CACHE_DIR $XDG_CACHE_HOME/composer
 ##set RUBY_VERSION (ruby -e 'puts RbConfig::CONFIG["ruby_version"]')
 
 # Other config files
-#set -xg VAGRANT_HOME $XDG_DATA_HOME/vagrant
 #set -xg VBOX_USER_HOME $XDG_CONFIG_HOME/virtualbox
 set -xg GETIPLAYER_PROFILE $XDG_CONFIG_HOME/get_iplayer
 set -xg INPUTRC $XDG_CONFIG_HOME/readline/inputrc

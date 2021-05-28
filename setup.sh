@@ -35,7 +35,6 @@ brew bundle --file=brewfiles/extras
 source $HOME/.dotfiles/scripts/homebrew.sh
 source $HOME/.dotfiles/scripts/others.sh
 source $HOME/.dotfiles/scripts/node.sh
-#source $HOME/.dotfiles/scripts/vagrant.sh
 source $HOME/.dotfiles/scripts/dotfiles.sh
 #source $HOME/.dotfiles/scripts/osx.sh
 source $HOME/.dotfiles/scripts/fish.sh

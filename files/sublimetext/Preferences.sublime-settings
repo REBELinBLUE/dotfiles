@@ -8,7 +8,6 @@
 		".git",
 		".hg",
 		".idea",
-		".vagrant",
 		"CVS"
 	],
 	"font_face": "Fira Code",
