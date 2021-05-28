@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source $HOME/.dotfiles/scripts/utils.sh
+source $HOME/.dotfiles/scripts/utils/utils.sh
 
 # Symlink sublime settings files
 if is_os "darwin"; then

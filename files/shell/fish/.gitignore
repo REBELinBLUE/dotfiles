@@ -14,3 +14,4 @@ functions/nvm.fish
 functions/nvm_alias_command.fish
 functions/nvm_alias_function.fish
 functions/yarn.fish
+functions/man.fish

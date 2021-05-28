@@ -3,7 +3,7 @@
 
 ### WARNING SOMETHING IN THIS SCRIPT BREAKS CATALINA
 
-source $HOME/.dotfiles/scripts/utils.sh
+source $HOME/.dotfiles/scripts/utils/utils.sh
 
 if ! is_os "darwin"; then
     e_error "The setup script is only for OS X"

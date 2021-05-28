@@ -1,4 +1,3 @@
-
 # Stop the colours polluting ENV
 unset CLI_BLACK
 unset CLI_RED

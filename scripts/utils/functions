@@ -1,0 +1,85 @@
+# Helper functions
+e_header() {
+    source $HOME/.dotfiles/scripts/utils/colours
+    printf "\n${CLI_BOLD}${CLI_MAGENTA}==========  %s  ==========${CLI_RESET}\n" "$@"
+    source $HOME/.dotfiles/scripts/utils/clear-colours
+}
+
+e_arrow() {
+    printf "➜ $@\n"
+}
+
+e_success() {
+    source $HOME/.dotfiles/scripts/utils/colours
+    printf "${CLI_GREEN}✔ %s${CLI_RESET}\n" "$@"
+    source $HOME/.dotfiles/scripts/utils/clear-colours
+}
+
+e_error() {
+    source $HOME/.dotfiles/scripts/utils/colours
+    printf "${CLI_RED}✖ %s${CLI_RESET}\n" "$@"
+    source $HOME/.dotfiles/scripts/utils/clear-colours
+}
+
+e_warning() {
+    source $HOME/.dotfiles/scripts/utils/colours
+    printf "${CLI_YELLOW}➜ %s${CLI_RESET}\n" "$@"
+    source $HOME/.dotfiles/scripts/utils/clear-colours
+}
+
+e_underline() {
+    source $HOME/.dotfiles/scripts/utils/colours
+    printf "${CLI_UNDERLINE}${CLI_BOLD}%s${CLI_RESET}\n" "$@"
+    source $HOME/.dotfiles/scripts/utils/clear-colours
+}
+
+e_bold() {
+    source $HOME/.dotfiles/scripts/utils/colours
+    printf "${CLI_BOLD}%s${CLI_RESET}\n" "$@"
+    source $HOME/.dotfiles/scripts/utils/clear-colours
+}
+
+e_tabbed() {
+    source $HOME/.dotfiles/scripts/utils/colours
+    printf "${CLI_YELLOW}%s-20s${CLI_RESET}%s\n" "$1" "$2" # fixme: not working
+    source $HOME/.dotfiles/scripts/utils/clear-colours
+}
+
+e_note() {
+    source $HOME/.dotfiles/scripts/utils/colours
+    printf "${CLI_UNDERLINE}${CLI_BOLD}${CLI_BLUE}Note:${CLI_RESET} ${CLI_BLUE}%s${CLI_RESET}\n" "$@"
+    source $HOME/.dotfiles/scripts/utils/clear-colours
+}
+
+seek_confirmation() {
+    source $HOME/.dotfiles/scripts/utils/colours
+    printf "\n${CLI_BOLD}$@${CLI_RESET}"
+    read -p " (y/n) " -n 1
+    printf "\n"
+    source $HOME/.dotfiles/scripts/utils/clear-colours
+}
+
+# Test whether the result of an 'ask' is a confirmation
+is_confirmed() {
+    if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+        return 0
+    fi
+
+    return 1
+}
+
+type_exists() {
+    if [ $(type -P $1) ]; then
+        return 0
+    fi
+
+    return 1
+}
+
+is_os() {
+    if [[ "${OSTYPE}" == $1* ]]; then
+        return 0
+    fi
+
+    return 1
+}

@@ -35,12 +35,6 @@ set -xg LC_COLLATE C
 # Default log level for NPM
 set -xg NPM_CONFIG_LOGLEVEL "error"
 
-# Colour man pages
-set -xg man_blink -o yellow
-set -xg man_bold -o red
-set -xg man_standout -b blue
-set -xg man_underline -u green
-
 # Set the session ssh-agent socket path (If it's not set)
 #set -xg SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent
 set -xg GPG_TTY (tty)
@@ -134,7 +128,7 @@ set -xg MANPATH $HOMEBREW_INSTALL_HOME/opt/findutils/libexec/gnuman \
                 /usr/share/man
 
 # # Set LS_COLORS
-eval (dircolors -c $HOME/.dotfiles/files/shell/bash/dircolors | sed 's/>&\/dev\/null$//')
+eval (dircolors -c $HOME/.dotfiles/files/shell/fish/dircolors | sed 's/>&\/dev\/null$//')
 
 # Fix behat colours
 set -xg BEHAT_PARAMS '{"formatters": {"pretty": {"output_styles": {"comment": ["blue"]}}}}'
