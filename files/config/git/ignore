@@ -43,9 +43,3 @@ Thumbs.db
 #####################
 *.sublime-*
 .idea
-
-# Tools #
-#########
-.freshignore
-.env
-docker-compose.override.yml
