@@ -106,6 +106,7 @@ gpg --edit-key $KEYID
 
 # key 2
 # key 3
+# keytocard
 # 3 - Authentication key
 
 rm -rf $GNUPGHOME
