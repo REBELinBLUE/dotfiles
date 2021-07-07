@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 install() {
-    cat << EOF > /tmp/gpg.gpg-agent.plist
+    cat << EOF > gpg.gpg-agent.plist
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
     <plist version="1.0">
@@ -19,10 +19,11 @@ install() {
         </dict>
     </plist>
 EOF
-    sudo cp "/tmp/gpg.gpg-agent.plist" "$HOME/Library/LaunchAgents/gpg.gpg-agent.plist"
-    rm "/tmp/gpg.gpg-agent.plist"
+    mkdir -p $HOME/Library/LaunchAgents
+    cp "gpg.gpg-agent.plist" "$HOME/Library/LaunchAgents/gpg.gpg-agent.plist"
+    rm "gpg.gpg-agent.plist"
 
-    sudo launchctl load -w $HOME/Library/LaunchAgents/gpg.gpg-agent.plist
+    launchctl load -w $HOME/Library/LaunchAgents/gpg.gpg-agent.plist
 
     #sudo launchctl enable gui/502/gpg.gpg-agent
     #sudo launchctl kickstart gui/502/gpg.gpg-agent
