@@ -96,7 +96,7 @@ brew 'vault'
 
 # Node related
 brew 'nvm'
-brew 'node'
+#brew 'node'
 
 # DB related
 brew 'mycli'
