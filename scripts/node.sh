@@ -12,7 +12,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # sudo rm -rf /opt/homebrew/{lib/node{,/.npm,_modules},bin,share/man}/{npm*,node*,man1/node*}
 # sudo rm -rf /opt/homebrew/lib/node_modules
 # rm -rf ~/.cache/npm/ ~/.config/nvm/
-# brew install node nvm
+# brew install nvm
 
 npm install -g eslint create-project jscs npm-check json5 serve markdownlint-cli markdown-toc @bchatard/alfred-jetbrains
 npm config -g set init-license MIT
