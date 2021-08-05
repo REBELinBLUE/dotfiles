@@ -9,12 +9,12 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Install HTTPie plugins
-pip3 install --upgrade pip
-pip3 install httpie-oauth
-pip3 install httpie-jwt-auth
-pip3 install http-prompt
+pip3 install --user --upgrade pip
+pip3 install --user httpie-oauth
+pip3 install --user httpie-jwt-auth
+pip3 install --user http-prompt
 
-curl -fsSL https://raw.githubusercontent.com/rgcr/m-cli/master/install.sh | sudo sh
+curl -fsSL https://raw.githubusercontent.com/rgcr/m-cli/master/install.sh |  sh
 
 # Install additional CLIs
 ln -s `which ffmpeg` /usr/local/bin/ffmpeg-static
