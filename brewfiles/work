@@ -1,3 +1,4 @@
 # Additional brewfile only for work Mac
 
 brew 'awscli'
+brew 'xsv'
