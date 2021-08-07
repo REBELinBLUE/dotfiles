@@ -35,6 +35,9 @@
     header = white dim
     untracked = cyan
 
+[init]
+    defaultBranch = master
+
 [commit]
     gpgsign = true
 
