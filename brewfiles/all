@@ -90,7 +90,7 @@ brew 'k9s'
 brew 'helm'
 brew 'derailed/popeye/popeye'
 brew 'octant'
-brew 'fluxctl'
+brew 'fluxcd/tap/flux'
 brew 'velero'
 brew 'vault'
 
