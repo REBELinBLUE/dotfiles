@@ -26,6 +26,6 @@ dockutil --add /Applications/PhpStorm.app --no-restart
 #dockutil --add /Applications/Patterns.app --no-restart
 dockutil --add /Applications/Visual\ Studio\ Code.app --no-restart
 dockutil --add /Applications/iTerm.app --no-restart
-dockutil --add /Applications/MoneyWiz\ 3.app
+dockutil --add /Applications/MoneyWiz.app
 
 brew uninstall dockutil

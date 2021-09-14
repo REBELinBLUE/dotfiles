@@ -14,5 +14,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # rm -rf ~/.cache/npm/ ~/.config/nvm/
 # brew install nvm
 
+nvm install --lts
+nvm alias default node
 npm install -g eslint create-project jscs npm-check json5 serve markdownlint-cli markdown-toc @bchatard/alfred-jetbrains
 npm config -g set init-license MIT

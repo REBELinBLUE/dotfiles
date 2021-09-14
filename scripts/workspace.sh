@@ -28,7 +28,7 @@ create() {
 
 automount() {
 	attach
-	cat << EOF > "/tmp/com.${VOLUME_NAME}.plist"
+	cat << EOF > "com.${VOLUME_NAME}.plist"
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -50,24 +50,24 @@ automount() {
 	</dict>
 </plist>
 EOF
-	sudo cp "/tmp/com.${VOLUME_NAME}.plist" "/Library/LaunchDaemons/com.${VOLUME_NAME}.plist"
-	rm "/tmp/com.${VOLUME_NAME}.plist"
+	cp "com.${VOLUME_NAME}.plist" "~/Library/LaunchAgents/com.${VOLUME_NAME}.plist"
+	rm "com.${VOLUME_NAME}.plist"
 }
 
 noautomount() {
 	detach
-	sudo rm -f "/Library/LaunchDaemons/com.${VOLUME_NAME}.plist"
+	rm -f "~/Library/LaunchAgents/com.${VOLUME_NAME}.plist"
 }
 
 detach() {
 	m=$(hdiutil info | grep "${MOUNT_POINT}" | cut -f1)
 	if [ ! -z "$m" ]; then
-		sudo hdiutil detach $m
+		hdiutil detach $m
 	fi
 }
 
 attach() {
-	sudo hdiutil attach -notremovable -nobrowse -mountpoint ${MOUNT_POINT} ${VOLUME_PATH}
+	hdiutil attach -nobrowse -mountpoint ${MOUNT_POINT} ${VOLUME_PATH}
 }
 
 resize() {

@@ -2,6 +2,7 @@
 
 # Taps
 tap 'homebrew/bundle'
+tap 'fluxcd/tap'
 tap 'homebrew/services'
 tap 'alehouse/homebrew-unofficial'
 tap 'homebrew/command-not-found'
@@ -80,8 +81,12 @@ brew 'ctop'
 brew 'dive'
 brew 'docker-completion'
 brew 'docker-compose-completion'
+#brew 'lima'
+#brew 'docker'
+#brew 'docker-compose'
 
 # Kubernetes related
+#brew 'kubectl'
 brew 'stern'
 brew 'kubectx'
 brew 'kube-prompt'
@@ -90,7 +95,7 @@ brew 'k9s'
 brew 'helm'
 brew 'derailed/popeye/popeye'
 brew 'octant'
-brew 'fluxcd/tap/flux'
+brew 'flux'
 brew 'velero'
 brew 'vault'
 
