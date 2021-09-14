@@ -30,7 +30,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 #     "/System/Library/CoreServices/Menu Extras/Clock.menu"
 
 # Disable menu bar transparency
-defaults write com.apple.universalaccess reduceTransparency -bool true
+#defaults write com.apple.universalaccess reduceTransparency -bool true
 
 # Set sidebar icon size to small
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
@@ -92,9 +92,9 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeF
 
 # Set language and text formats
 defaults write NSGlobalDomain AppleLanguages -array "en"
-defaults write NSGlobalDomain AppleLocale -string "en_GB@"
-defaults write NSGlobalDomain AppleMeasurementUnits -string "Inches"
-defaults write NSGlobalDomain AppleMetricUnits -bool true
+defaults write NSGlobalDomain AppleLocale -string "en_GB"
+#defaults write NSGlobalDomain AppleMeasurementUnits -string "Inches"
+#defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "Europe/London" > /dev/null
@@ -111,7 +111,7 @@ defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Save screenshots to the desktop
-defaults write com.apple.screencapture location -string "${HOME}/Desktop"
+defaults write com.apple.screencapture location -string "$HOME/Desktop"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
@@ -123,7 +123,7 @@ defaults write com.apple.screencapture type -string "png"
 # Set Desktop as the default location for new Finder windows
 # For other paths, use `PfLo` and `file:///full/path/here/`
 defaults write com.apple.finder NewWindowTarget -string "PfHm"
-defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
+defaults write com.apple.finder NewWindowTargetPath -string "file://$HOME/"
 
 # Show icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
@@ -192,7 +192,7 @@ defaults write com.apple.dock showhidden -bool true
 defaults write com.apple.dock show-recents -bool false
 
 # Reset Launchpad, but keep the desktop wallpaper intact
-find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
+find "$HOME/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
 
 ###############################################################################
 # TextEdit                                                                    #
@@ -248,11 +248,11 @@ defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -stri
 ###############################################################################
 
 # Install Sublime Text settings
-mkdir -p "${HOME}/Library/Application Support/Sublime Text/Packages/User/"
-mkdir -p "${HOME}/Library/Application Support/Sublime Text/Installed Packages/"
+mkdir -p "$HOME/Library/Application Support/Sublime Text/Packages/User/"
+mkdir -p "$HOME/Library/Application Support/Sublime Text/Installed Packages/"
 
 curl -o "Package Control.sublime-package" https://packagecontrol.io/Package%20Control.sublime-package
-mv "Package Control.sublime-package" "${HOME}/Library/Application Support/Sublime Text/Installed Packages/" 2> /dev/null
+mv "Package Control.sublime-package" "$HOME/Library/Application Support/Sublime Text/Installed Packages/" 2> /dev/null
 
 ###############################################################################
 # Transmission                                                                #
@@ -261,7 +261,7 @@ mv "Package Control.sublime-package" "${HOME}/Library/Application Support/Sublim
 if [ -e /Applications/Transmission.app ]; then
     # Use `~/Downloads/Torrents` to store incomplete downloads
     defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-    defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Torrents"
+    defaults write org.m0k.transmission IncompleteDownloadFolder -string "$HOME/Downloads/Torrents"
 
     # Don’t prompt for confirmation before downloading
     defaults write org.m0k.transmission DownloadAsk -bool false
@@ -281,8 +281,8 @@ fi
 ###############################################################################
 
 if [ -e /Applications/Fairmount.app ]; then
-    mkdir "${HOME}/Library/Application Support/Fairmount"
-    ln -s /usr/local/lib/libdvdcss.* "${HOME}/Library/Application Support/Fairmount"
+    mkdir "$HOME/Library/Application Support/Fairmount"
+    ln -s /usr/local/lib/libdvdcss.* "$HOME/Library/Application Support/Fairmount"
 fi
 
 ###############################################################################
