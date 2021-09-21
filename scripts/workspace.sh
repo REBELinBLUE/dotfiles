@@ -50,13 +50,13 @@ automount() {
 	</dict>
 </plist>
 EOF
-	cp "com.${VOLUME_NAME}.plist" "~/Library/LaunchAgents/com.${VOLUME_NAME}.plist"
+	cp -f "com.${VOLUME_NAME}.plist" "${HOME}/Library/LaunchAgents/com.${VOLUME_NAME}.plist"
 	rm "com.${VOLUME_NAME}.plist"
 }
 
 noautomount() {
 	detach
-	rm -f "~/Library/LaunchAgents/com.${VOLUME_NAME}.plist"
+	rm -f "${HOME}/Library/LaunchAgents/com.${VOLUME_NAME}.plist"
 }
 
 detach() {
