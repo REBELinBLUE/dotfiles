@@ -142,6 +142,7 @@ brew 'watch'
 brew 'peco'
 brew 'psgrep'
 brew 'asciinema'
+brew 'tree'
 
 # Used to colorise some output
 brew 'grc'
