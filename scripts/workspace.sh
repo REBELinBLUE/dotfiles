@@ -41,12 +41,19 @@ automount() {
 		<array>
 			<string>hdiutil</string>
 			<string>attach</string>
-			<string>-notremovable</string>
 			<string>-nobrowse</string>
 			<string>-mountpoint</string>
 			<string>${MOUNT_POINT}</string>
 			<string>${VOLUME_PATH}</string>
 		</array>
+		<key>ProcessType</key>
+		<string>Background</string>
+		<key>StandardOutPath</key>
+		<string>${HOME}/Library/Logs/com.${VOLUME_NAME}.log</string>
+		<key>StandardErrorPath</key>
+		<string>${HOME}/Library/Logs/com.${VOLUME_NAME}.log</string>
+		<key>ThrottleInterval</key>
+		<integer>60</integer>
 	</dict>
 </plist>
 EOF
