@@ -143,19 +143,23 @@ brew 'peco'
 brew 'psgrep'
 brew 'asciinema'
 brew 'tree'
+brew 'sleepwatcher'
+brew 'topgrade'
 
 # Used to colorise some output
 brew 'grc'
 
-# Install other tools
-brew 'terminal-notifier'
-brew 'graphviz'
+# Development tools
+# brew 'go'
+brew 'rust'
 
-#cask '1password-cli'
-
+# Yubikey
 brew 'pinentry'
 brew 'ykman'
 brew 'hopenpgp-tools' # May not have an arm binary
 
-brew 'sleepwatcher'
-brew 'topgrade'
+# Other tools
+brew 'terminal-notifier'
+brew 'graphviz'
+
+# cask '1password-cli'

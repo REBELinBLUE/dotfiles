@@ -1,14 +1,14 @@
 # Make sublime the default editor locally and nano when via SSH
 if begin; test -z $SSH_CLIENT; and test -z $SSH_TTY; end
-    set -xg EDITOR "subl -w"
+	set -xg EDITOR "subl -w"
 else
-    set -xg EDITOR "nano -w"
+	set -xg EDITOR "nano -w"
 end
 
 if begin; test -d /opt/homebrew; end
-    set -xg HOMEBREW_INSTALL_HOME "/opt/homebrew"
+	set -xg HOMEBREW_INSTALL_HOME "/opt/homebrew"
 else
-    set -xg HOMEBREW_INSTALL_HOME "/usr/local"
+	set -xg HOMEBREW_INSTALL_HOME "/usr/local"
 end
 
 # XDG directories
@@ -85,47 +85,48 @@ set -gx LDFLAGS "-L$HOMEBREW_INSTALL_HOME/opt/openssl@1.1/lib"
 set -gx CPPFLAGS "-I$HOMEBREW_INSTALL_HOME/opt/openssl@1.1/include"
 set -gx PKG_CONFIG_PATH "$HOMEBREW_INSTALL_HOME/opt/openssl@1.1/lib/pkgconfig"
 
-set -xg PATH /usr/local/MacGPG2/bin/ \
-            /usr/local/sbin \
-            /usr/local/bin \
-            /usr/sbin \
-            /usr/bin \
-            /sbin \
-            /bin \
-            $HOME/.local/bin \
-            $GEM_HOME/bin \
-            $HOME/.krew/bin \
-            $GOPATH/bin \
-            $COMPOSER_HOME/vendor/bin
+set -xg PATH /usr/local/MacGPG2/bin \
+			/usr/local/sbin \
+			/usr/local/bin \
+			/usr/sbin \
+			/usr/bin \
+			/sbin \
+			/bin \
+			$HOME/.local/bin \
+			$GEM_HOME/bin \
+			$HOME/.krew/bin \
+			$GOPATH/bin \
+			$COMPOSER_HOME/vendor/bin \
+			$HOME/.cargo/bin
 
 set -xgp PATH $HOMEBREW_INSTALL_HOME/opt/vim/bin \
-        $HOMEBREW_INSTALL_HOME/opt/nano/bin \
-        $HOMEBREW_INSTALL_HOME/opt/sqlite/bin \
-        $HOMEBREW_INSTALL_HOME/bin \
-        $HOMEBREW_INSTALL_HOME/sbin \
-        $HOMEBREW_INSTALL_HOME/opt/gnu-sed/libexec/gnubin \
-        $HOMEBREW_INSTALL_HOME/opt/findutils/libexec/gnubin \
-        $HOMEBREW_INSTALL_HOME/opt/coreutils/libexec/gnubin \
-        $HOMEBREW_INSTALL_HOME/opt/gnu-indent/libexec/gnubin \
-        $HOMEBREW_INSTALL_HOME/opt/gnu-tar/libexec/gnubin \
-        $HOMEBREW_INSTALL_HOME/opt/gnu-which/libexec/gnubin \
-        $HOMEBREW_INSTALL_HOME/opt/make/libexec/gnubin \
-        $HOMEBREW_INSTALL_HOME/opt/gnu-getopt/bin \
-        $HOMEBREW_INSTALL_HOME/opt/grep/libexec/gnubin \
-        $HOMEBREW_INSTALL_HOME/opt/mysql-client/bin
+		$HOMEBREW_INSTALL_HOME/opt/nano/bin \
+		$HOMEBREW_INSTALL_HOME/opt/sqlite/bin \
+		$HOMEBREW_INSTALL_HOME/bin \
+		$HOMEBREW_INSTALL_HOME/sbin \
+		$HOMEBREW_INSTALL_HOME/opt/gnu-sed/libexec/gnubin \
+		$HOMEBREW_INSTALL_HOME/opt/findutils/libexec/gnubin \
+		$HOMEBREW_INSTALL_HOME/opt/coreutils/libexec/gnubin \
+		$HOMEBREW_INSTALL_HOME/opt/gnu-indent/libexec/gnubin \
+		$HOMEBREW_INSTALL_HOME/opt/gnu-tar/libexec/gnubin \
+		$HOMEBREW_INSTALL_HOME/opt/gnu-which/libexec/gnubin \
+		$HOMEBREW_INSTALL_HOME/opt/make/libexec/gnubin \
+		$HOMEBREW_INSTALL_HOME/opt/gnu-getopt/bin \
+		$HOMEBREW_INSTALL_HOME/opt/grep/libexec/gnubin \
+		$HOMEBREW_INSTALL_HOME/opt/mysql-client/bin
 
 set -xg MANPATH $HOMEBREW_INSTALL_HOME/opt/findutils/libexec/gnuman \
-                $HOMEBREW_INSTALL_HOME/opt/coreutils/share/man \
-                $HOMEBREW_INSTALL_HOME/opt/gnu-tar/libexec/gnuman \
-                $HOMEBREW_INSTALL_HOME/opt/gnu-which/libexec/gnuman \
-                $HOMEBREW_INSTALL_HOME/opt/gnu-which/libexec/gnuman \
-                $HOMEBREW_INSTALL_HOME/opt/gnu-sed/libexec/gnuman \
-                $HOMEBREW_INSTALL_HOME/opt/make/libexec/gnuman \
-                $HOMEBREW_INSTALL_HOME/opt/mysql-client/share/man \
-                $HOMEBREW_INSTALL_HOME/opt/postgresql/share/man \
-                /usr/local/MacGPG2/share/man \
-                /usr/local/share/man \
-                /usr/share/man
+				$HOMEBREW_INSTALL_HOME/opt/coreutils/share/man \
+				$HOMEBREW_INSTALL_HOME/opt/gnu-tar/libexec/gnuman \
+				$HOMEBREW_INSTALL_HOME/opt/gnu-which/libexec/gnuman \
+				$HOMEBREW_INSTALL_HOME/opt/gnu-which/libexec/gnuman \
+				$HOMEBREW_INSTALL_HOME/opt/gnu-sed/libexec/gnuman \
+				$HOMEBREW_INSTALL_HOME/opt/make/libexec/gnuman \
+				$HOMEBREW_INSTALL_HOME/opt/mysql-client/share/man \
+				$HOMEBREW_INSTALL_HOME/opt/postgresql/share/man \
+				/usr/local/MacGPG2/share/man \
+				/usr/local/share/man \
+				/usr/share/man
 
 # # Set LS_COLORS
 eval (dircolors -c $HOME/.dotfiles/files/shell/fish/dircolors | sed 's/>&\/dev\/null$//')
