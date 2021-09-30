@@ -35,11 +35,11 @@ cp -f "$HOME/.dotfiles/prefs/Monaco for Powerline.otf" $HOME/Library/Fonts/
 git clone https://github.com/serialhex/nano-highlight.git /opt/nano-highlight
 
 (
-  set -x; cd "$(mktemp -d)" &&
-  curl -fsSLO "https://github.com/kubernetes-sigs/krew/releases/latest/download/krew.tar.gz" &&
-  tar zxvf krew.tar.gz &&
-  KREW=./krew-"$(uname | tr '[:upper:]' '[:lower:]')_amd64" &&
-  "$KREW" install krew
+	set -x; cd "$(mktemp -d)" &&
+	curl -fsSLO "https://github.com/kubernetes-sigs/krew/releases/latest/download/krew.tar.gz" &&
+	tar zxvf krew.tar.gz &&
+	KREW=./krew-"$(uname | tr '[:upper:]' '[:lower:]')_amd64" &&
+	"$KREW" install krew
 )
 
 kubectl krew install get-all
@@ -61,4 +61,5 @@ helm plugin install https://github.com/chartmuseum/helm-push.git
 
 cargo install git-tools --bin git-try-merge
 cargo install git-tools --bin git-delete
+cargo install cargo-update
 
