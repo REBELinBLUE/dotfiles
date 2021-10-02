@@ -17,14 +17,14 @@ else
     /usr/local/bin/composer self-update
 fi
 
-# brew-php-switcher 7.3 -s
-# pecl channel-update pecl.php.net
-# pecl uninstall xdebug
-# pecl install xdebug
-# cp $(brew --prefix php@7.3)/pecl/20180731/xdebug.so /tmp/php7.3-xdebug.so
-# pecl uninstall pcov
-# pecl install pcov
-# cp $(brew --prefix php@7.3)/pecl/20180731/pcov.so /tmp/php7.3-pcov.so
+brew-php-switcher 7.3 -s
+pecl channel-update pecl.php.net
+pecl uninstall xdebug
+pecl install xdebug
+cp $(brew --prefix php@7.3)/pecl/20180731/xdebug.so /tmp/php7.3-xdebug.so
+pecl uninstall pcov
+pecl install pcov
+cp $(brew --prefix php@7.3)/pecl/20180731/pcov.so /tmp/php7.3-pcov.so
 
 brew-php-switcher 7.4 -s
 pecl channel-update pecl.php.net
