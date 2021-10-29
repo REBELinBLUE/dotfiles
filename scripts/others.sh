@@ -17,7 +17,7 @@ pip3 install --user http-prompt
 curl -fsSL https://raw.githubusercontent.com/rgcr/m-cli/master/install.sh |  sh
 
 # Install additional CLIs
-ln -s `which ffmpeg` /usr/local/bin/ffmpeg-static
+ln -s $(brew --prefix)/bin/ffmpeg /usr/local/bin/ffmpeg-static
 
 # Install nerd fonts - https://github.com/ryanoasis/nerd-fonts
 # cd ~/Library/Fonts
@@ -30,16 +30,16 @@ ln -s `which ffmpeg` /usr/local/bin/ffmpeg-static
 # curl -fLo "Sauce Code Pro Semibold Nerd Font Complete.ttf" https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/SourceCodePro/Semibold/complete/Sauce%20Code%20Pro%20Semibold%20Nerd%20Font%20Complete.ttf
 # cd -
 
-cp -f "$HOME/.dotfiles/prefs/Monaco for Powerline.otf" $HOME/Library/Fonts/
-
 git clone https://github.com/serialhex/nano-highlight.git /opt/nano-highlight
 
 (
-	set -x; cd "$(mktemp -d)" &&
-	curl -fsSLO "https://github.com/kubernetes-sigs/krew/releases/latest/download/krew.tar.gz" &&
-	tar zxvf krew.tar.gz &&
-	KREW=./krew-"$(uname | tr '[:upper:]' '[:lower:]')_amd64" &&
-	"$KREW" install krew
+    set -x; cd "$(mktemp -d)" &&
+    OS="$(uname | tr '[:upper:]' '[:lower:]')" &&
+    ARCH="$(uname -m | sed -e 's/x86_64/amd64/' -e 's/\(arm\)\(64\)\?.*/\1\2/' -e 's/aarch64$/arm64/')" &&
+    KREW="krew-${OS}_${ARCH}" &&
+    curl -fsSLO "https://github.com/kubernetes-sigs/krew/releases/latest/download/${KREW}.tar.gz" &&
+    tar zxvf "${KREW}.tar.gz" &&
+    ./"${KREW}" install krew
 )
 
 kubectl krew install get-all
@@ -56,7 +56,7 @@ kubectl krew install neat
 kubectl krew install cert-manager
 #kubectl krew install tap
 
-helm plugin install https://github.com/databus23/helm-diff.git --version master
+helm plugin install https://github.com/databus23/helm-diff.git --version master # FIXME
 helm plugin install https://github.com/chartmuseum/helm-push.git
 
 cargo install git-tools --bin git-try-merge

@@ -5,7 +5,7 @@ assume_yes = true
 notify_each_step = false
 
 # Disable specific steps - same options as the command line flag
-disable = ["composer", "node", "git_repos", "mas"]
+disable = ["composer", "node", "git_repos", "mas", "gnome_shell_extensions"]
 
 # Ignore failures for these steps
 #ignore_failures = ["powershell"]

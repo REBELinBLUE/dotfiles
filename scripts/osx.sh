@@ -234,14 +234,14 @@ defaults write com.googlecode.iterm2 OpenTmuxWindowsIn -int 2
 /usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Terminal Type" "xterm-256color"' ~/Library/Preferences/com.googlecode.iterm2.plist
 /usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Scrollback Lines" 1000' ~/Library/Preferences/com.googlecode.iterm2.plist
 
-###############################################################################
-# Mail                                                                        #
-###############################################################################
+# ###############################################################################
+# # Mail                                                                        #
+# ###############################################################################
 
-# Display emails in threaded mode, sorted by date (oldest at the top)
-defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreadedMode" -string "yes"
-defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortedDescending" -string "yes"
-defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -string "received-date"
+# # Display emails in threaded mode, sorted by date (oldest at the top)
+# defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreadedMode" -string "yes"
+# defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortedDescending" -string "yes"
+# defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -string "received-date"
 
 ###############################################################################
 # Sublime Text                                                                #
@@ -275,19 +275,3 @@ if [ -e /Applications/Transmission.app ]; then
     # Hide the legal disclaimer
     defaults write org.m0k.transmission WarningLegal -bool false
 fi
-
-###############################################################################
-# Fairmount                                                                   #
-###############################################################################
-
-if [ -e /Applications/Fairmount.app ]; then
-    mkdir "$HOME/Library/Application Support/Fairmount"
-    ln -s /usr/local/lib/libdvdcss.* "$HOME/Library/Application Support/Fairmount"
-fi
-
-###############################################################################
-# Pixelmator                                                                  #
-###############################################################################
-
-# Don't open in pixelmator format
-defaults write com.pixelmatorteam.pixelmator openDocumentsInPixelmatorFileFormat -bool false

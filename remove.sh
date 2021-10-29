@@ -15,10 +15,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Remove stuff
 
-brew remove fluxctl
-
-if [ -e $HOME/.local/share/vagrant ]; then
-    rm -rf $HOME/.local/share/vagrant/
-fi
+rm /usr/local/bin/phpmd
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh

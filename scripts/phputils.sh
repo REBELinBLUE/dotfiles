@@ -17,20 +17,21 @@ else
     /usr/local/bin/composer self-update
 fi
 
-brew-php-switcher 7.3 -s
-pecl channel-update pecl.php.net
-pecl uninstall xdebug
-pecl install xdebug
-cp $(brew --prefix php@7.3)/pecl/20180731/xdebug.so /tmp/php7.3-xdebug.so
-pecl uninstall pcov
-pecl install pcov
-cp $(brew --prefix php@7.3)/pecl/20180731/pcov.so /tmp/php7.3-pcov.so
+# brew-php-switcher 7.3 -s
+# pecl channel-update pecl.php.net
+# pecl uninstall xdebug
+# pecl install xdebug
+# cp $(brew --prefix php@7.3)/pecl/20180731/xdebug.so /tmp/php7.3-xdebug.so
+# pecl uninstall pcov
+# pecl install pcov
+# cp $(brew --prefix php@7.3)/pecl/20180731/pcov.so /tmp/php7.3-pcov.so
 
 brew-php-switcher 7.4 -s
 pecl channel-update pecl.php.net
 pecl uninstall xdebug
-pecl install xdebug # Xdebug is not ARM compatible
+pecl install xdebug
 cp $(brew --prefix php@7.4)/pecl/20190902/xdebug.so /tmp/php7.4-xdebug.so
+ln -s $(brew --prefix pcre2)/include/pcre2.h $(brew --prefix php@7.4)/include/php/ext/pcre/pcre2.h
 pecl uninstall pcov
 pecl install pcov
 cp $(brew --prefix php@7.4)/pecl/20190902/pcov.so /tmp/php7.4-pcov.so
@@ -40,6 +41,7 @@ pecl channel-update pecl.php.net
 pecl uninstall xdebug
 pecl install xdebug
 cp $(brew --prefix php@8.0)/pecl/20200930/xdebug.so /tmp/php8.0-xdebug.so
+ln -s $(brew --prefix pcre2)/include/pcre2.h $(brew --prefix php@8.0)/include/php/ext/pcre/pcre2.h
 pecl uninstall pcov
 pecl install pcov
 cp $(brew --prefix php@8.0)/pecl/20200930/pcov.so /tmp/php8.0-pcov.so
@@ -68,10 +70,6 @@ chmod a+x /usr/local/bin/phpcs /usr/local/bin/phpcbf
 e_arrow 'Downloading PHPCS Fixer'
 curl -LsS https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v3.0.0/php-cs-fixer.phar -o /usr/local/bin/php-cs-fixer
 chmod a+x /usr/local/bin/php-cs-fixer
-
-e_arrow 'Downloading PHP Mess Detector'
-curl -LsS https://github.com/phpmd/phpmd/releases/download/2.10.1/phpmd.phar -o /usr/local/bin/phpmd
-chmod a+x /usr/local/bin/phpmd
 
 if [ ! -d $HOME/.config/composer/ ]; then
     mkdir -p $HOME/.config/composer/

@@ -40,6 +40,10 @@ if [ ! -f $HOME/.config/git/config ]; then
 fi
 
 # Symlink the ssh config files
+if [ ! -d $HOME/.ssh ]; then
+    mkdir $HOME/.ssh
+fi
+
 if [ ! -e $HOME/.ssh/config.d ]; then
     ln -s $HOME/.dotfiles/files/.ssh/config.d/ $HOME/.ssh/config.d
 fi
