@@ -120,7 +120,7 @@ ykman openpgp keys set-touch sig cached -f
 # $PUK
 
 # Turn on touch for AUTHENTICATION.
-ykman openpgp keys set-touch aut on -f
+ykman openpgp keys set-touch aut cached -f
 # $PUK
 
 # Turn on touch for ENCRYPTION.
