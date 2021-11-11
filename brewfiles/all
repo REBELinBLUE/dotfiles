@@ -131,7 +131,6 @@ brew 'iproute2mac'
 
 # Useful commands
 brew 'htop'
-brew 'tldr'
 brew 'ripgrep'
 brew 'exa'
 brew 'bat'
