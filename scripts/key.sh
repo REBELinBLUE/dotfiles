@@ -35,7 +35,7 @@ gpg --full-generate-key
 # 4096
 # 10y
 
-KEYID=????
+#KEYID=$(gpg --list-secret-keys --keyid-format long | grep sec  | cut -d' ' -f 3 |  tr -d ' ' | sed 's#.*/##')
 
 gpg --edit-key $KEYID
 
