@@ -35,7 +35,7 @@ gpg --full-generate-key
 # 4096
 # 10y
 
-#KEYID=$(gpg --list-secret-keys --keyid-format long | grep sec  | cut -d' ' -f 3 |  tr -d ' ' | sed 's#.*/##')
+#KEYID=$(gpg --list-secret-keys --keyid-format long | grep sec | cut -d' ' -f 4 |  tr -d ' ' | sed 's#.*/##')
 
 gpg --edit-key $KEYID
 
@@ -62,15 +62,15 @@ gpg --expert --edit-key $KEYID
 # 4069
 # 10y
 
+gpg --gen-revoke $KEYID > revocation-certificate.asc
 
-
-gpg --armor --export $KEYID > pubkey.asc
+gpg --armor --export $KEYID > public-key.asc
 
 gpg --export $KEYID | hokey lint
 
-gpg --armor --export-secret-keys $KEYID > $GNUPGHOME/mastersub.asc
+gpg --armor --export-secret-keys $KEYID > master-with-subkeys.asc
 
-gpg --armor --export-secret-subkeys $KEYID > $GNUPGHOME/sub.asc
+gpg --armor --export-secret-subkeys $KEYID > subkeys.asc
 
 sudo cp -avi $GNUPGHOME ~/Scratch
 
@@ -113,7 +113,8 @@ rm -rf $GNUPGHOME
 unset $GNUPGHOME
 gpgconf --kill all
 
-gpg --import < ~/Scratch/????/pubkey.asc
+gpg --import < ~/Scratch/**/public-key.asc
+#curl https://keybase.io/rebelinblue/pgp_keys.asc | gpg --import
 
 # Turn on touch for SIGNATURES.
 ykman openpgp keys set-touch sig cached -f
