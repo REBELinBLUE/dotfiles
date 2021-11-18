@@ -30,6 +30,7 @@ EOF
 }
 
 start() {
+    #/usr/local/MacGPG2/bin/gpg-connect-agent /bye
     /usr/local/MacGPG2/bin/gpgconf --launch gpg-agent
     ln -sf $HOME/.gnupg/S.gpg-agent.ssh $SSH_AUTH_SOCK
 }
