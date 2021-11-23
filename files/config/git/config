@@ -114,6 +114,7 @@
 
 [tag]
     forceSignAnnotated = true
+    gpgsign = true
 
 [branch]
     sort = -committerdate

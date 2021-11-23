@@ -116,6 +116,10 @@ if [ ! -f $HOME/.gnupg/gpg.conf ]; then
     ln -s $HOME/.dotfiles/files/config/gpg.conf $HOME/.gnupg/gpg.conf
 fi
 
+if [ ! -f $HOME/.gnupg/scdaemon.conf ]; then
+    ln -s $HOME/.dotfiles/files/config/scdaemon.conf $HOME/.gnupg/scdaemon.conf
+fi
+
 /usr/local/MacGPG2/bin/gpgconf --kill all
 
 if [ ! -f $HOME/.config/extras.fish ]; then
