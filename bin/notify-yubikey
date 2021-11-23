@@ -4,7 +4,6 @@
 
 osascript -e 'display notification "Touch your YubiKey after submitting the User PIN" with title "git wants to sign a commit!"'
 
-echo "$@" > /tmp/test.txt
 gpg "$@"
 
 if [[ "$?" -ne 0 ]]; then
