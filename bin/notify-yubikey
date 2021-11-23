@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+#terminal-notifier -sound default -title "git wants to sign a commit!" -message "Touch your YubiKey after submitting the User PIN"
+
+osascript -e 'display notification "Touch your YubiKey after submitting the User PIN" with title "git wants to sign a commit!"'
+
+echo "$@"
+
+gpg "$@"
+
+if [[ "\$?" -ne 0 ]]; then
+   echo "Signing failed, exiting"
+fi
+
+echo "Sign completed"

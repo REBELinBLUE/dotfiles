@@ -63,3 +63,5 @@ cargo install git-tools --bin git-try-merge
 cargo install git-tools --bin git-delete
 cargo install cargo-update
 
+ln -s ~/.dotfiles/bin/notify-yubikey /usr/local/bin/notify-yubikey
+

@@ -38,6 +38,9 @@
 [init]
     defaultBranch = master
 
+[gpg]
+    program = notify-yubikey
+
 [commit]
     gpgsign = true
 
