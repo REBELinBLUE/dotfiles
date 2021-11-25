@@ -5,10 +5,12 @@
 ykman info
 
 gpg --card-status
-ykman openpgp reset
+ykman openpgp reset -f
 
-# Turning off YubiKey OTP
-ykman mode "FIDO+CCID"
+# Turning off YubiKey OTP, HSM and OATH
+ykman config usb --disable OATH -f
+ykman config usb --disable HSMAUTH -f
+ykman config usb --disable OTP -f
 
 export GNUPGHOME=$(mktemp -d) ; echo $GNUPGHOME
 cat << EOF > $GNUPGHOME/gpg.conf

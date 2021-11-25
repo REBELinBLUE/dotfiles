@@ -1,4 +1,4 @@
-function resetcard -d "resets the smartcard being used"
+function swapcard -d "resets the smartcard being used"
   # rm -rf ~/.gnupg/private-keys-v1.d
   # gpgconf --kill gpg-agent
   # gpg --card-status
