@@ -15,8 +15,8 @@ ykman config usb --disable OTP -f
 export GNUPGHOME=$(mktemp -d) ; echo $GNUPGHOME
 cat << EOF > $GNUPGHOME/gpg.conf
 use-agent
-personal-cipher-preferences AES256 AES192 AES CAST5
-personal-digest-preferences SHA512 SHA384 SHA256 SHA224
+personal-cipher-preferences AES256 AES192 AES
+personal-digest-preferences SHA512 SHA384 SHA256
 default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed
 cert-digest-algo SHA512
 s2k-digest-algo SHA512
@@ -25,15 +25,20 @@ charset utf-8
 fixed-list-mode
 no-comments
 no-emit-version
+no-greating
 keyid-format 0xlong
 list-options show-uid-validity
 verify-options show-uid-validity
 with-fingerprint
+with-fingerprint
 EOF
 
-gpg --full-generate-key
+gpg --expert --full-generate-key
 
-# 4
+# 8
+# s - turn off signing
+# e - turn off encryption
+# a - turn off authentication
 # 4096
 # 10y
 
@@ -42,16 +47,24 @@ gpg --full-generate-key
 gpg --edit-key $KEYID
 
 # adduid
+# trust
+# primary
 
 gpg --expert --edit-key $KEYID
 
 # addkey
-# 4 - RSA signing key
+# 8 - RSA set own
+# s - turn on signing
+# e - turn off encryption
+# a - turn off authentication
 # 4096
 # 10y
 
 # addkey
-# 6 - RSA encryption
+# 8 - RSA set own
+# s - turn off signing
+# e - turn on encryption
+# a - turn off authentication
 # 4096
 # 10y
 
@@ -60,15 +73,12 @@ gpg --expert --edit-key $KEYID
 # s - turn off signing
 # e - turn off encryption
 # a - turn on authentication
-# q
 # 4069
 # 10y
 
 gpg --gen-revoke $KEYID > revocation-certificate.asc
 
 gpg --armor --export $KEYID > public-key.asc
-
-gpg --export $KEYID | hokey lint
 
 gpg --armor --export-secret-keys $KEYID > master-with-subkeys.asc
 
@@ -119,7 +129,7 @@ gpg --import < ~/Scratch/**/public-key.asc
 #curl https://keybase.io/rebelinblue/pgp_keys.asc | gpg --import
 
 # Turn on touch for SIGNATURES.
-ykman openpgp keys set-touch sig cached -f
+ykman openpgp keys set-touch sig on -f
 # $PUK
 
 # Turn on touch for AUTHENTICATION.
@@ -129,8 +139,6 @@ ykman openpgp keys set-touch aut cached -f
 # Turn on touch for ENCRYPTION.
 ykman openpgp keys set-touch enc on -f
 # $PUK
-
-hkt export-pubkeys ???? --keyring ~/.gnupg/pubring.gpg | hokey lint
 
 #KEYID=$(gpg --card-status | grep 'Signature key' | cut -f2 -d: | tr -d ' ')
 

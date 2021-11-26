@@ -154,7 +154,6 @@ brew 'rust'
 # Yubikey
 brew 'pinentry'
 brew 'ykman'
-brew 'hopenpgp-tools' # May not have an arm binary
 
 # Other tools
 brew 'terminal-notifier'
