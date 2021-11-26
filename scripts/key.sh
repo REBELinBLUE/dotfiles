@@ -26,7 +26,7 @@ fixed-list-mode
 no-comments
 no-emit-version
 no-greating
-keyid-format 0xlong
+keyid-format long
 list-options show-uid-validity
 verify-options show-uid-validity
 with-fingerprint
