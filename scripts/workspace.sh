@@ -58,11 +58,18 @@ automount() {
 </plist>
 EOF
 	cp -f "com.${VOLUME_NAME}.plist" "${HOME}/Library/LaunchAgents/com.${VOLUME_NAME}.plist"
-	rm "com.${VOLUME_NAME}.plist"
+	rm -f "com.${VOLUME_NAME}.plist"
+
+	USERID=$(id -u)
+    launchctl bookstrap gui/$USERID "${HOME}/Library/LaunchAgents/com.${VOLUME_NAME}.plist"
 }
 
 noautomount() {
 	detach
+
+	USERID=$(id -u)
+    launchctl bootout gui/$USERID "${HOME}/Library/LaunchAgents/com.${VOLUME_NAME}.plist"
+
 	rm -f "${HOME}/Library/LaunchAgents/com.${VOLUME_NAME}.plist"
 }
 
