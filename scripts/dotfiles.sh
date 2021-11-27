@@ -119,6 +119,9 @@ fi
 if [ ! -f $HOME/.gnupg/scdaemon.conf ]; then
     ln -s $HOME/.dotfiles/files/config/scdaemon.conf $HOME/.gnupg/scdaemon.conf
 fi
+if [ ! -f $HOME/.config/get_iplayer/options ]; then
+    ln -s $HOME/.dotfiles/files/config/get_iplayer $HOME/.config/get_iplayer/options
+fi
 
 /usr/local/MacGPG2/bin/gpgconf --kill all
 

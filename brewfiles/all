@@ -32,6 +32,7 @@ brew 'less'
 brew 'ack'
 brew 'unzip'
 brew 'pidof'
+brew 'expect'
 
 # Install shells
 brew 'bash'
