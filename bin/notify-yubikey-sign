@@ -8,6 +8,7 @@ gpg "$@"
 
 if [[ "$?" -ne 0 ]]; then
    echo "Signing failed, exiting"
+   exit -1
 fi
 
-echo "Sign completed"
+echo "Signing completed"

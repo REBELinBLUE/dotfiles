@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+command osascript -e 'display notification "Touch your YubiKey after submitting the User PIN" with title "ssh wants to authenticate!"'
+
+ssh "$@"
+
+if [[ "$?" -ne 0 ]]; then
+   echo "Authentication failed, exiting"
+   exit -1
+fi
+
+echo "Authentication completed"

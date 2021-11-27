@@ -39,7 +39,7 @@
     defaultBranch = master
 
 [gpg]
-    program = /usr/local/bin/notify-yubikey
+    program = /usr/local/bin/notify-yubikey-sign
 
 [commit]
     gpgsign = true
@@ -60,6 +60,7 @@
     quotepath = false
     excludesfile = ~/.dotfiles/files/config/git/ignore
     #attributesfile = ~/.dotfiles/files/config/git/attributes
+    sshCommand = /usr/local/bin/notify-yubikey-ssh
 
     pager = diff-so-fancy | less --tabs=4 -RFX
 
