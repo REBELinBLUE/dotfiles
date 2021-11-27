@@ -3,5 +3,5 @@ function swapcard -d "resets the smartcard being used"
   # gpgconf --kill gpg-agent
   # gpg --card-status
   # #gpg --edit-key ???
-  gpg-connect-agent "scd serialno" "learn --force" /bye
+  gpg-connect-agent "scd serialno" "learn --force" /bye > /dev/null
 end
