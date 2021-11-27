@@ -13,5 +13,6 @@ function ssh
     end
     set -e count
 
+    command osascript -e 'display notification "Touch your YubiKey after submitting the User PIN" with title "ssh wants to authenticate!"'
     command ssh $argv
 end
