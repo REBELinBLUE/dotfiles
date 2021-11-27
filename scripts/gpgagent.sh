@@ -12,21 +12,26 @@ install() {
             <array>
                 <string>/bin/sh</string>
                 <string>-c</string>
-                <string>$HOME/.dotfiles/scripts/gpgagent.sh start</string>
+                <string>${HOME}/.dotfiles/scripts/gpgagent.sh start</string>
             </array>
             <key>RunAtLoad</key>
             <true/>
         </dict>
     </plist>
 EOF
-    mkdir -p $HOME/Library/LaunchAgents
-    cp "gpg.gpg-agent.plist" "$HOME/Library/LaunchAgents/gpg.gpg-agent.plist"
-    rm "gpg.gpg-agent.plist"
+    mkdir -p "${HOME}/Library/LaunchAgents"
+    cp "gpg.gpg-agent.plist" "${HOME}/Library/LaunchAgents/gpg.gpg-agent.plist"
+    rm -f "gpg.gpg-agent.plist"
 
-    launchctl load -w $HOME/Library/LaunchAgents/gpg.gpg-agent.plist
+    launchctl load "${HOME}/Library/LaunchAgents/gpg.gpg-agent.plist"
 
     #sudo launchctl enable gui/502/gpg.gpg-agent
     #sudo launchctl kickstart gui/502/gpg.gpg-agent
+}
+
+uninstall() {
+    launchctl unload "${HOME}/Library/LaunchAgents/gpg.gpg-agent.plist"
+    rm -f "${HOME}/Library/LaunchAgents/gpg.gpg-agent.plist"
 }
 
 start() {
@@ -53,6 +58,7 @@ EOF
 
 case "$1" in
     install) install;;
+    uninstall) uninstall;;
     start) start;;
     help) help;;
     '') help;;
