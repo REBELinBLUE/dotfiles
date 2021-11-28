@@ -64,7 +64,6 @@ invalid() {
 
 help() {
     cat <<EOF
-    "$@"
 usage: ./gpgagent.sh <command>
 
 Possible commands:
