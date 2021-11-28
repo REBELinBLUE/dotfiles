@@ -51,6 +51,7 @@ brew 'python3'
 
 # PHP related
 brew 'brew-php-switcher'
+brew 'php@8.1'
 brew 'php@8.0'
 brew 'php@7.4'
 #brew 'php@7.3'
