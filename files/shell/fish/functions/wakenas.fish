@@ -1,3 +1,3 @@
 function wakenas -d "Wake the NAS"
-    wakeonlan "00:90:A9:E3:92:19"
+    wakeonlan "6C:BF:B5:02:3B:D1"
 end
