@@ -1,4 +1,4 @@
 #!/bin/bash
 
-rsync --exclude .plexignore --exclude _un --times --size-only -r -av /mnt/HD/HD_a2/Media/Downloads/ /mnt/USB/USB2_d2/Downloads/
-rsync --exclude .plexignore --exclude _un -r -av /mnt/HD/HD_a2/Media/Downloads/ /mnt/USB/USB2_d2/Downloads/
+rsync --exclude .plexignore --times --size-only -r -av --progress /mnt/md0/media/Downloads/ /mnt/usb/usbshare2/Downloads/
+rsync --exclude .plexignore -r -av --progress /mnt/md0/media/Downloads/ /mnt/usb/usbshare2/Downloads/

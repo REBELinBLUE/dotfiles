@@ -1,21 +1,21 @@
 #!/bin/bash
 
-for D in /mnt/USB/USB2_d2/Media/Downloads/*; do
+for D in /mnt/usb/usbshare2/Downloads/*; do
     if [ -d "${D}" ]; then
         echo "${D}"   # your processing here
         NAME=$(basename "${D}")
 
-        rsync --delete --exclude _un --times --size-only -r -av "/mnt/HD/HD_a2/Media/Downloads/${NAME}/" "${D}/"
-        rsync --delete --exclude _un -r -av "/mnt/HD/HD_a2/Media/Downloads/${NAME}/" "${D}/"
+        rsync --delete --times --size-only -r -av --progress "/mnt/md0/media/Downloads/${NAME}/" "${D}/"
+        rsync --delete -r -av --progress "/mnt/md0/media/Downloads/${NAME}/" "${D}/"
     fi
 done
 
-for D in /mnt/USB/USB2_d2/Media/TV/*; do
+for D in /mnt/usb/usbshare2/TV/*; do
     if [ -d "${D}" ]; then
         echo "${D}"   # your processing here
         NAME=$(basename "${D}")
 
-        rsync --delete --exclude _un --times --size-only -r -av "/mnt/HD/HD_a2/Media/TV/${NAME}/" "${D}/"
-        rsync --delete --exclude _un -r -av "/mnt/HD/HD_a2/Media/TV/${NAME}/" "${D}/"
+        rsync --delete --times --size-only -r -av --progress "/mnt/md0/media/TV/${NAME}/" "${D}/"
+        rsync --delete -r -av --progress "/mnt/md0/media/TV/${NAME}/" "${D}/"
     fi
 done
