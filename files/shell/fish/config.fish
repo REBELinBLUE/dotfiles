@@ -3,6 +3,7 @@ source $HOME/.dotfiles/files/shell/fish/scripts/exports.fish
 
 if test -z "$__INTELLIJ_COMMAND_HISTFILE__"
     starship init fish | source
+    direnv hook fish | source
 
     # Load helper files
     source $HOME/.dotfiles/files/shell/fish/scripts/helpers.fish

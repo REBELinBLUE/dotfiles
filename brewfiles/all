@@ -146,6 +146,7 @@ brew 'asciinema'
 brew 'tree'
 brew 'sleepwatcher'
 brew 'topgrade'
+brew 'direnv'
 
 # Used to colorise some output
 brew 'grc'
