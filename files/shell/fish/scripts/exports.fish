@@ -80,7 +80,6 @@ set -xg FLUX_FORWARD_NAMESPACE flux
 
 set -xg GOPATH $HOME/.go
 
-set -g fish_user_paths "$HOMEBREW_INSTALL_HOME/opt/openssl@1.1/bin" $fish_user_paths
 set -gx LDFLAGS "-L$HOMEBREW_INSTALL_HOME/opt/openssl@1.1/lib"
 set -gx CPPFLAGS "-I$HOMEBREW_INSTALL_HOME/opt/openssl@1.1/include"
 set -gx PKG_CONFIG_PATH "$HOMEBREW_INSTALL_HOME/opt/openssl@1.1/lib/pkgconfig"
@@ -93,11 +92,12 @@ set -xg PATH /usr/local/MacGPG2/bin \
 			/sbin \
 			/bin \
 			$HOME/.local/bin \
-			$GEM_HOME/bin \
+			#$GEM_HOME/bin \
 			$HOME/.krew/bin \
 			$GOPATH/bin \
 			$COMPOSER_HOME/vendor/bin \
-			$HOME/.cargo/bin
+			$HOME/.cargo/bin #\
+			#$HOME/Library/Python/3.9/bin
 
 set -xgp PATH $HOMEBREW_INSTALL_HOME/opt/vim/bin \
 		$HOMEBREW_INSTALL_HOME/opt/nano/bin \
@@ -113,7 +113,8 @@ set -xgp PATH $HOMEBREW_INSTALL_HOME/opt/vim/bin \
 		$HOMEBREW_INSTALL_HOME/opt/make/libexec/gnubin \
 		$HOMEBREW_INSTALL_HOME/opt/gnu-getopt/bin \
 		$HOMEBREW_INSTALL_HOME/opt/grep/libexec/gnubin \
-		$HOMEBREW_INSTALL_HOME/opt/mysql-client/bin
+		$HOMEBREW_INSTALL_HOME/opt/mysql-client/bin \
+		$HOMEBREW_INSTALL_HOME/opt/openssl@1.1/bin
 
 set -xg MANPATH $HOMEBREW_INSTALL_HOME/opt/findutils/libexec/gnuman \
 				$HOMEBREW_INSTALL_HOME/opt/coreutils/share/man \
