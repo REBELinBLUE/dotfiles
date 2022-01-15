@@ -83,6 +83,10 @@ e_arrow 'Downloading PHPCS Fixer'
 curl -LsS https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v3.0.0/php-cs-fixer.phar -o /usr/local/bin/php-cs-fixer
 chmod a+x /usr/local/bin/php-cs-fixer
 
+e_arrow 'Downloading PHPStan'
+curl -LsS https://github.com/phpstan/phpstan/releases/download/1.4.0/phpstan.phar -o /usr/local/bin/phpstan
+chmod a+x /usr/local/bin/phpstan
+
 if [ ! -d $HOME/.config/composer/ ]; then
     mkdir -p $HOME/.config/composer/
 fi
