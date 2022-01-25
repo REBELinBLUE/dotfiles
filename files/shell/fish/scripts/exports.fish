@@ -73,16 +73,16 @@ set -xg GRIPHOME $XDG_CONFIG_HOME/grip
 set -xg VIMINIT 'let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 set -xg NVM_DIR $XDG_CONFIG_HOME/nvm
 
-set -xg nvm_prefix $HOMEBREW_INSTALL_HOME/opt/nvm
+set -xg nvm_prefix $HOMEBREW_PREFIX/opt/nvm
 set -xg FLUX_FORWARD_NAMESPACE flux
 
 #set -e RUBY_VERSION
 
 set -xg GOPATH $HOME/.go
 
-set -gx LDFLAGS "-L$HOMEBREW_INSTALL_HOME/opt/openssl@1.1/lib"
-set -gx CPPFLAGS "-I$HOMEBREW_INSTALL_HOME/opt/openssl@1.1/include"
-set -gx PKG_CONFIG_PATH "$HOMEBREW_INSTALL_HOME/opt/openssl@1.1/lib/pkgconfig"
+set -gx LDFLAGS "-L$HOMEBREW_PREFIX/opt/openssl@1.1/lib"
+set -gx CPPFLAGS "-I$HOMEBREW_PREFIX/opt/openssl@1.1/include"
+set -gx PKG_CONFIG_PATH "$HOMEBREW_PREFIX/opt/openssl@1.1/lib/pkgconfig"
 
 set -xg PATH /usr/local/MacGPG2/bin \
 			/usr/local/sbin \
@@ -99,32 +99,32 @@ set -xg PATH /usr/local/MacGPG2/bin \
 			$HOME/.cargo/bin #\
 			#$HOME/Library/Python/3.9/bin
 
-set -xgp PATH $HOMEBREW_INSTALL_HOME/opt/vim/bin \
-		$HOMEBREW_INSTALL_HOME/opt/nano/bin \
-		$HOMEBREW_INSTALL_HOME/opt/sqlite/bin \
-		$HOMEBREW_INSTALL_HOME/bin \
-		$HOMEBREW_INSTALL_HOME/sbin \
-		$HOMEBREW_INSTALL_HOME/opt/gnu-sed/libexec/gnubin \
-		$HOMEBREW_INSTALL_HOME/opt/findutils/libexec/gnubin \
-		$HOMEBREW_INSTALL_HOME/opt/coreutils/libexec/gnubin \
-		$HOMEBREW_INSTALL_HOME/opt/gnu-indent/libexec/gnubin \
-		$HOMEBREW_INSTALL_HOME/opt/gnu-tar/libexec/gnubin \
-		$HOMEBREW_INSTALL_HOME/opt/gnu-which/libexec/gnubin \
-		$HOMEBREW_INSTALL_HOME/opt/make/libexec/gnubin \
-		$HOMEBREW_INSTALL_HOME/opt/gnu-getopt/bin \
-		$HOMEBREW_INSTALL_HOME/opt/grep/libexec/gnubin \
-		$HOMEBREW_INSTALL_HOME/opt/mysql-client/bin \
-		$HOMEBREW_INSTALL_HOME/opt/openssl@1.1/bin
+set -xgp PATH $HOMEBREW_PREFIX/opt/vim/bin \
+		$HOMEBREW_PREFIX/opt/nano/bin \
+		$HOMEBREW_PREFIX/opt/sqlite/bin \
+		$HOMEBREW_PREFIX/bin \
+		$HOMEBREW_PREFIX/sbin \
+		$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin \
+		$HOMEBREW_PREFIX/opt/findutils/libexec/gnubin \
+		$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin \
+		$HOMEBREW_PREFIX/opt/gnu-indent/libexec/gnubin \
+		$HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnubin \
+		$HOMEBREW_PREFIX/opt/gnu-which/libexec/gnubin \
+		$HOMEBREW_PREFIX/opt/make/libexec/gnubin \
+		$HOMEBREW_PREFIX/opt/gnu-getopt/bin \
+		$HOMEBREW_PREFIX/opt/grep/libexec/gnubin \
+		$HOMEBREW_PREFIX/opt/mysql-client/bin \
+		$HOMEBREW_PREFIX/opt/openssl@1.1/bin
 
-set -xg MANPATH $HOMEBREW_INSTALL_HOME/opt/findutils/libexec/gnuman \
-				$HOMEBREW_INSTALL_HOME/opt/coreutils/share/man \
-				$HOMEBREW_INSTALL_HOME/opt/gnu-tar/libexec/gnuman \
-				$HOMEBREW_INSTALL_HOME/opt/gnu-which/libexec/gnuman \
-				$HOMEBREW_INSTALL_HOME/opt/gnu-which/libexec/gnuman \
-				$HOMEBREW_INSTALL_HOME/opt/gnu-sed/libexec/gnuman \
-				$HOMEBREW_INSTALL_HOME/opt/make/libexec/gnuman \
-				$HOMEBREW_INSTALL_HOME/opt/mysql-client/share/man \
-				$HOMEBREW_INSTALL_HOME/opt/postgresql/share/man \
+set -xg MANPATH $HOMEBREW_PREFIX/opt/findutils/libexec/gnuman \
+				$HOMEBREW_PREFIX/opt/coreutils/share/man \
+				$HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnuman \
+				$HOMEBREW_PREFIX/opt/gnu-which/libexec/gnuman \
+				$HOMEBREW_PREFIX/opt/gnu-which/libexec/gnuman \
+				$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnuman \
+				$HOMEBREW_PREFIX/opt/make/libexec/gnuman \
+				$HOMEBREW_PREFIX/opt/mysql-client/share/man \
+				$HOMEBREW_PREFIX/opt/postgresql/share/man \
 				/usr/local/MacGPG2/share/man \
 				/usr/local/share/man \
 				/usr/share/man
