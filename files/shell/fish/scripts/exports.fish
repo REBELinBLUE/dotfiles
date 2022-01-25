@@ -5,11 +5,11 @@ else
 	set -xg EDITOR "nano -w"
 end
 
-if begin; test -d /opt/homebrew; end
-	set -xg HOMEBREW_INSTALL_HOME "/opt/homebrew"
-else
-	set -xg HOMEBREW_INSTALL_HOME "/usr/local"
-end
+# Homebrew options
+set -gx HOMEBREW_PREFIX "/opt/homebrew";
+set -gx HOMEBREW_CELLAR "/opt/homebrew/Cellar";
+set -gx HOMEBREW_REPOSITORY "/opt/homebrew";
+set -xg HOMEBREW_CASK_OPTS "--appdir=/Applications" # --caskroom=/opt/homebrew-cask/Caskroom"
 
 # XDG directories
 set -xg XDG_CONFIG_HOME $HOME/.config
@@ -128,6 +128,9 @@ set -xg MANPATH $HOMEBREW_INSTALL_HOME/opt/findutils/libexec/gnuman \
 				/usr/local/MacGPG2/share/man \
 				/usr/local/share/man \
 				/usr/share/man
+
+set -gx INFOPATH $HOMEBREW_PREFIX/share/info \
+				 $INFOPATH
 
 # # Set LS_COLORS
 eval (dircolors -c $HOME/.dotfiles/files/shell/fish/dircolors | sed 's/>&\/dev\/null$//')
