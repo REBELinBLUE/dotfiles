@@ -46,12 +46,12 @@ kubectl krew install get-all
 kubectl krew install access-matrix
 kubectl krew install resource-capacity
 kubectl krew install images
-kubectl krew install rbac-lookup
-kubectl krew install kubesec-scan
-kubectl krew install who-can
+#kubectl krew install rbac-lookup
+#kubectl krew install kubesec-scan
+#kubectl krew install who-can
 kubectl krew install outdated
 kubectl krew install tree
-kubectl krew install pod-dive
+#kubectl krew install pod-dive
 kubectl krew install neat
 kubectl krew install cert-manager
 #kubectl krew install tap
