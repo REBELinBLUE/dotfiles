@@ -2,5 +2,11 @@
     "require": {
         "ergebnis/composer-normalize": "^2.5",
         "icanhazstring/composer-unused": "^0.7.3"
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "icanhazstring/composer-unused": true
+        }
     }
 }

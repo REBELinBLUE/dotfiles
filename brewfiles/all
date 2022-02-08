@@ -120,6 +120,7 @@ brew 'httpstat'
 
 # JSON related
 brew 'jq'
+brew 'jo'
 brew 'jsonpp'
 
 # Mac related
