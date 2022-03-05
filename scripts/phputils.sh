@@ -80,12 +80,16 @@ curl -LsS https://squizlabs.github.io/PHP_CodeSniffer/phpcbf.phar -o /usr/local/
 chmod a+x /usr/local/bin/phpcs /usr/local/bin/phpcbf
 
 e_arrow 'Downloading PHPCS Fixer'
-curl -LsS https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v3.0.0/php-cs-fixer.phar -o /usr/local/bin/php-cs-fixer
+curl -LsS https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v3.6.0/php-cs-fixer.phar -o /usr/local/bin/php-cs-fixer
 chmod a+x /usr/local/bin/php-cs-fixer
 
 e_arrow 'Downloading PHPStan'
-curl -LsS https://github.com/phpstan/phpstan/releases/download/1.4.0/phpstan.phar -o /usr/local/bin/phpstan
+curl -LsS https://github.com/phpstan/phpstan/releases/download/1.4.8/phpstan.phar -o /usr/local/bin/phpstan
 chmod a+x /usr/local/bin/phpstan
+
+e_arrow 'Downloading PHPUnit'
+curl -LsS https://phar.phpunit.de/phpunit.phar -o /usr/local/bin/phpunit
+chmod a+x /usr/local/bin/phpunit
 
 if [ ! -d $HOME/.config/composer/ ]; then
     mkdir -p $HOME/.config/composer/

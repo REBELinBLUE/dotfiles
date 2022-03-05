@@ -12,11 +12,11 @@ brew install dockutil
 dockutil --remove all --no-restart
 dockutil --add /Applications/Safari.app --no-restart
 dockutil --add /Applications/Spark.app --no-restart
-dockutil --add /Applications/Instapaper.app --no-restart
-dockutil --add /Applications/Transmission.app --no-restart
+#dockutil --add /Applications/Instapaper.app --no-restart
+#dockutil --add /Applications/Transmission.app --no-restart
 dockutil --add /System/Applications/Music.app --no-restart
 dockutil --add /System/Applications/Podcasts.app --no-restart
-dockutil --add /Applications/Plex.app --no-restart
+#dockutil --add /Applications/Plex.app --no-restart
 dockutil --add /System/Applications/Reminders.app --no-restart
 #dockutil --add /System/Applications/Notes.app --no-restart
 dockutil --add /Applications/PhpStorm.app --no-restart
