@@ -47,7 +47,7 @@ brew 'vim'
 brew 'diffutils'
 brew 'nano'
 #brew 'nano', args: ['disable-nls', 'enable-color', 'enable-extra', 'enable-multibuffer', 'enable-nanorc', 'enable-utf8']
-brew 'python'
+#brew 'python'
 brew 'python3'
 
 # PHP related
@@ -148,6 +148,7 @@ brew 'tree'
 brew 'sleepwatcher'
 brew 'topgrade'
 brew 'direnv'
+brew 'the_silver_searcher'
 
 # Used to colorise some output
 brew 'grc'
