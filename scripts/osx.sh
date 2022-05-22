@@ -275,3 +275,7 @@ if [ -e /Applications/Transmission.app ]; then
     # Hide the legal disclaimer
     defaults write org.m0k.transmission WarningLegal -bool false
 fi
+
+#defaults write /Library/Preferences/com.apple.loginwindow HiddenUsersList -array-addadmin
+#sudo defaults delete /Library/Preferences/com.apple.loginwindow HideAdminUsers true
+

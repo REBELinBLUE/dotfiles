@@ -30,7 +30,7 @@ mas install 290986013  # Deliveries (9.1.2)
 mas install 1480068668 # Messenger (97.11.116)
 mas install 485812721  # TweetDeck (3.18)
 mas install 1147396723 # WhatsApp (2.2114.10)
-mas install 897814548  # Proxie (3.1.0)
+# mas install 897814548  # Proxie (3.1.0)
 
 mas install 497799835  # Xcode (12.5)
 
