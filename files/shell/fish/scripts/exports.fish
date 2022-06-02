@@ -97,7 +97,7 @@ set -xg PATH /usr/local/MacGPG2/bin \
 			$HOME/.krew/bin \
 			$GOPATH/bin \
 			$COMPOSER_HOME/vendor/bin \
-			$HOME/.cargo/bin #\
+			$HOME/.cargo/bin \
 			$HOME/Library/Python/3.9/bin
 
 set -xgp PATH $HOMEBREW_PREFIX/opt/vim/bin \
