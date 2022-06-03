@@ -10,5 +10,6 @@ fi
 # Remove stuff
 
 #brew remove hopenpgp-tools mutagen-beta
+rm -rf /usr/local/bin/chdiff
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh

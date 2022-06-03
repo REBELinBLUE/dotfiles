@@ -44,17 +44,6 @@
 [commit]
     gpgsign = true
 
-[diff]
-    # Use more time to create better diffs
-    algorithm = patience
-
-    # Diff will detect both renames and copies
-    renames = copies
-
-    tool = chdiff
-
-    orderfile = ~/.dotfiles/files/config/git/order
-
 [core]
     editor = nano
     quotepath = false
@@ -77,11 +66,12 @@
     # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
     precomposeunicode = false
 
-[merge]
-    # Include summaries of merged commits in newly created merge commit messages
-    log = true
+[pager]
+    diff = diff-so-fancy | less --tabs=4 -RFX --pattern='^(Date|added|deleted|modified): '
+    show = diff-so-fancy | less --tabs=4 -RFX --pattern='^(Date|added|deleted|modified): '
 
-    tool = chdiff
+[diff-so-fancy]
+    markEmptyLines = false
 
 [push]
     default = simple
@@ -89,16 +79,35 @@
 [pull]
     rebase = false
 
-[mergetool "chdiff"]
-    cmd = /usr/bin/env chdiff --wait "$LOCAL" "$REMOTE"
-    keepBackup = false
-    trustExitCode = false
+[diff]
+    # Use more time to create better diffs
+    algorithm = patience
+
+    # Diff will detect both renames and copies
+    renames = copies
+
+    tool = Kaleidoscope
+
+    orderfile = ~/.dotfiles/files/config/git/order
 
 [difftool]
     prompt = false
 
-[difftool "chdiff"]
-    cmd = /usr/bin/env chdiff $LOCAL $REMOTE
+[difftool "Kaleidoscope"]
+    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
+[merge]
+    # Include summaries of merged commits in newly created merge commit messages
+    log = true
+
+    tool = Kaleidoscope
+
+[mergetool "Kaleidoscope"]
+    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+    trustExitCode = true
+
+[mergetool]
+    prompt = false
 
 [filter "media"]
     clean = git-media-clean %f
@@ -191,10 +200,3 @@
 
     # Switches to master and removes all local branches not master
     wash = !"git reset --hard HEAD && git checkout master && (git branch | grep -v '^*' | xargs git branch -D)"
-
-[pager]
-    diff = diff-so-fancy | less --tabs=4 -RFX --pattern='^(Date|added|deleted|modified): '
-    show = diff-so-fancy | less --tabs=4 -RFX --pattern='^(Date|added|deleted|modified): '
-
-[diff-so-fancy]
-    markEmptyLines = false
