@@ -9,7 +9,6 @@ fi
 
 # Remove stuff
 
-#brew remove hopenpgp-tools mutagen-beta
-rm -rf /usr/local/bin/chdiff
+brew remove grip
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh
