@@ -9,6 +9,6 @@ fi
 
 # Remove stuff
 
-rm /usr/local/bin/phpcs /usr/local/bin/phpcbf /usr/local/bin/php-cs-fixer /usr/local/bin/phpstan /usr/local/bin/phpunit
+
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh
