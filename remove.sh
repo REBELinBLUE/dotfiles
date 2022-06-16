@@ -9,11 +9,6 @@ fi
 
 # Remove stuff
 
-brew remove grip
-brew remove octant
-brew remove popeye
-brew remove kubespy
-brew remove git-cal
-brew remove sshrc
+rm /usr/local/bin/phpcs /usr/local/bin/phpcbf /usr/local/bin/php-cs-fixer /usr/local/bin/phpstan /usr/local/bin/phpunit
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh
