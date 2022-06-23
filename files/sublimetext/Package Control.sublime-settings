@@ -5,27 +5,15 @@
 	],
 	"installed_packages":
 	[
-		"AdvancedNewFile",
 		"Alignment",
-		"Babel",
-		"Behat",
 		"DashDoc",
-		"DocBlockr",
 		"Dockerfile Syntax Highlighting",
 		"DotENV",
 		"EditorConfig",
 		"fish",
-		"Function Name Display",
-		"INI",
-		"Laravel 5 Snippets",
-		"Laravel Blade Highlighter",
-		"Markdown Extended",
-		"MarkdownPreview",
 		"Package Control",
 		"Pretty JSON",
-		"SublimeCodeIntel",
 		"Theme - Afterglow",
 		"TrailingSpaces",
-		"VCS Gutter"
 	],
 }

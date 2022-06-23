@@ -14,23 +14,6 @@
 	"font_size": 13.0,
 	"line_padding_bottom": 2,
 	"line_padding_top": 2,
-	"ignored_packages":
-	[
-		"AdvancedNewFile",
-		"Alignment",
-		"Babel",
-		"Behat",
-		"DashDoc",
-		"DocBlockr",
-		"Function Name Display",
-		"Go",
-		"Javascript",
-		"Laravel 5 Snippets",
-		"Laravel Blade Highlighter",
-		"Markdown Extended",
-		"SublimeCodeIntel",
-		"Vintage",
-	],
 	"rulers":
 	[
 		120
@@ -42,4 +25,8 @@
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": false,
 	"word_wrap": false,
+	"ignored_packages":
+	[
+		"Vintage",
+	],
 }
