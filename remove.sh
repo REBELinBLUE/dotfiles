@@ -10,8 +10,4 @@ fi
 # Remove stuff
 
 
-
-rm -rf "${HOME}/Library/Application Support/Sublime Text/Packages/User/VcsGutter.sublime-settings"
-open "${HOME}/Library/Application Support/Sublime Text/Installed Packages"
-
 #source $HOME/.dotfiles/scripts/dotfiles.sh
