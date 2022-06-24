@@ -134,6 +134,7 @@ brew 'tree'
 brew 'sleepwatcher'
 brew 'topgrade'
 brew 'direnv'
+brew 'viddy'
 brew 'the_silver_searcher'
 
 # Used to colorise some output
