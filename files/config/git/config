@@ -38,13 +38,14 @@
 [init]
     defaultBranch = master
 
-[gpg]
-    program = /usr/local/bin/notify-yubikey-sign
+#[gpg]
+#    program = /usr/local/bin/notify-yubikey-sign
 
 [commit]
     gpgsign = true
 
 [core]
+    fsmonitor = true
     editor = nano
     quotepath = false
     excludesfile = ~/.dotfiles/files/config/git/ignore

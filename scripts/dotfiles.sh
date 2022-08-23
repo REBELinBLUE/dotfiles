@@ -30,6 +30,16 @@ for path in $HOME/.dotfiles/files/.*; do
     fi
 done
 
+# Make ~/.config directory if missing
+if [ ! -d $HOME/.config ]; then
+    mkdir $HOME/.config
+fi
+
+# Make ~/.local directory if missing
+if [ ! -d $HOME/.local ]; then
+    mkdir -p $HOME/.local/share/
+fi
+
 #  Setup initial git config
 if [ ! -d $HOME/.config/git ]; then
     mkdir -p $HOME/.config/git
@@ -46,16 +56,6 @@ fi
 
 if [ ! -e $HOME/.ssh/config.d ]; then
     ln -s $HOME/.dotfiles/files/.ssh/config.d/ $HOME/.ssh/config.d
-fi
-
-# Make ~/.config directory if missing
-if [ ! -d $HOME/.config ]; then
-    mkdir $HOME/.config
-fi
-
-# Make ~/.local directory if missing
-if [ ! -d $HOME/.local ]; then
-    mkdir -p $HOME/.local/share/
 fi
 
 # Starship
@@ -119,6 +119,7 @@ fi
 if [ ! -f $HOME/.gnupg/scdaemon.conf ]; then
     ln -s $HOME/.dotfiles/files/config/scdaemon.conf $HOME/.gnupg/scdaemon.conf
 fi
+
 if [ ! -f $HOME/.config/get_iplayer/options ]; then
     ln -s $HOME/.dotfiles/files/config/get_iplayer $HOME/.config/get_iplayer/options
 fi
