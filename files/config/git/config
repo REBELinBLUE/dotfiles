@@ -38,8 +38,8 @@
 [init]
     defaultBranch = master
 
-#[gpg]
-#    program = /usr/local/bin/notify-yubikey-sign
+[gpg]
+    program = /usr/local/bin/notify-yubikey-sign
 
 [commit]
     gpgsign = true
