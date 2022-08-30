@@ -17,6 +17,8 @@ brew 'libdvdcss'
 brew 'handbrake'
 brew 'k3d'
 
+brew 'cloud-nuke'
+
 # cask 'garmin-express'
 # cask 'houdahgeo'
 # cask 'imageoptim'

@@ -91,6 +91,10 @@ brew 'linkerd'
 brew 'velero'
 brew 'vault'
 
+# AWS related
+brew 'awscli'
+brew 'terraform'
+
 # Node related
 brew 'nvm'
 
