@@ -1,3 +1,5 @@
 # Additional brewfile only for work Mac
 
 brew 'xsv'
+brew 'docker-credential-helper-ecr'
+brew 'aws-vault'
