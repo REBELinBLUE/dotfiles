@@ -93,7 +93,8 @@ brew 'vault'
 
 # AWS related
 brew 'awscli'
-brew 'terraform'
+#brew 'terraform'
+brew 'tfenv'
 
 # Node related
 brew 'nvm'
