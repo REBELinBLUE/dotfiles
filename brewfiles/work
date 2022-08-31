@@ -1,5 +1,13 @@
 # Additional brewfile only for work Mac
 
 brew 'xsv'
-brew 'docker-credential-helper-ecr'
 brew 'aws-vault'
+brew 'aws-iam-authenticator'
+brew 'pre-commit'
+
+# brew 'docker-credential-helper-ecr'
+# ~/.docker/config.sjon
+#  "credHelpers": {
+#    "public.ecr.aws": "ecr-login",
+#    "605325162538.dkr.ecr.eu-west-1.amazonaws.com": "ecr-login"
+#  },
