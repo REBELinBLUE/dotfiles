@@ -111,15 +111,6 @@ if [ ! -e $HOME/.config/npm/npmrc ]; then
     ln -s $HOME/.dotfiles/files/config/npmrc $HOME/.config/npm/npmrc
 fi
 
-# Symlink terraform
-if [ ! -d $HOME/.config/terraform/ ]; then
-    mkdir -p $HOME/.config/terraform/
-fi
-
-if [ ! -e $HOME/.config/terraform/terraformrc ]; then
-    ln -s $HOME/.dotfiles/files/terraform/terraformrc $HOME/.config/terraform/terraformrc
-fi
-
 # Symlink gnupg
 if [ ! -f $HOME/.gnupg/gpg-agent.conf ]; then
     ln -s $HOME/.dotfiles/files/config/gpg-agent.conf $HOME/.gnupg/gpg-agent.conf
