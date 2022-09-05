@@ -5,22 +5,17 @@ else
 	set -xg EDITOR "nano -w"
 end
 
-# Homebrew options
+# Homebrew options from brew shellenv
 set -gx HOMEBREW_PREFIX "/opt/homebrew";
 set -gx HOMEBREW_CELLAR "/opt/homebrew/Cellar";
 set -gx HOMEBREW_REPOSITORY "/opt/homebrew";
-set -xg HOMEBREW_CASK_OPTS "--appdir=/Applications" # --caskroom=/opt/homebrew-cask/Caskroom"
+#set -xg HOMEBREW_CASK_OPTS "--appdir=/Applications" # --caskroom=/opt/homebrew-cask/Caskroom"
 
 # XDG directories
 set -xg XDG_CONFIG_HOME $HOME/.config
 set -xg XDG_CACHE_HOME $HOME/.cache
 set -xg XDG_DATA_HOME $HOME/.local/share
 set -xg XDG_RUNTIME_DIR $XDG_CACHE_HOME
-
-set -xg WORKSPACE $HOME/Workspace
-
-# Homebrew options
-set -xg HOMEBREW_CASK_OPTS "--appdir=/Applications" # --caskroom=/opt/homebrew-cask/Caskroom"
 
 # Setup terminal, and turn on colors
 set -x TERM "xterm-256color"
@@ -46,8 +41,6 @@ set -xg TERMINFO $XDG_RUNTIME_DIR/terminfo
 # Set the composer home dir
 set -xg COMPOSER_HOME $XDG_CONFIG_HOME/composer
 set -xg COMPOSER_CACHE_DIR $XDG_CACHE_HOME/composer
-
-##set RUBY_VERSION (ruby -e 'puts RbConfig::CONFIG["ruby_version"]')
 
 # Other config files
 #set -xg VBOX_USER_HOME $XDG_CONFIG_HOME/virtualbox
@@ -75,8 +68,6 @@ set -xg NVM_DIR $XDG_CONFIG_HOME/nvm
 
 set -xg nvm_prefix $HOMEBREW_PREFIX/opt/nvm
 set -xg FLUX_FORWARD_NAMESPACE flux
-
-#set -e RUBY_VERSION
 
 set -xg GOPATH $HOME/.go
 
@@ -126,6 +117,7 @@ set -xg MANPATH $HOMEBREW_PREFIX/opt/findutils/libexec/gnuman \
 				$HOMEBREW_PREFIX/opt/make/libexec/gnuman \
 				$HOMEBREW_PREFIX/opt/mysql-client/share/man \
 				$HOMEBREW_PREFIX/opt/postgresql/share/man \
+                $HOMEBREW_PREFIX/share/man \
 				/usr/local/MacGPG2/share/man \
 				/usr/local/share/man \
 				/usr/share/man
