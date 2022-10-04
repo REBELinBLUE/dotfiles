@@ -1,7 +1,6 @@
 # Additional brewfile only for work Mac
 
 brew 'xsv'
-brew 'aws-vault'
 brew 'aws-iam-authenticator'
 brew 'pre-commit'
 brew 'kubecm'

@@ -18,6 +18,7 @@ brew 'handbrake'
 brew 'k3d'
 
 brew 'cloud-nuke'
+brew 'packer'
 
 # cask 'garmin-express'
 # cask 'houdahgeo'
