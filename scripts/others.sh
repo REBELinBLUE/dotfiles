@@ -64,5 +64,8 @@ cargo install git-tools --bin git-delete
 cargo install cargo-update
 cargo install jless
 
+pyenv install 2.7.18
+kbenv install 1.25.2
+
 ln -s ~/.dotfiles/bin/notify-yubikey-sign /usr/local/bin/notify-yubikey-sign
 ln -s ~/.dotfiles/bin/notify-yubikey-ssh /usr/local/bin/notify-yubikey-ssh

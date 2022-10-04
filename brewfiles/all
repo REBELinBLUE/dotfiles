@@ -50,6 +50,7 @@ brew 'nano'
 #brew 'nano', args: ['disable-nls', 'enable-color', 'enable-extra', 'enable-multibuffer', 'enable-nanorc', 'enable-utf8']
 #brew 'python'
 brew 'python3'
+brew 'pyenv'
 
 # PHP related
 brew 'brew-php-switcher'
