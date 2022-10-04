@@ -4,6 +4,7 @@ brew 'xsv'
 brew 'aws-vault'
 brew 'aws-iam-authenticator'
 brew 'pre-commit'
+brew 'kubecm'
 
 # brew 'docker-credential-helper-ecr'
 # ~/.docker/config.sjon

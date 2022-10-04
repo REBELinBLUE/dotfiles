@@ -7,9 +7,10 @@ tap 'homebrew/services'
 tap 'alehouse/homebrew-unofficial'
 tap 'homebrew/command-not-found'
 tap 'wagoodman/dive'
-#btap 'c-bata/kube-prompt'
+#tap 'c-bata/kube-prompt'
 tap 'derailed/k9s'
 tap 'derailed/popeye'
+tap 'little-angry-clouds/homebrew-my-brews'
 
 # Install standard tools
 brew 'findutils'
@@ -81,6 +82,7 @@ brew 'docker-completion'
 brew 'docker-compose-completion'
 
 # Kubernetes related
+brew 'kbenv'
 brew 'stern'
 brew 'kubectx'
 brew 'k9s'
