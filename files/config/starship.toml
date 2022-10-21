@@ -1,7 +1,7 @@
 command_timeout = 5000
 
 [kubernetes]
-disabled = true
+disabled = false
 
 [aws]
 disabled = true
