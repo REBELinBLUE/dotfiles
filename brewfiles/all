@@ -98,6 +98,7 @@ brew 'vault'
 brew 'awscli'
 brew 'aws-vault'
 brew 'tfenv' # terraform
+brew 'tflint'
 
 # Node related
 brew 'nvm'
