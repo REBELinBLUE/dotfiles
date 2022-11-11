@@ -36,7 +36,7 @@
     untracked = cyan
 
 [init]
-    defaultBranch = master
+    defaultBranch = main
 
 [gpg]
     program = /usr/local/bin/notify-yubikey-sign
