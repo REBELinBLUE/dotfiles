@@ -20,3 +20,6 @@ if test -e $HOME/.config/extras.fish
 end
 
 #gpgconf --launch gpg-agent
+if test -e $HOME/.config/op/plugins.sh
+    source $HOME/.config/op/plugins.sh
+end

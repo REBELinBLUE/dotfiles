@@ -14,7 +14,8 @@ pip3 install --user httpie-oauth
 pip3 install --user httpie-jwt-auth
 pip3 install --user http-prompt
 
-pip3 install --user datadog
+#pip3 install --user datadog
+pip3 install --user linode-cli
 
 curl -fsSL https://raw.githubusercontent.com/rgcr/m-cli/master/install.sh |  sh
 
