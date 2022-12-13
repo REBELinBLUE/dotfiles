@@ -148,6 +148,7 @@ brew 'topgrade'
 brew 'direnv'
 brew 'viddy'
 brew 'the_silver_searcher'
+brew 'duck'
 
 # Used to colorise some output
 brew 'grc'
