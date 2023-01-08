@@ -69,6 +69,8 @@ set -xg NVM_DIR $XDG_CONFIG_HOME/nvm
 set -xg nvm_prefix $HOMEBREW_PREFIX/opt/nvm
 set -xg FLUX_FORWARD_NAMESPACE flux
 
+set -gx QUOTING_STYLE literal
+
 set -xg GOPATH $HOME/.go
 
 set -gx LDFLAGS "-L$HOMEBREW_PREFIX/opt/openssl@1.1/lib"
