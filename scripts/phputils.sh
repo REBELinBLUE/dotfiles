@@ -17,16 +17,6 @@ else
 	/usr/local/bin/composer self-update
 fi
 
-brew-php-switcher 7.4 -s
-pecl channel-update pecl.php.net
-pecl uninstall xdebug
-pecl install xdebug-3.1.6
-cp $(brew --prefix php@7.4)/pecl/20190902/xdebug.so /tmp/php7.4-xdebug.so
-ln -s $(brew --prefix pcre2)/include/pcre2.h $(brew --prefix php@7.4)/include/php/ext/pcre/pcre2.h
-pecl uninstall pcov
-pecl install pcov
-cp $(brew --prefix php@7.4)/pecl/20190902/pcov.so /tmp/php7.4-pcov.so
-
 brew-php-switcher 8.0 -s
 pecl channel-update pecl.php.net
 pecl uninstall xdebug

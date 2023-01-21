@@ -57,7 +57,6 @@ brew 'brew-php-switcher'
 brew 'php@8.2'
 brew 'php@8.1'
 brew 'php@8.0'
-brew 'php@7.4'
 
 # Install media tools
 brew 'ffmpeg'
