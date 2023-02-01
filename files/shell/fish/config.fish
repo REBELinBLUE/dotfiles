@@ -21,8 +21,6 @@ end
 
 #gpgconf --launch gpg-agent
 
-# FIXME: Should this be $HOME/.config/op/plugins.sh ?
-# See https://developer.1password.com/docs/cli/shell-plugins/vault/#step-2-source-the-pluginssh-file
-if test -e $HOME/.op/plugins.sh
-    source $HOME/.op/plugins.sh
+if test -e $HOME/.config/op/plugins.sh
+    source $HOME/.config/op/plugins.sh
 end
