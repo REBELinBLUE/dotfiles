@@ -17,16 +17,6 @@ else
 	/usr/local/bin/composer self-update
 fi
 
-brew-php-switcher 8.0 -s
-pecl channel-update pecl.php.net
-pecl uninstall xdebug
-pecl install xdebug
-cp $(brew --prefix php@8.0)/pecl/20200930/xdebug.so /tmp/php8.0-xdebug.so
-ln -s $(brew --prefix pcre2)/include/pcre2.h $(brew --prefix php@8.0)/include/php/ext/pcre/pcre2.h
-pecl uninstall pcov
-pecl install pcov
-cp $(brew --prefix php@8.0)/pecl/20200930/pcov.so /tmp/php8.0-pcov.so
-
 brew-php-switcher 8.1 -s
 pecl channel-update pecl.php.net
 pecl uninstall xdebug
@@ -47,17 +37,13 @@ pecl uninstall pcov
 pecl install pcov
 cp $(brew --prefix php@8.2)/pecl/20220829/pcov.so /tmp/php8.2-pcov.so
 
-cp /tmp/php7.4-xdebug.so $(brew --prefix php@7.4)/pecl/20190902/xdebug.so
-cp /tmp/php8.0-xdebug.so $(brew --prefix php@8.0)/pecl/20200930/xdebug.so
 cp /tmp/php8.1-xdebug.so $(brew --prefix php@8.1)/pecl/20210902/xdebug.so
 cp /tmp/php8.2-xdebug.so $(brew --prefix php@8.2)/pecl/20220829/xdebug.so
 
-cp /tmp/php7.4-pcov.so $(brew --prefix php@7.4)/pecl/20190902/pcov.so
-cp /tmp/php8.0-pcov.so $(brew --prefix php@8.0)/pecl/20200930/pcov.so
 cp /tmp/php8.1-pcov.so $(brew --prefix php@8.1)/pecl/20210902/pcov.so
 cp /tmp/php8.2-pcov.so $(brew --prefix php@8.2)/pecl/20220829/pcov.so
 
-brew-php-switcher 8.0 -s
+brew-php-switcher 8.1 -s
 
 e_arrow 'Downloading Psysh'
 curl -LsS https://psysh.org/psysh -o /usr/local/bin/psysh

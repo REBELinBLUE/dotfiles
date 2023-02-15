@@ -8,6 +8,8 @@ if ! is_os "darwin"; then
 fi
 
 # Remove stuff
+brew remove php@8.0
+rm -rf /opt/homebrew/etc/php/php@8.0 /opt/homebrew/lib/php/pecl/20200930
 
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh
