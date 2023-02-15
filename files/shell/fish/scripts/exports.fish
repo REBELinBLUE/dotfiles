@@ -65,6 +65,7 @@ set -xg DOCKER_CONFIG $XDG_CONFIG_HOME/docker
 set -xg GRIPHOME $XDG_CONFIG_HOME/grip
 set -xg VIMINIT 'let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 set -xg NVM_DIR $XDG_CONFIG_HOME/nvm
+set -xg OP_TOKENS_FILE $HOME/.dotfiles/files/.tokens.env
 
 set -xg nvm_prefix $HOMEBREW_PREFIX/opt/nvm
 set -xg FLUX_FORWARD_NAMESPACE flux
