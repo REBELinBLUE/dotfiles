@@ -7,10 +7,16 @@ ykman info
 gpg --card-status
 ykman openpgp reset -f
 
-# Turning off YubiKey OTP, HSM and OATH
+# Turning off YubiKey OTP, HSM, PIV and OATH
 ykman config usb --disable OATH -f
 ykman config usb --disable HSMAUTH -f
 ykman config usb --disable OTP -f
+ykman config usb --disable PIV -f
+
+# ykman config nfc --disable OATH -f
+# ykman config nfc --disable HSMAUTH -f
+# ykman config nfc --disable OTP -f
+# ykman config nfc --disable PIV -f
 
 export GNUPGHOME=$(mktemp -d) ; echo $GNUPGHOME
 cat << EOF > $GNUPGHOME/gpg.conf
