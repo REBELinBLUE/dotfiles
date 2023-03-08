@@ -144,7 +144,7 @@ brew 'peco'
 brew 'psgrep'
 brew 'asciinema'
 brew 'tree'
-brew 'sleepwatcher'
+brew 'sleepwatcher' #   brew services start sleepwatcher
 brew 'topgrade'
 brew 'direnv'
 brew 'viddy'
