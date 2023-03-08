@@ -166,5 +166,6 @@ brew 'ykman'
 # Other tools
 brew 'terminal-notifier'
 brew 'graphviz'
+brew 'shellcheck'
 
 # cask '1password-cli'
