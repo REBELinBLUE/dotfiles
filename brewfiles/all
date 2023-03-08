@@ -101,6 +101,7 @@ brew 'tfenv' # terraform
 brew 'tflint'
 brew 'tfsec'
 brew 'terrascan'
+brew 'trivy'
 
 # Node related
 brew 'nvm'
