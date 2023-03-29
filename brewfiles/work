@@ -1,9 +1,13 @@
 # Additional brewfile only for work Mac
 
+tap 'cloudflare/cloudflare'
+
 brew 'xsv'
 brew 'aws-iam-authenticator'
 brew 'pre-commit'
 brew 'kubecm'
+
+cask 'cloudflare/cloudflare/cf-terraforming'
 
 # brew 'docker-credential-helper-ecr'
 # ~/.docker/config.sjon
