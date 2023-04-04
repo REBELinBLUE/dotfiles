@@ -145,7 +145,7 @@ brew 'peco'
 brew 'psgrep'
 brew 'asciinema'
 brew 'tree'
-brew 'sleepwatcher'
+brew 'sleepwatcher' #   brew services start sleepwatcher
 brew 'topgrade'
 brew 'direnv'
 brew 'viddy'
@@ -166,5 +166,6 @@ brew 'ykman'
 # Other tools
 brew 'terminal-notifier'
 brew 'graphviz'
+brew 'shellcheck'
 
 # cask '1password-cli'

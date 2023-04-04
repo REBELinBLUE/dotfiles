@@ -11,5 +11,4 @@ fi
 rm -rf /usr/local/bin/pstorm
 rm -rf /usr/local/bin/datagrip
 
-
 #source $HOME/.dotfiles/scripts/dotfiles.sh
