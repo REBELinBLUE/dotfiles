@@ -106,6 +106,14 @@ brew 'trivy'
 # Node related
 brew 'nvm'
 
+# PHP related
+brew 'composer'
+brew 'psysh'
+#brew 'phpstan'
+#brew 'php-cs-fixer'
+#brew 'phpunit'
+#brew 'php-code-sniffer'
+
 # DB related
 brew 'mycli'
 brew 'pgcli'

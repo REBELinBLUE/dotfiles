@@ -10,5 +10,7 @@ fi
 # Remove stuff
 rm -rf /usr/local/bin/pstorm
 rm -rf /usr/local/bin/datagrip
+rm -rf /usr/local/bin/composer
+rm -rf /usr/local/bin/psysh
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh
