@@ -132,6 +132,7 @@ fi
 
 if [ ! -f $HOME/.config/extras.fish ]; then
     echo -e "#!/usr/bin/env fish\n\n# Stick any extra functions and exports for fish in this file" > $HOME/.config/extras.fish
+    echo "set -gx HOMEBREW_GITHUB_API_TOKEN your_token_here" >> $HOME/.config/extras.fish
     $EDITOR $HOME/.config/extras.fish
 fi
 
