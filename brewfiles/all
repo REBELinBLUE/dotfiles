@@ -96,6 +96,8 @@ brew 'vault'
 # AWS related
 brew 'awscli'
 brew 'aws-vault'
+
+# Terraform related
 brew 'tfenv' # Instead of terraform
 brew 'tflint'
 brew 'tfsec'
@@ -104,6 +106,7 @@ brew 'trivy'
 
 # Node related
 brew 'nvm' # Instead of node
+
 # PHP related
 brew 'composer'
 brew 'psysh'
