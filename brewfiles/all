@@ -85,7 +85,6 @@ brew 'docker-compose-completion'
 # Kubernetes related
 brew 'kbenv' # Instead of kubectl
 brew 'stern'
-brew 'kubectx'
 brew 'k9s'
 brew 'popeye'
 brew 'helmenv' # Instead of helm

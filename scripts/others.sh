@@ -58,6 +58,8 @@ kubectl krew install tree
 kubectl krew install neat
 kubectl krew install cert-manager
 #kubectl krew install tap
+kubectl krew install ctx
+kubectl krew install ns
 
 helm plugin install https://github.com/databus23/helm-diff.git --version master # FIXME
 helm plugin install https://github.com/chartmuseum/helm-push.git
