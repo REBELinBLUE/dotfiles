@@ -6,12 +6,6 @@ brew 'xsv'
 brew 'aws-iam-authenticator'
 brew 'pre-commit'
 brew 'kubecm'
+brew 'docker-credential-helper-ecr'
 
 cask 'cloudflare/cloudflare/cf-terraforming'
-
-# brew 'docker-credential-helper-ecr'
-# ~/.docker/config.sjon
-#  "credHelpers": {
-#    "public.ecr.aws": "ecr-login",
-#    "605325162538.dkr.ecr.eu-west-1.amazonaws.com": "ecr-login"
-#  },

@@ -61,7 +61,7 @@ set -xg BABEL_CACHE_PATH $XDG_CACHE_HOME/babel.json
 set -xg GEMRC $XDG_CONFIG_HOME/gemrc/config
 #set -xg GEM_HOME $HOME/.local/lib/ruby/gems/$RUBY_VERSION # FIXME: Why is this not working?
 set -xg GEM_SPEC_CACHE $XDG_CACHE_HOME/gem/specs
-set -xg DOCKER_CONFIG $XDG_CONFIG_HOME/docker
+#set -xg DOCKER_CONFIG $XDG_CONFIG_HOME/docker
 set -xg GRIPHOME $XDG_CONFIG_HOME/grip
 set -xg VIMINIT 'let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 set -xg NVM_DIR $XDG_CONFIG_HOME/nvm
@@ -122,7 +122,7 @@ set -xg MANPATH $HOMEBREW_PREFIX/opt/findutils/libexec/gnuman \
 				$HOMEBREW_PREFIX/opt/make/libexec/gnuman \
 				$HOMEBREW_PREFIX/opt/mysql-client/share/man \
 				$HOMEBREW_PREFIX/opt/postgresql/share/man \
-                $HOMEBREW_PREFIX/share/man \
+				$HOMEBREW_PREFIX/share/man \
 				/usr/local/MacGPG2/share/man \
 				/usr/local/share/man \
 				/usr/share/man
