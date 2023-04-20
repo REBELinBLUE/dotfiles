@@ -50,7 +50,7 @@ brew 'nano'
 #brew 'nano', args: ['disable-nls', 'enable-color', 'enable-extra', 'enable-multibuffer', 'enable-nanorc', 'enable-utf8']
 #brew 'python'
 brew 'python3'
-brew 'pyenv'
+brew 'pyenv' # to add python 2
 
 # PHP related
 brew 'brew-php-switcher'
@@ -83,12 +83,12 @@ brew 'docker-completion'
 brew 'docker-compose-completion'
 
 # Kubernetes related
-brew 'kbenv'
+brew 'kbenv' # Instead of kubectl
 brew 'stern'
 brew 'kubectx'
 brew 'k9s'
 brew 'popeye'
-brew 'helm'
+brew 'helmenv' # Instead of helm
 brew 'fluxcd/tap/flux'
 brew 'linkerd'
 brew 'velero'
@@ -97,15 +97,14 @@ brew 'vault'
 # AWS related
 brew 'awscli'
 brew 'aws-vault'
-brew 'tfenv' # terraform
+brew 'tfenv' # Instead of terraform
 brew 'tflint'
 brew 'tfsec'
 brew 'terrascan'
 brew 'trivy'
 
 # Node related
-brew 'nvm'
-
+brew 'nvm' # Instead of node
 # PHP related
 brew 'composer'
 brew 'psysh'

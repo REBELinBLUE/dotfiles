@@ -69,6 +69,11 @@ cargo install jless
 
 pyenv install 2.7.18
 kbenv install 1.25.2
+helmenv install 3.11.3
+
+kbenv use 1.25.2
+helmenv use 3.11.3
+
 
 ln -s ~/.dotfiles/bin/notify-yubikey-sign /usr/local/bin/notify-yubikey-sign
 ln -s ~/.dotfiles/bin/notify-yubikey-ssh /usr/local/bin/notify-yubikey-ssh

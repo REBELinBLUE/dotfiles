@@ -8,9 +8,14 @@ if ! is_os "darwin"; then
 fi
 
 # Remove stuff
-rm -rf /usr/local/bin/pstorm
-rm -rf /usr/local/bin/datagrip
-rm -rf /usr/local/bin/composer
-rm -rf /usr/local/bin/psysh
+brew remove helm
+brew install helmenv
+kbenv install 1.25.2
+helmenv install 3.11.3
+
+kbenv use 1.25.2
+helmenv use 3.11.3
+
+rm -rf  $XDG_CONFIG_HOME/docker
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh
