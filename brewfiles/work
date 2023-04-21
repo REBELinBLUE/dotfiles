@@ -3,7 +3,6 @@
 tap 'cloudflare/cloudflare'
 
 brew 'xsv'
-brew 'aws-iam-authenticator'
 brew 'pre-commit'
 brew 'kubecm'
 brew 'docker-credential-helper-ecr'
