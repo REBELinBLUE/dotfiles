@@ -33,5 +33,4 @@ $ gist --login
 $ ngrok authtoken OAUTH_TOKEN
 $ asciinema auth
 $ gh auth login
-$ hub browse
 ```
