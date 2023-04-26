@@ -8,10 +8,5 @@ if ! is_os "darwin"; then
 fi
 
 # Remove stuff
-brew remove kubernetes-cli kubectx
-kubectl krew install ctx
-kubectl krew install ns
-brew remove hub
-rm -rf ~/.config/hub
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh
