@@ -67,6 +67,7 @@ helm plugin install https://github.com/chartmuseum/helm-push.git
 cargo install git-tools --bin git-try-merge
 cargo install git-tools --bin git-delete
 cargo install cargo-update
+cargo install cargo-cache
 cargo install jless
 
 pyenv install 2.7.18
