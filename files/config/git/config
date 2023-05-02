@@ -170,8 +170,11 @@
     # Interactive rebase with the given number of latest commits
     reb = "!r() { git rebase --interactive HEAD~$1; }; r"
 
-    # Remove the old tag with this name and tag the latest commit with it.
+    # Remove the old tag with this  name and tag the latest commit with it.
     rmtag = "!r() { git tag --delete $1 && git push origin :refs/tags/$1; }; r"
+
+    # Print the root dir
+    root = "!git rev-parse --show-toplevel"
 
     # Show verbose output about remotes
     remotes = remote --verbose
