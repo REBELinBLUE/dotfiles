@@ -8,5 +8,6 @@ if ! is_os "darwin"; then
 fi
 
 # Remove stuff
+brew remove cloud-nuke
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh

@@ -17,7 +17,7 @@ brew 'libdvdcss'
 brew 'handbrake'
 brew 'k3d'
 
-brew 'cloud-nuke'
+brew 'aws-nuke'
 brew 'packer'
 
 # cask 'garmin-express'
