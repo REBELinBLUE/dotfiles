@@ -30,10 +30,9 @@ set -xg LC_COLLATE C
 # Default log level for NPM
 set -xg NPM_CONFIG_LOGLEVEL "error"
 
-# Set the session ssh-agent socket path (If it's not set)
-#set -xg SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent
-set -xg GPG_TTY (tty)
-#set -xg SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
+# Set the session ssh-agent socket path
+#set -xg GPG_TTY (tty)
+set -xg SSH_AUTH_SOCK $XDG_RUNTIME_DIR/1password/agent.sock
 
 # Look for terminfo files under data
 set -xg TERMINFO $XDG_RUNTIME_DIR/terminfo

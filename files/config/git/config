@@ -39,7 +39,7 @@
     defaultBranch = main
 
 [gpg]
-#    program = /usr/local/bin/notify-yubikey-sign
+    #program = /usr/local/bin/notify-yubikey-sign
     format = ssh
 
 [gpg "ssh"]

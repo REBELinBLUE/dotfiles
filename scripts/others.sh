@@ -77,6 +77,8 @@ helmenv install 3.11.3
 kbenv use 1.25.2
 helmenv use 3.11.3
 
+mkdir -p $XDG_RUNTIME_DIR/1password
+ln -s ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock $XDG_RUNTIME_DIR/1password/agent.sock
 
-ln -s ~/.dotfiles/bin/notify-yubikey-sign /usr/local/bin/notify-yubikey-sign
-ln -s ~/.dotfiles/bin/notify-yubikey-ssh /usr/local/bin/notify-yubikey-ssh
+#ln -s ~/.dotfiles/bin/notify-yubikey-sign /usr/local/bin/notify-yubikey-sign
+#ln -s ~/.dotfiles/bin/notify-yubikey-ssh /usr/local/bin/notify-yubikey-ssh
