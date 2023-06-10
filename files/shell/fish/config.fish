@@ -24,3 +24,5 @@ end
 if test -e $HOME/.config/op/plugins.sh
     source $HOME/.config/op/plugins.sh
 end
+
+eval "$(ngrok completion)"
