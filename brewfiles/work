@@ -6,5 +6,6 @@ brew 'xsv'
 brew 'pre-commit'
 brew 'kubecm'
 brew 'docker-credential-helper-ecr'
+brew 'terragrunt'
 
 cask 'cloudflare/cloudflare/cf-terraforming'
