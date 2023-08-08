@@ -1,11 +1,12 @@
 # Additional brewfile only for work Mac
 
 tap 'cloudflare/cloudflare'
+tap 'warrensbox/tap/tgswitch'
 
 brew 'xsv'
 brew 'pre-commit'
 brew 'kubecm'
 brew 'docker-credential-helper-ecr'
-brew 'terragrunt'
+brew 'tgswitch'
 
 cask 'cloudflare/cloudflare/cf-terraforming'
