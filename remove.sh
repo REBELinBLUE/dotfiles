@@ -9,4 +9,6 @@ fi
 
 # Remove stuff
 
+brew remove tfenv
+
 #source $HOME/.dotfiles/scripts/dotfiles.sh

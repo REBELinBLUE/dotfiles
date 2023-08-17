@@ -11,6 +11,7 @@ tap 'wagoodman/dive'
 tap 'derailed/k9s'
 tap 'derailed/popeye'
 tap 'little-angry-clouds/homebrew-my-brews'
+tap 'warrensbox/tap'
 
 # Install standard tools
 brew 'findutils'
@@ -98,7 +99,7 @@ brew 'awscli'
 brew 'aws-vault'
 
 # Terraform related
-brew 'tfenv' # Instead of terraform
+brew 'tfswitch' # Instead of terraform
 brew 'tflint'
 brew 'tfsec'
 brew 'terrascan'
