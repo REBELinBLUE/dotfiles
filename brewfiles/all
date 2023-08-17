@@ -100,6 +100,7 @@ brew 'aws-vault'
 
 # Terraform related
 brew 'tfswitch' # Instead of terraform
+brew 'tgswitch'
 brew 'tflint'
 brew 'tfsec'
 brew 'terrascan'
