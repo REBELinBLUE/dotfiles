@@ -97,6 +97,7 @@ brew 'vault'
 # AWS related
 brew 'awscli'
 brew 'aws-vault'
+brew 'aws-nuke'
 
 # Terraform related
 brew 'tfswitch' # Instead of terraform
