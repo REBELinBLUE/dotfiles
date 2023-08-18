@@ -10,5 +10,6 @@ fi
 # Remove stuff
 
 brew remove tfenv
+brew remove postgresql mysql-client
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh

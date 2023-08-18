@@ -1,7 +1,7 @@
 # Make sublime the default editor locally and nano when via SSH
 if begin; test -z $SSH_CLIENT; and test -z $SSH_TTY; end
 	set -xg EDITOR "code -w"
-    set -xg KUBE_EDITOR "subl -w"
+	set -xg KUBE_EDITOR "subl -w"
 else
 	set -xg EDITOR "nano -w"
 end
@@ -112,7 +112,8 @@ set -xgp PATH $HOMEBREW_PREFIX/opt/vim/bin \
 		$HOMEBREW_PREFIX/opt/make/libexec/gnubin \
 		$HOMEBREW_PREFIX/opt/gnu-getopt/bin \
 		$HOMEBREW_PREFIX/opt/grep/libexec/gnubin \
-		$HOMEBREW_PREFIX/opt/mysql-client/bin \
+		$HOMEBREW_PREFIX/opt/mysql-client@5.7/bin \
+		$HOMEBREW_PREFIX/opt/postgresql@12/bin \
 		$HOMEBREW_PREFIX/opt/openssl@1.1/bin
 
 set -xg MANPATH $HOMEBREW_PREFIX/opt/findutils/libexec/gnuman \
@@ -122,8 +123,8 @@ set -xg MANPATH $HOMEBREW_PREFIX/opt/findutils/libexec/gnuman \
 				$HOMEBREW_PREFIX/opt/gnu-which/libexec/gnuman \
 				$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnuman \
 				$HOMEBREW_PREFIX/opt/make/libexec/gnuman \
-				$HOMEBREW_PREFIX/opt/mysql-client/share/man \
-				$HOMEBREW_PREFIX/opt/postgresql/share/man \
+				$HOMEBREW_PREFIX/opt/mysql-client@5.7/share/man \
+				$HOMEBREW_PREFIX/opt/postgresql@12/share/man \
 				$HOMEBREW_PREFIX/share/man \
 				/usr/local/MacGPG2/share/man \
 				/usr/local/share/man \

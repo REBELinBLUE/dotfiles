@@ -1,10 +1,10 @@
 # Additional brewfile only for work Mac
 
-tap 'cloudflare/cloudflare'
+#tap 'cloudflare/cloudflare'
 
 brew 'xsv'
 brew 'pre-commit'
 brew 'kubecm'
 brew 'docker-credential-helper-ecr'
 
-cask 'cloudflare/cloudflare/cf-terraforming'
+#cask 'cloudflare/cloudflare/cf-terraforming'
