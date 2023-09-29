@@ -4,7 +4,7 @@ function switch_terragrunt --on-event fish_postexec
 
     if test $is_command_cd -eq 0
       if count .terragrunt-version > /dev/null
-        command tgswitch use
+        command tgswitch
       end
     end
 end

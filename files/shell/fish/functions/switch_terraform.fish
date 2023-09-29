@@ -4,7 +4,7 @@ function switch_terraform --on-event fish_postexec
 
     if test $is_command_cd -eq 0
       if count .terraform-version > /dev/null
-        command tfswitch use
+        command tfswitch
       end
     end
 end
