@@ -9,7 +9,10 @@ fi
 
 # Remove stuff
 
-brew remove tfenv
-brew remove postgresql mysql-client
+kubectl krew remove access-matrix
+kubectl krew remove get-all
+kubectl krew remove resource-capacity
+kubectl krew remove outdated
+kubectl krew remove cert-manager
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh
