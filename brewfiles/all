@@ -90,9 +90,13 @@ brew 'k9s'
 brew 'popeye'
 brew 'helmenv' # Instead of helm
 brew 'fluxcd/tap/flux'
-brew 'linkerd'
-brew 'velero'
-brew 'vault'
+brew 'kubeseal'
+#brew 'linkerd'
+#brew 'velero'
+#brew 'vault'
+brew 'yq'
+brew 'kubeconform'
+brew 'kustomize'
 
 # AWS related
 brew 'awscli'
