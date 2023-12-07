@@ -1,6 +1,6 @@
 # Compiled source #
 ###################
-*.com
+#*.com
 *.class
 *.dll
 *.exe
@@ -44,3 +44,4 @@ Thumbs.db
 *.sublime-*
 .idea
 .vscode
+

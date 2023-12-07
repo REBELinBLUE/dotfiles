@@ -87,7 +87,6 @@ set -xg PATH /usr/local/MacGPG2/bin \
 			/usr/bin \
 			/sbin \
 			/bin \
-			$HOME/.fig/bin \
 			$HOME/.local/bin \
 			#$GEM_HOME/bin \
 			$HOME/.krew/bin \
