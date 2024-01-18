@@ -12,6 +12,7 @@ tap 'derailed/k9s'
 tap 'derailed/popeye'
 tap 'little-angry-clouds/homebrew-my-brews'
 tap 'warrensbox/tap'
+tap 'thecasualcoder/stable'
 
 # Install standard tools
 brew 'findutils'
@@ -110,6 +111,7 @@ brew 'tflint'
 brew 'tfsec'
 brew 'terrascan'
 brew 'trivy'
+brew 'tf-summarize'
 
 # Node related
 brew 'nvm' # Instead of node
