@@ -3,20 +3,20 @@
 source $HOME/.dotfiles/scripts/utils/utils.sh
 
 # Ask for the administrator password upfront
-sudo -v
+#sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+#while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-brew-php-switcher 8.0 -s
-pecl channel-update pecl.php.net
-pecl uninstall xdebug
-pecl install xdebug
-cp $(brew --prefix php@8.0)/pecl/20200930/xdebug.so /tmp/php8.0-xdebug.so
-ln -s $(brew --prefix pcre2)/include/pcre2.h $(brew --prefix php@8.0)/include/php/ext/pcre/pcre2.h
-pecl uninstall pcov
-pecl install pcov
-cp $(brew --prefix php@8.0)/pecl/20200930/pcov.so /tmp/php8.0-pcov.so
+# brew-php-switcher 8.0 -s
+# pecl channel-update pecl.php.net
+# pecl uninstall xdebug
+# pecl install xdebug
+# cp $(brew --prefix php@8.0)/pecl/20200930/xdebug.so /tmp/php8.0-xdebug.so
+# ln -s $(brew --prefix pcre2)/include/pcre2.h $(brew --prefix php@8.0)/include/php/ext/pcre/pcre2.h
+# pecl uninstall pcov
+# pecl install pcov
+# cp $(brew --prefix php@8.0)/pecl/20200930/pcov.so /tmp/php8.0-pcov.so
 
 brew-php-switcher 8.1 -s
 pecl channel-update pecl.php.net
@@ -38,11 +38,11 @@ pecl uninstall pcov
 pecl install pcov
 cp $(brew --prefix php@8.2)/pecl/20220829/pcov.so /tmp/php8.2-pcov.so
 
-cp /tmp/php8.0-xdebug.so $(brew --prefix php@8.0)/pecl/20200930/xdebug.so
+# cp /tmp/php8.0-xdebug.so $(brew --prefix php@8.0)/pecl/20200930/xdebug.so
 cp /tmp/php8.1-xdebug.so $(brew --prefix php@8.1)/pecl/20210902/xdebug.so
 cp /tmp/php8.2-xdebug.so $(brew --prefix php@8.2)/pecl/20220829/xdebug.so
 
-cp /tmp/php8.0-pcov.so $(brew --prefix php@8.0)/pecl/20200930/pcov.so
+# cp /tmp/php8.0-pcov.so $(brew --prefix php@8.0)/pecl/20200930/pcov.so
 cp /tmp/php8.1-pcov.so $(brew --prefix php@8.1)/pecl/20210902/pcov.so
 cp /tmp/php8.2-pcov.so $(brew --prefix php@8.2)/pecl/20220829/pcov.so
 
