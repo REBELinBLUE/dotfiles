@@ -13,6 +13,7 @@ tap 'derailed/popeye'
 tap 'little-angry-clouds/homebrew-my-brews'
 tap 'warrensbox/tap'
 tap 'thecasualcoder/stable'
+tap 'fairwindsops/tap'
 
 # Install standard tools
 brew 'findutils'
@@ -97,10 +98,10 @@ brew 'kubeseal'
 brew 'yq'
 brew 'kubeconform'
 brew 'kustomize'
+brew 'nova'
 
 # AWS related
 brew 'awscli'
-brew 'aws-sam-cli'
 brew 'aws-vault'
 brew 'aws-nuke'
 

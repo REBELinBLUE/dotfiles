@@ -15,4 +15,6 @@ kubectl krew remove resource-capacity
 kubectl krew remove outdated
 kubectl krew remove cert-manager
 
+brew remove aws-sam-cli
+
 #source $HOME/.dotfiles/scripts/dotfiles.sh
