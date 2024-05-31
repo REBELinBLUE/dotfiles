@@ -16,6 +16,6 @@ kubectl krew remove outdated
 kubectl krew remove cert-manager
 
 brew remove aws-sam-cli 
-bre remove php@8.0
+brew remove php@8.0
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh
