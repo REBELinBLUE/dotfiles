@@ -9,13 +9,4 @@ fi
 
 # Remove stuff
 
-kubectl krew remove access-matrix
-kubectl krew remove get-all
-kubectl krew remove resource-capacity
-kubectl krew remove outdated
-kubectl krew remove cert-manager
-
-brew remove aws-sam-cli 
-brew remove php@8.0
-
 #source $HOME/.dotfiles/scripts/dotfiles.sh

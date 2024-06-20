@@ -6,6 +6,7 @@ tap 'lucagrulla/tap'
 brew 'xsv'
 brew 'pre-commit'
 brew 'kubecm'
+brew 'kind'
 brew 'docker-credential-helper-ecr'
 
 #cask 'cloudflare/cloudflare/cf-terraforming'
