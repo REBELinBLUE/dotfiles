@@ -208,3 +208,6 @@
 
     # Switches to master and removes all local branches not master
     wash = !"git reset --hard HEAD && (git checkout master || git checkout main) && (git branch | grep -v '^*' | xargs git branch -D)"
+
+    # Switches to master/main, removes the previous branch then pulls
+    done = "!f() { git switch master || git checkout main && git branch -D $(git rev-parse --abbrev-ref @{-1}) && git pull; }; f"

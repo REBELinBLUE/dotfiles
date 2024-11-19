@@ -12,3 +12,5 @@ brew 'docker-credential-helper-ecr'
 #cask 'cloudflare/cloudflare/cf-terraforming'
 
 brew 'cw'
+brew 'gradle'
+brew 'openjdk@17'
