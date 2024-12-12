@@ -111,8 +111,8 @@ set -xgp PATH $HOMEBREW_PREFIX/opt/vim/bin \
 		$HOMEBREW_PREFIX/opt/make/libexec/gnubin \
 		$HOMEBREW_PREFIX/opt/gnu-getopt/bin \
 		$HOMEBREW_PREFIX/opt/grep/libexec/gnubin \
-		$HOMEBREW_PREFIX/opt/mysql-client@5.7/bin \
-		$HOMEBREW_PREFIX/opt/postgresql@12/bin \
+		$HOMEBREW_PREFIX/opt/mysql-client@8.0/bin \
+		$HOMEBREW_PREFIX/opt/postgresql@16/bin \
 		$HOMEBREW_PREFIX/opt/openssl@1.1/bin
 
 set -xg MANPATH $HOMEBREW_PREFIX/opt/findutils/libexec/gnuman \
@@ -122,8 +122,8 @@ set -xg MANPATH $HOMEBREW_PREFIX/opt/findutils/libexec/gnuman \
 				$HOMEBREW_PREFIX/opt/gnu-which/libexec/gnuman \
 				$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnuman \
 				$HOMEBREW_PREFIX/opt/make/libexec/gnuman \
-				$HOMEBREW_PREFIX/opt/mysql-client@5.7/share/man \
-				$HOMEBREW_PREFIX/opt/postgresql@12/share/man \
+				$HOMEBREW_PREFIX/opt/mysql-client@8.0/share/man \
+				$HOMEBREW_PREFIX/opt/postgresql@16/share/man \
 				$HOMEBREW_PREFIX/share/man \
 				/usr/local/MacGPG2/share/man \
 				/usr/local/share/man \

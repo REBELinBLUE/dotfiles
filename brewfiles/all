@@ -128,9 +128,8 @@ brew 'psysh'
 # DB related
 brew 'mycli'
 brew 'pgcli'
-#brew 'mysql-client@5.7'
 brew 'mysql-client@8.0'
-brew 'postgresql@12'
+brew 'postgresql@16'
 brew 'sqlite'
 
 # HTTP related

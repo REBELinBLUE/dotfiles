@@ -9,4 +9,6 @@ fi
 
 # Remove stuff
 
+brew remove postgresql@12
+
 #source $HOME/.dotfiles/scripts/dotfiles.sh
