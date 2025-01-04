@@ -3,4 +3,12 @@
 /usr/bin/pkill -9 gpg-agent
 /usr/local/MacGPG2/bin/gpgconf --launch gpg-agent
 /usr/local/MacGPG2/bin/gpg --card-status > /dev/null
-open --background /Applications/MuteMe-Client.app
+
+# Only open MuteMe-Client on weekdays between 9am and 6pm on the work laptop
+if [[ "$(hostname)" == "foo" ]]; then
+    if [[ "$(date +%u)" -le 5 ]]; then
+        if [[ "$(date +%H)" -ge 9 && "$(date +%H)" -lt 18 ]]; then
+            open --background /Applications/MuteMe-Client.app
+        fi
+    fi
+fi
