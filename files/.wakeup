@@ -4,11 +4,12 @@
 /usr/local/MacGPG2/bin/gpgconf --launch gpg-agent
 /usr/local/MacGPG2/bin/gpg --card-status > /dev/null
 
-# Only open MuteMe-Client on weekdays between 9am and 6pm on the work laptop
+# Only open MuteMe-Client on weekdays between 8am and 6pm on the work laptop
 if [[ "$(hostname)" == "L56HJQV7CR" ]]; then
-    if [[ "$(date +%u)" -le 5 ]]; then
-        if [[ "$(date +%H)" -ge 9 && "$(date +%H)" -lt 18 ]]; then
-            open --background /Applications/MuteMe-Client.app
-        fi
+    day_of_week=$(date +%u) # Day of the week (1-7, where 1 = Monday)
+    current_hour=$(date +%-H) # Current hour (0-23, no leading zero)
+
+    if [[ "$day_of_week" -le 5 && "$current_hour" -ge 8 && "$current_hour" -lt 18 ]]; then
+        open --background /Applications/MuteMe-Client.app
     fi
 fi
