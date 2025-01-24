@@ -58,6 +58,8 @@ brew 'pyenv' # to add python 2
 
 # PHP related
 brew 'brew-php-switcher'
+brew 'php'
+brew 'php@8.3'
 brew 'php@8.2'
 brew 'php@8.1'
 #brew 'php@8.0'
