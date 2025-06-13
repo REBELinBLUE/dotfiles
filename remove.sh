@@ -9,6 +9,6 @@ fi
 
 # Remove stuff
 
-brew remove postgresql@12
+brew remove postgresql@12 ripgrep exa
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh
