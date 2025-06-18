@@ -128,6 +128,10 @@ if [ ! -f $HOME/.config/get_iplayer/options ]; then
     ln -s $HOME/.dotfiles/files/config/get_iplayer $HOME/.config/get_iplayer/options
 fi
 
+if [ ! -f $HOME/.finicky.js ]; then
+    ln -s $HOME/.dotfiles/files/config/finicky.js $HOME/.finicky.js
+fi
+
 /usr/local/MacGPG2/bin/gpgconf --kill all
 
 if [ ! -f $HOME/.config/extras.fish ]; then
