@@ -69,11 +69,8 @@ brew 'ffmpeg'
 
 # Git related
 brew 'git'
-brew 'tig'
 brew 'git-fresh'
-brew 'git-when-merged'
 brew 'git-extras'
-brew 'git-quick-stats'
 brew 'gh'
 brew 'gist'
 brew 'gitup'

@@ -9,6 +9,6 @@ fi
 
 # Remove stuff
 
-brew remove postgresql@12 ripgrep exa
+brew remove git-quick-stats tig get-when-merged
 
 #source $HOME/.dotfiles/scripts/dotfiles.sh
