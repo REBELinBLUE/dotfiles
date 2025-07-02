@@ -41,19 +41,21 @@ export default {
     },
     {
       match: (url, options) => {
-        if (options.opener?.bundleId == "com.bluebanana-software.inyourface") {
+        if (options.opener?.bundleId === "com.bluebanana-software.inyourface") {
             return url.host.includes("google.com")
         }
 
         // FIXME: Second part of this seems wrong, where did it come from? it breaks sign in with google in most apps
-        return url.host.startsWith("meet.google.com") //|| url.host.startsWith("accounts.google.com")
+        return url.host.startsWith("meet.google.com") 
+        //|| url.host.startsWith("accounts.google.com")
       },
       browser: (url) => ({
         name: "Google Chrome",
-        // args: [
-        //     '--app-id=kjgfgldnnfoeklkmfkjfagphfepbbdan',
-        //     `--app-launch-url-for-shortcuts-menu-item=${url.toString()}`,
-        // ]
+        profile: "LendInvest",
+        args: [
+            "--app-id=kjgfgldnnfoeklkmfkjfagphfepbbdan",
+            `--app-launch-url-for-shortcuts-menu-item=${url.toString()}`,
+        ]
       })
     },
     {
