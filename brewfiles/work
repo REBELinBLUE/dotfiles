@@ -8,6 +8,10 @@ brew 'pre-commit'
 brew 'kubecm'
 brew 'kind'
 brew 'docker-credential-helper-ecr'
+brew 'switchaudio-osx'
+brew 'terraformer'
+brew 'aws-sam-cli'
+brew 'git-filter-repo'
 
 #cask 'cloudflare/cloudflare/cf-terraforming'
 

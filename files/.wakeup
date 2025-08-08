@@ -12,4 +12,18 @@ if [[ "$(hostname)" == *L56HJQV7CR* ]]; then
     if [[ "$day_of_week" -le 5 && "$current_hour" -ge 8 && "$current_hour" -lt 18 ]]; then
         open --background /Applications/MuteMe-Client.app
     fi
+
+
+    # # If connected to the microphone, switch to it and unmute
+    # if SwitchAudioSource -t output -f cli -a | cut -d',' -f1 | grep -qx "Razer"; then
+    #     SwitchAudioSource -t input -i 149 # Razer
+    #     SwitchAudioSource -t input -m unmute
+    # fi
+
+    # # If connected to the monitor, switch the audio output to it and mute
+    # if SwitchAudioSource -t output -f cli -a | cut -d',' -f1 | grep -qx "C34J79x"; then
+    #     SwitchAudioSource -t output -s "C34J79x"  # -u BuiltInSpeakerDevice
+    #     #SwitchAudioSource -t output -m mute || true
+    #     /usr/local/bin/m volume mute
+    # fi
 fi
