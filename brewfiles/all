@@ -83,6 +83,8 @@ brew 'ctop'
 brew 'dive'
 brew 'docker-completion'
 
+brew 'container'
+
 # Kubernetes related
 brew 'kbenv' # Instead of kubectl
 brew 'stern'
