@@ -2,12 +2,10 @@
 
 # Taps
 tap 'homebrew/bundle'
-tap 'fluxcd/tap'
 tap 'homebrew/services'
 tap 'alehouse/homebrew-unofficial'
 tap 'homebrew/command-not-found'
 tap 'wagoodman/dive'
-#tap 'c-bata/kube-prompt'
 tap 'derailed/k9s'
 tap 'derailed/popeye'
 tap 'little-angry-clouds/homebrew-my-brews'
@@ -59,10 +57,10 @@ brew 'pyenv' # to add python 2
 # PHP related
 brew 'brew-php-switcher'
 brew 'php'
+brew 'php@8.4'
 brew 'php@8.3'
 brew 'php@8.2'
 brew 'php@8.1'
-#brew 'php@8.0'
 
 # Install media tools
 brew 'ffmpeg'
@@ -91,7 +89,6 @@ brew 'stern'
 brew 'k9s'
 brew 'popeye'
 brew 'helmenv' # Instead of helm
-brew 'fluxcd/tap/flux'
 brew 'kubeseal'
 #brew 'linkerd'
 #brew 'velero'
@@ -99,7 +96,6 @@ brew 'kubeseal'
 brew 'yq'
 brew 'kubeconform'
 brew 'kustomize'
-brew 'nova'
 
 # AWS related
 brew 'awscli'
@@ -174,7 +170,7 @@ brew 'duck'
 brew 'grc'
 
 # Development tools
-# brew 'go'
+brew 'go'
 brew 'rust'
 
 # Yubikey
@@ -187,3 +183,6 @@ brew 'graphviz'
 brew 'shellcheck'
 
 # cask '1password-cli'
+
+brew 'ansible'
+brew 'ansible-lint'

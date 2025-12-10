@@ -1,9 +1,9 @@
 # Make sublime the default editor locally and nano when via SSH
 if begin; test -z $SSH_CLIENT; and test -z $SSH_TTY; end
-	set -xg EDITOR "code -w"
-	set -xg KUBE_EDITOR "subl -w"
+    set -xg EDITOR "code -w"
+    set -xg KUBE_EDITOR "subl -w"
 else
-	set -xg EDITOR "nano -w"
+    set -xg EDITOR "nano -w"
 end
 
 # Homebrew options from brew shellenv
@@ -68,7 +68,6 @@ set -xg NVM_DIR $XDG_CONFIG_HOME/nvm
 set -xg OP_TOKENS_FILE $HOME/.dotfiles/files/.tokens.env
 
 set -xg nvm_prefix $HOMEBREW_PREFIX/opt/nvm
-set -xg FLUX_FORWARD_NAMESPACE flux
 
 set -gx QUOTING_STYLE literal
 
@@ -79,58 +78,58 @@ set -gx CPPFLAGS "-I$HOMEBREW_PREFIX/opt/openssl@1.1/include"
 set -gx PKG_CONFIG_PATH "$HOMEBREW_PREFIX/opt/openssl@1.1/lib/pkgconfig"
 
 set -xg PATH /usr/local/MacGPG2/bin \
-			/Applications/PhpStorm.app/Contents/MacOS \
-			/Applications/DataGrip.app/Contents/MacOS \
-			/usr/local/sbin \
-			/usr/local/bin \
-			/usr/sbin \
-			/usr/bin \
-			/sbin \
-			/bin \
-			$HOME/.local/bin \
-			#$GEM_HOME/bin \
-			$HOME/.krew/bin \
-			$GOPATH/bin \
-			$COMPOSER_HOME/vendor/bin \
-			$HOME/.cargo/bin \
-			$HOME/Library/Python/3.9/bin \
-			$HOME/Library/Python/3.10/bin \
-			$HOME/Library/Python/3.11/bin
+            /Applications/PhpStorm.app/Contents/MacOS \
+            /Applications/DataGrip.app/Contents/MacOS \
+            /usr/local/sbin \
+            /usr/local/bin \
+            /usr/sbin \
+            /usr/bin \
+            /sbin \
+            /bin \
+            $HOME/.local/bin \
+            #$GEM_HOME/bin \
+            $HOME/.krew/bin \
+            $GOPATH/bin \
+            $COMPOSER_HOME/vendor/bin \
+            $HOME/.cargo/bin \
+            $HOME/Library/Python/3.9/bin \
+            $HOME/Library/Python/3.10/bin \
+            $HOME/Library/Python/3.11/bin
 
 set -xgp PATH $HOMEBREW_PREFIX/opt/vim/bin \
-		$HOMEBREW_PREFIX/opt/nano/bin \
-		$HOMEBREW_PREFIX/opt/sqlite/bin \
-		$HOMEBREW_PREFIX/bin \
-		$HOMEBREW_PREFIX/sbin \
-		$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin \
-		$HOMEBREW_PREFIX/opt/findutils/libexec/gnubin \
-		$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin \
-		$HOMEBREW_PREFIX/opt/gnu-indent/libexec/gnubin \
-		$HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnubin \
-		$HOMEBREW_PREFIX/opt/gnu-which/libexec/gnubin \
-		$HOMEBREW_PREFIX/opt/make/libexec/gnubin \
-		$HOMEBREW_PREFIX/opt/gnu-getopt/bin \
-		$HOMEBREW_PREFIX/opt/grep/libexec/gnubin \
-		$HOMEBREW_PREFIX/opt/mysql-client@8.0/bin \
-		$HOMEBREW_PREFIX/opt/postgresql@16/bin \
-		$HOMEBREW_PREFIX/opt/openssl@1.1/bin
+        $HOMEBREW_PREFIX/opt/nano/bin \
+        $HOMEBREW_PREFIX/opt/sqlite/bin \
+        $HOMEBREW_PREFIX/bin \
+        $HOMEBREW_PREFIX/sbin \
+        $HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin \
+        $HOMEBREW_PREFIX/opt/findutils/libexec/gnubin \
+        $HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin \
+        $HOMEBREW_PREFIX/opt/gnu-indent/libexec/gnubin \
+        $HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnubin \
+        $HOMEBREW_PREFIX/opt/gnu-which/libexec/gnubin \
+        $HOMEBREW_PREFIX/opt/make/libexec/gnubin \
+        $HOMEBREW_PREFIX/opt/gnu-getopt/bin \
+        $HOMEBREW_PREFIX/opt/grep/libexec/gnubin \
+        $HOMEBREW_PREFIX/opt/mysql-client@8.0/bin \
+        $HOMEBREW_PREFIX/opt/postgresql@16/bin \
+        $HOMEBREW_PREFIX/opt/openssl@1.1/bin
 
 set -xg MANPATH $HOMEBREW_PREFIX/opt/findutils/libexec/gnuman \
-				$HOMEBREW_PREFIX/opt/coreutils/share/man \
-				$HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnuman \
-				$HOMEBREW_PREFIX/opt/gnu-which/libexec/gnuman \
-				$HOMEBREW_PREFIX/opt/gnu-which/libexec/gnuman \
-				$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnuman \
-				$HOMEBREW_PREFIX/opt/make/libexec/gnuman \
-				$HOMEBREW_PREFIX/opt/mysql-client@8.0/share/man \
-				$HOMEBREW_PREFIX/opt/postgresql@16/share/man \
-				$HOMEBREW_PREFIX/share/man \
-				/usr/local/MacGPG2/share/man \
-				/usr/local/share/man \
-				/usr/share/man
+                $HOMEBREW_PREFIX/opt/coreutils/share/man \
+                $HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnuman \
+                $HOMEBREW_PREFIX/opt/gnu-which/libexec/gnuman \
+                $HOMEBREW_PREFIX/opt/gnu-which/libexec/gnuman \
+                $HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnuman \
+                $HOMEBREW_PREFIX/opt/make/libexec/gnuman \
+                $HOMEBREW_PREFIX/opt/mysql-client@8.0/share/man \
+                $HOMEBREW_PREFIX/opt/postgresql@16/share/man \
+                $HOMEBREW_PREFIX/share/man \
+                /usr/local/MacGPG2/share/man \
+                /usr/local/share/man \
+                /usr/share/man
 
 set -gx INFOPATH $HOMEBREW_PREFIX/share/info \
-				 $INFOPATH
+                 $INFOPATH
 
 # # Set LS_COLORS
 eval (dircolors -c $HOME/.dotfiles/files/shell/fish/dircolors | sed 's/>&\/dev\/null$//')
