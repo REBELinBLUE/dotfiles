@@ -96,6 +96,7 @@ brew 'kubeseal'
 brew 'yq'
 brew 'kubeconform'
 brew 'kustomize'
+brew 'argocd'
 
 # AWS related
 brew 'awscli'

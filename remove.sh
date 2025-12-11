@@ -9,9 +9,4 @@ fi
 
 # Remove stuff
 
-brew remove git-quick-stats tig get-when-merged
-brew remove fluxcd/tap/flux nova
-brew untap fluxcd/tap
-brew remove localstack/tap/localstack-cli
-
 #source $HOME/.dotfiles/scripts/dotfiles.sh
