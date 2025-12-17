@@ -13,6 +13,8 @@ export default {
   options: {
     checkForUpdates: true,
     logRequests: false,
+    hideIcon: true,
+    keepRunning: true
   },
   // rewrite: [
   //   {
