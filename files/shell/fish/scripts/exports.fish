@@ -80,6 +80,8 @@ set -gx PKG_CONFIG_PATH "$HOMEBREW_PREFIX/opt/openssl@1.1/lib/pkgconfig"
 set -xg PATH /usr/local/MacGPG2/bin \
             /Applications/PhpStorm.app/Contents/MacOS \
             /Applications/DataGrip.app/Contents/MacOS \
+            /Applications/IntelliJ\ IDEA.app/Contents/MacOS \
+            /Applications/GoLand.app/Contents/MacOS \
             /usr/local/sbin \
             /usr/local/bin \
             /usr/sbin \
