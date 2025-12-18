@@ -136,6 +136,10 @@
 [branch]
     sort = -committerdate
 
+# Causes segfault in 2.52.0
+# [blame]
+#     ignoreRevsFile = :(optional).git-blame-ignore-revs
+
 [alias]
     # List all aliases
     aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort -u
