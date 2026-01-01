@@ -13,6 +13,7 @@ pecl channel-update pecl.php.net
 pecl uninstall xdebug
 pecl install xdebug
 cp $(brew --prefix php@8.1)/pecl/20210902/xdebug.so /tmp/php8.1-xdebug.so
+# /opt/homebrew/Cellar/php@8.1/8.1.34/include/php/ext/pcre/php_pcre.h:23:10: fatal error: 'pcre2.h' file not found
 ln -s $(brew --prefix pcre2)/include/pcre2.h $(brew --prefix php@8.1)/include/php/ext/pcre/pcre2.h
 pecl uninstall pcov
 pecl install pcov
@@ -23,6 +24,7 @@ pecl channel-update pecl.php.net
 pecl uninstall xdebug
 pecl install xdebug
 cp $(brew --prefix php@8.2)/pecl/20220829/xdebug.so /tmp/php8.2-xdebug.so
+# /opt/homebrew/Cellar/php@8.2/8.2.30/include/php/ext/pcre/php_pcre.h:23:10: fatal error: 'pcre2.h' file not found
 ln -s $(brew --prefix pcre2)/include/pcre2.h $(brew --prefix php@8.2)/include/php/ext/pcre/pcre2.h
 pecl uninstall pcov
 pecl install pcov
@@ -33,6 +35,7 @@ pecl channel-update pecl.php.net
 pecl uninstall xdebug
 pecl install xdebug
 cp $(brew --prefix php@8.3)/pecl/20230831/xdebug.so /tmp/php8.3-xdebug.so
+# /opt/homebrew/Cellar/php@8.3/8.3.29/include/php/ext/pcre/php_pcre.h:23:10: fatal error: 'pcre2.h' file not found
 ln -s $(brew --prefix pcre2)/include/pcre2.h $(brew --prefix php@8.3)/include/php/ext/pcre/pcre2.h
 pecl uninstall pcov
 pecl install pcov
@@ -43,6 +46,7 @@ pecl channel-update pecl.php.net
 pecl uninstall xdebug
 pecl install xdebug
 cp $(brew --prefix php@8.4)/pecl/20240924/xdebug.so /tmp/php8.4-xdebug.so
+# /opt/homebrew/Cellar/php@8.4/8.4.16_1/include/php/ext/pcre/php_pcre.h:23:10: fatal error: 'pcre2.h' file not found
 ln -s $(brew --prefix pcre2)/include/pcre2.h $(brew --prefix php@8.4)/include/php/ext/pcre/pcre2.h
 pecl uninstall pcov
 pecl install pcov
@@ -53,6 +57,7 @@ pecl channel-update pecl.php.net
 pecl uninstall xdebug
 pecl install xdebug
 cp $(brew --prefix php@8.5)/pecl/20250925/xdebug.so /tmp/php8.5-xdebug.so
+# /opt/homebrew/Cellar/php/8.5.1_2/include/php/ext/pcre/php_pcre.h
 ln -s $(brew --prefix pcre2)/include/pcre2.h $(brew --prefix php@8.5)/include/php/ext/pcre/pcre2.h
 pecl uninstall pcov
 pecl install pcov
