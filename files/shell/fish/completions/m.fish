@@ -1,1 +1,1 @@
-source /usr/local/m-cli/completion/fish/m.fish
+/usr/local/m-cli/completion/fish/m.fish
