@@ -13,6 +13,8 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# FIXME: This is out of date, and might be possible with mas in brewfile now
+
 mas install 419330170  # Moom (3.2.22)
 mas install 425424353  # The Unarchiver (4.3.3)
 mas install 1462114288 # Grammarly for Safari (9.17)

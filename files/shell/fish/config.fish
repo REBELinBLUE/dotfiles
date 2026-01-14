@@ -1,6 +1,9 @@
 # Load exports
 source $HOME/.dotfiles/files/shell/fish/scripts/exports.fish
 
+set -g fish_complete_path $fish_complete_path /opt/homebrew/share/fish/completions/
+set -g fish_function_path $fish_function_path /opt/homebrew/share/fish/functions/
+
 if test -z "$__INTELLIJ_COMMAND_HISTFILE__"
     starship init fish | source
     direnv hook fish | source
@@ -24,5 +27,3 @@ end
 if test -e $HOME/.config/op/plugins.sh
     source $HOME/.config/op/plugins.sh
 end
-
-#eval "$(ngrok completion)"

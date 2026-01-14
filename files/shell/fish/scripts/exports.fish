@@ -139,21 +139,21 @@ eval (dircolors -c $HOME/.dotfiles/files/shell/fish/dircolors | sed 's/>&\/dev\/
 # Fix behat colours
 set -xg BEHAT_PARAMS '{"formatters": {"pretty": {"output_styles": {"comment": ["blue"]}}}}'
 
-#    set -l FORMATTING '{
-#    "output_styles": {
-#        "keyboard": [null, null, ["bold"]],
-#        "stdout": [null, null, []],
-#        "exception": ["red"],
-#        "undefined": ["yellow"],
-#        "pending": ["yellow"],
-#        "pending_param": ["yellow", null, ["bold"]],
-#        "failed": ["red"],
-#        "failed_param": ["red", null, ["bold"]],
-#        "passed": ["green"],
-#        "passed_param": ["green", null, ["bold"]],
-#        "skipped": ["cyan"],
-#        "skipped_param": ["cyan", null, ["bold"]],
-#        "comment":["blue"],
-#        "tag": ["cyan"]
-#    }
-#}'
+# {
+#     "output_styles": {
+#         "keyboard": [null, null, ["bold"]],
+#         "stdout": [null, null, []],
+#         "exception": ["red"],
+#         "undefined": ["yellow"],
+#         "pending": ["yellow"],
+#         "pending_param": ["yellow", null, ["bold"]],
+#         "failed": ["red"],
+#         "failed_param": ["red", null, ["bold"]],
+#         "passed": ["green"],
+#         "passed_param": ["green", null, ["bold"]],
+#         "skipped": ["cyan"],
+#         "skipped_param": ["cyan", null, ["bold"]],
+#         "comment":["blue"],
+#         "tag": ["cyan"]
+#     }
+# }
