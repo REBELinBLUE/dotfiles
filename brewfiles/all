@@ -159,6 +159,7 @@ brew 'watch'
 brew 'peco'
 brew 'psgrep'
 brew 'asciinema'
+brew 'agg'
 brew 'tree'
 brew 'sleepwatcher' #   brew services start sleepwatcher
 brew 'topgrade'
