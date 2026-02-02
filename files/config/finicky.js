@@ -72,6 +72,10 @@ export default {
       match: /^https?:\/\/tel\.meet.*$/,
       browser: "Google Chrome"
     },
+    { // The github pull request pages are laggy in Safari https://github.com/orgs/community/discussions/170922
+      match: /^https?:\/\/(www\.)?github\.com\/lend-invest\/(.*)\/pull\/.*$/,
+      browser: "Google Chrome"
+    },
     {
       match: /^https?:\/\/forms\.gle.*$/,
       browser: "Google Chrome"
