@@ -1,1 +1,2 @@
 brewfiles/*.lock.json
+files/shell/fish/completions/docker.fish
