@@ -9,7 +9,6 @@ fi
 
 # Remove stuff
 
-brew remove speedtest-cli php@8.1 pidof libass icu4c@77 libgit2@1.7
-brew untap homebrew/bundle homebrew/services homebrew/command-not-found
+brew remove openssl@1.1
  
 #source $HOME/.dotfiles/scripts/dotfiles.sh

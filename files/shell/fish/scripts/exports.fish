@@ -1,5 +1,5 @@
 # Make sublime the default editor locally and nano when via SSH
-if begin; test -z $SSH_CLIENT; and test -z $SSH_TTY; end
+if not set -q SSH_CLIENT; and not set -q SSH_TTY
     set -xg EDITOR "code -w"
     set -xg KUBE_EDITOR "subl -w"
 else
@@ -7,9 +7,9 @@ else
 end
 
 # Homebrew options from brew shellenv
-set -gx HOMEBREW_PREFIX "/opt/homebrew";
-set -gx HOMEBREW_CELLAR "/opt/homebrew/Cellar";
-set -gx HOMEBREW_REPOSITORY "/opt/homebrew";
+set -gx HOMEBREW_PREFIX "/opt/homebrew"
+set -gx HOMEBREW_CELLAR "/opt/homebrew/Cellar"
+set -gx HOMEBREW_REPOSITORY "/opt/homebrew"
 #set -xg HOMEBREW_CASK_OPTS "--appdir=/Applications" # --caskroom=/opt/homebrew-cask/Caskroom"
 
 # XDG directories
@@ -43,26 +43,25 @@ set -xg COMPOSER_HOME $XDG_CONFIG_HOME/composer
 set -xg COMPOSER_CACHE_DIR $XDG_CACHE_HOME/composer
 
 # Other config files
-#set -xg VBOX_USER_HOME $XDG_CONFIG_HOME/virtualbox
 set -xg GETIPLAYER_PROFILE $XDG_CONFIG_HOME/get_iplayer
 set -xg INPUTRC $XDG_CONFIG_HOME/readline/inputrc
-set -xg ACKRC $XDG_CONFIG_HOME/ack/ackrc
+set -xg ACKRC $XDG_CONFIG_HOME/ack/ackrc # Is this still used?
 set -xg MYSQL_HISTFILE $XDG_CACHE_HOME/mysql_history
 set -xg LESSHISTFILE $XDG_CACHE_HOME/less_history
 set -xg SDIRS $XDG_CONFIG_HOME/marks
 set -xg PGCLIRC $XDG_CONFIG_HOME/pgcli/config
 set -xg MYCLIRC $XDG_CONFIG_HOME/mycli/config
-set -xg HTTPIE_CONFIG_DIR $XDG_CONFIG_HOME/httpie
+set -xg HTTPIE_CONFIG_DIR $XDG_CONFIG_HOME/httpie # Is this still used?
 set -xg NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
-set -xg SCREENRC $XDG_CONFIG_HOME/screen/screenrc
-set -xg HGRCPATH $XDG_CONFIG_HOME/hg/hgrc
-set -xg TIGRC_USER $XDG_CONFIG_HOME/tig/tigrc
+set -xg SCREENRC $XDG_CONFIG_HOME/screen/screenrc  # Is this still used?
+set -xg HGRCPATH $XDG_CONFIG_HOME/hg/hgrc  # Is this still used?
+set -xg TIGRC_USER $XDG_CONFIG_HOME/tig/tigrc  # Is this still used?
 set -xg BABEL_CACHE_PATH $XDG_CACHE_HOME/babel.json
-set -xg GEMRC $XDG_CONFIG_HOME/gemrc/config
+set -xg GEMRC $XDG_CONFIG_HOME/gemrc/config  # Is this still used?
 #set -xg GEM_HOME $HOME/.local/lib/ruby/gems/$RUBY_VERSION # FIXME: Why is this not working?
 set -xg GEM_SPEC_CACHE $XDG_CACHE_HOME/gem/specs
 #set -xg DOCKER_CONFIG $XDG_CONFIG_HOME/docker
-set -xg GRIPHOME $XDG_CONFIG_HOME/grip
+set -xg GRIPHOME $XDG_CONFIG_HOME/grip # Is this still used?
 set -xg VIMINIT 'let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 set -xg NVM_DIR $XDG_CONFIG_HOME/nvm
 set -xg OP_TOKENS_FILE $HOME/.dotfiles/files/.tokens.env
@@ -73,21 +72,13 @@ set -gx QUOTING_STYLE literal
 
 set -xg GOPATH $HOME/.go
 
-set -gx LDFLAGS "-L$HOMEBREW_PREFIX/opt/openssl@1.1/lib"
-set -gx CPPFLAGS "-I$HOMEBREW_PREFIX/opt/openssl@1.1/include"
-set -gx PKG_CONFIG_PATH "$HOMEBREW_PREFIX/opt/openssl@1.1/lib/pkgconfig"
+fish_add_path /usr/local/sbin 
 
-set -xg PATH /usr/local/MacGPG2/bin \
+set -xga PATH /usr/local/MacGPG2/bin \
             /Applications/PhpStorm.app/Contents/MacOS \
             /Applications/DataGrip.app/Contents/MacOS \
             /Applications/IntelliJ\ IDEA.app/Contents/MacOS \
             /Applications/GoLand.app/Contents/MacOS \
-            /usr/local/sbin \
-            /usr/local/bin \
-            /usr/sbin \
-            /usr/bin \
-            /sbin \
-            /bin \
             $HOME/.local/bin \
             #$GEM_HOME/bin \
             $HOME/.krew/bin \
@@ -113,8 +104,7 @@ set -xgp PATH $HOMEBREW_PREFIX/opt/vim/bin \
         $HOMEBREW_PREFIX/opt/gnu-getopt/bin \
         $HOMEBREW_PREFIX/opt/grep/libexec/gnubin \
         $HOMEBREW_PREFIX/opt/mysql-client@8.0/bin \
-        $HOMEBREW_PREFIX/opt/postgresql@16/bin \
-        $HOMEBREW_PREFIX/opt/openssl@1.1/bin
+        $HOMEBREW_PREFIX/opt/postgresql@16/bin
 
 set -xg MANPATH $HOMEBREW_PREFIX/opt/findutils/libexec/gnuman \
                 $HOMEBREW_PREFIX/opt/coreutils/share/man \
@@ -130,10 +120,9 @@ set -xg MANPATH $HOMEBREW_PREFIX/opt/findutils/libexec/gnuman \
                 /usr/local/share/man \
                 /usr/share/man
 
-set -gx INFOPATH $HOMEBREW_PREFIX/share/info \
-                 $INFOPATH
+set -xga INFOPATH $HOMEBREW_PREFIX/share/info
 
-# # Set LS_COLORS
+# Set LS_COLORS
 eval (dircolors -c $HOME/.dotfiles/files/shell/fish/dircolors | sed 's/>&\/dev\/null$//')
 
 # Fix behat colours
