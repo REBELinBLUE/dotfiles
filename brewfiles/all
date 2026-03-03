@@ -1,10 +1,7 @@
 # brewfile for all machines
 
 # Taps
-tap 'homebrew/bundle'
-tap 'homebrew/services'
 tap 'alehouse/homebrew-unofficial'
-tap 'homebrew/command-not-found'
 tap 'wagoodman/dive'
 tap 'derailed/k9s'
 tap 'derailed/popeye'
@@ -33,7 +30,6 @@ brew 'rsync'
 brew 'less'
 brew 'ack'
 brew 'unzip'
-brew 'pidof'
 brew 'expect'
 brew 'duf'
 
@@ -60,7 +56,6 @@ brew 'php'
 brew 'php@8.4'
 brew 'php@8.3'
 brew 'php@8.2'
-brew 'php@8.1'
 
 # Install media tools
 brew 'ffmpeg'
@@ -146,7 +141,6 @@ brew 'mas'
 #brew 'm-cli'
 
 # Network related
-brew 'speedtest-cli'
 brew 'wakeonlan'
 brew 'iproute2mac'
 

@@ -2,6 +2,7 @@
 
 #tap 'cloudflare/cloudflare'
 tap 'lucagrulla/tap'
+tap 'hashicorp/tap'
 
 brew 'xsv'
 brew 'pre-commit'
@@ -12,6 +13,7 @@ brew 'switchaudio-osx'
 brew 'terraformer'
 brew 'aws-sam-cli'
 brew 'git-filter-repo'
+brew 'hashicorp/tap/vault'
 
 #cask 'cloudflare/cloudflare/cf-terraforming'
 
