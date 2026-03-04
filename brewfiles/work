@@ -4,7 +4,7 @@
 tap 'lucagrulla/tap'
 tap 'hashicorp/tap'
 
-brew 'xsv'
+brew 'xan'
 brew 'pre-commit'
 brew 'kubecm'
 brew 'kind'
