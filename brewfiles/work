@@ -14,6 +14,7 @@ brew 'terraformer'
 brew 'aws-sam-cli'
 brew 'git-filter-repo'
 brew 'hashicorp/tap/vault'
+brew 'liquibase'
 
 #cask 'cloudflare/cloudflare/cf-terraforming'
 
