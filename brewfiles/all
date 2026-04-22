@@ -161,6 +161,7 @@ brew 'direnv'
 brew 'viddy'
 brew 'the_silver_searcher'
 brew 'duck'
+brew '1password-cli@beta'
 
 # Used to colorise some output
 brew 'grc'
