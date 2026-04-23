@@ -161,7 +161,6 @@ brew 'direnv'
 brew 'viddy'
 brew 'the_silver_searcher'
 brew 'duck'
-brew '1password-cli@beta'
 
 # Used to colorise some output
 brew 'grc'
@@ -179,7 +178,7 @@ brew 'terminal-notifier'
 brew 'graphviz'
 brew 'shellcheck'
 
-# cask '1password-cli'
+cask '1password-cli@beta'
 
 brew 'ansible'
 brew 'ansible-lint'
