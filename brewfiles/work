@@ -20,4 +20,4 @@ brew 'liquibase'
 
 brew 'cw'
 brew 'gradle'
-brew 'openjdk@17'
+brew 'openjdk@21'

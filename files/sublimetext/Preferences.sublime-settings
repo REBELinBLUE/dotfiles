@@ -10,8 +10,8 @@
 		".idea",
 		"CVS"
 	],
-	"font_face": "Fira Code",
-	"font_size": 13.0,
+	"font_face": "FiraCode Nerd Font Mono",
+	"font_size": 13,
 	"line_padding_bottom": 2,
 	"line_padding_top": 2,
 	"rulers":
