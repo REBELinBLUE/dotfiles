@@ -29,3 +29,6 @@ end
 if test -e $HOME/.config/op/plugins.sh
     source $HOME/.config/op/plugins.sh
 end
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish ; or true
+
