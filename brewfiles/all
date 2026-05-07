@@ -48,6 +48,7 @@ brew 'nano'
 #brew 'python'
 brew 'python3'
 brew 'pipx'
+brew 'virtualenv'
 brew 'pyenv' # to add python 2
 
 # PHP related
