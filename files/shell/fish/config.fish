@@ -1,6 +1,8 @@
 # Load exports
 source $HOME/.dotfiles/files/shell/fish/scripts/exports.fish
 
+set -U fish_greeting ""
+
 set -g fish_complete_path $fish_complete_path /opt/homebrew/share/fish/completions/
 set -g fish_function_path $fish_function_path /opt/homebrew/share/fish/functions/
 
@@ -30,5 +32,7 @@ if test -e $HOME/.config/op/plugins.sh
     source $HOME/.config/op/plugins.sh
 end
 
-test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish ; or true
+if test -e $HOME/.iterm2_shell_integration.fish
+    source $HOME/.iterm2_shell_integration.fish
+end
 
