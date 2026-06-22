@@ -100,7 +100,7 @@ brew 'aws-vault'
 brew 'aws-nuke'
 
 # Terraform related
-brew 'tfswitch' # Instead of terraform
+cask 'tfswitch' # Instead of terraform
 brew 'tgswitch'
 brew 'tflint'
 brew 'tfsec'
@@ -184,3 +184,8 @@ cask '1password-cli@beta'
 
 brew 'ansible'
 brew 'ansible-lint'
+
+brew 'elio'
+brew 'poppler'
+brew 'resvg'
+brew '7zip'
