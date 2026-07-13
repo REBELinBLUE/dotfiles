@@ -48,7 +48,7 @@ export default {
         }
 
         // FIXME: Second part of this seems wrong, where did it come from? it breaks sign in with google in most apps
-        return url.host.startsWith("meet.google.com") 
+        return url.host.startsWith("meet.google.com")
         //|| url.host.startsWith("accounts.google.com")
       },
       browser: (url) => ({
@@ -66,6 +66,10 @@ export default {
     },
     {
       match: /^https?:\/\/(accounts|docs|sheets|slides|mail|drive|calendar|groups|admin)\.google\.com.*$/,
+      browser: "Google Chrome"
+    },
+    {
+      match: /^https?:\/\/(.*)\.bamboohr\.com.*$/,
       browser: "Google Chrome"
     },
     {
