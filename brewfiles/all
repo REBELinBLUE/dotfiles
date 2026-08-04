@@ -181,7 +181,6 @@ brew 'graphviz'
 brew 'shellcheck'
 
 cask '1password-cli@beta'
-cask 'claude-code'
 
 brew 'ansible'
 brew 'ansible-lint'

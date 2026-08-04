@@ -21,3 +21,6 @@ brew 'liquibase'
 brew 'cw'
 brew 'gradle'
 brew 'openjdk@21'
+
+
+cask 'claude-code@beta'
