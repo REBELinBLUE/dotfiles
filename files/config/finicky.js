@@ -73,6 +73,10 @@ export default {
       browser: "Google Chrome"
     },
     {
+      match: /^https?:\/\/claude.com\/cai\/oauth\/authorize.*$/,
+      browser: "Google Chrome"
+    },
+    {
       match: /^https?:\/\/tel\.meet.*$/,
       browser: "Google Chrome"
     },
