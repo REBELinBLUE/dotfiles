@@ -16,6 +16,7 @@ brew 'get_iplayer'
 brew 'libdvdcss'
 brew 'handbrake'
 brew 'k3d'
+brew 'yt-dlp'
 
 # cask 'garmin-express'
 # cask 'houdahgeo'
