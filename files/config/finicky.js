@@ -37,10 +37,14 @@ export default {
   //   },
   // ],
   handlers: [
+
+    // Migrated
     {
       match: (url, options) => options.opener?.bundleId === "com.1password.1password",
       browser: "Safari"
     },
+
+    // Migrated
     {
       match: (url, options) => {
         if (options.opener?.bundleId === "com.bluebanana-software.inyourface") {
@@ -60,34 +64,49 @@ export default {
         ]
       })
     },
+
+    // Migrated
     {
       match: /^https?:\/\/www.google.com\/calendar\/event.*$/,
       browser: "Google Chrome"
     },
+
+    // Migrated
     {
       match: /^https?:\/\/(accounts|docs|sheets|slides|mail|drive|calendar|groups|admin)\.google\.com.*$/,
       browser: "Google Chrome"
     },
+
+    // Migrated
     {
       match: /^https?:\/\/(.*)\.bamboohr\.com.*$/,
       browser: "Google Chrome"
     },
+    // Migrated
     {
       match: /^https?:\/\/claude.com\/cai\/oauth\/authorize.*$/,
       browser: "Google Chrome"
     },
+    // {
+    //   match: /^https?:\/\/api\.workos\.com.*$/,
+    //   browser: "Google Chrome"
+    // },
+    // Migrated
     {
       match: /^https?:\/\/tel\.meet.*$/,
       browser: "Google Chrome"
     },
+    // Migrated
     { // The github pull request pages are laggy in Safari https://github.com/orgs/community/discussions/170922
       match: /^https?:\/\/(www\.)?github\.com\/lend-invest\/(.*)\/pull\/.*$/,
       browser: "Google Chrome"
     },
+    // Migrated
     {
       match: /^https?:\/\/forms\.gle.*$/,
       browser: "Google Chrome"
     },
+    // Migrated
     {
       match: /^https?:\/\/.*\.logicgate\.com.*$/,
       browser: "Google Chrome"

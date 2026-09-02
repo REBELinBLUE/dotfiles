@@ -44,4 +44,5 @@ Thumbs.db
 *.sublime-*
 .idea
 .vscode
+**/.claude/settings.local.json
 
