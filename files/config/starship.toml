@@ -226,3 +226,48 @@ disabled = false
 [time]
 disabled = false
 format = '[ $time]($style)'
+
+[profiles]
+claude-code = "$directory$git_branch$claude_model$claude_context$claude_cost"
+
+[claude_model]
+format = "using [$symbol$model]($style) "
+symbol = "🤖 "
+style = "bold blue"
+
+[claude_context]
+format = "[\\[$gauge $percentage - $input_tokens in / $output_tokens out]($style)\\] "
+gauge_width = 10
+
+[[claude_context.display]]
+threshold = 0
+style = "bold green"
+hidden = true
+
+[[claude_context.display]]
+threshold = 50
+style = "bold yellow"
+
+[[claude_context.display]]
+threshold = 75
+style = "bold orange"
+
+[[claude_context.display]]
+threshold = 90
+style = "bold red"
+
+[claude_cost]
+format = "[$symbol\\$$cost (+$lines_added -$lines_removed $duration)]($style)"
+symbol = "💰 "
+
+[[claude_cost.display]]
+threshold = 0.0
+hidden = true
+
+[[claude_cost.display]]
+threshold = 0.10
+style = "bold yellow"
+
+[[claude_cost.display]]
+threshold = 2.0
+style = "bold red"
