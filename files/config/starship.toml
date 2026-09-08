@@ -1,4 +1,5 @@
 command_timeout = 5000
+scan_timeout = 60
 
 # format = "$all"
 
