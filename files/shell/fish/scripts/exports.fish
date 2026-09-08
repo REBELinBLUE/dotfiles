@@ -82,6 +82,7 @@ set -xga PATH /usr/local/MacGPG2/bin \
             $HOME/.local/bin \
             #$GEM_HOME/bin \
             $HOME/.krew/bin \
+            $HOME/.docker/bin \
             $GOPATH/bin \
             $COMPOSER_HOME/vendor/bin \
             $HOME/.cargo/bin \
