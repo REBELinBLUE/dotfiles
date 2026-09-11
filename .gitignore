@@ -1,2 +1,3 @@
 brewfiles/*.lock.json
 files/shell/fish/completions/docker.fish
+files/shell/fish/completions/copilot.fish
