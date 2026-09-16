@@ -75,7 +75,6 @@ brew 'hadolint'
 brew 'lazydocker'
 brew 'ctop'
 brew 'dive'
-brew 'docker-completion'
 
 brew 'container'
 
