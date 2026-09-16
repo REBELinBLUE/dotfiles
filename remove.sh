@@ -10,5 +10,6 @@ fi
 # Remove stuff
 
 brew remove openssl@1.1
- 
+brew remove docker-completion
+
 #source $HOME/.dotfiles/scripts/dotfiles.sh
