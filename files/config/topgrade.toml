@@ -64,7 +64,9 @@ repos = ["~/.dotfiles"]
 #"Emacs Snapshot" = "rm -rf ~/.emacs.d/elpa.bak && cp -rl ~/.emacs.d/elpa ~/.emacs.d/elpa.bak"
 
 # Custom commands
-#[commands]
+[commands]
+"Brew Bundle Install" = "brew bundle --file=~/.dotfiles/brewfiles/all"
+"Brew Bundle Cleanup" = "~/.dotfiles/remove.sh"
 #"Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
 
 #[brew]
