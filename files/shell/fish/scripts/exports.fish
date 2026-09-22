@@ -72,7 +72,7 @@ set -gx QUOTING_STYLE literal
 
 set -xg GOPATH $HOME/.go
 
-fish_add_path /usr/local/sbin 
+fish_add_path /usr/local/sbin
 
 set -xga PATH /usr/local/MacGPG2/bin \
             /Applications/PhpStorm.app/Contents/MacOS \
@@ -110,7 +110,6 @@ set -xgp PATH $HOMEBREW_PREFIX/opt/vim/bin \
 set -xg MANPATH $HOMEBREW_PREFIX/opt/findutils/libexec/gnuman \
                 $HOMEBREW_PREFIX/opt/coreutils/share/man \
                 $HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnuman \
-                $HOMEBREW_PREFIX/opt/gnu-which/libexec/gnuman \
                 $HOMEBREW_PREFIX/opt/gnu-which/libexec/gnuman \
                 $HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnuman \
                 $HOMEBREW_PREFIX/opt/make/libexec/gnuman \
