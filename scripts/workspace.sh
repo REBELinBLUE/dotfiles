@@ -1,12 +1,17 @@
 #!/usr/bin/env bash
 
-# From https://gist.github.com/scottsb/479bebe8b4b86bf17e2d
+# Originally from https://gist.github.com/scottsb/479bebe8b4b86bf17e2d
+#
+# Uses `diskutil image` (hdiutil is deprecated as of macOS 27). The one
+# exception is `compact`, which has no diskutil equivalent yet.
+
+set -euo pipefail
 
 # ---------------------------------------------------------
 # Customizable Settings
 # ---------------------------------------------------------
 
-# where to store the sparse-image
+# where to store the sparse bundle
 VOLUME_PATH="${CASE_SAFE_VOLUME_PATH:-${HOME}/.workspace.dmg.sparsebundle}"
 
 # location where workspace will be mounted
@@ -22,13 +27,26 @@ VOLUME_SIZE="${CASE_SAFE_VOLUME_SIZE:-60g}"
 # Functionality
 # ---------------------------------------------------------
 
+LABEL="com.${VOLUME_NAME}"
+PLIST="${HOME}/Library/LaunchAgents/${LABEL}.plist"
+LOG="${HOME}/Library/Logs/${LABEL}.log"
+
 create() {
-    hdiutil create -type SPARSEBUNDLE -fs 'Case-sensitive APFS' -size ${VOLUME_SIZE} -volname ${VOLUME_NAME} ${VOLUME_PATH}
+    # `diskutil image create blank -fs` cannot create case-sensitive APFS
+    # (it silently falls back to case-insensitive), so create an
+    # unformatted image and format it ourselves.
+    diskutil image create blank --format UDSB --size "${VOLUME_SIZE}" -fs None "${VOLUME_PATH}"
+
+    local disk
+    disk=$(diskutil image attach --noMount "${VOLUME_PATH}" | awk 'NR==1 {print $1}')
+    diskutil eraseDisk "Case-sensitive APFS" "${VOLUME_NAME}" GPT "${disk}"
+    diskutil eject "${disk}"
 }
 
 automount() {
     attach
-    cat << EOF > "com.${VOLUME_NAME}.plist"
+    mkdir -p "$(dirname "${PLIST}")"
+    cat <<EOF > "${PLIST}"
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -36,64 +54,82 @@ automount() {
         <key>RunAtLoad</key>
         <true/>
         <key>Label</key>
-        <string>com.${VOLUME_NAME}</string>
+        <string>${LABEL}</string>
         <key>ProgramArguments</key>
         <array>
-            <string>hdiutil</string>
+            <string>/usr/sbin/diskutil</string>
+            <string>image</string>
             <string>attach</string>
-            <string>-nobrowse</string>
-            <string>-mountpoint</string>
+            <string>--nobrowse</string>
+            <string>--mountPoint</string>
             <string>${MOUNT_POINT}</string>
             <string>${VOLUME_PATH}</string>
         </array>
         <key>ProcessType</key>
         <string>Background</string>
         <key>StandardOutPath</key>
-        <string>${HOME}/Library/Logs/com.${VOLUME_NAME}.log</string>
+        <string>${LOG}</string>
         <key>StandardErrorPath</key>
-        <string>${HOME}/Library/Logs/com.${VOLUME_NAME}.log</string>
+        <string>${LOG}</string>
         <key>ThrottleInterval</key>
         <integer>60</integer>
     </dict>
 </plist>
 EOF
-    cp -f "com.${VOLUME_NAME}.plist" "${HOME}/Library/LaunchAgents/com.${VOLUME_NAME}.plist"
-    rm -f "com.${VOLUME_NAME}.plist"
-
-    USERID=$(id -u)
-    launchctl bootstrap gui/$USERID "${HOME}/Library/LaunchAgents/com.${VOLUME_NAME}.plist"
+    launchctl bootstrap "gui/$(id -u)" "${PLIST}"
 }
 
 noautomount() {
     detach
+    launchctl bootout "gui/$(id -u)" "${PLIST}" || true
+    rm -f "${PLIST}"
+}
 
-    USERID=$(id -u)
-    launchctl bootout gui/$USERID "${HOME}/Library/LaunchAgents/com.${VOLUME_NAME}.plist"
+# Prints the whole-disk identifier backing the image mounted at MOUNT_POINT,
+# or nothing if it isn't mounted.
+image_disk() {
+    [ -d "${MOUNT_POINT}" ] || return 0
 
-    rm -f "${HOME}/Library/LaunchAgents/com.${VOLUME_NAME}.plist"
+    # `diskutil info <path>` resolves to whichever volume contains the path,
+    # so make sure it's actually our volume and not the parent (boot) volume.
+    local resolved mounted_at store
+    resolved=$(cd "${MOUNT_POINT}" && pwd -P)
+    mounted_at=$(diskutil info -plist "${MOUNT_POINT}" | plutil -extract MountPoint raw - 2>/dev/null) || return 0
+    [ "${mounted_at}" = "${resolved}" ] || return 0
+
+    # The mounted volume lives in a synthesized APFS container; eject the
+    # image's physical disk so the image itself is detached.
+    store=$(diskutil info -plist "${MOUNT_POINT}" | plutil -extract APFSPhysicalStores.0.APFSPhysicalStore raw -)
+    diskutil info -plist "${store}" | plutil -extract ParentWholeDisk raw -
 }
 
 detach() {
-    m=$(hdiutil info | grep "${MOUNT_POINT}" | cut -f1)
-    if [ ! -z "$m" ]; then
-        hdiutil detach $m
+    local disk
+    disk=$(image_disk)
+    if [ -n "${disk}" ]; then
+        diskutil eject "${disk}"
     fi
 }
 
 attach() {
-    hdiutil attach -nobrowse -mountpoint ${MOUNT_POINT} ${VOLUME_PATH}
+    if [ -n "$(image_disk)" ]; then
+        echo "Workspace already mounted at ${MOUNT_POINT}"
+        return 0
+    fi
+    diskutil image attach --nobrowse --mountPoint "${MOUNT_POINT}" "${VOLUME_PATH}"
 }
 
 resize() {
-    compact
     detach
-    hdiutil resize -size ${VOLUME_SIZE} ${VOLUME_PATH}
+    hdiutil compact "${VOLUME_PATH}" -batteryallowed
+    diskutil image resize --size "${VOLUME_SIZE}" "${VOLUME_PATH}"
     attach
 }
 
 compact() {
     detach
-    hdiutil compact ${VOLUME_PATH} -batteryallowed
+    # No `diskutil image` equivalent exists for compact yet.
+    hdiutil compact "${VOLUME_PATH}" -batteryallowed
     attach
 }
 
@@ -108,7 +144,7 @@ Possible commands:
     mount        Attach the case-sensitive volume
     unmount      Detach the case-sensitive volume
     resize       Resize the case-sensitive volume
-    compact      Remove any uneeded reserved space in the volume
+    compact      Remove any unneeded reserved space in the volume
     config       Show current configuration and instructions on changing
     help         Display this message
 EOF
@@ -134,11 +170,12 @@ EOF
 }
 
 invalid() {
-    printf "workspace: '$1' is not a valid command.\n\n";
-    help
+    printf "workspace: '%s' is not a valid command.\n\n" "$1" >&2
+    help >&2
+    exit 1
 }
 
-case "$1" in
+case "${1:-}" in
     create) create;;
     automount) automount;;
     noautomount) noautomount;;
@@ -147,7 +184,6 @@ case "$1" in
     resize) resize;;
     compact) compact;;
     config) config;;
-    help) help;;
-    '') help;;
-    *) invalid $1;;
+    help|'') help;;
+    *) invalid "$1";;
 esac
