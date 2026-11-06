@@ -99,7 +99,7 @@ compact() {
 
 help() {
     cat <<EOF
-usage: workspace <command>
+Usage: workspace <command>
 
 Possible commands:
     create       Initialize case-sensitive volume (only needed first time)
