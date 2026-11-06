@@ -75,10 +75,10 @@ set -xg GOPATH $HOME/.go
 fish_add_path /usr/local/sbin
 
 set -xga PATH /usr/local/MacGPG2/bin \
-            /Applications/PhpStorm.app/Contents/MacOS \
-            /Applications/DataGrip.app/Contents/MacOS \
-            /Applications/IntelliJ\ IDEA.app/Contents/MacOS \
-            /Applications/GoLand.app/Contents/MacOS \
+            #/Applications/PhpStorm.app/Contents/MacOS \
+            #/Applications/DataGrip.app/Contents/MacOS \
+            #/Applications/IntelliJ\ IDEA.app/Contents/MacOS \
+            #/Applications/GoLand.app/Contents/MacOS \
             $HOME/.local/bin \
             #$GEM_HOME/bin \
             $HOME/.krew/bin \
