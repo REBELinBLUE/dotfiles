@@ -19,6 +19,9 @@ Usage:
                                                         --delete-branch also deletes its local branch;
                                                         offers to copy changed .worktreeinclude files back)
   worktree prune [args]                             Prune stale worktrees (git worktree prune)
+  worktree repair [path...]                         Fix links between worktrees and the repo after moving
+                                                        them by hand (git worktree repair; run it inside a
+                                                        moved worktree, or pass the new paths)
 EOF
 }
 
@@ -84,7 +87,7 @@ cmd_init() {
     # If anything below fails, remove the half-built folder so a retry starts clean
     cleanup_init() {
         if [ -z "$INIT_DONE" ] && [ -n "$INIT_DIR" ] && [ -d "$INIT_DIR" ]; then
-            echo "🧹 Setup failed, removing $INIT_DIR" >&2
+            echo "Setup failed, removing $INIT_DIR" >&2
             cd / && rm -rf "$INIT_DIR"
         fi
     }
@@ -203,10 +206,10 @@ cmd_add() {
     git remote set-head origin --auto >/dev/null 2>&1
 
     if git show-ref --verify --quiet "refs/heads/$BRANCH"; then
-        echo "🌳 Adding worktree for existing branch '$BRANCH'..."
+        echo "Adding worktree for existing branch '$BRANCH'..."
         git worktree add "$WORKTREE_PATH" "$BRANCH" || exit 1
     elif git show-ref --verify --quiet "refs/remotes/origin/$BRANCH"; then
-        echo "🌳 Adding worktree for remote branch 'origin/$BRANCH'..."
+        echo "Adding worktree for remote branch 'origin/$BRANCH'..."
         git worktree add --track -b "$BRANCH" "$WORKTREE_PATH" "origin/$BRANCH" || exit 1
     else
         DEFAULT_BRANCH=$(default_branch)
@@ -223,7 +226,7 @@ cmd_add() {
 
     copy_worktree_includes "$ROOT" "$WORKTREE_PATH"
 
-    echo "✅ Worktree ready in $WORKTREE_PATH"
+    echo "Worktree ready in $WORKTREE_PATH"
 }
 
 # Find the worktree that has the default branch checked out. If the remote's default has
@@ -471,6 +474,10 @@ cmd_prune() {
     git worktree prune "$@"
 }
 
+cmd_repair() {
+    git worktree repair "$@"
+}
+
 # Make sure git is installed and new enough (2.31+ for rev-parse --path-format)
 MIN_GIT_MAJOR=2
 MIN_GIT_MINOR=31
@@ -517,6 +524,7 @@ case "$COMMAND" in
     move)   cmd_move "$@";;
     remove) cmd_remove "$@";;
     prune)  cmd_prune "$@";;
+    repair) cmd_repair "$@";;
     -h|--help|help|"") usage;;
     *) invalid $COMMAND;;
 esac
