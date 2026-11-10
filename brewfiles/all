@@ -101,7 +101,6 @@ brew 'aws-nuke'
 # Terraform related
 cask 'tfswitch' # Instead of terraform
 brew 'tgswitch'
-brew 'tflint'
 brew 'tfsec'
 brew 'terrascan'
 brew 'trivy'

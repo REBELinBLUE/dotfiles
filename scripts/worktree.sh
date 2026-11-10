@@ -29,10 +29,12 @@ Usage:
 EOF
 }
 
-# Turn a path into an absolute one (the path itself doesn't need to exist, its parent does)
+# Turn a path into an absolute, symlink-resolved one (the path itself doesn't need to exist,
+# its parent does). Resolving symlinks keeps this comparable with git's own output (e.g. git
+# worktree list --porcelain), which also reports resolved paths.
 abs_path() {
     local dir
-    dir=$(cd "$(dirname "$1")" 2>/dev/null && pwd) || return 1
+    dir=$(cd -P "$(dirname "$1")" 2>/dev/null && pwd) || return 1
     echo "$dir/$(basename "$1")"
 }
 
@@ -467,6 +469,27 @@ cmd_move() {
     echo "Moved $1 to $2"
 }
 
+# Look up the branch for worktree path $1 via 'git worktree list --porcelain'. Unlike
+# 'symbolic-ref --short HEAD' in the worktree itself, this still works if the worktree's
+# folder was already deleted by hand and only git's admin files remember it.
+branch_for_worktree() {
+    local target=$1 path line
+
+    while IFS= read -r line; do
+        case "$line" in
+            "worktree "*) path=${line#worktree } ;;
+            "branch refs/heads/"*)
+                if [ "$path" = "$target" ]; then
+                    echo "${line#branch refs/heads/}"
+                    return 0
+                fi
+                ;;
+        esac
+    done < <(git worktree list --porcelain)
+
+    return 1
+}
+
 cmd_remove() {
     DELETE_BRANCH=""
     GIT_ARGS=()
@@ -494,6 +517,9 @@ cmd_remove() {
     ROOT=$(repo_root) || exit 1
     ABS_PATH=$(abs_path "$WORKTREE_PATH")
     BRANCH=$(git -C "$WORKTREE_PATH" symbolic-ref --short HEAD 2>/dev/null)
+    if [ -z "$BRANCH" ] && [ -n "$ABS_PATH" ]; then
+        BRANCH=$(branch_for_worktree "$ABS_PATH")
+    fi
 
     if [ -d "$WORKTREE_PATH" ]; then
         sync_back_includes "$ROOT" "$WORKTREE_PATH"
@@ -558,8 +584,9 @@ check_git_version() {
 }
 
 invalid() {
-    printf "worktree: '$1' is not a valid command.\n\n";
+    printf "worktree: '%s' is not a valid command.\n\n" "$1"
     usage
+    exit 1
 }
 
 VERBOSE=""
@@ -581,5 +608,5 @@ case "$COMMAND" in
     prune)  cmd_prune "$@";;
     repair) cmd_repair "$@";;
     -h|--help|help|"") usage;;
-    *) invalid $COMMAND;;
+    *) invalid "$COMMAND";;
 esac

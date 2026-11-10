@@ -11,8 +11,7 @@ fi
 
 # Remove stuff
 packages_to_remove=(
-    "openssl@1.1"
-    "docker-completion"
+    "tflint"
 )
 
 for package in "${packages_to_remove[@]}"; do
