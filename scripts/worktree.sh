@@ -9,7 +9,9 @@ usage() {
 Usage:
   worktree init <repo-url> [folder]                 Create [folder] with a bare repo and default branch worktree
                                                         (<repo-url> can be a full URL or GitHub org/repo;
-                                                        [folder] defaults to the repo name)
+                                                        [folder] defaults to the repo name;
+                                                        creates a personal .worktreeinclude with
+                                                        .gitignore's lines commented out)
   worktree add [--verbose] <branch> [path]          Add a worktree for <branch> (creates the branch if needed;
                                                         [path] defaults to <branch> in the repo root;
                                                         copies gitignored files listed in .worktreeinclude;
@@ -151,6 +153,8 @@ cmd_init() {
         exit 1
     fi
 
+    ensure_root_include "$INIT_DIR" "$INIT_DIR/$DEFAULT_BRANCH"
+
     INIT_DONE=1
     echo "Setup complete! Your $DEFAULT_BRANCH worktree is in $TARGET_DIR/$DEFAULT_BRANCH"
 }
@@ -277,6 +281,35 @@ load_include_patterns() {
     [ ${#INCLUDE_ARGS[@]} -gt 0 ]
 }
 
+# Create the personal <repo root>/.worktreeinclude if it doesn't exist yet, seeded with the
+# default worktree's .gitignore commented out, so it's easy to pick what to copy.
+ensure_root_include() {
+    local root=$1 main=$2 file="$1/.worktreeinclude" line
+
+    [ -e "$file" ] && return 0
+
+    {
+        echo "# Gitignored files and folders to copy from the default branch's worktree into"
+        echo "# new worktrees (e.g. .envrc, .terraform/). Uses .gitignore syntax."
+        echo "# This file is personal to you; commit a .worktreeinclude to share with the team."
+        echo "# Uncomment any of the lines below (taken from .gitignore) to include them."
+
+        if [ -n "$main" ] && [ -f "$main/.gitignore" ]; then
+            echo "#"
+            echo "# --- .gitignore ---"
+            while IFS= read -r line || [ -n "$line" ]; do
+                if [ -z "$line" ]; then
+                    echo
+                else
+                    echo "# $line"
+                fi
+            done <"$main/.gitignore"
+        fi
+    } >"$file" || { err "Could not create $file"; return 1; }
+
+    echo "Created $file (edit it to choose which gitignored files new worktrees get)"
+}
+
 # List (NUL-separated) the paths in worktree $1 that match .worktreeinclude and are gitignored.
 # A whole matching folder (e.g. .terraform/) is listed once, with a trailing slash.
 list_includes() {
@@ -284,8 +317,11 @@ list_includes() {
         git -C "$1" check-ignore -z --stdin
 }
 
-# Copy a file or folder using APFS copy-on-write clones: near-instant and no extra disk
-# space until one copy changes. /bin/cp because GNU cp (e.g. Homebrew coreutils) has no -c.
+# Copy a file or folder using APFS copy-on-write clones: no extra disk space until one
+# copy changes. /bin/cp because GNU cp (e.g. Homebrew coreutils) has no -c.
+# cp clones file by file (via copyfile(3)), so huge folders like node_modules still take a
+# while. clonefile(2) can clone a whole folder in one call, but Apple's man page strongly
+# discourages that, so we don't.
 copy_clone() {
     /bin/cp -Rpc "$1" "$2" 2>/dev/null && return 0
 
@@ -319,6 +355,7 @@ copy_worktree_includes() {
     local root=$1 target=$2 source entry count=0 skipped=0 envrcs=() file
 
     source=$(default_worktree) || return 0
+    ensure_root_include "$root" "$source"
     load_include_patterns "$root" "$source" || return 0
 
     echo "Copying files listed in .worktreeinclude from $source..."
