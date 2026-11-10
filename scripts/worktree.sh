@@ -10,12 +10,14 @@ Usage:
   worktree init <repo-url> [folder]                 Create [folder] with a bare repo and default branch worktree
                                                         (<repo-url> can be a full URL or GitHub org/repo;
                                                         [folder] defaults to the repo name)
-  worktree add <branch> [path]                      Add a worktree for <branch> (creates the branch if needed;
+  worktree add [--verbose] <branch> [path]          Add a worktree for <branch> (creates the branch if needed;
                                                         [path] defaults to <branch> in the repo root;
-                                                        copies gitignored files listed in .worktreeinclude)
+                                                        copies gitignored files listed in .worktreeinclude;
+                                                        --verbose lists each path copied)
   worktree list [args]                              List worktrees (git worktree list)
   worktree move <worktree> <new-path>               Move a worktree (git worktree move)
-  worktree remove [--delete-branch] <path> [args]   Remove a worktree (git worktree remove);
+  worktree remove [--delete-branch] [--verbose] <path> [args]
+                                                    Remove a worktree (git worktree remove);
                                                         --delete-branch also deletes its local branch;
                                                         offers to copy changed .worktreeinclude files back)
   worktree prune [args]                             Prune stale worktrees (git worktree prune)
@@ -179,12 +181,22 @@ default_branch() {
 }
 
 cmd_add() {
-    BRANCH=$1
-    WORKTREE_PATH=$2
+    BRANCH=""
+    WORKTREE_PATH=""
+
+    for arg in "$@"; do
+        if [ "$arg" = "--verbose" ]; then
+            VERBOSE=1
+        elif [ -z "$BRANCH" ]; then
+            BRANCH=$arg
+        elif [ -z "$WORKTREE_PATH" ]; then
+            WORKTREE_PATH=$arg
+        fi
+    done
 
     if [ -z "$BRANCH" ]; then
         err "Missing branch name."
-        echo "Usage: worktree add <branch> [path]" >&2
+        echo "Usage: worktree add [--verbose] <branch> [path]" >&2
         exit 1
     fi
 
@@ -294,7 +306,7 @@ allow_envrcs() {
     local file
     for file in "$@"; do
         if direnv allow "$file"; then
-            echo "Ran direnv allow on $file"
+            [ -n "$VERBOSE" ] && echo "Ran direnv allow on $file"
         else
             err "direnv allow failed for $file"
         fi
@@ -317,12 +329,14 @@ copy_worktree_includes() {
         # Don't recreate folders this branch doesn't have, or overwrite anything it does have
         if [ ! -d "$target/$(dirname "$entry")" ]; then
             skipped=$((skipped + 1))
+            [ -n "$VERBOSE" ] && echo "  Skipped $entry (folder doesn't exist on this branch)"
             continue
         fi
         [ -e "$target/$entry" ] && continue
 
         if copy_clone "$source/$entry" "$target/$entry"; then
             count=$((count + 1))
+            [ -n "$VERBOSE" ] && echo "  Copied $entry"
             while IFS= read -r -d '' file; do
                 envrcs+=("$file")
             done < <(find "$target/$entry" -name .envrc -type f -print0)
@@ -424,6 +438,8 @@ cmd_remove() {
     for arg in "$@"; do
         if [ "$arg" = "--delete-branch" ]; then
             DELETE_BRANCH=1
+        elif [ "$arg" = "--verbose" ]; then
+            VERBOSE=1
         else
             if [ -z "$WORKTREE_PATH" ] && [[ "$arg" != -* ]]; then
                 WORKTREE_PATH=$arg
@@ -434,7 +450,7 @@ cmd_remove() {
 
     if [ -z "$WORKTREE_PATH" ]; then
         err "Missing worktree path."
-        echo "Usage: worktree remove [--delete-branch] <path> [args]" >&2
+        echo "Usage: worktree remove [--delete-branch] [--verbose] <path> [args]" >&2
         exit 1
     fi
 
@@ -508,6 +524,8 @@ invalid() {
     printf "worktree: '$1' is not a valid command.\n\n";
     usage
 }
+
+VERBOSE=""
 
 COMMAND=$1
 shift
