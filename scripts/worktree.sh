@@ -507,9 +507,12 @@ cmd_move() {
     echo "Moved $1 to $2"
 }
 
-# Look up the branch for worktree path $1 via 'git worktree list --porcelain'. Unlike
-# 'symbolic-ref --short HEAD' in the worktree itself, this still works if the worktree's
-# folder was already deleted by hand and only git's admin files remember it.
+# Print the paths in 'git worktree list --porcelain' output $1, one per line
+worktree_paths() {
+    awk '/^worktree /{print substr($0, 10)}' <<<"$1"
+}
+
+# Look up the branch for worktree path $1 in 'git worktree list --porcelain' output $2
 branch_for_worktree() {
     local target=$1 path line
 
@@ -523,7 +526,7 @@ branch_for_worktree() {
                 fi
                 ;;
         esac
-    done < <(git worktree list --porcelain)
+    done <<<"$2"
 
     return 1
 }
@@ -553,20 +556,26 @@ cmd_remove() {
     fi
 
     ROOT=$(repo_root) || exit 1
-    ABS_PATH=$(abs_path "$WORKTREE_PATH")
-    BRANCH=$(git -C "$WORKTREE_PATH" symbolic-ref --short HEAD 2>/dev/null)
-    if [ -z "$BRANCH" ] && [ -n "$ABS_PATH" ]; then
-        BRANCH=$(branch_for_worktree "$ABS_PATH")
-    fi
 
     if [ -d "$WORKTREE_PATH" ]; then
         sync_back_includes "$ROOT" "$WORKTREE_PATH"
     fi
 
+    BEFORE=$(git worktree list --porcelain)
+
     git worktree remove "${GIT_ARGS[@]}" || exit 1
 
-    # Tidy up folders left empty by the removal (e.g. feature/ after removing feature/x)
-    [ -n "$ABS_PATH" ] && remove_empty_parents "$(dirname "$ABS_PATH")" "$ROOT"
+    # git matches <path> against its registered worktrees rather than our cwd (so
+    # feat/x works from inside master/), so diff the lists to see which one went
+    REMOVED_PATH=$(comm -23 <(worktree_paths "$BEFORE" | sort) \
+        <(worktree_paths "$(git worktree list --porcelain)" | sort))
+    BRANCH=""
+
+    if [ -n "$REMOVED_PATH" ]; then
+        BRANCH=$(branch_for_worktree "$REMOVED_PATH" "$BEFORE")
+        # Tidy up folders left empty by the removal (e.g. feature/ after removing feature/x)
+        remove_empty_parents "$(dirname "$REMOVED_PATH")" "$ROOT"
+    fi
 
     echo "Removed worktree $WORKTREE_PATH"
 
