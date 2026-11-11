@@ -6,7 +6,16 @@ set -l __worktree_commands init add list move remove prune repair help
 function __worktree_arg_count
     set -l tokens (commandline -opc)
     set -l count 0
+    set -l skip_next 0
     for token in $tokens[3..-1]
+        if test $skip_next -eq 1
+            set skip_next 0
+            continue
+        end
+        if test "$token" = --from
+            set skip_next 1
+            continue
+        end
         string match -q -- '-*' $token; or set count (math $count + 1)
     end
     echo $count
@@ -90,10 +99,11 @@ complete -c worktree -n "not __fish_seen_subcommand_from $__worktree_commands" -
 # init <repo-url> [folder]
 complete -c worktree -n '__worktree_at_arg init 1' -F
 
-# add [--verbose] <branch> [path]
+# add [--verbose] [--from <ref>] <branch> [path]
 complete -c worktree -n '__worktree_at_arg add 0' -a '(__worktree_branches)'
 complete -c worktree -n '__worktree_at_arg add 1' -a '(__fish_complete_directories)'
 complete -c worktree -n '__fish_seen_subcommand_from add' -l verbose -d 'List each path copied and direnv allow run'
+complete -c worktree -n '__fish_seen_subcommand_from add' -l from -r -d 'Base a new branch on this ref instead of the default branch' -a '(__worktree_branches)'
 
 # list [args]
 complete -c worktree -n '__fish_seen_subcommand_from list' -l porcelain -d 'Machine-readable output'

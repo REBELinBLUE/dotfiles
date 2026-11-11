@@ -12,8 +12,12 @@ Usage:
                                                         [folder] defaults to the repo name;
                                                         creates a personal .worktreeinclude with
                                                         .gitignore's lines commented out)
-  worktree add [--verbose] <branch> [path]          Add a worktree for <branch> (creates the branch if needed;
+  worktree add [--verbose] [--from <ref>] <branch> [path]
+                                                    Add a worktree for <branch> (creates the branch if needed;
                                                         [path] defaults to <branch> in the repo root;
+                                                        --from <ref> bases a new branch on <ref> instead of
+                                                        the default branch (only valid when <branch> doesn't
+                                                        already exist locally or on origin);
                                                         copies gitignored files listed in .worktreeinclude;
                                                         --verbose lists each path copied)
   worktree list [args]                              List worktrees (git worktree list)
@@ -112,7 +116,7 @@ cmd_init() {
     # Link the root to the bare repository
     echo "gitdir: ./.bare" > .git || exit 1
 
-    # Enable remote tracking (The "Remote Awareness" fix)
+    # Enable remote tracking
     git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*" || exit 1
 
     # New branches push without needing -u, and fetches drop branches deleted on the remote
@@ -189,20 +193,38 @@ default_branch() {
 cmd_add() {
     BRANCH=""
     WORKTREE_PATH=""
+    FROM_REF=""
+    SAW_FROM=""
 
-    for arg in "$@"; do
-        if [ "$arg" = "--verbose" ]; then
-            VERBOSE=1
-        elif [ -z "$BRANCH" ]; then
-            BRANCH=$arg
-        elif [ -z "$WORKTREE_PATH" ]; then
-            WORKTREE_PATH=$arg
-        fi
+    while [ $# -gt 0 ]; do
+        case "$1" in
+            --verbose)
+                VERBOSE=1
+                ;;
+            --from)
+                SAW_FROM=1
+                shift
+                FROM_REF=$1
+                ;;
+            *)
+                if [ -z "$BRANCH" ]; then
+                    BRANCH=$1
+                elif [ -z "$WORKTREE_PATH" ]; then
+                    WORKTREE_PATH=$1
+                fi
+                ;;
+        esac
+        shift
     done
 
     if [ -z "$BRANCH" ]; then
         err "Missing branch name."
-        echo "Usage: worktree add [--verbose] <branch> [path]" >&2
+        echo "Usage: worktree add [--verbose] [--from <ref>] <branch> [path]" >&2
+        exit 1
+    fi
+
+    if [ -n "$SAW_FROM" ] && [ -z "$FROM_REF" ]; then
+        err "Missing ref after --from."
         exit 1
     fi
 
@@ -224,11 +246,27 @@ cmd_add() {
     git remote set-head origin --auto >/dev/null 2>&1
 
     if git show-ref --verify --quiet "refs/heads/$BRANCH"; then
+        if [ -n "$FROM_REF" ]; then
+            err "'$BRANCH' already exists, so --from has no effect."
+            exit 1
+        fi
         echo "Adding worktree for existing branch '$BRANCH'..."
         git worktree add "$WORKTREE_PATH" "$BRANCH" || exit 1
     elif git show-ref --verify --quiet "refs/remotes/origin/$BRANCH"; then
+        if [ -n "$FROM_REF" ]; then
+            err "'origin/$BRANCH' already exists, so --from has no effect."
+            exit 1
+        fi
         echo "Adding worktree for remote branch 'origin/$BRANCH'..."
         git worktree add --track -b "$BRANCH" "$WORKTREE_PATH" "origin/$BRANCH" || exit 1
+    elif [ -n "$FROM_REF" ]; then
+        if ! git rev-parse --verify --quiet "${FROM_REF}^{commit}" >/dev/null; then
+            err "'$FROM_REF' is not a valid ref."
+            exit 1
+        fi
+
+        echo "Creating new branch '$BRANCH' from '$FROM_REF'..."
+        git worktree add --no-track -b "$BRANCH" "$WORKTREE_PATH" "$FROM_REF" || exit 1
     else
         DEFAULT_BRANCH=$(default_branch)
 

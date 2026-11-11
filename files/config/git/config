@@ -78,6 +78,9 @@
 [diff-so-fancy]
     markEmptyLines = false
 
+[fetch]
+    prune = true
+
 [push]
     default = simple
     autoSetupRemote = true
