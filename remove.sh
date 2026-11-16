@@ -22,7 +22,7 @@ for package in "${packages_to_remove[@]}"; do
     fi
 done
 
-pipx uninstall busylight-for-humans
+pipx uninstall busylight-for-humans || true
 
 e_success "Cleanup complete"
 
