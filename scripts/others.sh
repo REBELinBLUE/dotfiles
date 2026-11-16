@@ -14,7 +14,7 @@ pip3 install --user httpie-oauth
 pip3 install --user httpie-jwt-auth
 pip3 install --user http-prompt
 
-pipx install busylight-for-humans
+#pipx install busylight-for-humans
 
 #pip3 install --user datadog
 pip3 install --user linode-cli

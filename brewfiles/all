@@ -79,8 +79,9 @@ brew 'dive'
 brew 'container'
 
 # Kubernetes related
-brew 'kbenv' # Instead of kubectl
+brew 'kubectl'
 brew 'stern'
+brew 'kubecolor'
 brew 'k9s'
 brew 'popeye'
 brew 'helmenv' # Instead of helm

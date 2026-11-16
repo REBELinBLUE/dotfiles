@@ -11,7 +11,8 @@ fi
 
 # Remove stuff
 packages_to_remove=(
-    "tflint"
+    "tflint",
+    "kbenv"
 )
 
 for package in "${packages_to_remove[@]}"; do
@@ -20,6 +21,8 @@ for package in "${packages_to_remove[@]}"; do
         brew uninstall "$package"
     fi
 done
+
+pipx uninstall busylight-for-humans
 
 e_success "Cleanup complete"
 
