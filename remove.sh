@@ -12,7 +12,8 @@ fi
 # Remove stuff
 packages_to_remove=(
     "tflint",
-    "kbenv"
+    "kbenv",
+    "git-fresh"
 )
 
 for package in "${packages_to_remove[@]}"; do
