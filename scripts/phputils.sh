@@ -88,6 +88,7 @@ fi
 if [ ! -f $HOME/.config/composer/composer.json ]; then
     ln -s $HOME/.dotfiles/files/config/composer/composer.json $HOME/.config/composer/composer.json
     ln -s $HOME/.dotfiles/files/config/composer/composer.lock $HOME/.config/composer/composer.lock
+    ln -s $HOME/.dotfiles/files/config/composer/config.json $HOME/.config/composer/config.json
 fi
 
 $(brew --prefix composer)/bin/composer global install

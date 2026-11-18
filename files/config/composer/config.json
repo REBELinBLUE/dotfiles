@@ -1,0 +1,10 @@
+{
+    "config": {
+        "policy": {
+            "cooldown": {
+                "period": "3 days"
+            }
+        },
+        "sort-packages": true
+    }
+}
