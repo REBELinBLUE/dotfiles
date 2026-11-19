@@ -47,6 +47,15 @@ fi
 
 if [ ! -f $HOME/.config/git/config ]; then
     echo -e "[include]\n    path = $HOME/.dotfiles/files/config/git/config" > $HOME/.config/git/config
+
+    # [user]
+    #     name = Stephen Ball
+    #     email = stephen.ball@foo-bar.com
+    #     signingkey = xyz
+
+    # Alternative name/email
+    # [includeIf "hasconfig:remote.*.url:git@github.com:REBELinBLUE/**"]
+    #     path = ~/.config/git/personal
 fi
 
 # Symlink the ssh config files
